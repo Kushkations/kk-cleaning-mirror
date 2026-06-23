@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-22T20:56:20.064485",
+  "generated": "2026-06-22T21:00:26.293348",
   "weekStart": "2026-06-23",
   "weekEnd": "2026-06-29",
   "week": [
@@ -17,50 +17,6 @@
             "Alexandria"
           ],
           "properties": [
-            {
-              "name": "Grant",
-              "address": "261 Grant Way, Denver 80229",
-              "priority": "moved_sameday",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-25",
-              "source": "breezeway-reconcile",
-              "order": 8,
-              "priority_locked": true,
-              "pinned_order": 1
-            },
-            {
-              "name": "Palace",
-              "address": "12332 Quince St, Thornton 80602",
-              "priority": "moved_sameday",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-23",
-              "source": "breezeway-reconcile",
-              "order": 4,
-              "priority_locked": true,
-              "pinned_order": 2
-            },
-            {
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
-              "priority": "moved_sameday",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-23",
-              "source": "breezeway-reconcile",
-              "order": 5,
-              "priority_locked": true,
-              "pinned_order": 3
-            },
-            {
-              "name": "Sativa",
-              "address": "391 E 83rd Dr, Denver 80229",
-              "priority": "moved",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-24",
-              "source": "breezeway-reconcile",
-              "order": 7,
-              "priority_locked": true,
-              "pinned_order": 4
-            },
             {
               "name": "Beach",
               "address": "5467 Beach Ct, Denver 80221",
@@ -80,22 +36,13 @@
               "order": 2
             },
             {
-              "name": "BuffaloGolf",
-              "address": "16714 Buffalo Run Dr, Commerce City 80022",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-23",
-              "source": "breezeway-reconcile",
-              "order": 3
-            },
-            {
               "name": "Indica",
               "address": "7682 Shoshone St, Denver 80221",
               "priority": "tomorrow_checkin",
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 6
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -163,15 +110,6 @@
               "order": 1
             },
             {
-              "name": "Quivas",
-              "address": "7240 Quivas St, Denver 80221",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-24",
-              "source": "breezeway-reconcile",
-              "order": 2
-            },
-            {
               "property_id": 320255,
               "name": "Hotbox",
               "address": "761 E 83rd Pl, Denver 80229",
@@ -188,7 +126,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -238,45 +176,17 @@
       "dayNameEn": "Thursday",
       "teams": [
         {
-          "name": "Equipo 1",
-          "lead": "TBD",
+          "team_name": "Team 1",
+          "lead": "",
           "members": [],
           "properties": [
             {
-              "name": "BlueDream",
-              "address": "1475 S Pierce St, Lakewood 80232",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-25",
-              "source": "breezeway-reconcile",
-              "order": 1
-            },
-            {
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-25",
-              "source": "breezeway-reconcile",
-              "order": 2
-            },
-            {
-              "name": "Indica",
-              "address": "7682 Shoshone St, Denver 80221",
-              "priority": "tomorrow_checkin",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
-              "order": 3
-            },
-            {
-              "name": "JoyStick",
-              "address": "8228 Balsam Way, Arvada 80005",
+              "name": "1967 E 115th",
+              "address": "1967 E 115th Ave, Northglenn 80233",
               "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-28",
-              "source": "breezeway-reconcile",
-              "order": 4
+              "est_hours": 2.5,
+              "priority_locked": true,
+              "manual_add": true
             }
           ]
         }
@@ -354,32 +264,13 @@
               "order": 2
             },
             {
-              "name": "Altitude",
-              "address": "4350 Xenon St, Wheat Ridge 80033",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
-              "order": 3,
-              "priority_locked": true
-            },
-            {
-              "name": "Grant",
-              "address": "261 Grant Way, Denver 80229",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
-              "order": 4
-            },
-            {
               "name": "BuffaloGolf",
               "address": "",
               "priority": "tomorrow_checkin",
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 5
+              "order": 3
             },
             {
               "name": "Sheridan",
@@ -388,7 +279,7 @@
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 6
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -610,15 +501,6 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 4
-            },
-            {
-              "name": "Grant",
-              "address": "261 Grant Way, Denver 80229",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-03",
-              "source": "breezeway-reconcile",
-              "order": 5
             }
           ],
           "isLaundry": false
@@ -711,24 +593,6 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
-            },
-            {
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-01",
-              "source": "breezeway-reconcile",
-              "order": 3
-            },
-            {
-              "name": "PlayHouse",
-              "address": "7350 Alkire Ct, Arvada 80005",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-03",
-              "source": "breezeway-reconcile",
-              "order": 4
             }
           ],
           "isLaundry": false
