@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23T15:16:28.986858",
+  "generated": "2026-06-23T15:45:29.459667",
   "weekStart": "2026-06-24",
   "weekEnd": "2026-06-30",
   "week": [
@@ -21,9 +21,10 @@
               "name": "Beach",
               "address": "5467 Beach Ct, Denver 80221",
               "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-24",
-              "source": "breezeway-reconcile",
+              "est_hours": 2.5,
+              "priority_locked": true,
+              "manual_add": true,
+              "pinned_order": 1,
               "order": 1
             },
             {
@@ -90,9 +91,9 @@
         "Wonderland"
       ],
       "payrollEstimate": 440,
-      "sameDayTurns": 0,
+      "sameDayTurns": 1,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 1,
+      "totalCheckouts": 2,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -212,17 +213,30 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "TBD",
-          "members": [],
+          "lead": "Marii",
+          "members": [
+            "Marii",
+            "Yenny",
+            "Alexandria"
+          ],
           "properties": [
             {
               "name": "Airport",
               "address": "19990 E 40th Ave, Denver 80249",
               "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
+              "est_hours": 2.5,
+              "priority_locked": true,
+              "manual_add": true,
               "order": 1
+            },
+            {
+              "name": "Sativa",
+              "address": "391 E 83rd Dr, Denver 80229",
+              "priority": "same_day",
+              "est_hours": 2.5,
+              "priority_locked": true,
+              "manual_add": true,
+              "order": 2
             },
             {
               "name": "Altitude",
@@ -231,7 +245,7 @@
               "est_hours": 2.0,
               "notes": "CI 2026-06-26",
               "source": "breezeway-reconcile",
-              "order": 2
+              "order": 3
             },
             {
               "name": "Grant",
@@ -240,36 +254,28 @@
               "est_hours": 2.0,
               "notes": "CI 2026-06-26",
               "source": "breezeway-reconcile",
-              "order": 3
-            },
-            {
-              "name": "Sativa",
-              "address": "391 E 83rd Dr, Denver 80229",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
               "order": 4
             },
             {
               "name": "BuffaloGolf",
-              "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "address": "",
               "priority": "tomorrow_checkin",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-27",
-              "source": "breezeway-reconcile",
+              "est_hours": 2.5,
+              "priority_locked": true,
+              "manual_add": true,
               "order": 5
             },
             {
               "name": "Sheridan",
               "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
               "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-28",
-              "source": "breezeway-reconcile",
+              "est_hours": 2.5,
+              "priority_locked": true,
+              "manual_add": true,
               "order": 6
             }
-          ]
+          ],
+          "isLaundry": false
         }
       ],
       "laundry": {
@@ -277,12 +283,9 @@
         "active": false
       },
       "off": [
-        "Marii",
         "Gabby",
-        "Yenny",
         "Julie",
         "Yolanda",
-        "Alexandria",
         "Maria"
       ],
       "occupied": [
@@ -305,10 +308,10 @@
         "Sativa",
         "Wonderland"
       ],
-      "payrollEstimate": 0,
-      "sameDayTurns": 0,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 0,
+      "payrollEstimate": 440,
+      "sameDayTurns": 2,
+      "tomorrowCheckins": 1,
+      "totalCheckouts": 4,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -742,7 +745,7 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 6,
       "role": "lead",
       "dailyRate": 170
     },
@@ -752,7 +755,7 @@
       "dailyRate": 150
     },
     "Yenny": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 6,
       "role": "cleaner",
       "dailyRate": 140
     },
@@ -767,7 +770,7 @@
       "dailyRate": 130
     },
     "Alexandria": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 6,
       "role": "cleaner",
       "dailyRate": 130
     },
