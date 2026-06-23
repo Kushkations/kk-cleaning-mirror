@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23T13:46:31.987580",
+  "generated": "2026-06-23T14:00:36.574842",
   "weekStart": "2026-06-24",
   "weekEnd": "2026-06-30",
   "week": [
@@ -103,9 +103,30 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "TBD",
-          "members": [],
+          "lead": "Marii",
+          "members": [
+            "Marii",
+            "Yenny",
+            "Alexandria"
+          ],
           "properties": [
+            {
+              "property_id": null,
+              "name": "1967 E 115th",
+              "address": "1967 E 115th Place, Northglenn 80233",
+              "zone": "north",
+              "beds": 3,
+              "sqft": 1200,
+              "est_hours": 2.0,
+              "lat": 39.8878,
+              "lon": -104.9458,
+              "priority": "same_day",
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": "4:00 PM",
+              "notes": "External client - Beloved Soul Healer. Door code: 1067.",
+              "order": 1
+            },
             {
               "name": "BlueDream",
               "address": "1475 S Pierce St, Lakewood 80232",
@@ -113,7 +134,7 @@
               "est_hours": 2.0,
               "notes": "CI 2026-06-25",
               "source": "breezeway-reconcile",
-              "order": 1
+              "order": 2
             },
             {
               "name": "JoyStick",
@@ -122,7 +143,7 @@
               "est_hours": 2.0,
               "notes": "CI 2026-06-25",
               "source": "breezeway-reconcile",
-              "order": 2
+              "order": 3
             },
             {
               "name": "Paradise",
@@ -131,7 +152,7 @@
               "est_hours": 2.0,
               "notes": "CI 2026-06-25",
               "source": "breezeway-reconcile",
-              "order": 3
+              "order": 4
             },
             {
               "name": "Indica",
@@ -140,9 +161,10 @@
               "est_hours": 2.0,
               "notes": "CI 2026-06-26",
               "source": "breezeway-reconcile",
-              "order": 4
+              "order": 5
             }
-          ]
+          ],
+          "isLaundry": false
         }
       ],
       "laundry": {
@@ -150,12 +172,9 @@
         "active": false
       },
       "off": [
-        "Marii",
         "Gabby",
-        "Yenny",
         "Julie",
         "Yolanda",
-        "Alexandria",
         "Maria"
       ],
       "occupied": [
@@ -179,10 +198,10 @@
         "Sheridan",
         "Wonderland"
       ],
-      "payrollEstimate": 0,
-      "sameDayTurns": 0,
+      "payrollEstimate": 440,
+      "sameDayTurns": 1,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 0,
+      "totalCheckouts": 1,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -723,7 +742,7 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 5,
       "role": "lead",
       "dailyRate": 170
     },
@@ -733,7 +752,7 @@
       "dailyRate": 150
     },
     "Yenny": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 5,
       "role": "cleaner",
       "dailyRate": 140
     },
@@ -748,7 +767,7 @@
       "dailyRate": 130
     },
     "Alexandria": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 5,
       "role": "cleaner",
       "dailyRate": 130
     },
