@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23T19:03:20.695963",
+  "generated": "2026-06-23T19:16:14.384369",
   "weekStart": "2026-06-24",
   "weekEnd": "2026-06-30",
   "week": [
@@ -28,6 +28,15 @@
               "order": 1
             },
             {
+              "name": "Quivas",
+              "address": "7240 Quivas St, Denver 80221",
+              "priority": "same_day",
+              "est_hours": 2.0,
+              "notes": "CI 2026-06-24",
+              "source": "breezeway-reconcile",
+              "order": 2
+            },
+            {
               "property_id": 320255,
               "name": "Hotbox",
               "address": "761 E 83rd Pl, Denver 80229",
@@ -44,7 +53,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -687,6 +696,15 @@
               "notes": "CI 2026-06-30",
               "source": "breezeway-reconcile",
               "order": 2
+            },
+            {
+              "name": "Palace",
+              "address": "12332 Quince St, Thornton 80602",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-02",
+              "source": "breezeway-reconcile",
+              "order": 3
             }
           ],
           "isLaundry": false
