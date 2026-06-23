@@ -18,6 +18,17 @@
           ],
           "properties": [
             {
+              "name": "Grant",
+              "address": "261 Grant Way, Denver 80229",
+              "priority": "moved_sameday",
+              "est_hours": 2.0,
+              "notes": "CI 2026-06-25",
+              "source": "breezeway-reconcile",
+              "order": 6,
+              "priority_locked": true,
+              "pinned_order": 1
+            },
+            {
               "name": "Beach",
               "address": "5467 Beach Ct, Denver 80221",
               "priority": "same_day",
@@ -62,16 +73,6 @@
               "priority_locked": true,
               "manual_add": true,
               "order": 5
-            },
-            {
-              "name": "Grant",
-              "address": "261 Grant Way, Denver 80229",
-              "priority": "moved_sameday",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-25",
-              "source": "breezeway-reconcile",
-              "order": 6,
-              "priority_locked": true
             },
             {
               "name": "Paradise",
@@ -180,11 +181,12 @@
             {
               "name": "Quivas",
               "address": "7240 Quivas St, Denver 80221",
-              "priority": "checkout_only",
+              "priority": "same_day",
               "est_hours": 2.0,
               "notes": "",
               "source": "breezeway-reconcile",
-              "order": 3
+              "order": 3,
+              "priority_locked": true
             }
           ],
           "isLaundry": false
@@ -273,6 +275,14 @@
               "notes": "",
               "source": "breezeway-reconcile",
               "order": 4
+            },
+            {
+              "name": "1967 E 115th",
+              "address": "1967 E 115th Ave, Northglenn 80233",
+              "priority": "checkout_only",
+              "est_hours": 2.5,
+              "priority_locked": true,
+              "manual_add": true
             }
           ]
         }
