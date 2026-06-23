@@ -1,0 +1,8 @@
+{
+  "name": "kk-cleaning",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npx serve .",
+    "generate": "python3 generate_schedule.py"
+  }
+}

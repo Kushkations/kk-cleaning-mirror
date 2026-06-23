@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0f172a">
+<title>Cleaning Operations — Cashaw</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f172a;color:#e2e8f0;min-height:100vh;padding-bottom:70px}
+.hd{background:linear-gradient(135deg,#0f172a,#1e293b);padding:14px 16px;position:sticky;top:0;z-index:100;border-bottom:1px solid #334155}
+.hd-row{display:flex;justify-content:space-between;align-items:center}
+.hd h1{font-size:1.1em;font-weight:800;color:#fff}
+.hd .sub{font-size:.7em;color:#94a3b8;margin-top:2px}
+.hd .day{font-size:.85em;font-weight:700;color:#fff;text-align:right}
+.hd .dt{font-size:.65em;color:#94a3b8}
+.mx{max-width:600px;margin:0 auto;padding:12px}
+
+/* Stats row */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:14px}
+.stat{background:#1e293b;border:1px solid #334155;border-radius:10px;padding:10px 8px;text-align:center}
+.stat .n{font-size:1.5em;font-weight:800}
+.stat .n.red{color:#ef4444}.stat .n.yellow{color:#fbbf24}.stat .n.green{color:#4ade80}.stat .n.blue{color:#60a5fa}
+.stat .l{font-size:.55em;color:#64748b;text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+
+/* Alerts */
+.alert{background:#7f1d1d33;border:1px solid #7f1d1d;border-radius:10px;padding:10px 14px;margin-bottom:10px;font-size:.82em;display:flex;align-items:flex-start;gap:8px}
+.alert.warn{background:#713f1233;border-color:#713f12}
+.alert.info{background:#1e3a5f33;border-color:#1e3a5f}
+.alert.good{background:#065f4633;border-color:#065f46}
+.alert b{color:#fff}
+
+/* Section */
+.section{margin-bottom:16px}
+.section-hd{font-size:.72em;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#64748b;padding:0 4px;margin-bottom:8px}
+
+/* Team card */
+.team-card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:14px;margin-bottom:10px}
+.team-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.team-name{font-size:.9em;font-weight:700;color:#4ade80}
+.team-name.t2{color:#60a5fa}
+.team-members{font-size:.72em;color:#94a3b8}
+.team-badge{font-size:.6em;background:#065f46;color:#6ee7b7;padding:2px 8px;border-radius:10px;font-weight:600}
+.team-badge.laundry{background:#713f12;color:#fde68a}
+
+/* Property row */
+.prop-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #0f172a}
+.prop-row:last-child{border-bottom:none}
+.prop-num{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7em;font-weight:800;flex-shrink:0}
+.prop-num.red{background:#ef4444;color:#fff}
+.prop-num.yellow{background:#fbbf24;color:#000}
+.prop-num.white{background:#475569;color:#fff}
+.prop-info{flex:1}
+.prop-name{font-weight:700;font-size:.85em;color:#fff}
+.prop-addr{font-size:.65em;color:#64748b;margin-top:1px}
+.prop-meta{display:flex;gap:6px;margin-top:3px;flex-wrap:wrap}
+.prop-tag{font-size:.55em;padding:1px 6px;border-radius:4px;font-weight:600}
+.prop-tag.same-day{background:#7f1d1d;color:#fca5a5}
+.prop-tag.tomorrow{background:#713f12;color:#fde68a}
+.prop-tag.checkout{background:#334155;color:#94a3b8}
+.prop-est{font-size:.65em;color:#64748b;white-space:nowrap}
+
+/* Weekly view */
+.week-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:14px}
+.week-day{background:#1e293b;border:1px solid #334155;border-radius:8px;padding:8px 4px;text-align:center;cursor:pointer;transition:all .2s}
+.week-day:hover,.week-day.active{border-color:#4ade80;background:#1a2b1c}
+.week-day .wd{font-size:.6em;color:#64748b;text-transform:uppercase;font-weight:700}
+.week-day .wn{font-size:1.3em;font-weight:800;color:#fff;margin:2px 0}
+.week-day .wco{font-size:.55em;color:#94a3b8}
+.week-day .bar{height:4px;border-radius:2px;margin-top:4px}
+.bar.light{background:#4ade80}.bar.medium{background:#fbbf24}.bar.heavy{background:#ef4444}
+
+/* Optimization card */
+.opt-card{background:#1e293b;border:1px solid #334155;border-radius:10px;padding:10px 14px;margin-bottom:6px;font-size:.78em}
+.opt-card .save{color:#4ade80;font-weight:700;font-size:.7em}
+
+/* Laundry card */
+.laundry-card{background:linear-gradient(135deg,#1e3a5f,#1e293b);border:1px solid #334155;border-radius:10px;padding:12px;margin-bottom:10px}
+.laundry-card h3{font-size:.82em;color:#60a5fa;margin-bottom:6px}
+.laundry-card .detail{font-size:.72em;color:#94a3b8}
+
+/* Off list */
+.off-list{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.off-chip{background:#334155;color:#94a3b8;padding:3px 10px;border-radius:12px;font-size:.7em}
+
+/* Bottom nav */
+.nav{position:fixed;bottom:0;left:0;right:0;background:#1e293b;border-top:1px solid #334155;display:flex;z-index:100}
+.nav-btn{flex:1;padding:10px 0;text-align:center;font-size:.6em;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.5px;cursor:pointer;transition:color .2s}
+.nav-btn.active{color:#4ade80}
+.nav-btn .icon{font-size:1.6em;display:block;margin-bottom:2px}
+
+/* Tabs */
+.tab{display:none}.tab.active{display:block}
+
+/* Cleaner stats */
+.stats-table{width:100%;border-collapse:collapse;font-size:.75em}
+.stats-table th{background:#0f172a;color:#64748b;padding:6px 8px;text-align:left;font-weight:600;font-size:.7em;text-transform:uppercase}
+.stats-table td{padding:6px 8px;border-bottom:1px solid #1e293b}
+.stats-table .role{font-size:.6em;background:#334155;color:#94a3b8;padding:1px 5px;border-radius:4px}
+
+.footer{text-align:center;padding:16px;font-size:.6em;color:#475569}
+
+/* Day nav */
+.day-nav{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:12px}
+.day-nav .arrow{width:32px;height:32px;border-radius:50%;background:#334155;color:#fff;border:none;font-size:1em;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.day-nav .current{font-size:.9em;font-weight:700;color:#fff}
+</style>
+</head>
+<body>
+
+<div class="hd">
+<div class="hd-row">
+<div><h1>CLEANING OPS</h1><div class="sub">Cashaw Management</div></div>
+<div><div class="day" id="hd-day"></div><div class="dt" id="hd-date"></div></div>
+</div>
+</div>
+
+<div class="mx">
+<!-- TAB: TODAY -->
+<div class="tab active" id="tab-today">
+<div class="day-nav">
+<button class="arrow" onclick="prevDay()">&#8249;</button>
+<span class="current" id="day-label"></span>
+<button class="arrow" onclick="nextDay()">&#8250;</button>
+</div>
+
+<div class="stats" id="today-stats"></div>
+<div id="today-alerts"></div>
+<div id="today-teams"></div>
+<div id="today-laundry"></div>
+<div id="today-off"></div>
+</div>
+
+<!-- TAB: WEEK -->
+<div class="tab" id="tab-week">
+<div class="section"><div class="section-hd">Week Overview</div></div>
+<div class="week-grid" id="week-grid"></div>
+<div id="week-details"></div>
+</div>
+
+<!-- TAB: TEAM -->
+<div class="tab" id="tab-team">
+<div class="section"><div class="section-hd">Team Stats This Week</div></div>
+<div id="team-stats"></div>
+</div>
+
+<!-- TAB: COSTS -->
+<div class="tab" id="tab-costs">
+<div class="section"><div class="section-hd">Cost Optimization</div></div>
+<div id="cost-opts"></div>
+</div>
+
+<div class="footer">Luna — Cashaw Cleaning Operations<br>Auto-generated from OwnerRez</div>
+</div>
+
+<div class="nav">
+<div class="nav-btn active" onclick="showTab('today')"><span class="icon">&#128197;</span>Today</div>
+<div class="nav-btn" onclick="showTab('week')"><span class="icon">&#128200;</span>Week</div>
+<div class="nav-btn" onclick="showTab('team')"><span class="icon">&#128101;</span>Team</div>
+<div class="nav-btn" onclick="showTab('costs')"><span class="icon">&#128176;</span>Costs</div>
+</div>
+
+<script>
+let data = null;
+let currentDayIndex = 0;
+
+async function loadData() {
+  try {
+    const resp = await fetch('data/schedule.json?' + Date.now());
+    data = await resp.json();
+    renderHeader();
+    renderDay(0);
+    renderWeek();
+    renderTeamStats();
+    renderCosts();
+  } catch(e) {
+    document.querySelector('.mx').innerHTML = '<div class="alert">Error loading schedule data: ' + e.message + '</div>';
+  }
+}
+
+function renderHeader() {
+  if (!data || !data.week.length) return;
+  const d = data.week[0];
+  document.getElementById('hd-day').textContent = d.dayNameEn;
+  document.getElementById('hd-date').textContent = d.date;
+}
+
+function renderDay(idx) {
+  currentDayIndex = idx;
+  const d = data.week[idx];
+  if (!d) return;
+
+  document.getElementById('day-label').textContent = d.dayNameEn + ' ' + d.date.split('-').slice(1).join('/');
+
+  // Stats
+  document.getElementById('today-stats').innerHTML = `
+    <div class="stat"><div class="n red">${d.sameDayTurns}</div><div class="l">Same-Day</div></div>
+    <div class="stat"><div class="n yellow">${d.tomorrowCheckins}</div><div class="l">Tomorrow CI</div></div>
+    <div class="stat"><div class="n blue">${d.totalCheckouts}</div><div class="l">Checkouts</div></div>
+    <div class="stat"><div class="n green">$${d.payrollEstimate}</div><div class="l">Payroll</div></div>
+  `;
+
+  // Alerts
+  let alerts = '';
+  if (d.sameDayTurns > 0) {
+    const turns = d.teams.flatMap(t => t.properties).filter(p => p.priority === 'same_day').map(p => p.name);
+    alerts += `<div class="alert"><span>&#128680;</span><div><b>${d.sameDayTurns} same-day turnover${d.sameDayTurns > 1 ? 's' : ''}:</b> ${turns.join(', ')} — must be clean by 4 PM</div></div>`;
+  }
+  if (d.laundry && d.laundry.active) {
+    alerts += `<div class="alert info"><span>&#128092;</span><div><b>Laundry day:</b> ${d.laundry.assigned.join(' + ')}</div></div>`;
+  }
+  if (d.totalCheckouts === 0) {
+    alerts += `<div class="alert good"><span>&#9989;</span><div><b>No checkouts today.</b> Day off or laundry only.</div></div>`;
+  }
+  document.getElementById('today-alerts').innerHTML = alerts;
+
+  // Teams
+  let teamsHtml = '';
+  d.teams.forEach((team, ti) => {
+    const colorClass = ti === 0 ? '' : 't2';
+    const badge = team.isLaundry ? '<span class="team-badge laundry">LAUNDRY</span>' : `<span class="team-badge">${team.properties.length} houses</span>`;
+
+    let propsHtml = '';
+    const poDay = {same_day:0,moved_sameday:0,tomorrow_checkin:1,moved_nextday:1,moved:2,checkout_only:3};
+    const sortedTeamProps = team.properties.slice().sort((a,b) => ((poDay[a.priority]!==undefined?poDay[a.priority]:9)) - ((poDay[b.priority]!==undefined?poDay[b.priority]:9)));
+    sortedTeamProps.forEach(p => {
+      const numClass = p.priority === 'same_day' ? 'red' : p.priority === 'tomorrow_checkin' ? 'yellow' : 'white';
+      const tagClass = p.priority === 'same_day' ? 'same-day' : p.priority === 'tomorrow_checkin' ? 'tomorrow' : 'checkout';
+      const tagText = p.priority === 'same_day' ? 'SAME-DAY &#128308;' : p.priority === 'tomorrow_checkin' ? 'CI TOMORROW &#128992;' : 'Checkout';
+      const deadline = p.deadline ? ` — by ${p.deadline}` : '';
+      const nextCI = p.next_checkin ? `Next CI: ${p.next_checkin}` : 'No upcoming CI';
+      const coTime = p.checkout_time ? `<span style="font-size:.72em;font-weight:700;color:#94a3b8;margin-left:8px">Check out: ${p.checkout_time}</span>` : '';
+
+      propsHtml += `
+        <div class="prop-row">
+          <div class="prop-num ${numClass}">${p.order}</div>
+          <div class="prop-info">
+            <div class="prop-name" style="display:flex;align-items:center;flex-wrap:wrap;gap:4px">${p.name}${coTime}</div>
+            <div class="prop-addr">${p.address}</div>
+            <div class="prop-meta">
+              <span class="prop-tag ${tagClass}">${tagText}${deadline}</span>
+            </div>
+          </div>
+          <div class="prop-est">${p.est_hours}h<br><span style="font-size:.8em">${p.beds}bd</span></div>
+        </div>`;
+    });
+
+    teamsHtml += `
+      <div class="team-card">
+        <div class="team-hd">
+          <div>
+            <div class="team-name ${colorClass}">${team.name} — ${team.lead}</div>
+            <div class="team-members">${team.members.join(', ')}</div>
+          </div>
+          ${badge}
+        </div>
+        ${propsHtml}
+      </div>`;
+  });
+
+  if (d.teams.length === 0) {
+    teamsHtml = '<div class="alert good"><span>&#127969;</span><div>No cleaning teams assigned today.</div></div>';
+  }
+  document.getElementById('today-teams').innerHTML = '<div class="section"><div class="section-hd">&#129529; Teams</div>' + teamsHtml + '</div>';
+
+  // Laundry
+  let laundryHtml = '';
+  if (d.laundry && d.laundry.active) {
+    laundryHtml = `
+      <div class="laundry-card">
+        <h3>&#128092; Laundry Team</h3>
+        <div class="detail">${d.laundry.assigned.join(' + ')} — all day at Grant HQ</div>
+      </div>`;
+  }
+  document.getElementById('today-laundry').innerHTML = laundryHtml;
+
+  // Off
+  let offHtml = '';
+  if (d.off && d.off.length > 0) {
+    offHtml = '<div class="section"><div class="section-hd">Off Today</div><div class="off-list">' +
+      d.off.map(n => `<span class="off-chip">${n}</span>`).join('') +
+      '</div></div>';
+  }
+  document.getElementById('today-off').innerHTML = offHtml;
+}
+
+function prevDay() { if (currentDayIndex > 0) renderDay(currentDayIndex - 1); }
+function nextDay() { if (currentDayIndex < data.week.length - 1) renderDay(currentDayIndex + 1); }
+
+function renderWeek() {
+  let grid = '';
+  data.week.forEach((d, i) => {
+    const load = d.totalCheckouts >= 5 ? 'heavy' : d.totalCheckouts >= 3 ? 'medium' : 'light';
+    const dayNum = d.date.split('-')[2];
+    const dayAbbr = d.dayNameEn.substring(0, 3).toUpperCase();
+    grid += `
+      <div class="week-day ${i === 0 ? 'active' : ''}" onclick="selectWeekDay(${i}, this)">
+        <div class="wd">${dayAbbr}</div>
+        <div class="wn">${dayNum}</div>
+        <div class="wco">${d.totalCheckouts} out${d.sameDayTurns > 0 ? '<br>' + d.sameDayTurns + ' turn' : ''}</div>
+        <div class="bar ${load}"></div>
+      </div>`;
+  });
+  document.getElementById('week-grid').innerHTML = grid;
+
+  // Details for first day
+  renderWeekDetails(0);
+}
+
+function selectWeekDay(idx, el) {
+  document.querySelectorAll('.week-day').forEach(d => d.classList.remove('active'));
+  el.classList.add('active');
+  renderWeekDetails(idx);
+}
+
+function renderWeekDetails(idx) {
+  const d = data.week[idx];
+  let html = `<div class="section"><div class="section-hd">${d.dayNameEn} — ${d.totalCheckouts} checkouts, $${d.payrollEstimate} payroll</div>`;
+
+  const po = {same_day:0,moved_sameday:0,tomorrow_checkin:1,moved_nextday:1,moved:2,checkout_only:3};
+  // Flat sorted list across all teams — priority ALWAYS wins over team grouping
+  const teamMap = {};
+  d.teams.forEach(t => t.properties.forEach(p => { teamMap[p.name] = t.name; }));
+  const allDayProps = d.teams.flatMap(t => t.properties).slice().sort((a,b) => ((po[a.priority]!==undefined?po[a.priority]:9)) - ((po[b.priority]!==undefined?po[b.priority]:9)));
+  if (allDayProps.length) {
+    html += `<div class="team-card"><div class="team-hd"><div><div class="team-name">Cleaning Priority Order</div><div class="team-members">${allDayProps.length} properties</div></div></div>`;
+    allDayProps.forEach(p => {
+      const tag = (p.priority === 'same_day' || p.priority === 'moved_sameday') ? '&#128308;' : (p.priority === 'tomorrow_checkin' || p.priority === 'moved_nextday') ? '&#128994;' : p.priority === 'moved' ? '&#128309;' : '&#9898;';
+      html += `<div style="font-size:.78em;padding:3px 0;color:#94a3b8">${tag} ${p.name} <span style="color:#64748b;font-size:.9em">— ${teamMap[p.name]}</span></div>`;
+    });
+    html += '</div>';
+  }
+  d.teams.forEach(team => {
+    html += `<div class="team-card"><div class="team-hd"><div><div class="team-name">${team.name}</div><div class="team-members">${team.members.join(', ')}</div></div></div>`;
+    const sortedProps = team.properties.slice().sort((a,b) => ((po[a.priority]!==undefined?po[a.priority]:9)) - ((po[b.priority]!==undefined?po[b.priority]:9)));
+    sortedProps.forEach(p => {
+      const tag = (p.priority === 'same_day' || p.priority === 'moved_sameday') ? '&#128308;' : (p.priority === 'tomorrow_checkin' || p.priority === 'moved_nextday') ? '&#128994;' : p.priority === 'moved' ? '&#128309;' : '&#9898;';
+      html += `<div style="font-size:.78em;padding:3px 0;color:#94a3b8">${tag} ${p.name}</div>`;
+    });
+    html += '</div>';
+  });
+
+  if (d.laundry && d.laundry.active) {
+    html += `<div class="laundry-card"><h3>&#128092; Laundry</h3><div class="detail">${d.laundry.assigned.join(' + ')}</div></div>`;
+  }
+
+  if (d.optimizations && d.optimizations.length > 0) {
+    html += '<div class="section-hd" style="margin-top:10px">&#128161; Optimizations</div>';
+    d.optimizations.forEach(opt => {
+      html += `<div class="opt-card">${opt}</div>`;
+    });
+  }
+
+  html += '</div>';
+  document.getElementById('week-details').innerHTML = html;
+}
+
+function renderTeamStats() {
+  if (!data.cleanerStats) return;
+  let html = '<div class="team-card"><table class="stats-table"><tr><th>Name</th><th>Role</th><th>Days</th><th>$/Day</th></tr>';
+
+  const sorted = Object.entries(data.cleanerStats).sort((a, b) => b[1].daysThisWeek - a[1].daysThisWeek);
+  sorted.forEach(([name, info]) => {
+    const roleLabel = info.role === 'lead' ? '<span class="role" style="background:#065f46;color:#6ee7b7">LEAD</span>' : '<span class="role">Cleaner</span>';
+    html += `<tr><td><b style="color:#fff">${name}</b></td><td>${roleLabel}</td><td>${info.daysThisWeek}</td><td>$${info.dailyRate}</td></tr>`;
+  });
+
+  html += '</table></div>';
+
+  // Weekly payroll total
+  const totalPayroll = data.week.reduce((sum, d) => sum + d.payrollEstimate, 0);
+  html += `<div class="stat" style="margin-top:10px"><div class="n green">$${totalPayroll}</div><div class="l">Est. Weekly Payroll</div></div>`;
+
+  document.getElementById('team-stats').innerHTML = html;
+}
+
+function renderCosts() {
+  let html = '';
+  let totalSavings = 0;
+
+  data.week.forEach(d => {
+    if (d.optimizations && d.optimizations.length > 0) {
+      html += `<div class="section-hd">${d.dayNameEn} ${d.date}</div>`;
+      d.optimizations.forEach(opt => {
+        html += `<div class="opt-card">&#128161; ${opt}</div>`;
+      });
+    }
+  });
+
+  if (!html) {
+    html = '<div class="alert good"><span>&#9989;</span><div>No cost optimization opportunities found this week.</div></div>';
+  }
+
+  document.getElementById('cost-opts').innerHTML = html;
+}
+
+function showTab(tab) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+
+loadData();
+</script>
+</body>
+</html>

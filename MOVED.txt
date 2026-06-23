@@ -1,0 +1,13 @@
+⚠️ THIS COPY IS NO LONGER ACTIVE — DO NOT EDIT ⚠️
+
+The cleaning schedule app has been moved to:
+  /Users/shaquanpratt/.claude/brain/apps/kk-cleaning/
+
+Reason: macOS TCC blocks `cron` from reading files inside ~/Downloads/,
+which broke the daily 5:30 AM + 6:30 PM automation. Moving the app to
+~/.claude/brain/apps/ where cron already has access fixes the issue.
+
+Edit files in the new location only. This folder is kept temporarily
+as a backup and can be deleted.
+
+Moved: 2026-04-09

@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/owner", "destination": "/index.html" },
+    { "source": "/cleaner", "destination": "/cleaner.html" },
+    { "source": "/equipo", "destination": "/cleaner.html" }
+  ],
+  "headers": [
+    {
+      "source": "/data/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=300" }
+      ]
+    }
+  ]
+}

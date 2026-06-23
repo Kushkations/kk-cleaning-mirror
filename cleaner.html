@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0f172a">
+<link rel="manifest" href="manifest.json">
+<title>Cashaw Cleaning Schedule</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f172a;color:#e2e8f0;min-height:100vh;padding-bottom:60px}
+
+.hd{background:linear-gradient(135deg,#065f46,#0f172a);padding:12px 16px;position:sticky;top:0;z-index:100;border-bottom:1px solid #334155}
+.hd h1{font-size:1em;font-weight:800;color:#fff;letter-spacing:.5px}
+.mx{max-width:600px;margin:0 auto;padding:10px}
+
+/* Bottom nav */
+.nav{position:fixed;bottom:0;left:0;right:0;background:#1e293b;border-top:1px solid #334155;display:flex;z-index:100}
+.nav-btn{flex:1;padding:10px 0;text-align:center;font-size:.65em;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.5px;cursor:pointer;transition:color .2s}
+.nav-btn.active{color:#4ade80}
+.nav-btn .icon{font-size:1.4em;display:block;margin-bottom:2px}
+.tab{display:none}.tab.active{display:block}
+
+/* ─── WEEK TAB ─── */
+.week-table{width:100%;border-collapse:collapse;font-size:.68em;margin-bottom:14px}
+.week-table th{background:#1e293b;color:#94a3b8;padding:6px 2px;text-align:center;font-weight:700;font-size:.7em;text-transform:uppercase;border:1px solid #334155;white-space:nowrap}
+.week-table td{padding:3px;border:1px solid #334155;vertical-align:top;min-width:46px;max-width:80px}
+.week-table .row-label{font-size:.65em;font-weight:700;color:#64748b;white-space:nowrap;padding:4px 4px;background:#0f172a}
+
+.cell{border-radius:4px;padding:2px 4px;margin-bottom:2px;font-size:.72em;font-weight:600;line-height:1.2}
+.cell.red{background:#e74c3c;color:#fff}
+.cell.green{background:#2ecc71;color:#000}
+.cell.cyan{background:#5dade2;color:#000}
+.cell.orange{background:#e67e22;color:#fff}
+.cell.blue{background:#3498db;color:#fff}
+.cell.gray{background:#95a5a6;color:#000}
+.cell.laundry{background:#f1c40f;color:#000}
+.cell.yellow{background:#f1c40f;color:#000}
+.tag.yellow{background:#f1c40f;color:#000}
+
+/* Legend */
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;padding:10px;background:#1e293b;border:1px solid #334155;border-radius:8px}
+.legend-item{display:flex;align-items:center;gap:4px;font-size:.68em;color:#94a3b8}
+.legend-dot{width:14px;height:14px;border-radius:3px;flex-shrink:0}
+
+/* Summary cards */
+.summary-card{background:#1e293b;border:1px solid #334155;border-radius:10px;padding:12px;margin-bottom:10px}
+.summary-card h3{font-size:.85em;font-weight:700;color:#fff;margin-bottom:8px}
+.summary-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;font-size:.8em;border-bottom:1px solid #0f172a}
+.summary-row:last-child{border:none}
+.summary-row .prop{font-weight:600;color:#fff}
+.tag{font-size:.7em;padding:2px 8px;border-radius:4px;font-weight:700}
+.tag.red{background:#e74c3c;color:#fff}
+.tag.green{background:#2ecc71;color:#000}
+.tag.cyan{background:#5dade2;color:#000}
+.tag.orange{background:#e67e22;color:#fff}
+.tag.blue{background:#3498db;color:#fff}
+.tag.gray{background:#95a5a6;color:#000}
+
+/* ─── SCHEDULE TAB ─── */
+.day-nav{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:14px}
+.day-nav .arrow{width:36px;height:36px;border-radius:50%;background:#334155;color:#fff;border:none;font-size:1.1em;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.day-nav .current{font-size:.95em;font-weight:700;color:#fff}
+
+.hq-banner{background:linear-gradient(135deg,#1e3a5f,#1e293b);border:1px solid #334155;border-radius:12px;padding:14px;margin-bottom:14px;text-align:center}
+.hq-banner .loc{font-size:.85em;font-weight:700;color:#60a5fa}
+.hq-banner .time{font-size:1.2em;font-weight:800;color:#fff;margin:4px 0}
+.hq-banner .addr{font-size:.72em;color:#94a3b8}
+.hq-banner a{color:#60a5fa;text-decoration:none;font-size:.72em}
+
+.team-info{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:14px;margin-bottom:10px}
+.team-info .lead{font-size:.9em;font-weight:700;color:#4ade80}
+.team-info.t2 .lead{color:#60a5fa}
+.team-info .members{font-size:.75em;color:#94a3b8;margin-top:4px}
+
+.prop-card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:14px;margin-bottom:8px;position:relative}
+.prop-order{position:absolute;top:12px;right:14px;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85em;font-weight:800}
+.prop-order.red{background:#e74c3c;color:#fff}
+.prop-order.yellow{background:#2ecc71;color:#000}
+.prop-order.g{background:#475569;color:#fff}
+.prop-name{font-size:1em;font-weight:800;color:#fff;padding-right:40px}
+.prop-address{font-size:.72em;color:#64748b;margin-top:3px}
+.prop-tag{display:inline-block;font-size:.65em;font-weight:700;padding:2px 8px;border-radius:4px;margin-top:6px}
+.prop-deadline{font-size:.72em;color:#ef4444;font-weight:700;margin-top:3px}
+.maps-btn{display:block;background:#065f46;color:#6ee7b7;border:none;border-radius:8px;padding:9px;width:100%;text-align:center;font-size:.82em;font-weight:700;margin-top:8px;cursor:pointer;text-decoration:none}
+
+.laundry-banner{background:linear-gradient(135deg,#7d6608,#1e293b);border:1px solid #f1c40f;border-radius:12px;padding:14px;margin-bottom:10px;text-align:center}
+.laundry-banner h2{font-size:.95em;color:#f1c40f}
+.laundry-banner .detail{font-size:.75em;color:#94a3b8;margin-top:4px}
+
+.no-work{text-align:center;padding:40px 20px}
+.no-work .emoji{font-size:3em}
+.no-work .msg{font-size:1em;color:#94a3b8;margin-top:10px}
+
+.footer{text-align:center;padding:16px;font-size:.55em;color:#475569}
+</style>
+</head>
+<body>
+
+<div class="hd"><h1>CASHAW CLEANING</h1></div>
+
+<div class="mx">
+
+<!-- TAB: WEEK OVERVIEW -->
+<div class="tab active" id="tab-week">
+
+<div class="legend">
+<div class="legend-item"><div class="legend-dot" style="background:#e74c3c"></div>*Same-day</div>
+<div class="legend-item"><div class="legend-dot" style="background:#2ecc71"></div>^Next-day CI</div>
+<div class="legend-item"><div class="legend-dot" style="background:#3498db"></div>Moved</div>
+<div class="legend-item"><div class="legend-dot" style="background:#e67e22"></div>Moved same-day</div>
+<div class="legend-item"><div class="legend-dot" style="background:#5dade2"></div>Moved next-day</div>
+<div class="legend-item"><div class="legend-dot" style="background:#f1c40f"></div>Laundry</div>
+</div>
+
+<div id="week-summary"></div>
+
+<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:14px">
+<table class="week-table" id="week-grid"></table>
+</div>
+
+</div>
+
+<!-- TAB: SCHEDULE -->
+<div class="tab" id="tab-schedule">
+
+<div class="day-nav">
+<button class="arrow" onclick="prevDay()">&#8249;</button>
+<span class="current" id="day-label"></span>
+<button class="arrow" onclick="nextDay()">&#8250;</button>
+</div>
+
+<div class="hq-banner">
+<div class="loc">Meeting Point</div>
+<div class="time" id="start-time">9:45 AM</div>
+<div class="addr" id="hq-addr">Grant HQ — 261 Grant Way, Denver 80229</div>
+<a href="https://maps.google.com/?q=261+Grant+Way+Denver+80229" target="_blank">Open in Maps &#8594;</a>
+</div>
+
+<div id="schedule-content"></div>
+
+</div>
+
+<!-- TAB: EQUIPO (SPANISH) -->
+<div class="tab" id="tab-equipo">
+
+<div class="day-nav">
+<button class="arrow" onclick="prevDayEs()">&#8249;</button>
+<span class="current" id="day-label-es"></span>
+<button class="arrow" onclick="nextDayEs()">&#8250;</button>
+</div>
+
+<div class="hq-banner">
+<div class="loc">Punto de Encuentro</div>
+<div class="time" id="start-time-es">9:45 AM</div>
+<div class="addr">Grant HQ — 261 Grant Way, Denver 80229</div>
+<a href="https://maps.google.com/?q=261+Grant+Way+Denver+80229" target="_blank">Abrir en Maps &#8594;</a>
+</div>
+
+<div id="equipo-content"></div>
+
+</div>
+
+<div class="footer">Cashaw Cleaning — Luna AI</div>
+</div>
+
+<div class="nav">
+<div class="nav-btn active" onclick="showTab('week')"><span class="icon">&#128197;</span>Week</div>
+<div class="nav-btn" onclick="showTab('schedule')"><span class="icon">&#128203;</span>Schedule</div>
+<div class="nav-btn" onclick="showTab('equipo')"><span class="icon">&#127463;</span>Equipo</div>
+</div>
+
+<script>
+let data = null;
+let currentDayIndex = 0;
+
+function priorityTag(p) {
+  const map = {
+    same_day:        {cls:'red',    text:'*Same-Day Cleaning'},
+    tomorrow_checkin: {cls:'green', text:'^Next-Day Check-In'},
+    moved:           {cls:'blue',   text:'Moved Cleaning'},
+    moved_sameday:   {cls:'orange', text:'Moved Same-Day'},
+    moved_nextday:   {cls:'cyan',   text:'Moved Next-Day'},
+    checkout_only:   {cls:'gray',   text:'Checkout'}
+  };
+  return map[p] || {cls:'gray', text:'Checkout'};
+}
+
+function cellClass(p) {
+  const map = {same_day:'red',tomorrow_checkin:'green',moved:'blue',moved_sameday:'yellow',moved_nextday:'cyan',checkout_only:'gray',light_blue:'cyan',yellow:'yellow'};
+  return map[p] || 'gray';
+}
+
+async function loadData() {
+  try {
+    const resp = await fetch('data/schedule.json?' + Date.now());
+    data = await resp.json();
+
+    // Start on first day that has cleanings
+    currentDayIndex = 0;
+    for (let i = 0; i < data.week.length; i++) {
+      if (data.week[i].teams.length > 0) { currentDayIndex = i; break; }
+    }
+
+    currentDayIndexEs = currentDayIndex;
+    renderWeekTab();
+    renderScheduleDay(currentDayIndex);
+    renderEquipoDay(currentDayIndexEs);
+  } catch(e) {
+    document.querySelector('.mx').innerHTML = '<div style="text-align:center;padding:40px;color:#ef4444">Error loading data: ' + e.message + '</div>';
+  }
+}
+
+function isLateCheckout(t) {
+  if (!t) return false;
+  const m = t.match(/^(\d+):(\d+)\s*(AM|PM)$/i);
+  if (!m) return false;
+  let h = parseInt(m[1]);
+  const pm = m[3].toUpperCase() === 'PM';
+  if (pm && h !== 12) h += 12;
+  if (!pm && h === 12) h = 0;
+  return h > 10; // strictly after 10 AM
+}
+
+function renderWeekTab() {
+  // ─── Summary: Today + Tomorrow ───
+  let summaryHtml = '';
+
+  for (let i = 0; i < Math.min(2, data.week.length); i++) {
+    const d = data.week[i];
+    if (!d || d.totalCheckouts === 0) continue;
+    const label = i === 0 ? 'Today' : 'Tomorrow';
+    summaryHtml += `<div class="summary-card"><h3>${label} — ${d.dayNameEn} ${formatDate(d.date)}</h3>`;
+    const allProps = d.teams.flatMap(t => t.properties);
+    allProps.sort((a, b) => {
+      const po = {same_day:0,moved_sameday:0,tomorrow_checkin:1,moved_nextday:1,moved:2,checkout_only:3};
+      return ((po[a.priority]!==undefined?po[a.priority]:9)) - ((po[b.priority]!==undefined?po[b.priority]:9));
+    });
+    allProps.forEach(p => {
+      const tc = priorityTag(p.priority);
+      const coTime = isLateCheckout(p.checkout_time) ? `<span style="font-size:.8em;color:#94a3b8;margin-left:6px">${p.checkout_time}</span>` : '';
+      summaryHtml += `<div class="summary-row"><span class="prop">${p.name}${coTime}</span><span class="tag ${tc.cls}">${tc.text}</span></div>`;
+    });
+    if (d.laundry && d.laundry.active) {
+      summaryHtml += `<div class="summary-row"><span class="prop">Laundry</span><span class="tag" style="background:#f1c40f;color:#000">${d.laundry.assigned.join(' + ')}</span></div>`;
+    }
+    summaryHtml += '</div>';
+  }
+
+  document.getElementById('week-summary').innerHTML = summaryHtml;
+
+  // ─── 7-Day Color Grid ───
+  let g = '<tr><th></th>';
+  data.week.forEach((d, i) => {
+    const dayAbbr = d.dayNameEn.substring(0, 3).toUpperCase();
+    const dayNum = d.date.split('-')[2];
+    const hl = (i === 0) ? ' style="background:#065f46;color:#6ee7b7"' : '';
+    g += `<th${hl}>${dayAbbr}<br>${dayNum}</th>`;
+  });
+  g += '</tr>';
+
+  // Row: Properties
+  g += `<tr><td class="row-label">CLEANINGS</td>`;
+  data.week.forEach(d => {
+    let cells = '';
+    const poWeek = {same_day:0,moved_sameday:0,tomorrow_checkin:1,moved_nextday:1,moved:2,checkout_only:3};
+    const sortedProps = d.teams.flatMap(t => t.properties).slice().sort((a,b) => ((poWeek[a.priority]!==undefined?poWeek[a.priority]:9)) - ((poWeek[b.priority]!==undefined?poWeek[b.priority]:9)));
+    sortedProps.forEach(p => {
+      const coTime = isLateCheckout(p.checkout_time) ? `<span style="font-size:.85em;opacity:.85"> ${p.checkout_time}</span>` : '';
+      cells += `<div class="cell ${cellClass(p.priority)}">${p.name}${coTime}</div>`;
+    });
+    if (d.laundry && d.laundry.active) {
+      cells += `<div class="cell laundry">Laundry</div>`;
+    }
+    if (!cells) cells = '<div style="font-size:.7em;color:#475569;text-align:center;padding:4px">OFF</div>';
+    g += `<td>${cells}</td>`;
+  });
+  g += '</tr>';
+
+  // Row: Teams
+  g += `<tr><td class="row-label">TEAMS</td>`;
+  data.week.forEach(d => {
+    let cells = '';
+    d.teams.forEach(t => {
+      const names = t.members.join(', ');
+      cells += `<div style="font-size:.72em;color:#94a3b8;padding:2px 0">${names}</div>`;
+    });
+    if (d.laundry && d.laundry.active) {
+      cells += `<div style="font-size:.72em;color:#f1c40f;padding:2px 0">${d.laundry.assigned.join(', ')}</div>`;
+    }
+    if (!cells) cells = '<div style="font-size:.7em;color:#475569;text-align:center;padding:4px">—</div>';
+    g += `<td>${cells}</td>`;
+  });
+  g += '</tr>';
+
+  // Row: Payroll
+  g += `<tr><td class="row-label">COST</td>`;
+  data.week.forEach(d => {
+    if (d.payrollEstimate === 0) {
+      g += `<td style="text-align:center;font-size:.8em;color:#475569">$0</td>`;
+    } else {
+      const color = d.payrollEstimate > 600 ? '#ef4444' : d.payrollEstimate > 400 ? '#fbbf24' : '#4ade80';
+      g += `<td style="text-align:center;font-weight:800;color:${color};font-size:.85em">$${d.payrollEstimate}</td>`;
+    }
+  });
+  g += '</tr>';
+
+  // Row: Guests OUT / IN
+  g += `<tr><td class="row-label">👥 GUESTS</td>`;
+  let wkOut = 0, wkIn = 0;
+  data.week.forEach(d => {
+    const hc = d.headcount || {out_total:0, in_total:0};
+    wkOut += hc.out_total || 0;
+    wkIn += hc.in_total || 0;
+    if (!hc.out_total && !hc.in_total) {
+      g += `<td style="text-align:center;font-size:.75em;color:#475569">—</td>`;
+    } else {
+      g += `<td style="text-align:center;font-size:.75em;line-height:1.3">
+        <div style="color:#f87171;font-weight:700">🚪 ${hc.out_total || 0}</div>
+        <div style="color:#4ade80;font-weight:700">🛬 ${hc.in_total || 0}</div>
+      </td>`;
+    }
+  });
+  g += '</tr>';
+
+  document.getElementById('week-grid').innerHTML = g;
+
+  // Per-reservation list across the week
+  const seen = new Set();
+  const rows = [];
+  data.week.forEach(d => {
+    d.teams.forEach(t => t.properties.forEach(p => {
+      if (!p.guests) return;
+      ['out','in'].forEach(side => {
+        const r = p.guests[side];
+        if (!r) return;
+        const key = `${p.name}|${r.arrival}|${r.departure}|${side}`;
+        if (seen.has(key)) return;
+        seen.add(key);
+        rows.push({property:p.name, side, ...r, cleanDate:d.date});
+      });
+    }));
+  });
+  rows.sort((a,b) => (a.side==='out'?a.departure:a.arrival).localeCompare(b.side==='out'?b.departure:b.arrival));
+
+  let listHtml = `<div class="summary-card" style="margin-top:14px"><h3>Reservations — 7 Day Detail</h3>
+    <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:.82em">
+      <thead>
+        <tr style="background:#0f172a;color:#94a3b8;text-align:left">
+          <th style="padding:6px 8px;border-bottom:1px solid #334155">Type</th>
+          <th style="padding:6px 8px;border-bottom:1px solid #334155">Guest</th>
+          <th style="padding:6px 8px;border-bottom:1px solid #334155">Property</th>
+          <th style="padding:6px 8px;border-bottom:1px solid #334155">Checkout</th>
+          <th style="padding:6px 8px;border-bottom:1px solid #334155;text-align:right">Guests</th>
+        </tr>
+      </thead>
+      <tbody>`;
+  rows.forEach(r => {
+    const icon = r.side === 'out' ? '🚪' : '🛬';
+    const color = r.side === 'out' ? '#f87171' : '#4ade80';
+    const label = r.side === 'out' ? 'OUT' : 'IN';
+    const extra = r.extra ? ` <span style="color:#fbbf24;font-size:.85em">+${r.extra}⭐</span>` : '';
+    listHtml += `<tr style="border-bottom:1px solid #1e293b">
+      <td style="padding:6px 8px;color:${color};font-weight:700">${icon} ${label}</td>
+      <td style="padding:6px 8px;color:#e2e8f0">${r.name || 'Guest'}</td>
+      <td style="padding:6px 8px;color:#cbd5e1">${r.property}</td>
+      <td style="padding:6px 8px;color:#94a3b8">${r.departure}</td>
+      <td style="padding:6px 8px;color:${color};font-weight:800;text-align:right">${r.total}${extra}</td>
+    </tr>`;
+  });
+  listHtml += `<tr style="background:#0f172a;border-top:2px solid #334155">
+    <td colspan="4" style="padding:8px;color:#94a3b8;font-weight:700">TOTALS</td>
+    <td style="padding:8px;text-align:right;color:#fff;font-weight:800">🚪 ${wkOut} · 🛬 ${wkIn} · ${wkOut + wkIn}</td>
+  </tr>
+  </tbody></table></div></div>`;
+  const existing = document.getElementById('week-total-card');
+  if (existing) existing.outerHTML = `<div id="week-total-card">${listHtml}</div>`;
+  else document.getElementById('week-grid').insertAdjacentHTML('afterend', `<div id="week-total-card">${listHtml}</div>`);
+}
+
+function renderScheduleDay(idx) {
+  currentDayIndex = idx;
+  const d = data.week[idx];
+  if (!d) return;
+
+  document.getElementById('day-label').textContent = d.dayNameEn + ' ' + formatDate(d.date);
+
+  if (data.hq) {
+    document.getElementById('start-time').textContent = d.startTime || data.hq.startTime;
+  }
+
+  let html = '';
+
+  if (d.teams.length === 0) {
+    html = `<div class="no-work"><div class="emoji">&#127769;</div><div class="msg">No cleanings today.</div></div>`;
+    document.getElementById('schedule-content').innerHTML = html;
+    return;
+  }
+
+  d.teams.forEach((team, ti) => {
+    const t2 = ti > 0 ? 't2' : '';
+    html += `<div class="team-info ${t2}"><div class="lead">${team.name} — ${team.lead}</div><div class="members">${team.members.join(', ')}</div></div>`;
+
+    team.properties.forEach(p => {
+      const tc = priorityTag(p.priority);
+      const borderColors = {same_day:'#e74c3c',moved_sameday:'#e67e22',tomorrow_checkin:'#2ecc71',moved_nextday:'#5dade2',moved:'#3498db',checkout_only:'#95a5a6'};
+      const bc = borderColors[p.priority] || '#95a5a6';
+      const numCls = (p.priority === 'same_day' || p.priority === 'moved_sameday') ? 'red' : (p.priority === 'tomorrow_checkin' || p.priority === 'moved_nextday') ? 'yellow' : 'g';
+      const dl = p.deadline ? `<div class="prop-deadline">Must be clean by ${p.deadline}</div>` : '';
+      const isLate = isLateCheckout(p.checkout_time);
+      const coTime = isLate ? `<span style="font-size:.72em;font-weight:700;color:${bc};margin-left:8px">${p.checkout_time}</span>` : '';
+      const lateBadge = isLate ? `<div style="font-size:.72em;font-weight:800;color:#fbbf24;background:#422006;border:1px solid #fbbf24;border-radius:4px;padding:3px 6px;margin-top:4px;display:inline-block">⏰ Late Checkout — Start: ${p.checkout_time}</div>` : '';
+      let guestsBadge = '';
+      if (p.guests) {
+        const o = p.guests.out, i = p.guests.in;
+        const parts = [];
+        if (o) parts.push(`OUT ${o.total}${o.extra ? ` (${o.base}+${o.extra})` : ''}`);
+        if (i) parts.push(`IN ${i.total}${i.extra ? ` (${i.base}+${i.extra}⭐)` : ''}`);
+        if (parts.length) guestsBadge = `<div style="font-size:.7em;color:#cbd5e1;background:#0f172a;border:1px solid #334155;border-radius:4px;padding:3px 6px;margin-top:4px;display:inline-block">👥 ${parts.join(' → ')}</div>`;
+      }
+
+      html += `
+        <div class="prop-card" style="border-left:4px solid ${bc}">
+          <div class="prop-order ${numCls}">${p.order}</div>
+          <div class="prop-name" style="display:flex;align-items:center;gap:4px;flex-wrap:wrap">${p.name}${coTime}</div>
+          ${p.notes ? '<div style="font-size:.72em;color:#fbbf24;font-weight:700;margin-top:3px">' + p.notes + '</div>' : ''}
+          <span class="prop-tag ${tc.cls}">${tc.text}</span>
+          ${dl}
+          ${lateBadge}
+          ${guestsBadge}
+        </div>`;
+    });
+
+    if (ti < d.teams.length - 1) html += '<div style="height:10px"></div>';
+  });
+
+  if (d.laundry && d.laundry.active) {
+    html += `<div class="laundry-banner" style="margin-top:10px"><h2>Laundry</h2><div class="detail">${d.laundry.assigned.join(' + ')} — 8:00 AM at 261 Grant Way</div></div>`;
+  }
+
+  if (d.headcount && (d.headcount.out_total || d.headcount.in_total)) {
+    html += `<div class="summary-card" style="margin-top:14px"><h3>Guest Headcount — ${d.dayNameEn}</h3>
+      <div class="summary-row"><span class="prop">🚪 Outgoing (departing today)</span><span style="color:#f87171;font-weight:700">${d.headcount.out_total}</span></div>
+      <div class="summary-row"><span class="prop">🛬 Incoming (arriving today)</span><span style="color:#4ade80;font-weight:700">${d.headcount.in_total}</span></div>
+      <div style="font-size:.72em;color:#64748b;margin-top:6px">⭐ = Extra Guest tag added from OwnerRez</div>
+    </div>`;
+  }
+
+  // Payroll breakdown
+  if (d.crew && d.crew.length > 0) {
+    let total = 0;
+    let payHtml = '<div class="summary-card" style="margin-top:14px"><h3>Payroll — ' + d.dayNameEn + '</h3>';
+    d.crew.forEach(c => {
+      total += c.rate;
+      payHtml += `<div class="summary-row"><span class="prop">${c.name} <span style="font-size:.75em;color:#64748b">(${c.task})</span></span><span style="color:#4ade80;font-weight:700">$${c.rate}</span></div>`;
+    });
+    payHtml += `<div class="summary-row" style="border-top:1px solid #334155;padding-top:8px;margin-top:4px"><span class="prop" style="color:#94a3b8">TOTAL</span><span style="color:#fff;font-weight:800;font-size:1.1em">$${total}</span></div>`;
+    payHtml += '</div>';
+    html += payHtml;
+  }
+
+  document.getElementById('schedule-content').innerHTML = html;
+}
+
+function prevDay() { if (currentDayIndex > 0) renderScheduleDay(currentDayIndex - 1); }
+function nextDay() { if (currentDayIndex < data.week.length - 1) renderScheduleDay(currentDayIndex + 1); }
+
+let currentDayIndexEs = 0;
+function prevDayEs() { if (currentDayIndexEs > 0) { currentDayIndexEs--; renderEquipoDay(currentDayIndexEs); } }
+function nextDayEs() { if (currentDayIndexEs < data.week.length - 1) { currentDayIndexEs++; renderEquipoDay(currentDayIndexEs); } }
+
+function priorityTagEs(p) {
+  const map = {
+    same_day:        {cls:'red',    text:'Limpieza Mismo Dia'},
+    tomorrow_checkin: {cls:'green', text:'Check-In Manana'},
+    moved:           {cls:'blue',   text:'Limpieza Movida'},
+    moved_sameday:   {cls:'orange', text:'Movida Mismo Dia'},
+    moved_nextday:   {cls:'cyan',   text:'Movida Manana'},
+    checkout_only:   {cls:'gray',   text:'Solo Checkout'}
+  };
+  return map[p] || {cls:'gray', text:'Solo Checkout'};
+}
+
+function renderEquipoDay(idx) {
+  currentDayIndexEs = idx;
+  const d = data.week[idx];
+  if (!d) return;
+
+  document.getElementById('day-label-es').textContent = d.dayNameEs + ' ' + formatDate(d.date);
+  document.getElementById('start-time-es').textContent = d.startTime || data.hq.startTime;
+
+  let html = '';
+
+  if (d.teams.length === 0) {
+    html = '<div class="no-work"><div class="emoji">&#127769;</div><div class="msg">No hay limpiezas hoy. Dia libre.</div></div>';
+    document.getElementById('equipo-content').innerHTML = html;
+    return;
+  }
+
+  d.teams.forEach((team, ti) => {
+    const t2 = ti > 0 ? 't2' : '';
+    html += '<div class="team-info ' + t2 + '"><div class="lead">' + team.name + ' — ' + team.lead + '</div><div class="members">' + team.members.join(', ') + '</div></div>';
+
+    team.properties.forEach(p => {
+      const tc = priorityTagEs(p.priority);
+      const borderColors = {same_day:'#e74c3c',moved_sameday:'#e67e22',tomorrow_checkin:'#2ecc71',moved_nextday:'#5dade2',moved:'#3498db',checkout_only:'#95a5a6'};
+      const bc = borderColors[p.priority] || '#95a5a6';
+      const numCls = (p.priority === 'same_day' || p.priority === 'moved_sameday') ? 'red' : (p.priority === 'tomorrow_checkin' || p.priority === 'moved_nextday') ? 'yellow' : 'g';
+      const dl = p.deadline ? `<div class="prop-deadline">Listo antes de ${p.deadline}</div>` : '';
+      const isLate = isLateCheckout(p.checkout_time);
+      const coTime = isLate ? `<span style="font-size:.72em;font-weight:700;color:${bc};margin-left:8px">${p.checkout_time}</span>` : '';
+      const lateBadge = isLate ? `<div style="font-size:.72em;font-weight:800;color:#fbbf24;background:#422006;border:1px solid #fbbf24;border-radius:4px;padding:3px 6px;margin-top:4px;display:inline-block">⏰ Salida Tarde — Empezar: ${p.checkout_time}</div>` : '';
+
+      html += `
+        <div class="prop-card" style="border-left:4px solid ${bc}">
+          <div class="prop-order ${numCls}">${p.order}</div>
+          <div class="prop-name" style="display:flex;align-items:center;gap:4px;flex-wrap:wrap">${p.name}${coTime}</div>
+          ${p.notes ? '<div style="font-size:.72em;color:#fbbf24;font-weight:700;margin-top:3px">' + p.notes + '</div>' : ''}
+          <span class="prop-tag ${tc.cls}">${tc.text}</span>
+          ${dl}
+          ${lateBadge}
+        </div>`;
+    });
+
+    if (ti < d.teams.length - 1) html += '<div style="height:10px"></div>';
+  });
+
+  if (d.laundry && d.laundry.active) {
+    html += '<div class="laundry-banner" style="margin-top:10px"><h2>Lavandería</h2><div class="detail">' + d.laundry.assigned.join(' + ') + ' — 8:00 AM en 261 Grant Way</div></div>';
+  }
+
+  document.getElementById('equipo-content').innerHTML = html;
+}
+
+function showTab(tab) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  event.currentTarget.classList.add('active');
+  if (tab === 'equipo') renderEquipoDay(currentDayIndexEs);
+}
+
+function formatDate(dateStr) {
+  if (!dateStr) return '';
+  const [y, m, d] = dateStr.split('-');
+  const months = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return `${months[parseInt(m)]} ${parseInt(d)}`;
+}
+
+loadData();
+</script>
+</body>
+</html>
