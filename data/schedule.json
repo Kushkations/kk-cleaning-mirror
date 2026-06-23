@@ -248,6 +248,16 @@
           ],
           "properties": [
             {
+              "name": "1967 E 115th",
+              "address": "1967 E 115th Ave, Northglenn 80233",
+              "priority": "same_day",
+              "est_hours": 2.5,
+              "priority_locked": true,
+              "manual_add": true,
+              "order": 4,
+              "pinned_order": 1
+            },
+            {
               "name": "BlueDream",
               "address": "1475 S Pierce St, Lakewood 80232",
               "priority": "same_day",
@@ -273,15 +283,6 @@
               "notes": "CI 2026-06-26",
               "source": "breezeway-reconcile",
               "order": 3
-            },
-            {
-              "name": "1967 E 115th",
-              "address": "1967 E 115th Ave, Northglenn 80233",
-              "priority": "checkout_only",
-              "est_hours": 2.5,
-              "priority_locked": true,
-              "manual_add": true,
-              "order": 4
             },
             {
               "name": "JoyStick",
