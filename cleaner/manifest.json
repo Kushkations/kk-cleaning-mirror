@@ -1,0 +1,9 @@
+{
+  "name": "Cashaw Cleaning",
+  "short_name": "Cleaning",
+  "start_url": "/cleaner",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": []
+}
