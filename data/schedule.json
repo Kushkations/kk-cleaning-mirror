@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23T19:45:54.735575",
+  "generated": "2026-06-23T20:00:59.456678",
   "weekStart": "2026-06-24",
   "weekEnd": "2026-06-30",
   "week": [
@@ -154,15 +154,6 @@
               "notes": "CI 2026-06-25",
               "source": "breezeway-reconcile",
               "order": 4
-            },
-            {
-              "name": "Indica",
-              "address": "7682 Shoshone St, Denver 80221",
-              "priority": "tomorrow_checkin",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
-              "order": 5
             }
           ],
           "isLaundry": false
@@ -239,22 +230,13 @@
               "order": 2
             },
             {
-              "name": "Altitude",
-              "address": "4350 Xenon St, Wheat Ridge 80033",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
-              "order": 3
-            },
-            {
               "name": "Grant",
               "address": "261 Grant Way, Denver 80229",
               "priority": "same_day",
               "est_hours": 2.0,
               "notes": "CI 2026-06-26",
               "source": "breezeway-reconcile",
-              "order": 4
+              "order": 3
             },
             {
               "name": "BuffaloGolf",
@@ -263,7 +245,7 @@
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 5
+              "order": 4
             },
             {
               "name": "Sheridan",
@@ -272,7 +254,7 @@
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 6
+              "order": 5
             }
           ],
           "isLaundry": false
