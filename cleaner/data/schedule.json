@@ -47,11 +47,12 @@
             {
               "name": "Palace",
               "address": "12332 Quince St, Thornton 80602",
-              "priority": "same_day",
+              "priority": "moved_sameday",
               "est_hours": 2.0,
               "notes": "CI 2026-06-23",
               "source": "breezeway-reconcile",
-              "order": 4
+              "order": 4,
+              "priority_locked": true
             },
             {
               "name": "Indica",
@@ -65,29 +66,32 @@
             {
               "name": "Grant",
               "address": "261 Grant Way, Denver 80229",
-              "priority": "checkout_only",
+              "priority": "moved_sameday",
               "est_hours": 2.0,
               "notes": "CI 2026-06-25",
               "source": "breezeway-reconcile",
-              "order": 6
+              "order": 6,
+              "priority_locked": true
             },
             {
               "name": "Paradise",
               "address": "11448 Larson Ln, Northglenn 80233",
-              "priority": "checkout_only",
+              "priority": "moved_sameday",
               "est_hours": 2.0,
               "notes": "",
               "source": "breezeway-reconcile",
-              "order": 7
+              "order": 7,
+              "priority_locked": true
             },
             {
               "name": "Sativa",
               "address": "391 E 83rd Dr, Denver 80229",
-              "priority": "checkout_only",
+              "priority": "moved",
               "est_hours": 2.0,
               "notes": "",
               "source": "breezeway-reconcile",
-              "order": 8
+              "order": 8,
+              "priority_locked": true
             }
           ],
           "isLaundry": false
