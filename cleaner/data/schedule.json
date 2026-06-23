@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23T15:45:29.459667",
+  "generated": "2026-06-23T16:01:25.989867",
   "weekStart": "2026-06-24",
   "weekEnd": "2026-06-30",
   "week": [
@@ -28,15 +28,6 @@
               "order": 1
             },
             {
-              "name": "Quivas",
-              "address": "7240 Quivas St, Denver 80221",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-24",
-              "source": "breezeway-reconcile",
-              "order": 2
-            },
-            {
               "property_id": 320255,
               "name": "Hotbox",
               "address": "761 E 83rd Pl, Denver 80229",
@@ -53,7 +44,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -129,22 +120,13 @@
               "order": 1
             },
             {
-              "name": "BlueDream",
-              "address": "1475 S Pierce St, Lakewood 80232",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-25",
-              "source": "breezeway-reconcile",
-              "order": 2
-            },
-            {
               "name": "JoyStick",
               "address": "8228 Balsam Way, Arvada 80005",
               "priority": "same_day",
               "est_hours": 2.0,
               "notes": "CI 2026-06-25",
               "source": "breezeway-reconcile",
-              "order": 3
+              "order": 2
             },
             {
               "name": "Paradise",
@@ -153,16 +135,7 @@
               "est_hours": 2.0,
               "notes": "CI 2026-06-25",
               "source": "breezeway-reconcile",
-              "order": 4
-            },
-            {
-              "name": "Indica",
-              "address": "7682 Shoshone St, Denver 80221",
-              "priority": "tomorrow_checkin",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
-              "order": 5
+              "order": 3
             }
           ],
           "isLaundry": false
