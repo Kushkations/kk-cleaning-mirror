@@ -745,15 +745,6 @@
           ],
           "properties": [
             {
-              "name": "Sativa",
-              "address": "391 E 83rd Dr, Denver 80229",
-              "priority": "same_day",
-              "est_hours": 2.5,
-              "priority_locked": true,
-              "manual_add": true,
-              "order": 1
-            },
-            {
               "name": "Paradise",
               "address": "11448 Larson Ln, Northglenn 80233",
               "priority": "checkout_only",
