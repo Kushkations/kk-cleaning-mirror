@@ -1,92 +1,8 @@
 {
-  "generated": "2026-06-23T18:55:27.506978",
-  "weekStart": "2026-06-24",
-  "weekEnd": "2026-06-30",
+  "generated": "2026-06-24T01:16:04.733834",
+  "weekStart": "2026-06-25",
+  "weekEnd": "2026-07-01",
   "week": [
-    {
-      "date": "2026-06-24",
-      "dayNameEs": "Miercoles",
-      "dayNameEn": "Wednesday",
-      "teams": [
-        {
-          "name": "Equipo 1",
-          "lead": "Marii",
-          "members": [
-            "Marii",
-            "Yenny",
-            "Alexandria"
-          ],
-          "properties": [
-            {
-              "name": "Beach",
-              "address": "5467 Beach Ct, Denver 80221",
-              "priority": "same_day",
-              "est_hours": 2.5,
-              "priority_locked": true,
-              "manual_add": true,
-              "pinned_order": 1,
-              "order": 1
-            },
-            {
-              "name": "Quivas",
-              "address": "7240 Quivas St, Denver 80221",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-24",
-              "source": "breezeway-reconcile",
-              "order": 2
-            },
-            {
-              "name": "Hotbox",
-              "address": "761 E 83rd Pl, Denver 80229",
-              "priority": "tomorrow_checkin",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-25",
-              "source": "breezeway-reconcile",
-              "order": 3
-            }
-          ],
-          "isLaundry": false
-        }
-      ],
-      "laundry": {
-        "assigned": [],
-        "active": false
-      },
-      "off": [
-        "Gabby",
-        "Julie",
-        "Yolanda",
-        "Maria"
-      ],
-      "occupied": [
-        "Airport",
-        "Alpha",
-        "Altitude",
-        "Beach",
-        "BlueDream",
-        "BuffaloGolf",
-        "Elevation",
-        "GameRoom",
-        "Grant",
-        "Indica",
-        "JoyStick",
-        "Palace",
-        "Paradise",
-        "PlayHouse",
-        "Pueblo",
-        "Quivas",
-        "Sativa",
-        "Sheridan",
-        "Wonderland"
-      ],
-      "payrollEstimate": 440,
-      "sameDayTurns": 1,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 1,
-      "optimizations": [],
-      "startTime": "9:45 AM"
-    },
     {
       "date": "2026-06-25",
       "dayNameEs": "Jueves",
@@ -220,33 +136,13 @@
               "order": 1
             },
             {
-              "name": "Sativa",
-              "address": "391 E 83rd Dr, Denver 80229",
-              "priority": "same_day",
-              "est_hours": 2.5,
-              "priority_locked": true,
-              "manual_add": true,
-              "order": 2
-            },
-            {
-              "name": "Altitude",
-              "address": "4350 Xenon St, Wheat Ridge 80033",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
-              "order": 3,
-              "priority_locked": true,
-              "manual_add": true
-            },
-            {
               "name": "Grant",
               "address": "261 Grant Way, Denver 80229",
               "priority": "same_day",
               "est_hours": 2.0,
               "notes": "CI 2026-06-26",
               "source": "breezeway-reconcile",
-              "order": 4
+              "order": 2
             },
             {
               "name": "BuffaloGolf",
@@ -255,7 +151,39 @@
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 5
+              "order": 3
+            },
+            {
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-06-26",
+              "source": "breezeway-reconcile",
+              "order": 4,
+              "priority_locked": true,
+              "manual_add": true
+            }
+          ],
+          "isLaundry": false
+        },
+        {
+          "name": "Equipo 2",
+          "lead": "Gabby",
+          "members": [
+            "Gabby",
+            "Yolanda",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "name": "Sativa",
+              "address": "391 E 83rd Dr, Denver 80229",
+              "priority": "same_day",
+              "est_hours": 2.5,
+              "priority_locked": true,
+              "manual_add": true,
+              "order": 1
             },
             {
               "name": "Sheridan",
@@ -264,7 +192,7 @@
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 6
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -275,9 +203,6 @@
         "active": false
       },
       "off": [
-        "Gabby",
-        "Julie",
-        "Yolanda",
         "Maria"
       ],
       "occupied": [
@@ -300,10 +225,10 @@
         "Sativa",
         "Wonderland"
       ],
-      "payrollEstimate": 440,
+      "payrollEstimate": 850,
       "sameDayTurns": 2,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 4,
+      "totalCheckouts": 5,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -708,34 +633,22 @@
               "order": 2
             },
             {
-              "name": "Palace",
-              "address": "12332 Quince St, Thornton 80602",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-02",
-              "source": "breezeway-reconcile",
-              "order": 5
-            }
-          ],
-          "isLaundry": false
-        },
-        {
-          "name": "Equipo 2",
-          "lead": "Gabby",
-          "members": [
-            "Gabby",
-            "Yolanda",
-            "Julie"
-          ],
-          "properties": [
-            {
               "name": "Beach",
               "address": "5467 Beach Ct, Denver 80221",
               "priority": "checkout_only",
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 2
+              "order": 3
+            },
+            {
+              "name": "Palace",
+              "address": "12332 Quince St, Thornton 80602",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-02",
+              "source": "breezeway-reconcile",
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -746,6 +659,9 @@
         "active": false
       },
       "off": [
+        "Gabby",
+        "Julie",
+        "Yolanda",
         "Maria"
       ],
       "occupied": [
@@ -763,17 +679,59 @@
         "Sativa",
         "Sheridan"
       ],
-      "payrollEstimate": 850,
+      "payrollEstimate": 440,
       "sameDayTurns": 1,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 5,
+      "totalCheckouts": 2,
+      "optimizations": [],
+      "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-01",
+      "dayNameEs": "Miercoles",
+      "dayNameEn": "Wednesday",
+      "teams": [],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Gabby",
+        "Yenny",
+        "Julie",
+        "Yolanda",
+        "Alexandria",
+        "Maria"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Altitude",
+        "BlueDream",
+        "BuffaloGolf",
+        "Elevation",
+        "GameRoom",
+        "GrownSexy",
+        "Hotbox",
+        "JoyStick",
+        "Paradise",
+        "Pueblo",
+        "Quivas",
+        "Sativa",
+        "Sheridan"
+      ],
+      "payrollEstimate": 0,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 0,
       "optimizations": [],
       "startTime": "9:45 AM"
     }
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 7,
+      "daysThisWeek": 6,
       "role": "lead",
       "dailyRate": 170
     },
@@ -783,7 +741,7 @@
       "dailyRate": 150
     },
     "Yenny": {
-      "daysThisWeek": 7,
+      "daysThisWeek": 6,
       "role": "cleaner",
       "dailyRate": 140
     },
@@ -798,7 +756,7 @@
       "dailyRate": 130
     },
     "Alexandria": {
-      "daysThisWeek": 7,
+      "daysThisWeek": 6,
       "role": "cleaner",
       "dailyRate": 130
     },
