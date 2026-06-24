@@ -36,6 +36,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .cell.blue{background:#3498db;color:#fff}
 .cell.gray{background:#95a5a6;color:#000}
 .cell.laundry{background:#f1c40f;color:#000}
+.cell.yellow{background:#f1c40f;color:#000}
+.tag.yellow{background:#f1c40f;color:#000}
 
 /* Legend */
 .legend{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;padding:10px;background:#1e293b;border:1px solid #334155;border-radius:8px}
@@ -186,7 +188,7 @@ function priorityTag(p) {
 }
 
 function cellClass(p) {
-  const map = {same_day:'red',tomorrow_checkin:'green',moved:'blue',moved_sameday:'orange',moved_nextday:'cyan',checkout_only:'gray'};
+  const map = {same_day:'red',tomorrow_checkin:'green',moved:'blue',moved_sameday:'orange',moved_nextday:'cyan',checkout_only:'gray',light_blue:'cyan',yellow:'yellow'};
   return map[p] || 'gray';
 }
 
