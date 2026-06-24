@@ -46,14 +46,6 @@
               "source": "breezeway-reconcile",
               "order": 3,
               "priority_locked": true
-            },
-            {
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
-              "priority": "same_day",
-              "est_hours": 2.5,
-              "priority_locked": true,
-              "manual_add": true
             }
           ],
           "isLaundry": false
@@ -244,11 +236,12 @@
             {
               "name": "Altitude",
               "address": "4350 Xenon St, Wheat Ridge 80033",
-              "priority": "same_day",
+              "priority": "checkout_only",
               "est_hours": 2.0,
               "notes": "CI 2026-06-26",
               "source": "breezeway-reconcile",
-              "order": 3
+              "order": 3,
+              "priority_locked": true
             },
             {
               "name": "Grant",
