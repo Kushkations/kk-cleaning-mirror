@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23T21:00:30.721269",
+  "generated": "2026-06-23T21:05:22.551706",
   "weekStart": "2026-06-24",
   "weekEnd": "2026-06-30",
   "week": [
@@ -37,13 +37,14 @@
               "order": 2
             },
             {
-              "name": "Hotbox",
+              "name": "Hotbox (Vac\u00eda)",
               "address": "761 E 83rd Pl, Denver 80229",
               "priority": "tomorrow_checkin",
               "est_hours": 2.0,
               "notes": "CI 2026-06-25",
               "source": "breezeway-reconcile",
-              "order": 3
+              "order": 3,
+              "priority_locked": true
             }
           ],
           "isLaundry": false
@@ -82,7 +83,7 @@
         "Sheridan",
         "Wonderland"
       ],
-      "payrollEstimate": 440,
+      "payrollEstimate": 570,
       "sameDayTurns": 1,
       "tomorrowCheckins": 0,
       "totalCheckouts": 1,
@@ -240,15 +241,13 @@
               "order": 3
             },
             {
-              "name": "Altitude",
-              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "name": "Sheridan",
+              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
               "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
-              "order": 4,
+              "est_hours": 2.5,
               "priority_locked": true,
-              "manual_add": true
+              "manual_add": true,
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -272,13 +271,15 @@
               "order": 1
             },
             {
-              "name": "Sheridan",
-              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
               "priority": "checkout_only",
-              "est_hours": 2.5,
+              "est_hours": 2.0,
+              "notes": "CI 2026-06-26",
+              "source": "breezeway-reconcile",
+              "order": 2,
               "priority_locked": true,
-              "manual_add": true,
-              "order": 2
+              "manual_add": true
             }
           ],
           "isLaundry": false
