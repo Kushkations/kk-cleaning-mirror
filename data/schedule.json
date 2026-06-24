@@ -644,15 +644,6 @@
           ],
           "properties": [
             {
-              "name": "Sativa",
-              "address": "391 E 83rd Dr, Denver 80229",
-              "priority": "same_day",
-              "est_hours": 2.5,
-              "priority_locked": true,
-              "manual_add": true,
-              "order": 1
-            },
-            {
               "name": "Grant",
               "address": "261 Grant Way, Denver 80229",
               "priority": "checkout_only",
