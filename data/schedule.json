@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-24T08:16:12.336703",
+  "generated": "2026-06-24T14:15:37.849249",
   "weekStart": "2026-06-25",
   "weekEnd": "2026-07-01",
   "week": [
@@ -33,6 +33,42 @@
               "deadline": "4:00 PM",
               "notes": "External client - Beloved Soul Healer. Door code: 1067.",
               "order": 1
+            },
+            {
+              "name": "BlueDream",
+              "address": "1475 S Pierce St, Lakewood 80232",
+              "priority": "same_day",
+              "est_hours": 2.0,
+              "notes": "CI 2026-06-25",
+              "source": "breezeway-reconcile",
+              "order": 2
+            },
+            {
+              "name": "JoyStick",
+              "address": "8228 Balsam Way, Arvada 80005",
+              "priority": "same_day",
+              "est_hours": 2.0,
+              "notes": "CI 2026-06-25",
+              "source": "breezeway-reconcile",
+              "order": 3
+            },
+            {
+              "name": "Paradise",
+              "address": "11448 Larson Ln, Northglenn 80233",
+              "priority": "same_day",
+              "est_hours": 2.0,
+              "notes": "CI 2026-06-25",
+              "source": "breezeway-reconcile",
+              "order": 4
+            },
+            {
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "priority": "tomorrow_checkin",
+              "est_hours": 2.0,
+              "notes": "CI 2026-06-26",
+              "source": "breezeway-reconcile",
+              "order": 5
             }
           ],
           "isLaundry": false
@@ -100,24 +136,31 @@
               "order": 1
             },
             {
+              "name": "Grant",
+              "address": "261 Grant Way, Denver 80229",
+              "priority": "same_day",
+              "est_hours": 2.0,
+              "notes": "CI 2026-06-26",
+              "source": "breezeway-reconcile",
+              "order": 2
+            },
+            {
               "name": "BuffaloGolf",
               "address": "",
               "priority": "tomorrow_checkin",
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 2
+              "order": 3
             },
             {
-              "name": "Altitude",
-              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "name": "Sheridan",
+              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
               "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
-              "order": 3,
+              "est_hours": 2.5,
               "priority_locked": true,
-              "manual_add": true
+              "manual_add": true,
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -141,13 +184,15 @@
               "order": 1
             },
             {
-              "name": "Sheridan",
-              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
               "priority": "checkout_only",
-              "est_hours": 2.5,
+              "est_hours": 2.0,
+              "notes": "CI 2026-06-26",
+              "source": "breezeway-reconcile",
+              "order": 2,
               "priority_locked": true,
-              "manual_add": true,
-              "order": 2
+              "manual_add": true
             }
           ],
           "isLaundry": false
@@ -214,7 +259,7 @@
               "priority": "same_day",
               "priority_locked": false,
               "next_checkin": "2026-06-27",
-              "next_checkout": "2026-07-05",
+              "next_checkout": null,
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -294,6 +339,15 @@
           ],
           "properties": [
             {
+              "name": "JoyStick",
+              "address": "8228 Balsam Way, Arvada 80005",
+              "priority": "same_day",
+              "est_hours": 2.5,
+              "priority_locked": true,
+              "manual_add": true,
+              "order": 1
+            },
+            {
               "property_id": 320255,
               "name": "Hotbox",
               "address": "761 E 83rd Pl, Denver 80229",
@@ -306,26 +360,7 @@
               "priority": "same_day",
               "priority_locked": false,
               "next_checkin": "2026-06-28",
-              "next_checkout": "2026-07-03",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
-              "property_id": 400224,
-              "name": "BlueDream",
-              "address": "1475 S Pierce St, Lakewood 80232",
-              "zone": "isolated",
-              "beds": 3,
-              "sqft": 1100,
-              "est_hours": 1.5,
-              "lat": 39.6902,
-              "lon": -105.073,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-06-28",
-              "next_checkout": "2026-07-02",
+              "next_checkout": null,
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -344,11 +379,20 @@
               "priority": "checkout_only",
               "priority_locked": false,
               "next_checkin": "2026-07-02",
-              "next_checkout": "2026-07-06",
+              "next_checkout": null,
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 3
+            },
+            {
+              "name": "Grant",
+              "address": "261 Grant Way, Denver 80229",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-03",
+              "source": "breezeway-reconcile",
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -363,12 +407,22 @@
           ],
           "properties": [
             {
-              "name": "JoyStick",
-              "address": "8228 Balsam Way, Arvada 80005",
+              "property_id": 400224,
+              "name": "BlueDream",
+              "address": "1475 S Pierce St, Lakewood 80232",
+              "zone": "isolated",
+              "beds": 3,
+              "sqft": 1100,
+              "est_hours": 1.5,
+              "lat": 39.6902,
+              "lon": -105.073,
               "priority": "same_day",
-              "est_hours": 2.5,
-              "priority_locked": true,
-              "manual_add": true,
+              "priority_locked": false,
+              "next_checkin": "2026-06-28",
+              "next_checkout": null,
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
               "order": 1
             },
             {
@@ -381,11 +435,11 @@
               "est_hours": 2.0,
               "lat": 39.7958,
               "lon": -105.0185,
-              "priority": "same_day",
-              "priority_locked": false,
+              "priority": "checkout_only",
+              "priority_locked": true,
               "next_checkin": "2026-06-28",
-              "next_checkout": "2026-06-30",
-              "deadline": "4:00 PM",
+              "next_checkout": null,
+              "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
@@ -422,7 +476,7 @@
         "Sheridan"
       ],
       "payrollEstimate": 850,
-      "sameDayTurns": 4,
+      "sameDayTurns": 3,
       "tomorrowCheckins": 0,
       "totalCheckouts": 5,
       "optimizations": [],
@@ -455,7 +509,7 @@
               "priority": "same_day",
               "priority_locked": false,
               "next_checkin": "2026-06-29",
-              "next_checkout": "2026-07-05",
+              "next_checkout": null,
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -474,11 +528,29 @@
               "priority": "checkout_only",
               "priority_locked": false,
               "next_checkin": "2026-07-02",
-              "next_checkout": "2026-07-05",
+              "next_checkout": null,
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
+            },
+            {
+              "name": "Paradise",
+              "address": "11448 Larson Ln, Northglenn 80233",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-01",
+              "source": "breezeway-reconcile",
+              "order": 3
+            },
+            {
+              "name": "PlayHouse",
+              "address": "7350 Alkire Ct, Arvada 80005",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-03",
+              "source": "breezeway-reconcile",
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -545,11 +617,20 @@
               "priority": "same_day",
               "priority_locked": false,
               "next_checkin": "2026-06-30",
-              "next_checkout": "2026-07-09",
+              "next_checkout": null,
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 1
+            },
+            {
+              "name": "BuffaloGolf",
+              "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "priority": "same_day",
+              "est_hours": 2.0,
+              "notes": "CI 2026-06-30",
+              "source": "breezeway-reconcile",
+              "order": 2
             },
             {
               "name": "Beach",
@@ -558,7 +639,16 @@
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 2
+              "order": 3
+            },
+            {
+              "name": "Palace",
+              "address": "12332 Quince St, Thornton 80602",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-02",
+              "source": "breezeway-reconcile",
+              "order": 4
             }
           ],
           "isLaundry": false
