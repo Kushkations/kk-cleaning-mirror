@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23T18:45:29.617929",
+  "generated": "2026-06-23T18:55:27.506978",
   "weekStart": "2026-06-24",
   "weekEnd": "2026-06-30",
   "week": [
@@ -34,8 +34,7 @@
               "est_hours": 2.0,
               "notes": "CI 2026-06-24",
               "source": "breezeway-reconcile",
-              "order": 2,
-              "priority_locked": true
+              "order": 2
             },
             {
               "name": "Hotbox",
@@ -44,8 +43,7 @@
               "est_hours": 2.0,
               "notes": "CI 2026-06-25",
               "source": "breezeway-reconcile",
-              "order": 3,
-              "priority_locked": true
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -127,18 +125,16 @@
               "est_hours": 2.0,
               "notes": "CI 2026-06-25",
               "source": "breezeway-reconcile",
-              "order": 2,
-              "priority_locked": true
+              "order": 2
             },
             {
               "name": "JoyStick",
               "address": "8228 Balsam Way, Arvada 80005",
-              "priority": "checkout_only",
+              "priority": "same_day",
               "est_hours": 2.0,
               "notes": "CI 2026-06-25",
               "source": "breezeway-reconcile",
-              "order": 3,
-              "priority_locked": true
+              "order": 3
             },
             {
               "name": "Paradise",
@@ -156,8 +152,7 @@
               "est_hours": 2.0,
               "notes": "CI 2026-06-26",
               "source": "breezeway-reconcile",
-              "order": 5,
-              "priority_locked": true
+              "order": 5
             }
           ],
           "isLaundry": false
@@ -236,12 +231,11 @@
             {
               "name": "Altitude",
               "address": "4350 Xenon St, Wheat Ridge 80033",
-              "priority": "checkout_only",
+              "priority": "same_day",
               "est_hours": 2.0,
               "notes": "CI 2026-06-26",
               "source": "breezeway-reconcile",
-              "order": 3,
-              "priority_locked": true
+              "order": 3
             },
             {
               "name": "Grant",
@@ -712,24 +706,6 @@
               "order": 2
             },
             {
-              "name": "Grant",
-              "address": "261 Grant Way, Denver 80229",
-              "priority": "checkout_only",
-              "est_hours": 2.5,
-              "priority_locked": true,
-              "manual_add": true,
-              "order": 3
-            },
-            {
-              "name": "Wonderland",
-              "address": "8825 W 75th Way, Arvada 80005",
-              "priority": "checkout_only",
-              "est_hours": 2.5,
-              "priority_locked": true,
-              "manual_add": true,
-              "order": 4
-            },
-            {
               "name": "Palace",
               "address": "12332 Quince St, Thornton 80602",
               "priority": "checkout_only",
@@ -753,15 +729,6 @@
             {
               "name": "Beach",
               "address": "5467 Beach Ct, Denver 80221",
-              "priority": "checkout_only",
-              "est_hours": 2.5,
-              "priority_locked": true,
-              "manual_add": true,
-              "order": 1
-            },
-            {
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
               "priority": "checkout_only",
               "est_hours": 2.5,
               "priority_locked": true,
