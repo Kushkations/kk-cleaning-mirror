@@ -191,6 +191,14 @@
               "priority_locked": true,
               "manual_add": true,
               "order": 4
+            },
+            {
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "priority": "checkout_only",
+              "est_hours": 2.5,
+              "priority_locked": true,
+              "manual_add": true
             }
           ],
           "isLaundry": false
