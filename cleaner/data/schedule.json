@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-24T21:15:18.269512",
+  "generated": "2026-06-24T21:31:47.408739",
   "weekStart": "2026-06-25",
   "weekEnd": "2026-07-01",
   "week": [
@@ -154,15 +154,13 @@
               "order": 3
             },
             {
-              "name": "Altitude",
-              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "name": "Sheridan",
+              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
               "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
-              "order": 4,
+              "est_hours": 2.5,
               "priority_locked": true,
-              "manual_add": true
+              "manual_add": true,
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -186,13 +184,15 @@
               "order": 1
             },
             {
-              "name": "Sheridan",
-              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
               "priority": "checkout_only",
-              "est_hours": 2.5,
+              "est_hours": 2.0,
+              "notes": "CI 2026-06-26",
+              "source": "breezeway-reconcile",
+              "order": 2,
               "priority_locked": true,
-              "manual_add": true,
-              "order": 2
+              "manual_add": true
             }
           ],
           "isLaundry": false
