@@ -1,102 +1,8 @@
 {
-  "generated": "2026-06-23T23:46:20.014054",
-  "weekStart": "2026-06-24",
-  "weekEnd": "2026-06-30",
+  "generated": "2026-06-24T00:01:24.473407",
+  "weekStart": "2026-06-25",
+  "weekEnd": "2026-07-01",
   "week": [
-    {
-      "date": "2026-06-24",
-      "dayNameEs": "Miercoles",
-      "dayNameEn": "Wednesday",
-      "teams": [
-        {
-          "name": "Equipo 1",
-          "lead": "Marii",
-          "members": [
-            "Marii",
-            "Yenny",
-            "Alexandria"
-          ],
-          "properties": [
-            {
-              "name": "Beach",
-              "address": "5467 Beach Ct, Denver 80221",
-              "priority": "same_day",
-              "est_hours": 2.5,
-              "priority_locked": true,
-              "manual_add": true,
-              "pinned_order": 1,
-              "order": 1
-            },
-            {
-              "name": "Quivas",
-              "address": "7240 Quivas St, Denver 80221",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-24",
-              "source": "breezeway-reconcile",
-              "order": 2
-            },
-            {
-              "property_id": 320255,
-              "name": "Hotbox",
-              "address": "761 E 83rd Pl, Denver 80229",
-              "zone": "hq",
-              "beds": 4,
-              "sqft": 1822,
-              "est_hours": 2.0,
-              "lat": 39.8488,
-              "lon": -104.9769,
-              "priority": "tomorrow_checkin",
-              "priority_locked": false,
-              "next_checkin": "2026-06-25",
-              "next_checkout": null,
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
-            }
-          ],
-          "isLaundry": false
-        }
-      ],
-      "laundry": {
-        "assigned": [],
-        "active": false
-      },
-      "off": [
-        "Gabby",
-        "Julie",
-        "Yolanda",
-        "Maria"
-      ],
-      "occupied": [
-        "Airport",
-        "Alpha",
-        "Altitude",
-        "Beach",
-        "BlueDream",
-        "BuffaloGolf",
-        "Elevation",
-        "GameRoom",
-        "Grant",
-        "Indica",
-        "JoyStick",
-        "Palace",
-        "Paradise",
-        "PlayHouse",
-        "Pueblo",
-        "Quivas",
-        "Sativa",
-        "Sheridan",
-        "Wonderland"
-      ],
-      "payrollEstimate": 440,
-      "sameDayTurns": 1,
-      "tomorrowCheckins": 1,
-      "totalCheckouts": 2,
-      "optimizations": [],
-      "startTime": "9:45 AM"
-    },
     {
       "date": "2026-06-25",
       "dayNameEs": "Jueves",
@@ -248,22 +154,13 @@
               "order": 3
             },
             {
-              "name": "Grant",
-              "address": "261 Grant Way, Denver 80229",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
-              "order": 4
-            },
-            {
               "name": "BuffaloGolf",
               "address": "",
               "priority": "tomorrow_checkin",
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 5
+              "order": 4
             },
             {
               "name": "Sheridan",
@@ -272,7 +169,7 @@
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 6
+              "order": 5
             }
           ],
           "isLaundry": false
@@ -741,11 +638,53 @@
       "totalCheckouts": 1,
       "optimizations": [],
       "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-01",
+      "dayNameEs": "Miercoles",
+      "dayNameEn": "Wednesday",
+      "teams": [],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Gabby",
+        "Yenny",
+        "Julie",
+        "Yolanda",
+        "Alexandria",
+        "Maria"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Altitude",
+        "BlueDream",
+        "BuffaloGolf",
+        "Elevation",
+        "GameRoom",
+        "GrownSexy",
+        "Hotbox",
+        "JoyStick",
+        "Paradise",
+        "Pueblo",
+        "Quivas",
+        "Sativa",
+        "Sheridan"
+      ],
+      "payrollEstimate": 0,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 0,
+      "optimizations": [],
+      "startTime": "9:45 AM"
     }
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 6,
+      "daysThisWeek": 5,
       "role": "lead",
       "dailyRate": 170
     },
@@ -755,7 +694,7 @@
       "dailyRate": 150
     },
     "Yenny": {
-      "daysThisWeek": 6,
+      "daysThisWeek": 5,
       "role": "cleaner",
       "dailyRate": 140
     },
@@ -770,7 +709,7 @@
       "dailyRate": 130
     },
     "Alexandria": {
-      "daysThisWeek": 6,
+      "daysThisWeek": 5,
       "role": "cleaner",
       "dailyRate": 130
     },
