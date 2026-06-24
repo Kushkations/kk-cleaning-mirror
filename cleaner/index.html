@@ -192,7 +192,15 @@ function cellClass(p) {
 
 async function loadData() {
   try {
-    const resp = await fetch('data/schedule.json?' + Date.now());
+    // Live data via GitHub Gist (no Vercel deploy needed); falls back to bundled file.
+    const GIST_URL = "https://gist.githubusercontent.com/Kushkations/60c05be462321d834f7b4249243992da/raw/cleaning_schedule.json";
+    let resp;
+    try {
+      resp = await fetch(GIST_URL + '?t=' + Date.now(), {cache:'no-store'});
+      if (!resp.ok) throw new Error('gist ' + resp.status);
+    } catch(_e) {
+      resp = await fetch('data/schedule.json?' + Date.now());
+    }
     data = await resp.json();
 
     // Start on first day that has cleanings
