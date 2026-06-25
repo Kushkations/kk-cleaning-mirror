@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-25T12:16:27.978383",
+  "generated": "2026-06-25T12:32:24.927284",
   "weekStart": "2026-06-26",
   "weekEnd": "2026-07-02",
   "week": [
@@ -27,33 +27,22 @@
               "order": 1
             },
             {
-              "name": "Grant",
-              "address": "261 Grant Way, Denver 80229",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
-              "order": 2
-            },
-            {
               "name": "BuffaloGolf",
               "address": "",
               "priority": "tomorrow_checkin",
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 3
+              "order": 2
             },
             {
-              "name": "Altitude",
-              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "name": "Sheridan",
+              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
               "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
-              "order": 4,
+              "est_hours": 2.5,
               "priority_locked": true,
-              "manual_add": true
+              "manual_add": true,
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -77,13 +66,15 @@
               "order": 1
             },
             {
-              "name": "Sheridan",
-              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
               "priority": "checkout_only",
-              "est_hours": 2.5,
+              "est_hours": 2.0,
+              "notes": "CI 2026-06-26",
+              "source": "breezeway-reconcile",
+              "order": 2,
               "priority_locked": true,
-              "manual_add": true,
-              "order": 2
+              "manual_add": true
             }
           ],
           "isLaundry": false
@@ -433,15 +424,6 @@
               "notes": "CI 2026-07-01",
               "source": "breezeway-reconcile",
               "order": 3
-            },
-            {
-              "name": "PlayHouse",
-              "address": "7350 Alkire Ct, Arvada 80005",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-03",
-              "source": "breezeway-reconcile",
-              "order": 4
             }
           ],
           "isLaundry": false
