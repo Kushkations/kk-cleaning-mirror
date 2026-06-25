@@ -1,117 +1,8 @@
 {
-  "generated": "2026-06-24T23:45:26.525316",
-  "weekStart": "2026-06-25",
-  "weekEnd": "2026-07-01",
+  "generated": "2026-06-25T00:00:38.779141",
+  "weekStart": "2026-06-26",
+  "weekEnd": "2026-07-02",
   "week": [
-    {
-      "date": "2026-06-25",
-      "dayNameEs": "Jueves",
-      "dayNameEn": "Thursday",
-      "teams": [
-        {
-          "name": "Equipo 1",
-          "lead": "Marii",
-          "members": [
-            "Marii",
-            "Yenny",
-            "Alexandria"
-          ],
-          "properties": [
-            {
-              "property_id": null,
-              "name": "1967 E 115th",
-              "address": "1967 E 115th Place, Northglenn 80233",
-              "zone": "north",
-              "beds": 3,
-              "sqft": 1200,
-              "est_hours": 2.0,
-              "lat": 39.8878,
-              "lon": -104.9458,
-              "priority": "same_day",
-              "next_checkin": null,
-              "next_checkout": null,
-              "deadline": "4:00 PM",
-              "notes": "External client - Beloved Soul Healer. Door code: 1067.",
-              "order": 1
-            },
-            {
-              "name": "BlueDream",
-              "address": "1475 S Pierce St, Lakewood 80232",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-25",
-              "source": "breezeway-reconcile",
-              "order": 2
-            },
-            {
-              "name": "JoyStick",
-              "address": "8228 Balsam Way, Arvada 80005",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-25",
-              "source": "breezeway-reconcile",
-              "order": 3
-            },
-            {
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-25",
-              "source": "breezeway-reconcile",
-              "order": 4
-            },
-            {
-              "name": "Indica",
-              "address": "7682 Shoshone St, Denver 80221",
-              "priority": "tomorrow_checkin",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
-              "order": 5
-            }
-          ],
-          "isLaundry": false
-        }
-      ],
-      "laundry": {
-        "assigned": [],
-        "active": false
-      },
-      "off": [
-        "Gabby",
-        "Julie",
-        "Yolanda",
-        "Maria"
-      ],
-      "occupied": [
-        "Airport",
-        "Alpha",
-        "Altitude",
-        "Beach",
-        "BlueDream",
-        "BuffaloGolf",
-        "Elevation",
-        "GameRoom",
-        "Grant",
-        "Hotbox",
-        "JoyStick",
-        "Palace",
-        "Paradise",
-        "PlayHouse",
-        "Pueblo",
-        "Quivas",
-        "Sativa",
-        "Sheridan",
-        "Wonderland"
-      ],
-      "payrollEstimate": 440,
-      "sameDayTurns": 1,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 1,
-      "optimizations": [],
-      "startTime": "9:45 AM"
-    },
     {
       "date": "2026-06-26",
       "dayNameEs": "Viernes",
@@ -154,15 +45,13 @@
               "order": 3
             },
             {
-              "name": "Altitude",
-              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "name": "Sheridan",
+              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
               "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
-              "order": 4,
+              "est_hours": 2.5,
               "priority_locked": true,
-              "manual_add": true
+              "manual_add": true,
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -186,13 +75,15 @@
               "order": 1
             },
             {
-              "name": "Sheridan",
-              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
               "priority": "checkout_only",
-              "est_hours": 2.5,
+              "est_hours": 2.0,
+              "notes": "CI 2026-06-26",
+              "source": "breezeway-reconcile",
+              "order": 2,
               "priority_locked": true,
-              "manual_add": true,
-              "order": 2
+              "manual_add": true
             }
           ],
           "isLaundry": false
@@ -535,22 +426,13 @@
               "order": 2
             },
             {
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-01",
-              "source": "breezeway-reconcile",
-              "order": 3
-            },
-            {
               "name": "PlayHouse",
               "address": "7350 Alkire Ct, Arvada 80005",
               "priority": "checkout_only",
               "est_hours": 2.0,
               "notes": "CI 2026-07-03",
               "source": "breezeway-reconcile",
-              "order": 4
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -727,36 +609,128 @@
       "totalCheckouts": 0,
       "optimizations": [],
       "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-02",
+      "dayNameEs": "Jueves",
+      "dayNameEn": "Thursday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Gabby",
+          "members": [
+            "Gabby",
+            "Yolanda",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 387216,
+              "name": "GrownSexy",
+              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1200,
+              "est_hours": 1.5,
+              "lat": 39.7652,
+              "lon": -105.0535,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 400224,
+              "name": "BlueDream",
+              "address": "1475 S Pierce St, Lakewood 80232",
+              "zone": "isolated",
+              "beds": 3,
+              "sqft": 1100,
+              "est_hours": 1.5,
+              "lat": 39.6902,
+              "lon": -105.073,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Yenny",
+        "Alexandria",
+        "Maria"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Altitude",
+        "Beach",
+        "BuffaloGolf",
+        "Elevation",
+        "GameRoom",
+        "Hotbox",
+        "Indica",
+        "JoyStick",
+        "Palace",
+        "Paradise",
+        "Pueblo",
+        "Quivas",
+        "Sativa",
+        "Sheridan",
+        "Wonderland"
+      ],
+      "payrollEstimate": 410,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 2,
+      "optimizations": [],
+      "startTime": "9:45 AM"
     }
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 6,
+      "daysThisWeek": 5,
       "role": "lead",
       "dailyRate": 170
     },
     "Gabby": {
-      "daysThisWeek": 2,
+      "daysThisWeek": 3,
       "role": "lead",
       "dailyRate": 150
     },
     "Yenny": {
-      "daysThisWeek": 6,
+      "daysThisWeek": 5,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Julie": {
-      "daysThisWeek": 2,
+      "daysThisWeek": 3,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Yolanda": {
-      "daysThisWeek": 2,
+      "daysThisWeek": 3,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Alexandria": {
-      "daysThisWeek": 6,
+      "daysThisWeek": 5,
       "role": "cleaner",
       "dailyRate": 130
     },
