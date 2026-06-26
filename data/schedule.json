@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-26T11:45:29.217267",
+  "generated": "2026-06-26T12:02:53.701053",
   "weekStart": "2026-06-27",
   "weekEnd": "2026-07-03",
   "week": [
@@ -165,15 +165,6 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 3
-            },
-            {
-              "name": "Grant",
-              "address": "261 Grant Way, Denver 80229",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-03",
-              "source": "breezeway-reconcile",
-              "order": 4
             }
           ],
           "isLaundry": false
