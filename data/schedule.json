@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-26T18:16:48.292190",
+  "generated": "2026-06-26T18:32:23.736852",
   "weekStart": "2026-06-27",
   "weekEnd": "2026-07-03",
   "week": [
@@ -313,6 +313,15 @@
               "notes": "CI 2026-07-01",
               "source": "breezeway-reconcile",
               "order": 3
+            },
+            {
+              "name": "PlayHouse",
+              "address": "7350 Alkire Ct, Arvada 80005",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-03",
+              "source": "breezeway-reconcile",
+              "order": 4
             }
           ],
           "isLaundry": false
