@@ -1,137 +1,8 @@
 {
-  "generated": "2026-06-25T23:46:22.732369",
-  "weekStart": "2026-06-26",
-  "weekEnd": "2026-07-02",
+  "generated": "2026-06-26T00:02:22.282212",
+  "weekStart": "2026-06-27",
+  "weekEnd": "2026-07-03",
   "week": [
-    {
-      "date": "2026-06-26",
-      "dayNameEs": "Viernes",
-      "dayNameEn": "Friday",
-      "teams": [
-        {
-          "name": "Equipo 1",
-          "lead": "Marii",
-          "members": [
-            "Marii",
-            "Yenny",
-            "Alexandria"
-          ],
-          "properties": [
-            {
-              "name": "Airport",
-              "address": "19990 E 40th Ave, Denver 80249",
-              "priority": "same_day",
-              "est_hours": 2.5,
-              "priority_locked": true,
-              "manual_add": true,
-              "order": 1
-            },
-            {
-              "name": "Grant",
-              "address": "261 Grant Way, Denver 80229",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
-              "order": 2
-            },
-            {
-              "name": "GrownSexy",
-              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
-              "order": 3
-            },
-            {
-              "name": "BuffaloGolf",
-              "address": "",
-              "priority": "tomorrow_checkin",
-              "est_hours": 2.5,
-              "priority_locked": true,
-              "manual_add": true,
-              "order": 4
-            },
-            {
-              "name": "Sheridan",
-              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
-              "priority": "checkout_only",
-              "est_hours": 2.5,
-              "priority_locked": true,
-              "manual_add": true,
-              "order": 5
-            }
-          ],
-          "isLaundry": false
-        },
-        {
-          "name": "Equipo 2",
-          "lead": "Gabby",
-          "members": [
-            "Gabby",
-            "Yolanda",
-            "Julie"
-          ],
-          "properties": [
-            {
-              "name": "Sativa",
-              "address": "391 E 83rd Dr, Denver 80229",
-              "priority": "same_day",
-              "est_hours": 2.5,
-              "priority_locked": true,
-              "manual_add": true,
-              "order": 1
-            },
-            {
-              "name": "Altitude",
-              "address": "4350 Xenon St, Wheat Ridge 80033",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-26",
-              "source": "breezeway-reconcile",
-              "order": 2,
-              "priority_locked": true,
-              "manual_add": true
-            }
-          ],
-          "isLaundry": false
-        }
-      ],
-      "laundry": {
-        "assigned": [],
-        "active": false
-      },
-      "off": [
-        "Maria"
-      ],
-      "occupied": [
-        "Airport",
-        "Alpha",
-        "Beach",
-        "BlueDream",
-        "Elevation",
-        "GameRoom",
-        "Grant",
-        "GrownSexy",
-        "Hotbox",
-        "Indica",
-        "JoyStick",
-        "Palace",
-        "Paradise",
-        "PlayHouse",
-        "Pueblo",
-        "Quivas",
-        "Sativa",
-        "Wonderland"
-      ],
-      "payrollEstimate": 850,
-      "sameDayTurns": 2,
-      "tomorrowCheckins": 1,
-      "totalCheckouts": 5,
-      "optimizations": [],
-      "startTime": "9:45 AM"
-    },
     {
       "date": "2026-06-27",
       "dayNameEs": "Sabado",
@@ -719,11 +590,94 @@
       "totalCheckouts": 2,
       "optimizations": [],
       "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-03",
+      "dayNameEs": "Viernes",
+      "dayNameEn": "Friday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Gabby",
+          "members": [
+            "Gabby",
+            "Yolanda",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 470233,
+              "name": "BuffaloGolf",
+              "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "zone": "far_east",
+              "beds": 5,
+              "sqft": 2146,
+              "est_hours": 2.5,
+              "lat": 39.9113,
+              "lon": -104.7923,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-03",
+              "next_checkout": "2026-07-06",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "name": "Hotbox",
+              "address": "761 E 83rd Pl, Denver 80229",
+              "priority": "same_day",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-03",
+              "source": "breezeway-reconcile",
+              "order": 2
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Yenny",
+        "Alexandria",
+        "Maria"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Altitude",
+        "Beach",
+        "BuffaloGolf",
+        "Elevation",
+        "GameRoom",
+        "Hotbox",
+        "Indica",
+        "JoyStick",
+        "Palace",
+        "Paradise",
+        "PlayHouse",
+        "Pueblo",
+        "Quivas",
+        "Sativa",
+        "Sheridan",
+        "Wonderland"
+      ],
+      "payrollEstimate": 410,
+      "sameDayTurns": 1,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 1,
+      "optimizations": [],
+      "startTime": "9:45 AM"
     }
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 4,
       "role": "lead",
       "dailyRate": 170
     },
@@ -733,7 +687,7 @@
       "dailyRate": 150
     },
     "Yenny": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 140
     },
@@ -748,7 +702,7 @@
       "dailyRate": 130
     },
     "Alexandria": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 130
     },
