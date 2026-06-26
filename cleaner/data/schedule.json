@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-26T02:31:50.145313",
+  "generated": "2026-06-26T02:45:25.296796",
   "weekStart": "2026-06-27",
   "weekEnd": "2026-07-03",
   "week": [
@@ -376,6 +376,24 @@
           ],
           "properties": [
             {
+              "name": "BuffaloGolf",
+              "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "priority": "same_day",
+              "est_hours": 2.0,
+              "notes": "CI 2026-06-30",
+              "source": "breezeway-reconcile",
+              "order": 1
+            },
+            {
+              "name": "Beach",
+              "address": "5467 Beach Ct, Denver 80221",
+              "priority": "checkout_only",
+              "est_hours": 2.5,
+              "priority_locked": true,
+              "manual_add": true,
+              "order": 2
+            },
+            {
               "property_id": 393796,
               "name": "GameRoom",
               "address": "3921 N Colorado Blvd, Denver 80205",
@@ -385,31 +403,13 @@
               "est_hours": 2.0,
               "lat": 39.7714,
               "lon": -104.9413,
-              "priority": "same_day",
+              "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": "2026-06-30",
-              "next_checkout": "2026-07-09",
-              "deadline": "4:00 PM",
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 1
-            },
-            {
-              "name": "BuffaloGolf",
-              "address": "16714 Buffalo Run Dr, Commerce City 80022",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-30",
-              "source": "breezeway-reconcile",
-              "order": 2
-            },
-            {
-              "name": "Beach",
-              "address": "5467 Beach Ct, Denver 80221",
-              "priority": "checkout_only",
-              "est_hours": 2.5,
-              "priority_locked": true,
-              "manual_add": true,
               "order": 3
             },
             {
@@ -441,7 +441,6 @@
         "BlueDream",
         "BuffaloGolf",
         "Elevation",
-        "GameRoom",
         "GrownSexy",
         "Hotbox",
         "JoyStick",
@@ -451,7 +450,7 @@
         "Sheridan"
       ],
       "payrollEstimate": 440,
-      "sameDayTurns": 1,
+      "sameDayTurns": 0,
       "tomorrowCheckins": 0,
       "totalCheckouts": 2,
       "optimizations": [],
@@ -482,7 +481,6 @@
         "BlueDream",
         "BuffaloGolf",
         "Elevation",
-        "GameRoom",
         "GrownSexy",
         "Hotbox",
         "JoyStick",
@@ -572,7 +570,6 @@
         "Beach",
         "BuffaloGolf",
         "Elevation",
-        "GameRoom",
         "Hotbox",
         "Indica",
         "JoyStick",
@@ -654,7 +651,6 @@
         "Beach",
         "BuffaloGolf",
         "Elevation",
-        "GameRoom",
         "Hotbox",
         "Indica",
         "JoyStick",
