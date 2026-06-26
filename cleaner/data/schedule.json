@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-26T01:45:53.462474",
+  "generated": "2026-06-26T02:01:46.905223",
   "weekStart": "2026-06-27",
   "weekEnd": "2026-07-03",
   "week": [
@@ -171,7 +171,7 @@
               "address": "261 Grant Way, Denver 80229",
               "priority": "checkout_only",
               "est_hours": 2.0,
-              "notes": "CI 2026-07-03",
+              "notes": "CI 2026-06-30",
               "source": "breezeway-reconcile",
               "order": 4
             }
