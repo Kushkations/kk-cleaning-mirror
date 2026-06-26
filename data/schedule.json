@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-26T07:46:08.490915",
+  "generated": "2026-06-26T08:01:09.932566",
   "weekStart": "2026-06-27",
   "weekEnd": "2026-07-03",
   "week": [
@@ -376,22 +376,13 @@
           ],
           "properties": [
             {
-              "name": "BuffaloGolf",
-              "address": "16714 Buffalo Run Dr, Commerce City 80022",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-30",
-              "source": "breezeway-reconcile",
-              "order": 1
-            },
-            {
               "name": "Beach",
               "address": "5467 Beach Ct, Denver 80221",
               "priority": "checkout_only",
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 2
+              "order": 1
             },
             {
               "property_id": 393796,
@@ -410,7 +401,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 2
             },
             {
               "name": "Palace",
@@ -419,7 +410,7 @@
               "est_hours": 2.0,
               "notes": "CI 2026-07-02",
               "source": "breezeway-reconcile",
-              "order": 4
+              "order": 3
             }
           ],
           "isLaundry": false
