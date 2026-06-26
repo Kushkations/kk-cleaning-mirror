@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-26T02:45:25.296796",
+  "generated": "2026-06-26T03:01:16.870971",
   "weekStart": "2026-06-27",
   "weekEnd": "2026-07-03",
   "week": [
@@ -171,7 +171,7 @@
               "address": "261 Grant Way, Denver 80229",
               "priority": "checkout_only",
               "est_hours": 2.0,
-              "notes": "CI 2026-06-30",
+              "notes": "CI 2026-07-03",
               "source": "breezeway-reconcile",
               "order": 4
             }
@@ -441,6 +441,7 @@
         "BlueDream",
         "BuffaloGolf",
         "Elevation",
+        "Grant",
         "GrownSexy",
         "Hotbox",
         "JoyStick",
@@ -481,6 +482,7 @@
         "BlueDream",
         "BuffaloGolf",
         "Elevation",
+        "Grant",
         "GrownSexy",
         "Hotbox",
         "JoyStick",
@@ -570,6 +572,7 @@
         "Beach",
         "BuffaloGolf",
         "Elevation",
+        "Grant",
         "Hotbox",
         "Indica",
         "JoyStick",
@@ -651,6 +654,7 @@
         "Beach",
         "BuffaloGolf",
         "Elevation",
+        "Grant",
         "Hotbox",
         "Indica",
         "JoyStick",
