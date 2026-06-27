@@ -605,6 +605,14 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 1
+            },
+            {
+              "name": "Hotbox",
+              "address": "761 E 83rd Pl, Denver 80229",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "priority_locked": true,
+              "manual_add": true
             }
           ],
           "isLaundry": false
