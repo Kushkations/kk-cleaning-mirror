@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-27T05:31:24.940324",
+  "generated": "2026-06-27T05:45:23.657595",
   "weekStart": "2026-06-28",
   "weekEnd": "2026-07-04",
   "week": [
@@ -221,15 +221,6 @@
               "notes": "CI 2026-07-01",
               "source": "breezeway-reconcile",
               "order": 3
-            },
-            {
-              "name": "PlayHouse",
-              "address": "7350 Alkire Ct, Arvada 80005",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-03",
-              "source": "breezeway-reconcile",
-              "order": 4
             }
           ],
           "isLaundry": false
@@ -370,7 +361,24 @@
       "date": "2026-07-01",
       "dayNameEs": "Miercoles",
       "dayNameEn": "Wednesday",
-      "teams": [],
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "TBD",
+          "members": [],
+          "properties": [
+            {
+              "name": "PlayHouse",
+              "address": "7350 Alkire Ct, Arvada 80005",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-03",
+              "source": "breezeway-reconcile",
+              "order": 1
+            }
+          ]
+        }
+      ],
       "laundry": {
         "assigned": [],
         "active": false
