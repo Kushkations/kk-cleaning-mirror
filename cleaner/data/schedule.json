@@ -1,8 +1,100 @@
 {
-  "generated": "2026-06-27T01:00:51.968155",
-  "weekStart": "2026-06-28",
-  "weekEnd": "2026-07-04",
+  "generated": "2026-06-26T19:09:53.013689",
+  "weekStart": "2026-06-27",
+  "weekEnd": "2026-07-17",
   "week": [
+    {
+      "date": "2026-06-27",
+      "dayNameEs": "Sabado",
+      "dayNameEn": "Saturday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Marii",
+          "members": [
+            "Marii",
+            "Yenny",
+            "Alexandria"
+          ],
+          "properties": [
+            {
+              "property_id": 313164,
+              "name": "Quivas (Salida 12 PM)",
+              "address": "7240 Quivas St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 2200,
+              "est_hours": 2.5,
+              "lat": 39.8282,
+              "lon": -105.0086,
+              "priority": "same_day",
+              "priority_locked": true,
+              "next_checkin": "2026-06-27",
+              "next_checkout": "2026-07-05",
+              "deadline": "4:00 PM",
+              "checkout_time": "12:00 PM",
+              "is_late_checkout": true,
+              "order": 1
+            },
+            {
+              "property_id": null,
+              "name": "1967 E 115th",
+              "address": "1967 E 115th Place, Northglenn 80233",
+              "zone": "north",
+              "beds": 3,
+              "sqft": 1200,
+              "est_hours": 2.0,
+              "lat": 39.8878,
+              "lon": -104.9458,
+              "priority": "same_day",
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": "4:00 PM",
+              "notes": "External client - Beloved Soul Healer. Door code: 1067.",
+              "order": 2
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Gabby",
+        "Julie",
+        "Yolanda",
+        "Maria"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Beach",
+        "BlueDream",
+        "BuffaloGolf",
+        "Elevation",
+        "GameRoom",
+        "Grant",
+        "GrownSexy",
+        "Hotbox",
+        "Indica",
+        "JoyStick",
+        "Palace",
+        "Paradise",
+        "PlayHouse",
+        "Pueblo",
+        "Quivas",
+        "Sativa",
+        "Wonderland"
+      ],
+      "payrollEstimate": 440,
+      "sameDayTurns": 2,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 2,
+      "optimizations": [],
+      "startTime": "9:45 AM"
+    },
     {
       "date": "2026-06-28",
       "dayNameEs": "Domingo",
@@ -73,15 +165,6 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 3
-            },
-            {
-              "name": "Grant",
-              "address": "261 Grant Way, Denver 80229",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-03",
-              "source": "breezeway-reconcile",
-              "order": 4
             }
           ],
           "isLaundry": false
@@ -102,7 +185,13 @@
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 1
+              "order": 1,
+              "zone": "far_west",
+              "property_id": 354421,
+              "lat": 39.8466,
+              "lon": -105.0904,
+              "beds": 4,
+              "sqft": 2183
             },
             {
               "property_id": 281880,
@@ -114,11 +203,11 @@
               "est_hours": 2.0,
               "lat": 39.7958,
               "lon": -105.0185,
-              "priority": "same_day",
-              "priority_locked": false,
+              "priority": "checkout_only",
+              "priority_locked": true,
               "next_checkin": "2026-06-28",
               "next_checkout": "2026-06-30",
-              "deadline": "4:00 PM",
+              "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
@@ -155,7 +244,7 @@
         "Sheridan"
       ],
       "payrollEstimate": 850,
-      "sameDayTurns": 4,
+      "sameDayTurns": 3,
       "tomorrowCheckins": 0,
       "totalCheckouts": 5,
       "optimizations": [],
@@ -212,24 +301,6 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
-            },
-            {
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-01",
-              "source": "breezeway-reconcile",
-              "order": 3
-            },
-            {
-              "name": "PlayHouse",
-              "address": "7350 Alkire Ct, Arvada 80005",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-03",
-              "source": "breezeway-reconcile",
-              "order": 4
             }
           ],
           "isLaundry": false
@@ -284,22 +355,19 @@
           ],
           "properties": [
             {
-              "name": "BuffaloGolf",
-              "address": "16714 Buffalo Run Dr, Commerce City 80022",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-30",
-              "source": "breezeway-reconcile",
-              "order": 1
-            },
-            {
               "name": "Beach",
               "address": "5467 Beach Ct, Denver 80221",
               "priority": "checkout_only",
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 2
+              "order": 1,
+              "zone": "west",
+              "property_id": 281880,
+              "lat": 39.7958,
+              "lon": -105.0185,
+              "beds": 4,
+              "sqft": 2000
             },
             {
               "property_id": 393796,
@@ -318,16 +386,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
-            },
-            {
-              "name": "Palace",
-              "address": "12332 Quince St, Thornton 80602",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-02",
-              "source": "breezeway-reconcile",
-              "order": 4
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -431,8 +490,8 @@
               "lon": -105.0535,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-07-10",
+              "next_checkout": "2026-07-13",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -450,8 +509,8 @@
               "lon": -105.073,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-07-13",
+              "next_checkout": "2026-07-21",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -528,15 +587,6 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 1
-            },
-            {
-              "name": "Hotbox",
-              "address": "761 E 83rd Pl, Denver 80229",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-03",
-              "source": "breezeway-reconcile",
-              "order": 2
             }
           ],
           "isLaundry": false
@@ -621,36 +671,1038 @@
       "totalCheckouts": 0,
       "optimizations": [],
       "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-05",
+      "dayNameEs": "Domingo",
+      "dayNameEn": "Sunday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Marii",
+          "members": [
+            "Marii",
+            "Yenny",
+            "Alexandria"
+          ],
+          "properties": [
+            {
+              "property_id": 435859,
+              "name": "Airport",
+              "address": "19990 E 40th Ave, Denver 80249",
+              "zone": "far_east",
+              "beds": 4,
+              "sqft": 1642,
+              "est_hours": 2.0,
+              "lat": 39.7706,
+              "lon": -104.7548,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-05",
+              "next_checkout": "2026-07-12",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 399039,
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "zone": "far_west",
+              "beds": 6,
+              "sqft": 1868,
+              "est_hours": 2.5,
+              "lat": 39.7773,
+              "lon": -105.1396,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-06",
+              "next_checkout": "2026-07-09",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
+              "property_id": 281880,
+              "name": "Beach",
+              "address": "5467 Beach Ct, Denver 80221",
+              "zone": "west",
+              "beds": 4,
+              "sqft": 2000,
+              "est_hours": 2.0,
+              "lat": 39.7958,
+              "lon": -105.0185,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-09",
+              "next_checkout": "2026-07-14",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
+            }
+          ],
+          "isLaundry": false
+        },
+        {
+          "name": "Equipo 2",
+          "lead": "Gabby",
+          "members": [
+            "Gabby",
+            "Yolanda",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 313164,
+              "name": "Quivas",
+              "address": "7240 Quivas St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 2200,
+              "est_hours": 2.5,
+              "lat": 39.8282,
+              "lon": -105.0086,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-06",
+              "next_checkout": "2026-07-09",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 440656,
+              "name": "Palace",
+              "address": "12332 Quince St, Thornton 80602",
+              "zone": "north",
+              "beds": 6,
+              "sqft": 4406,
+              "est_hours": 4.0,
+              "lat": 39.9199,
+              "lon": -104.9018,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-13",
+              "next_checkout": "2026-07-16",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Maria"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "BuffaloGolf",
+        "Hotbox",
+        "Paradise",
+        "PlayHouse",
+        "Pueblo",
+        "Sativa",
+        "Wonderland"
+      ],
+      "payrollEstimate": 850,
+      "sameDayTurns": 1,
+      "tomorrowCheckins": 2,
+      "totalCheckouts": 5,
+      "optimizations": [],
+      "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-06",
+      "dayNameEs": "Lunes",
+      "dayNameEn": "Monday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Marii",
+          "members": [
+            "Marii",
+            "Yenny",
+            "Alexandria"
+          ],
+          "properties": [
+            {
+              "property_id": 404868,
+              "name": "Paradise",
+              "address": "11448 Larson Ln, Northglenn 80233",
+              "zone": "north",
+              "beds": 5,
+              "sqft": 1834,
+              "est_hours": 2.5,
+              "lat": 39.9046,
+              "lon": -104.9736,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-10",
+              "next_checkout": "2026-07-17",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Gabby",
+        "Julie",
+        "Yolanda",
+        "Maria"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Altitude",
+        "Hotbox",
+        "PlayHouse",
+        "Pueblo",
+        "Quivas",
+        "Sativa"
+      ],
+      "payrollEstimate": 440,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 1,
+      "optimizations": [],
+      "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-07",
+      "dayNameEs": "Martes",
+      "dayNameEn": "Tuesday",
+      "teams": [],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Gabby",
+        "Yenny",
+        "Julie",
+        "Yolanda",
+        "Alexandria",
+        "Maria"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Altitude",
+        "Hotbox",
+        "PlayHouse",
+        "Pueblo",
+        "Quivas",
+        "Sativa"
+      ],
+      "payrollEstimate": 0,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 0,
+      "optimizations": [],
+      "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-08",
+      "dayNameEs": "Miercoles",
+      "dayNameEn": "Wednesday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Gabby",
+          "members": [
+            "Gabby",
+            "Yolanda",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 362638,
+              "name": "Sativa",
+              "address": "391 E 83rd Dr, Denver 80229",
+              "zone": "hq",
+              "beds": 6,
+              "sqft": 1782,
+              "est_hours": 2.0,
+              "lat": 39.8458,
+              "lon": -104.9816,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-09",
+              "next_checkout": "2026-07-12",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 387379,
+              "name": "PlayHouse",
+              "address": "7350 Alkire Ct, Arvada 80005",
+              "zone": "far_west",
+              "beds": 7,
+              "sqft": 2976,
+              "est_hours": 3.5,
+              "lat": 39.8294,
+              "lon": -105.1483,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-09",
+              "next_checkout": "2026-07-13",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Yenny",
+        "Alexandria",
+        "Maria"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Altitude",
+        "Elevation",
+        "Hotbox",
+        "Indica",
+        "JoyStick",
+        "Pueblo",
+        "Quivas"
+      ],
+      "payrollEstimate": 410,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 2,
+      "totalCheckouts": 2,
+      "optimizations": [],
+      "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-09",
+      "dayNameEs": "Jueves",
+      "dayNameEn": "Thursday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Gabby",
+          "members": [
+            "Gabby",
+            "Yolanda",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 320255,
+              "name": "Hotbox",
+              "address": "761 E 83rd Pl, Denver 80229",
+              "zone": "hq",
+              "beds": 4,
+              "sqft": 1822,
+              "est_hours": 2.0,
+              "lat": 39.8488,
+              "lon": -104.9769,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-09",
+              "next_checkout": "2026-07-12",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 399039,
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "zone": "far_west",
+              "beds": 6,
+              "sqft": 1868,
+              "est_hours": 2.5,
+              "lat": 39.7773,
+              "lon": -105.1396,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-09",
+              "next_checkout": "2026-07-12",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Yenny",
+        "Alexandria",
+        "Maria"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Altitude",
+        "Beach",
+        "BuffaloGolf",
+        "Elevation",
+        "Grant",
+        "Hotbox",
+        "Indica",
+        "JoyStick",
+        "PlayHouse",
+        "Pueblo",
+        "Sativa"
+      ],
+      "payrollEstimate": 410,
+      "sameDayTurns": 2,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 2,
+      "optimizations": [],
+      "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-10",
+      "dayNameEs": "Viernes",
+      "dayNameEn": "Friday",
+      "teams": [],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Gabby",
+        "Yenny",
+        "Julie",
+        "Yolanda",
+        "Alexandria",
+        "Maria"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Altitude",
+        "Beach",
+        "BuffaloGolf",
+        "Elevation",
+        "Grant",
+        "GrownSexy",
+        "Hotbox",
+        "Indica",
+        "JoyStick",
+        "Paradise",
+        "PlayHouse",
+        "Quivas",
+        "Sativa",
+        "Wonderland"
+      ],
+      "payrollEstimate": 0,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 0,
+      "optimizations": [],
+      "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-11",
+      "dayNameEs": "Sabado",
+      "dayNameEn": "Saturday",
+      "teams": [],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Gabby",
+        "Yenny",
+        "Julie",
+        "Yolanda",
+        "Alexandria",
+        "Maria"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Altitude",
+        "Beach",
+        "BuffaloGolf",
+        "Elevation",
+        "Grant",
+        "GrownSexy",
+        "Hotbox",
+        "Indica",
+        "JoyStick",
+        "Paradise",
+        "PlayHouse",
+        "Quivas",
+        "Sativa",
+        "Wonderland"
+      ],
+      "payrollEstimate": 0,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 0,
+      "optimizations": [],
+      "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-12",
+      "dayNameEs": "Domingo",
+      "dayNameEn": "Sunday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Marii",
+          "members": [
+            "Marii",
+            "Yenny",
+            "Alexandria"
+          ],
+          "properties": [
+            {
+              "property_id": 440656,
+              "name": "Palace",
+              "address": "12332 Quince St, Thornton 80602",
+              "zone": "north",
+              "beds": 6,
+              "sqft": 4406,
+              "est_hours": 4.0,
+              "lat": 39.9199,
+              "lon": -104.9018,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-13",
+              "next_checkout": "2026-07-16",
+              "deadline": null,
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 409557,
+              "name": "Elevation",
+              "address": "3431 E 105th Ct, Northglenn 80233",
+              "zone": "north",
+              "beds": 5,
+              "sqft": 2376,
+              "est_hours": 2.5,
+              "lat": 39.8878,
+              "lon": -104.9458,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-14",
+              "next_checkout": "2026-07-16",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
+              "property_id": 435859,
+              "name": "Airport",
+              "address": "19990 E 40th Ave, Denver 80249",
+              "zone": "far_east",
+              "beds": 4,
+              "sqft": 1642,
+              "est_hours": 2.0,
+              "lat": 39.7706,
+              "lon": -104.7548,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-17",
+              "next_checkout": "2026-07-20",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
+            }
+          ],
+          "isLaundry": false
+        },
+        {
+          "name": "Equipo 2",
+          "lead": "Gabby",
+          "members": [
+            "Gabby",
+            "Yolanda",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 370631,
+              "name": "Grant",
+              "address": "261 Grant Way, Denver 80229",
+              "zone": "hq",
+              "beds": 6,
+              "sqft": 1782,
+              "est_hours": 2.0,
+              "lat": 39.8455,
+              "lon": -104.9828,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-16",
+              "next_checkout": "2026-07-19",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 399039,
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "zone": "far_west",
+              "beds": 6,
+              "sqft": 1868,
+              "est_hours": 2.5,
+              "lat": 39.7773,
+              "lon": -105.1396,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Maria"
+      ],
+      "occupied": [
+        "Alpha",
+        "Beach",
+        "GrownSexy",
+        "Hotbox",
+        "Indica",
+        "Paradise",
+        "PlayHouse",
+        "Quivas",
+        "Wonderland"
+      ],
+      "payrollEstimate": 850,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 1,
+      "totalCheckouts": 5,
+      "optimizations": [],
+      "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-13",
+      "dayNameEs": "Lunes",
+      "dayNameEn": "Monday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Gabby",
+          "members": [
+            "Gabby",
+            "Yolanda",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 320255,
+              "name": "Hotbox",
+              "address": "761 E 83rd Pl, Denver 80229",
+              "zone": "hq",
+              "beds": 4,
+              "sqft": 1822,
+              "est_hours": 2.0,
+              "lat": 39.8488,
+              "lon": -104.9769,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-19",
+              "next_checkout": "2026-07-22",
+              "deadline": null,
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 399810,
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 1700,
+              "est_hours": 2.0,
+              "lat": 39.8361,
+              "lon": -105.0096,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-16",
+              "next_checkout": "2026-07-19",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
+              "property_id": 313164,
+              "name": "Quivas",
+              "address": "7240 Quivas St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 2200,
+              "est_hours": 2.5,
+              "lat": 39.8282,
+              "lon": -105.0086,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
+            },
+            {
+              "property_id": 447452,
+              "name": "Wonderland",
+              "address": "5955 S Zante Way, Aurora 80015",
+              "zone": "isolated",
+              "beds": 5,
+              "sqft": 1886,
+              "est_hours": 2.5,
+              "lat": 39.6083,
+              "lon": -104.7176,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-16",
+              "next_checkout": "2026-07-20",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 4
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Yenny",
+        "Alexandria",
+        "Maria"
+      ],
+      "occupied": [
+        "Alpha",
+        "Beach",
+        "BlueDream",
+        "Hotbox",
+        "Palace",
+        "Paradise",
+        "Pueblo"
+      ],
+      "payrollEstimate": 410,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 4,
+      "optimizations": [],
+      "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-14",
+      "dayNameEs": "Martes",
+      "dayNameEn": "Tuesday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Marii",
+          "members": [
+            "Marii",
+            "Yenny",
+            "Alexandria"
+          ],
+          "properties": [
+            {
+              "property_id": 281880,
+              "name": "Beach",
+              "address": "5467 Beach Ct, Denver 80221",
+              "zone": "west",
+              "beds": 4,
+              "sqft": 2000,
+              "est_hours": 2.0,
+              "lat": 39.7958,
+              "lon": -105.0185,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-16",
+              "next_checkout": "2026-07-19",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Gabby",
+        "Julie",
+        "Yolanda",
+        "Maria"
+      ],
+      "occupied": [
+        "Alpha",
+        "BlueDream",
+        "Elevation",
+        "Hotbox",
+        "Palace",
+        "Paradise",
+        "Pueblo"
+      ],
+      "payrollEstimate": 440,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 1,
+      "optimizations": [],
+      "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-15",
+      "dayNameEs": "Miercoles",
+      "dayNameEn": "Wednesday",
+      "teams": [],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Gabby",
+        "Yenny",
+        "Julie",
+        "Yolanda",
+        "Alexandria",
+        "Maria"
+      ],
+      "occupied": [
+        "Alpha",
+        "BlueDream",
+        "Elevation",
+        "Hotbox",
+        "JoyStick",
+        "Palace",
+        "Paradise"
+      ],
+      "payrollEstimate": 0,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 0,
+      "optimizations": [],
+      "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-16",
+      "dayNameEs": "Jueves",
+      "dayNameEn": "Thursday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Marii",
+          "members": [
+            "Marii",
+            "Yenny",
+            "Alexandria"
+          ],
+          "properties": [
+            {
+              "property_id": 409557,
+              "name": "Elevation",
+              "address": "3431 E 105th Ct, Northglenn 80233",
+              "zone": "north",
+              "beds": 5,
+              "sqft": 2376,
+              "est_hours": 2.5,
+              "lat": 39.8878,
+              "lon": -104.9458,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-16",
+              "next_checkout": "2026-07-19",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 440656,
+              "name": "Palace",
+              "address": "12332 Quince St, Thornton 80602",
+              "zone": "north",
+              "beds": 6,
+              "sqft": 4406,
+              "est_hours": 4.0,
+              "lat": 39.9199,
+              "lon": -104.9018,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-16",
+              "next_checkout": "2026-07-19",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Gabby",
+        "Julie",
+        "Yolanda",
+        "Maria"
+      ],
+      "occupied": [
+        "Alpha",
+        "Beach",
+        "BlueDream",
+        "BuffaloGolf",
+        "Elevation",
+        "Grant",
+        "Indica",
+        "JoyStick",
+        "Palace",
+        "Paradise",
+        "PlayHouse",
+        "Sativa",
+        "Wonderland"
+      ],
+      "payrollEstimate": 440,
+      "sameDayTurns": 2,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 2,
+      "optimizations": [],
+      "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-17",
+      "dayNameEs": "Viernes",
+      "dayNameEn": "Friday",
+      "teams": [],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Gabby",
+        "Yenny",
+        "Julie",
+        "Yolanda",
+        "Alexandria",
+        "Maria"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Beach",
+        "BlueDream",
+        "BuffaloGolf",
+        "Elevation",
+        "Grant",
+        "Indica",
+        "JoyStick",
+        "Palace",
+        "PlayHouse",
+        "Sativa",
+        "Wonderland"
+      ],
+      "payrollEstimate": 0,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 0,
+      "optimizations": [],
+      "startTime": "9:45 AM"
     }
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 9,
       "role": "lead",
       "dailyRate": 170
     },
     "Gabby": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 8,
       "role": "lead",
       "dailyRate": 150
     },
     "Yenny": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 9,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Julie": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 8,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Yolanda": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 8,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Alexandria": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 9,
       "role": "cleaner",
       "dailyRate": 130
     },
