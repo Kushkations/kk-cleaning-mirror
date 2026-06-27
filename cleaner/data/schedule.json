@@ -609,7 +609,7 @@
             {
               "name": "Hotbox",
               "address": "761 E 83rd Pl, Denver 80229",
-              "priority": "checkout_only",
+              "priority": "same_day",
               "est_hours": 2.0,
               "priority_locked": true,
               "manual_add": true
