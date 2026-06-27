@@ -1,8 +1,100 @@
 {
-  "generated": "2026-06-27T08:57:43.014167",
-  "weekStart": "2026-06-28",
-  "weekEnd": "2026-07-07",
+  "generated": "2026-06-27T09:00:36.899677",
+  "weekStart": "2026-06-27",
+  "weekEnd": "2026-07-03",
   "week": [
+    {
+      "date": "2026-06-27",
+      "dayNameEs": "Sabado",
+      "dayNameEn": "Saturday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Marii",
+          "members": [
+            "Marii",
+            "Yenny",
+            "Alexandria"
+          ],
+          "properties": [
+            {
+              "property_id": 313164,
+              "name": "Quivas (Salida 12 PM)",
+              "address": "7240 Quivas St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 2200,
+              "est_hours": 2.5,
+              "lat": 39.8282,
+              "lon": -105.0086,
+              "priority": "same_day",
+              "priority_locked": true,
+              "next_checkin": "2026-06-27",
+              "next_checkout": "2026-07-05",
+              "deadline": "4:00 PM",
+              "checkout_time": "",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": null,
+              "name": "1967 E 115th",
+              "address": "1967 E 115th Place, Northglenn 80233",
+              "zone": "north",
+              "beds": 3,
+              "sqft": 1200,
+              "est_hours": 2.0,
+              "lat": 39.8878,
+              "lon": -104.9458,
+              "priority": "same_day",
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": "4:00 PM",
+              "notes": "External client - Beloved Soul Healer. Door code: 1067.",
+              "order": 2
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Gabby",
+        "Julie",
+        "Yolanda",
+        "Maria"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Beach",
+        "BlueDream",
+        "BuffaloGolf",
+        "Elevation",
+        "GameRoom",
+        "Grant",
+        "GrownSexy",
+        "Hotbox",
+        "Indica",
+        "JoyStick",
+        "Palace",
+        "Paradise",
+        "PlayHouse",
+        "Pueblo",
+        "Quivas",
+        "Sativa",
+        "Wonderland"
+      ],
+      "payrollEstimate": 440,
+      "sameDayTurns": 2,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 2,
+      "optimizations": [],
+      "startTime": "9:45 AM"
+    },
     {
       "date": "2026-06-28",
       "dayNameEs": "Domingo",
@@ -521,32 +613,32 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 4,
       "role": "lead",
       "dailyRate": 170
     },
     "Gabby": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 3,
       "role": "lead",
       "dailyRate": 150
     },
     "Yenny": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Julie": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 3,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Yolanda": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 3,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Alexandria": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 130
     },
