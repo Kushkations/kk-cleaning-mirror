@@ -1,7 +1,7 @@
 {
-  "generated": "2026-06-27T09:00:36.899677",
+  "generated": "2026-06-27T09:09:25.333770",
   "weekStart": "2026-06-27",
-  "weekEnd": "2026-07-03",
+  "weekEnd": "2026-07-06",
   "week": [
     {
       "date": "2026-06-27",
@@ -32,8 +32,8 @@
               "next_checkin": "2026-06-27",
               "next_checkout": "2026-07-05",
               "deadline": "4:00 PM",
-              "checkout_time": "",
-              "is_late_checkout": false,
+              "checkout_time": "12:00 PM",
+              "is_late_checkout": true,
               "order": 1
             },
             {
@@ -129,19 +129,23 @@
               "order": 1
             },
             {
-              "name": "JoyStick",
-              "address": "8228 Balsam Way, Arvada 80005",
+              "property_id": 400224,
+              "name": "BlueDream",
+              "address": "1475 S Pierce St, Lakewood 80232",
+              "zone": "isolated",
+              "beds": 3,
+              "sqft": 1100,
+              "est_hours": 1.5,
+              "lat": 39.6902,
+              "lon": -105.073,
               "priority": "same_day",
-              "est_hours": 2.5,
-              "priority_locked": true,
-              "manual_add": true,
-              "order": 2,
-              "zone": "far_west",
-              "property_id": 354421,
-              "lat": 39.8466,
-              "lon": -105.0904,
-              "beds": 4,
-              "sqft": 2183
+              "priority_locked": false,
+              "next_checkin": "2026-06-28",
+              "next_checkout": "2026-07-02",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
             },
             {
               "property_id": 447452,
@@ -161,15 +165,6 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 3
-            },
-            {
-              "name": "Grant",
-              "address": "261 Grant Way, Denver 80229",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-03",
-              "source": "breezeway-reconcile",
-              "order": 4
             }
           ],
           "isLaundry": false
@@ -184,6 +179,21 @@
           ],
           "properties": [
             {
+              "name": "JoyStick",
+              "address": "8228 Balsam Way, Arvada 80005",
+              "priority": "same_day",
+              "est_hours": 2.5,
+              "priority_locked": true,
+              "manual_add": true,
+              "order": 1,
+              "zone": "far_west",
+              "property_id": 354421,
+              "lat": 39.8466,
+              "lon": -105.0904,
+              "beds": 4,
+              "sqft": 2183
+            },
+            {
               "property_id": 281880,
               "name": "Beach",
               "address": "5467 Beach Ct, Denver 80221",
@@ -197,26 +207,7 @@
               "priority_locked": true,
               "next_checkin": "2026-06-28",
               "next_checkout": "2026-06-30",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
-              "property_id": 400224,
-              "name": "BlueDream",
-              "address": "1475 S Pierce St, Lakewood 80232",
-              "zone": "isolated",
-              "beds": 3,
-              "sqft": 1100,
-              "est_hours": 1.5,
-              "lat": 39.6902,
-              "lon": -105.073,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-06-28",
-              "next_checkout": "2026-07-02",
-              "deadline": "4:00 PM",
+              "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
@@ -253,7 +244,7 @@
         "Sheridan"
       ],
       "payrollEstimate": 850,
-      "sameDayTurns": 4,
+      "sameDayTurns": 3,
       "tomorrowCheckins": 0,
       "totalCheckouts": 5,
       "optimizations": [],
@@ -310,15 +301,6 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
-            },
-            {
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-01",
-              "source": "breezeway-reconcile",
-              "order": 3
             }
           ],
           "isLaundry": false
@@ -374,22 +356,13 @@
           ],
           "properties": [
             {
-              "name": "BuffaloGolf",
-              "address": "16714 Buffalo Run Dr, Commerce City 80022",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-30",
-              "source": "breezeway-reconcile",
-              "order": 1
-            },
-            {
               "name": "Beach",
               "address": "5467 Beach Ct, Denver 80221",
               "priority": "checkout_only",
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 2,
+              "order": 1,
               "zone": "west",
               "property_id": 281880,
               "lat": 39.7958,
@@ -414,16 +387,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
-            },
-            {
-              "name": "Palace",
-              "address": "12332 Quince St, Thornton 80602",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-02",
-              "source": "breezeway-reconcile",
-              "order": 4
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -467,18 +431,17 @@
       "dayNameEn": "Wednesday",
       "teams": [
         {
-          "name": "Equipo 1",
-          "lead": "TBD",
+          "team_name": "Team 1",
+          "lead": "",
           "members": [],
           "properties": [
             {
               "name": "PlayHouse",
               "address": "7350 Alkire Ct, Arvada 80005",
               "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-03",
-              "source": "breezeway-reconcile",
-              "order": 1
+              "est_hours": 3.5,
+              "priority_locked": true,
+              "manual_add": true
             }
           ]
         }
@@ -609,36 +572,109 @@
       "totalCheckouts": 2,
       "optimizations": [],
       "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-03",
+      "dayNameEs": "Viernes",
+      "dayNameEn": "Friday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Gabby",
+          "members": [
+            "Gabby",
+            "Yolanda",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 470233,
+              "name": "BuffaloGolf",
+              "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "zone": "far_east",
+              "beds": 5,
+              "sqft": 2146,
+              "est_hours": 2.5,
+              "lat": 39.9113,
+              "lon": -104.7923,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-03",
+              "next_checkout": "2026-07-06",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Yenny",
+        "Alexandria",
+        "Maria"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Altitude",
+        "Beach",
+        "BuffaloGolf",
+        "Elevation",
+        "Hotbox",
+        "Indica",
+        "JoyStick",
+        "Palace",
+        "Paradise",
+        "PlayHouse",
+        "Pueblo",
+        "Quivas",
+        "Sativa",
+        "Sheridan",
+        "Wonderland"
+      ],
+      "payrollEstimate": 410,
+      "sameDayTurns": 1,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 1,
+      "optimizations": [],
+      "startTime": "9:45 AM"
     }
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 6,
       "role": "lead",
       "dailyRate": 170
     },
     "Gabby": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 4,
       "role": "lead",
       "dailyRate": 150
     },
     "Yenny": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 6,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Julie": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Yolanda": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Alexandria": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 6,
       "role": "cleaner",
       "dailyRate": 130
     },
