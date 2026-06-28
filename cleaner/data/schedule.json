@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-28T08:02:59.396187",
+  "generated": "2026-06-28T08:16:45.893922",
   "weekStart": "2026-06-29",
   "weekEnd": "2026-07-05",
   "week": [
@@ -381,6 +381,15 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 1
+            },
+            {
+              "name": "Hotbox",
+              "address": "761 E 83rd Pl, Denver 80229",
+              "priority": "same_day",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-03",
+              "source": "breezeway-reconcile",
+              "order": 2
             }
           ],
           "isLaundry": false
