@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-28T00:16:05.352086",
+  "generated": "2026-06-28T00:31:01.410072",
   "weekStart": "2026-06-29",
   "weekEnd": "2026-07-05",
   "week": [
@@ -574,6 +574,33 @@
               "notes": "CI 2026-07-08",
               "source": "breezeway-reconcile",
               "order": 6
+            },
+            {
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-08",
+              "source": "breezeway-reconcile",
+              "order": 7
+            },
+            {
+              "name": "JoyStick",
+              "address": "8228 Balsam Way, Arvada 80005",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-08",
+              "source": "breezeway-reconcile",
+              "order": 8
+            },
+            {
+              "name": "Sheridan",
+              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "",
+              "source": "breezeway-reconcile",
+              "order": 9
             }
           ],
           "isLaundry": false
