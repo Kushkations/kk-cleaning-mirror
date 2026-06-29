@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T01:15:33.265254",
+  "generated": "2026-06-29T01:31:12.059651",
   "weekStart": "2026-06-29",
   "weekEnd": "2026-07-05",
   "week": [
@@ -10,30 +10,16 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Marii",
-          "members": [
-            "Marii",
-            "Yenny",
-            "Alexandria"
-          ],
+          "lead": "TBD",
+          "members": [],
           "properties": [
             {
-              "property_id": 362638,
               "name": "Sativa",
               "address": "391 E 83rd Dr, Denver 80229",
-              "zone": "hq",
-              "beds": 6,
-              "sqft": 1782,
-              "est_hours": 2.0,
-              "lat": 39.8458,
-              "lon": -104.9816,
               "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-06-29",
-              "next_checkout": "2026-07-05",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
+              "est_hours": 2.0,
+              "notes": "CI 2026-06-29",
+              "source": "breezeway-reconcile",
               "order": 1
             },
             {
@@ -54,8 +40,7 @@
               "source": "breezeway-reconcile",
               "order": 3
             }
-          ],
-          "isLaundry": false
+          ]
         }
       ],
       "laundry": {
@@ -63,9 +48,12 @@
         "active": false
       },
       "off": [
+        "Marii",
         "Gabby",
+        "Yenny",
         "Julie",
         "Yolanda",
+        "Alexandria",
         "Maria"
       ],
       "occupied": [
@@ -87,10 +75,10 @@
         "Sativa",
         "Sheridan"
       ],
-      "payrollEstimate": 440,
-      "sameDayTurns": 1,
+      "payrollEstimate": 0,
+      "sameDayTurns": 0,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 1,
+      "totalCheckouts": 0,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -697,7 +685,7 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 3,
       "role": "lead",
       "dailyRate": 170
     },
@@ -707,7 +695,7 @@
       "dailyRate": 150
     },
     "Yenny": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 3,
       "role": "cleaner",
       "dailyRate": 140
     },
@@ -722,7 +710,7 @@
       "dailyRate": 130
     },
     "Alexandria": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 3,
       "role": "cleaner",
       "dailyRate": 130
     },
