@@ -1,98 +1,8 @@
 {
-  "generated": "2026-06-29T23:00:52.857389",
-  "weekStart": "2026-06-29",
-  "weekEnd": "2026-07-05",
+  "generated": "2026-06-29T16:57:20.859736",
+  "weekStart": "2026-06-30",
+  "weekEnd": "2026-07-06",
   "week": [
-    {
-      "date": "2026-06-29",
-      "dayNameEs": "Lunes",
-      "dayNameEn": "Monday",
-      "teams": [
-        {
-          "name": "Equipo 1",
-          "lead": "TBD",
-          "members": [],
-          "properties": [
-            {
-              "name": "Indica",
-              "address": "7682 Shoshone St, Denver 80221",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-29",
-              "source": "breezeway-reconcile",
-              "order": 1
-            },
-            {
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-29",
-              "source": "breezeway-reconcile",
-              "order": 2
-            },
-            {
-              "name": "Sativa",
-              "address": "391 E 83rd Dr, Denver 80229",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-29",
-              "source": "breezeway-reconcile",
-              "order": 3
-            },
-            {
-              "name": "BlueDream",
-              "address": "1475 S Pierce St, Lakewood 80232",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-01",
-              "source": "breezeway-reconcile",
-              "order": 4
-            }
-          ]
-        }
-      ],
-      "laundry": {
-        "assigned": [],
-        "active": false
-      },
-      "off": [
-        "Marii",
-        "Gabby",
-        "Yenny",
-        "Julie",
-        "Yolanda",
-        "Alexandria",
-        "Maria"
-      ],
-      "occupied": [
-        "Airport",
-        "Alpha",
-        "Beach",
-        "BlueDream",
-        "BuffaloGolf",
-        "Elevation",
-        "GameRoom",
-        "Grant",
-        "GrownSexy",
-        "Hotbox",
-        "Indica",
-        "JoyStick",
-        "Palace",
-        "PlayHouse",
-        "Pueblo",
-        "Quivas",
-        "Sativa",
-        "Sheridan",
-        "Wonderland"
-      ],
-      "payrollEstimate": 0,
-      "sameDayTurns": 0,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 0,
-      "optimizations": [],
-      "startTime": "9:45 AM"
-    },
     {
       "date": "2026-06-30",
       "dayNameEs": "Martes",
@@ -205,11 +115,11 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Marii",
+          "lead": "Gabby",
           "members": [
-            "Marii",
-            "Yenny",
-            "Alexandria"
+            "Gabby",
+            "Yolanda",
+            "Julie"
           ],
           "properties": [
             {
@@ -237,7 +147,13 @@
               "est_hours": 3.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 3
+              "order": 3,
+              "zone": "far_west",
+              "property_id": 387379,
+              "lat": 39.8294,
+              "lon": -105.1483,
+              "beds": 7,
+              "sqft": 2976
             }
           ],
           "isLaundry": false
@@ -248,9 +164,9 @@
         "active": false
       },
       "off": [
-        "Gabby",
-        "Julie",
-        "Yolanda",
+        "Marii",
+        "Yenny",
+        "Alexandria",
         "Maria"
       ],
       "occupied": [
@@ -272,7 +188,7 @@
         "Sheridan",
         "Wonderland"
       ],
-      "payrollEstimate": 440,
+      "payrollEstimate": 410,
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
       "totalCheckouts": 1,
@@ -294,32 +210,19 @@
           ],
           "properties": [
             {
-              "property_id": 400224,
-              "name": "BlueDream",
-              "address": "1475 S Pierce St, Lakewood 80232",
-              "zone": "isolated",
-              "beds": 3,
-              "sqft": 1100,
-              "est_hours": 1.5,
-              "lat": 39.6902,
-              "lon": -105.073,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-02",
-              "next_checkout": "2026-07-05",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
               "name": "Wonderland",
               "address": "5955 S Zante Way, Aurora 80015",
               "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-02",
-              "source": "breezeway-reconcile",
-              "order": 2
+              "est_hours": 2.5,
+              "priority_locked": true,
+              "manual_add": true,
+              "zone": "isolated",
+              "property_id": 447452,
+              "lat": 39.6083,
+              "lon": -104.7176,
+              "beds": 5,
+              "sqft": 1886,
+              "order": 1
             },
             {
               "property_id": 387216,
@@ -334,6 +237,25 @@
               "priority": "tomorrow_checkin",
               "priority_locked": false,
               "next_checkin": "2026-07-03",
+              "next_checkout": "2026-07-05",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
+              "property_id": 400224,
+              "name": "BlueDream",
+              "address": "1475 S Pierce St, Lakewood 80232",
+              "zone": "isolated",
+              "beds": 3,
+              "sqft": 1100,
+              "est_hours": 1.5,
+              "lat": 39.6902,
+              "lon": -105.073,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-02",
               "next_checkout": "2026-07-05",
               "deadline": null,
               "checkout_time": "10:00 AM",
@@ -378,7 +300,7 @@
       "payrollEstimate": 410,
       "sameDayTurns": 1,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 2,
+      "totalCheckouts": 3,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -403,7 +325,13 @@
               "est_hours": 2.0,
               "priority_locked": true,
               "manual_add": true,
-              "order": 1
+              "order": 1,
+              "zone": "hq",
+              "property_id": 320255,
+              "lat": 39.8488,
+              "lon": -104.9769,
+              "beds": 4,
+              "sqft": 1822
             },
             {
               "property_id": 470233,
@@ -415,11 +343,11 @@
               "est_hours": 2.5,
               "lat": 39.9113,
               "lon": -104.7923,
-              "priority": "same_day",
+              "priority": "checkout_only",
               "priority_locked": false,
               "next_checkin": "2026-07-03",
               "next_checkout": "2026-07-06",
-              "deadline": "4:00 PM",
+              "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
@@ -462,7 +390,7 @@
         "Wonderland"
       ],
       "payrollEstimate": 410,
-      "sameDayTurns": 2,
+      "sameDayTurns": 1,
       "tomorrowCheckins": 0,
       "totalCheckouts": 2,
       "optimizations": [],
@@ -736,6 +664,97 @@
       "totalCheckouts": 5,
       "optimizations": [],
       "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-06",
+      "dayNameEs": "Lunes",
+      "dayNameEn": "Monday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Marii",
+          "members": [
+            "Marii",
+            "Yenny",
+            "Alexandria"
+          ],
+          "properties": [
+            {
+              "name": "Sativa",
+              "address": "391 E 83rd Dr, Denver 80229",
+              "priority": "same_day",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-06",
+              "source": "breezeway-reconcile",
+              "order": 1
+            },
+            {
+              "property_id": 404868,
+              "name": "Paradise",
+              "address": "11448 Larson Ln, Northglenn 80233",
+              "zone": "north",
+              "beds": 5,
+              "sqft": 1834,
+              "est_hours": 2.5,
+              "lat": 39.9046,
+              "lon": -104.9736,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
+              "name": "BuffaloGolf",
+              "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-09",
+              "source": "breezeway-reconcile",
+              "order": 3
+            },
+            {
+              "name": "Wonderland",
+              "address": "5955 S Zante Way, Aurora 80015",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-10",
+              "source": "breezeway-reconcile",
+              "order": 4
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Gabby",
+        "Julie",
+        "Yolanda",
+        "Maria"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Altitude",
+        "Hotbox",
+        "PlayHouse",
+        "Pueblo",
+        "Quivas",
+        "Sativa"
+      ],
+      "payrollEstimate": 440,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 1,
+      "optimizations": [],
+      "startTime": "9:45 AM"
     }
   ],
   "cleanerStats": {
@@ -745,7 +764,7 @@
       "dailyRate": 170
     },
     "Gabby": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 4,
       "role": "lead",
       "dailyRate": 150
     },
@@ -755,12 +774,12 @@
       "dailyRate": 140
     },
     "Julie": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Yolanda": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 130
     },
