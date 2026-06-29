@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T18:15:27.775715",
+  "generated": "2026-06-29T18:30:50.630132",
   "weekStart": "2026-06-29",
   "weekEnd": "2026-07-05",
   "week": [
@@ -213,13 +213,22 @@
           ],
           "properties": [
             {
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "priority": "tomorrow_checkin",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-02",
+              "source": "breezeway-reconcile",
+              "order": 1
+            },
+            {
               "name": "PlayHouse",
               "address": "7350 Alkire Ct, Arvada 80005",
               "priority": "checkout_only",
               "est_hours": 3.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 1
+              "order": 2
             }
           ],
           "isLaundry": false
