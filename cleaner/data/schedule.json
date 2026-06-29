@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T00:45:56.666648",
+  "generated": "2026-06-29T01:01:54.277835",
   "weekStart": "2026-06-29",
   "weekEnd": "2026-07-05",
   "week": [
@@ -119,22 +119,13 @@
           ],
           "properties": [
             {
-              "name": "BuffaloGolf",
-              "address": "16714 Buffalo Run Dr, Commerce City 80022",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-30",
-              "source": "breezeway-reconcile",
-              "order": 1
-            },
-            {
               "name": "Beach",
               "address": "5467 Beach Ct, Denver 80221",
               "priority": "checkout_only",
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 2,
+              "order": 1,
               "zone": "west",
               "property_id": 281880,
               "lat": 39.7958,
@@ -159,6 +150,15 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
+              "order": 2
+            },
+            {
+              "name": "BuffaloGolf",
+              "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "",
+              "source": "breezeway-reconcile",
               "order": 3
             },
             {
@@ -166,7 +166,7 @@
               "address": "12332 Quince St, Thornton 80602",
               "priority": "checkout_only",
               "est_hours": 2.0,
-              "notes": "CI 2026-07-02",
+              "notes": "",
               "source": "breezeway-reconcile",
               "order": 4
             }
