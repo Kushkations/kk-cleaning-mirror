@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T01:01:54.277835",
+  "generated": "2026-06-29T01:15:33.265254",
   "weekStart": "2026-06-29",
   "weekEnd": "2026-07-05",
   "week": [
@@ -37,22 +37,12 @@
               "order": 1
             },
             {
-              "property_id": 399810,
               "name": "Indica",
               "address": "7682 Shoshone St, Denver 80221",
-              "zone": "west",
-              "beds": 5,
-              "sqft": 1700,
-              "est_hours": 2.0,
-              "lat": 39.8361,
-              "lon": -105.0096,
               "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-07-02",
-              "next_checkout": "2026-07-05",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-02",
+              "source": "breezeway-reconcile",
               "order": 2
             },
             {
@@ -100,7 +90,7 @@
       "payrollEstimate": 440,
       "sameDayTurns": 1,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 2,
+      "totalCheckouts": 1,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -119,13 +109,22 @@
           ],
           "properties": [
             {
+              "name": "BuffaloGolf",
+              "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "priority": "same_day",
+              "est_hours": 2.0,
+              "notes": "CI 2026-06-30",
+              "source": "breezeway-reconcile",
+              "order": 1
+            },
+            {
               "name": "Beach",
               "address": "5467 Beach Ct, Denver 80221",
               "priority": "checkout_only",
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 1,
+              "order": 2,
               "zone": "west",
               "property_id": 281880,
               "lat": 39.7958,
@@ -150,15 +149,6 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
-            },
-            {
-              "name": "BuffaloGolf",
-              "address": "16714 Buffalo Run Dr, Commerce City 80022",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "",
-              "source": "breezeway-reconcile",
               "order": 3
             },
             {
@@ -166,7 +156,7 @@
               "address": "12332 Quince St, Thornton 80602",
               "priority": "checkout_only",
               "est_hours": 2.0,
-              "notes": "",
+              "notes": "CI 2026-07-02",
               "source": "breezeway-reconcile",
               "order": 4
             }
