@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T23:31:52.077684",
+  "generated": "2026-06-29T17:32:18.496448",
   "weekStart": "2026-06-29",
   "weekEnd": "2026-07-05",
   "week": [
@@ -205,11 +205,11 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Marii",
+          "lead": "Gabby",
           "members": [
-            "Marii",
-            "Yenny",
-            "Alexandria"
+            "Gabby",
+            "Yolanda",
+            "Julie"
           ],
           "properties": [
             {
@@ -237,7 +237,13 @@
               "est_hours": 3.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 3
+              "order": 3,
+              "zone": "far_west",
+              "property_id": 387379,
+              "lat": 39.8294,
+              "lon": -105.1483,
+              "beds": 7,
+              "sqft": 2976
             }
           ],
           "isLaundry": false
@@ -248,9 +254,9 @@
         "active": false
       },
       "off": [
-        "Gabby",
-        "Julie",
-        "Yolanda",
+        "Marii",
+        "Yenny",
+        "Alexandria",
         "Maria"
       ],
       "occupied": [
@@ -272,7 +278,7 @@
         "Sheridan",
         "Wonderland"
       ],
-      "payrollEstimate": 440,
+      "payrollEstimate": 410,
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
       "totalCheckouts": 1,
@@ -316,9 +322,15 @@
               "name": "Wonderland",
               "address": "5955 S Zante Way, Aurora 80015",
               "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-02",
-              "source": "breezeway-reconcile",
+              "est_hours": 2.5,
+              "priority_locked": true,
+              "manual_add": true,
+              "zone": "isolated",
+              "property_id": 447452,
+              "lat": 39.6083,
+              "lon": -104.7176,
+              "beds": 5,
+              "sqft": 1886,
               "order": 2
             },
             {
@@ -376,9 +388,9 @@
         "Wonderland"
       ],
       "payrollEstimate": 410,
-      "sameDayTurns": 1,
+      "sameDayTurns": 2,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 2,
+      "totalCheckouts": 3,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -403,7 +415,13 @@
               "est_hours": 2.0,
               "priority_locked": true,
               "manual_add": true,
-              "order": 1
+              "order": 1,
+              "zone": "hq",
+              "property_id": 320255,
+              "lat": 39.8488,
+              "lon": -104.9769,
+              "beds": 4,
+              "sqft": 1822
             },
             {
               "property_id": 470233,
@@ -740,32 +758,32 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 2,
       "role": "lead",
       "dailyRate": 170
     },
     "Gabby": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 4,
       "role": "lead",
       "dailyRate": 150
     },
     "Yenny": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 2,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Julie": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Yolanda": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Alexandria": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 2,
       "role": "cleaner",
       "dailyRate": 130
     },
