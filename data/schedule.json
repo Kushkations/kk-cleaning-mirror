@@ -300,6 +300,14 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
+            },
+            {
+              "name": "Wonderland",
+              "address": "5955 S Zante Way, Aurora 80015",
+              "priority": "same_day",
+              "est_hours": 2.5,
+              "priority_locked": true,
+              "manual_add": true
             }
           ],
           "isLaundry": false
