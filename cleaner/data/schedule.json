@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T20:30:54.081361",
+  "generated": "2026-06-29T20:46:38.197888",
   "weekStart": "2026-06-29",
   "weekEnd": "2026-07-05",
   "week": [
@@ -23,8 +23,8 @@
               "order": 1
             },
             {
-              "name": "Sativa",
-              "address": "391 E 83rd Dr, Denver 80229",
+              "name": "Paradise",
+              "address": "11448 Larson Ln, Northglenn 80233",
               "priority": "same_day",
               "est_hours": 2.0,
               "notes": "CI 2026-06-29",
@@ -32,17 +32,17 @@
               "order": 2
             },
             {
-              "name": "BlueDream",
-              "address": "1475 S Pierce St, Lakewood 80232",
-              "priority": "checkout_only",
+              "name": "Sativa",
+              "address": "391 E 83rd Dr, Denver 80229",
+              "priority": "same_day",
               "est_hours": 2.0,
-              "notes": "CI 2026-07-01",
+              "notes": "CI 2026-06-29",
               "source": "breezeway-reconcile",
               "order": 3
             },
             {
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
+              "name": "BlueDream",
+              "address": "1475 S Pierce St, Lakewood 80232",
               "priority": "checkout_only",
               "est_hours": 2.0,
               "notes": "CI 2026-07-01",
