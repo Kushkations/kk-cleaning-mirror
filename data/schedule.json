@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T00:16:18.265894",
+  "generated": "2026-06-29T00:31:22.586905",
   "weekStart": "2026-06-29",
   "weekEnd": "2026-07-05",
   "week": [
@@ -525,6 +525,15 @@
               "order": 1
             },
             {
+              "name": "Sativa",
+              "address": "391 E 83rd Dr, Denver 80229",
+              "priority": "same_day",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-05",
+              "source": "breezeway-reconcile",
+              "order": 2
+            },
+            {
               "property_id": 399039,
               "name": "Altitude",
               "address": "4350 Xenon St, Wheat Ridge 80033",
@@ -541,7 +550,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             },
             {
               "property_id": 281880,
@@ -560,7 +569,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 4
             },
             {
               "name": "BlueDream",
@@ -569,7 +578,7 @@
               "est_hours": 2.0,
               "notes": "CI 2026-07-13",
               "source": "breezeway-reconcile",
-              "order": 4
+              "order": 5
             },
             {
               "name": "Elevation",
@@ -578,7 +587,7 @@
               "est_hours": 2.0,
               "notes": "CI 2026-07-08",
               "source": "breezeway-reconcile",
-              "order": 5
+              "order": 6
             },
             {
               "name": "Grant",
@@ -587,7 +596,7 @@
               "est_hours": 2.0,
               "notes": "CI 2026-07-09",
               "source": "breezeway-reconcile",
-              "order": 6
+              "order": 7
             },
             {
               "name": "Indica",
@@ -596,7 +605,7 @@
               "est_hours": 2.0,
               "notes": "CI 2026-07-08",
               "source": "breezeway-reconcile",
-              "order": 7
+              "order": 8
             },
             {
               "name": "JoyStick",
@@ -605,7 +614,7 @@
               "est_hours": 2.0,
               "notes": "CI 2026-07-08",
               "source": "breezeway-reconcile",
-              "order": 8
+              "order": 9
             },
             {
               "name": "Sheridan",
@@ -614,7 +623,7 @@
               "est_hours": 2.0,
               "notes": "",
               "source": "breezeway-reconcile",
-              "order": 9
+              "order": 10
             }
           ],
           "isLaundry": false
