@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T20:46:38.197888",
+  "generated": "2026-06-29T21:01:09.362332",
   "weekStart": "2026-06-29",
   "weekEnd": "2026-07-05",
   "week": [
@@ -213,13 +213,22 @@
           ],
           "properties": [
             {
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "priority": "same_day",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-01",
+              "source": "breezeway-reconcile",
+              "order": 1
+            },
+            {
               "name": "Indica",
               "address": "7682 Shoshone St, Denver 80221",
               "priority": "tomorrow_checkin",
               "est_hours": 2.0,
               "notes": "CI 2026-07-02",
               "source": "breezeway-reconcile",
-              "order": 1
+              "order": 2
             },
             {
               "name": "PlayHouse",
@@ -228,7 +237,7 @@
               "est_hours": 3.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 2
+              "order": 3
             }
           ],
           "isLaundry": false
