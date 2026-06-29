@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T08:31:13.581443",
+  "generated": "2026-06-29T08:46:09.973319",
   "weekStart": "2026-06-29",
   "weekEnd": "2026-07-05",
   "week": [
@@ -292,6 +292,15 @@
               "order": 1
             },
             {
+              "name": "Wonderland",
+              "address": "5955 S Zante Way, Aurora 80015",
+              "priority": "same_day",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-02",
+              "source": "breezeway-reconcile",
+              "order": 2
+            },
+            {
               "property_id": 387216,
               "name": "GrownSexy",
               "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
@@ -308,7 +317,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -591,13 +600,22 @@
               "order": 7
             },
             {
+              "name": "GrownSexy",
+              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-10",
+              "source": "breezeway-reconcile",
+              "order": 8
+            },
+            {
               "name": "Indica",
               "address": "7682 Shoshone St, Denver 80221",
               "priority": "checkout_only",
               "est_hours": 2.0,
               "notes": "CI 2026-07-08",
               "source": "breezeway-reconcile",
-              "order": 8
+              "order": 9
             },
             {
               "name": "JoyStick",
@@ -606,7 +624,7 @@
               "est_hours": 2.0,
               "notes": "CI 2026-07-08",
               "source": "breezeway-reconcile",
-              "order": 9
+              "order": 10
             },
             {
               "name": "Sheridan",
@@ -615,7 +633,7 @@
               "est_hours": 2.0,
               "notes": "",
               "source": "breezeway-reconcile",
-              "order": 10
+              "order": 11
             }
           ],
           "isLaundry": false
