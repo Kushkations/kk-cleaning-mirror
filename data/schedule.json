@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T07:46:35.341480",
+  "generated": "2026-06-29T08:01:11.331321",
   "weekStart": "2026-06-29",
   "weekEnd": "2026-07-05",
   "week": [
@@ -573,31 +573,13 @@
               "order": 6
             },
             {
-              "name": "Grant",
-              "address": "261 Grant Way, Denver 80229",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-09",
-              "source": "breezeway-reconcile",
-              "order": 7
-            },
-            {
-              "name": "Indica",
-              "address": "7682 Shoshone St, Denver 80221",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-08",
-              "source": "breezeway-reconcile",
-              "order": 8
-            },
-            {
               "name": "JoyStick",
               "address": "8228 Balsam Way, Arvada 80005",
               "priority": "checkout_only",
               "est_hours": 2.0,
               "notes": "CI 2026-07-08",
               "source": "breezeway-reconcile",
-              "order": 9
+              "order": 7
             },
             {
               "name": "Sheridan",
@@ -606,7 +588,7 @@
               "est_hours": 2.0,
               "notes": "",
               "source": "breezeway-reconcile",
-              "order": 10
+              "order": 8
             }
           ],
           "isLaundry": false
