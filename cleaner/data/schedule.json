@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T06:01:11.077407",
+  "generated": "2026-06-29T06:16:12.066806",
   "weekStart": "2026-06-29",
   "weekEnd": "2026-07-05",
   "week": [
@@ -73,7 +73,8 @@
         "Pueblo",
         "Quivas",
         "Sativa",
-        "Sheridan"
+        "Sheridan",
+        "Wonderland"
       ],
       "payrollEstimate": 0,
       "sameDayTurns": 0,
@@ -176,7 +177,8 @@
         "Pueblo",
         "Quivas",
         "Sativa",
-        "Sheridan"
+        "Sheridan",
+        "Wonderland"
       ],
       "payrollEstimate": 440,
       "sameDayTurns": 0,
@@ -237,7 +239,8 @@
         "Pueblo",
         "Quivas",
         "Sativa",
-        "Sheridan"
+        "Sheridan",
+        "Wonderland"
       ],
       "payrollEstimate": 440,
       "sameDayTurns": 0,
@@ -289,10 +292,10 @@
               "est_hours": 1.5,
               "lat": 39.7652,
               "lon": -105.0535,
-              "priority": "checkout_only",
+              "priority": "tomorrow_checkin",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-07-03",
+              "next_checkout": "2026-07-05",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -334,7 +337,7 @@
       ],
       "payrollEstimate": 410,
       "sameDayTurns": 1,
-      "tomorrowCheckins": 0,
+      "tomorrowCheckins": 1,
       "totalCheckouts": 2,
       "optimizations": [],
       "startTime": "9:45 AM"
@@ -404,6 +407,7 @@
         "BuffaloGolf",
         "Elevation",
         "Grant",
+        "GrownSexy",
         "Hotbox",
         "Indica",
         "JoyStick",
@@ -450,6 +454,7 @@
         "BuffaloGolf",
         "Elevation",
         "Grant",
+        "GrownSexy",
         "Hotbox",
         "Indica",
         "JoyStick",
