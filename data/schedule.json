@@ -39,6 +39,14 @@
               "notes": "CI 2026-07-01",
               "source": "breezeway-reconcile",
               "order": 3
+            },
+            {
+              "name": "BlueDream",
+              "address": "1475 S Pierce St, Lakewood 80232",
+              "priority": "checkout_only",
+              "est_hours": 1.5,
+              "priority_locked": true,
+              "manual_add": true
             }
           ]
         }
