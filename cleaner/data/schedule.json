@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-30T13:16:11.939879",
+  "generated": "2026-06-30T07:17:39.287081",
   "weekStart": "2026-06-30",
   "weekEnd": "2026-07-06",
   "week": [
@@ -10,40 +10,31 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Marii",
+          "lead": "Gabby",
           "members": [
-            "Marii",
-            "Yenny",
-            "Alexandria"
+            "Gabby",
+            "Yolanda",
+            "Julie"
           ],
           "properties": [
             {
+              "property_id": 470233,
               "name": "BuffaloGolf",
               "address": "16714 Buffalo Run Dr, Commerce City 80022",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-06-30",
-              "source": "breezeway-reconcile",
-              "order": 1
-            },
-            {
-              "property_id": 404868,
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
-              "zone": "north",
+              "zone": "far_east",
               "beds": 5,
-              "sqft": 1834,
+              "sqft": 2146,
               "est_hours": 2.5,
-              "lat": 39.9046,
-              "lon": -104.9736,
-              "priority": "tomorrow_checkin",
+              "lat": 39.9113,
+              "lon": -104.7923,
+              "priority": "same_day",
               "priority_locked": false,
-              "next_checkin": "2026-07-01",
-              "next_checkout": "2026-07-06",
-              "deadline": null,
-              "checkout_time": null,
+              "next_checkin": "2026-06-30",
+              "next_checkout": "2026-07-03",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 1
             },
             {
               "property_id": 393796,
@@ -62,30 +53,53 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
+              "order": 2
+            },
+            {
+              "name": "Paradise",
+              "address": "11448 Larson Ln, Northglenn 80233",
+              "priority": "tomorrow_checkin",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-01",
+              "source": "breezeway-reconcile",
               "order": 3
             },
             {
+              "property_id": 281880,
               "name": "Beach",
               "address": "5467 Beach Ct, Denver 80221",
-              "priority": "checkout_only",
-              "est_hours": 2.5,
-              "priority_locked": true,
-              "manual_add": true,
-              "order": 4,
               "zone": "west",
-              "property_id": 281880,
+              "beds": 4,
+              "sqft": 2000,
+              "est_hours": 2.0,
               "lat": 39.7958,
               "lon": -105.0185,
-              "beds": 4,
-              "sqft": 2000
+              "priority": "checkout_only",
+              "priority_locked": true,
+              "next_checkin": "2026-07-02",
+              "next_checkout": "2026-07-05",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 4
             },
             {
+              "property_id": 440656,
               "name": "Palace",
               "address": "12332 Quince St, Thornton 80602",
+              "zone": "north",
+              "beds": 6,
+              "sqft": 4406,
+              "est_hours": 4.0,
+              "lat": 39.9199,
+              "lon": -104.9018,
               "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-02",
-              "source": "breezeway-reconcile",
+              "priority_locked": false,
+              "next_checkin": "2026-07-02",
+              "next_checkout": "2026-07-05",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
               "order": 5
             }
           ],
@@ -97,9 +111,9 @@
         "active": false
       },
       "off": [
-        "Gabby",
-        "Julie",
-        "Yolanda",
+        "Marii",
+        "Yenny",
+        "Alexandria",
         "Maria"
       ],
       "occupied": [
@@ -122,10 +136,10 @@
         "Sheridan",
         "Wonderland"
       ],
-      "payrollEstimate": 440,
-      "sameDayTurns": 0,
-      "tomorrowCheckins": 2,
-      "totalCheckouts": 3,
+      "payrollEstimate": 410,
+      "sameDayTurns": 1,
+      "tomorrowCheckins": 1,
+      "totalCheckouts": 4,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -136,47 +150,87 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Marii",
+          "lead": "Gabby",
           "members": [
-            "Marii",
-            "Yenny",
-            "Alexandria"
+            "Gabby",
+            "Yolanda",
+            "Julie"
           ],
           "properties": [
             {
-              "name": "Altitude",
-              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "property_id": 404868,
+              "name": "Paradise",
+              "address": "11448 Larson Ln, Northglenn 80233",
+              "zone": "north",
+              "beds": 5,
+              "sqft": 1834,
+              "est_hours": 2.5,
+              "lat": 39.9046,
+              "lon": -104.9736,
               "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-01",
-              "source": "breezeway-reconcile",
+              "priority_locked": false,
+              "next_checkin": "2026-07-01",
+              "next_checkout": "2026-07-06",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
               "order": 1
             },
             {
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
+              "property_id": 399039,
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "zone": "far_west",
+              "beds": 6,
+              "sqft": 1868,
+              "est_hours": 2.5,
+              "lat": 39.7773,
+              "lon": -105.1396,
               "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-01",
-              "source": "breezeway-reconcile",
+              "priority_locked": false,
+              "next_checkin": "2026-07-01",
+              "next_checkout": "2026-07-05",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
               "order": 2
             },
             {
+              "property_id": 399810,
               "name": "Indica",
               "address": "7682 Shoshone St, Denver 80221",
-              "priority": "tomorrow_checkin",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 1700,
               "est_hours": 2.0,
-              "notes": "CI 2026-07-02",
-              "source": "breezeway-reconcile",
+              "lat": 39.8361,
+              "lon": -105.0096,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-02",
+              "next_checkout": "2026-07-05",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
               "order": 3
             },
             {
+              "property_id": 387379,
               "name": "PlayHouse",
               "address": "7350 Alkire Ct, Arvada 80005",
-              "priority": "checkout_only",
+              "zone": "far_west",
+              "beds": 7,
+              "sqft": 2976,
               "est_hours": 3.5,
+              "lat": 39.8294,
+              "lon": -105.1483,
+              "priority": "checkout_only",
               "priority_locked": true,
-              "manual_add": true,
+              "next_checkin": "2026-07-03",
+              "next_checkout": "2026-07-08",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
               "order": 4
             }
           ],
@@ -188,9 +242,9 @@
         "active": false
       },
       "off": [
-        "Gabby",
-        "Julie",
-        "Yolanda",
+        "Marii",
+        "Yenny",
+        "Alexandria",
         "Maria"
       ],
       "occupied": [
@@ -212,10 +266,10 @@
         "Sheridan",
         "Wonderland"
       ],
-      "payrollEstimate": 440,
-      "sameDayTurns": 0,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 1,
+      "payrollEstimate": 410,
+      "sameDayTurns": 2,
+      "tomorrowCheckins": 1,
+      "totalCheckouts": 4,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -253,12 +307,22 @@
               "order": 1
             },
             {
+              "property_id": 447452,
               "name": "Wonderland",
               "address": "5955 S Zante Way, Aurora 80015",
+              "zone": "isolated",
+              "beds": 5,
+              "sqft": 1886,
+              "est_hours": 2.5,
+              "lat": 39.6083,
+              "lon": -104.7176,
               "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-02",
-              "source": "breezeway-reconcile",
+              "priority_locked": true,
+              "next_checkin": "2026-07-02",
+              "next_checkout": "2026-07-06",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
               "order": 2
             },
             {
@@ -316,9 +380,9 @@
         "Wonderland"
       ],
       "payrollEstimate": 410,
-      "sameDayTurns": 1,
+      "sameDayTurns": 2,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 2,
+      "totalCheckouts": 3,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -337,12 +401,22 @@
           ],
           "properties": [
             {
+              "property_id": 320255,
               "name": "Hotbox",
               "address": "761 E 83rd Pl, Denver 80229",
-              "priority": "same_day",
+              "zone": "hq",
+              "beds": 4,
+              "sqft": 1822,
               "est_hours": 2.0,
+              "lat": 39.8488,
+              "lon": -104.9769,
+              "priority": "same_day",
               "priority_locked": true,
-              "manual_add": true,
+              "next_checkin": "2026-07-03",
+              "next_checkout": "2026-07-09",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
               "order": 1
             },
             {
@@ -470,6 +544,151 @@
           ],
           "properties": [
             {
+              "property_id": 362638,
+              "name": "Sativa",
+              "address": "391 E 83rd Dr, Denver 80229",
+              "zone": "hq",
+              "beds": 6,
+              "sqft": 1782,
+              "est_hours": 2.0,
+              "lat": 39.8458,
+              "lon": -104.9816,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-05",
+              "next_checkout": "2026-07-06",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 435859,
+              "name": "Airport",
+              "address": "19990 E 40th Ave, Denver 80249",
+              "zone": "far_east",
+              "beds": 4,
+              "sqft": 1642,
+              "est_hours": 2.0,
+              "lat": 39.7706,
+              "lon": -104.7548,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-05",
+              "next_checkout": "2026-07-12",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
+              "property_id": 399039,
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "zone": "far_west",
+              "beds": 6,
+              "sqft": 1868,
+              "est_hours": 2.5,
+              "lat": 39.7773,
+              "lon": -105.1396,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-06",
+              "next_checkout": "2026-07-09",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
+            },
+            {
+              "property_id": 387216,
+              "name": "GrownSexy",
+              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1200,
+              "est_hours": 1.5,
+              "lat": 39.7652,
+              "lon": -105.0535,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 4
+            },
+            {
+              "property_id": 370183,
+              "name": "Sheridan",
+              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1287,
+              "est_hours": 1.5,
+              "lat": 39.7653,
+              "lon": -105.0534,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 5
+            },
+            {
+              "property_id": 400224,
+              "name": "BlueDream",
+              "address": "1475 S Pierce St, Lakewood 80232",
+              "zone": "isolated",
+              "beds": 3,
+              "sqft": 1100,
+              "est_hours": 1.5,
+              "lat": 39.6902,
+              "lon": -105.073,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 6
+            },
+            {
+              "property_id": 409557,
+              "name": "Elevation",
+              "address": "3431 E 105th Ct, Northglenn 80233",
+              "zone": "north",
+              "beds": 5,
+              "sqft": 2376,
+              "est_hours": 2.5,
+              "lat": 39.8878,
+              "lon": -104.9458,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-08",
+              "next_checkout": "2026-07-12",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 7
+            }
+          ],
+          "isLaundry": false
+        },
+        {
+          "name": "Equipo 2",
+          "lead": "Gabby",
+          "members": [
+            "Gabby",
+            "Yolanda",
+            "Julie"
+          ],
+          "properties": [
+            {
               "property_id": 281880,
               "name": "Beach",
               "address": "5467 Beach Ct, Denver 80221",
@@ -489,15 +708,6 @@
               "order": 1
             },
             {
-              "name": "Sativa",
-              "address": "391 E 83rd Dr, Denver 80229",
-              "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-05",
-              "source": "breezeway-reconcile",
-              "order": 2
-            },
-            {
               "property_id": 313164,
               "name": "Quivas",
               "address": "7240 Quivas St, Denver 80221",
@@ -514,7 +724,64 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
+              "order": 2
+            },
+            {
+              "property_id": 399810,
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 1700,
+              "est_hours": 2.0,
+              "lat": 39.8361,
+              "lon": -105.0096,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-08",
+              "next_checkout": "2026-07-10",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
               "order": 3
+            },
+            {
+              "property_id": 370631,
+              "name": "Grant",
+              "address": "261 Grant Way, Denver 80229",
+              "zone": "hq",
+              "beds": 6,
+              "sqft": 1782,
+              "est_hours": 2.0,
+              "lat": 39.8455,
+              "lon": -104.9828,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 4
+            },
+            {
+              "property_id": 354421,
+              "name": "JoyStick",
+              "address": "8228 Balsam Way, Arvada 80005",
+              "zone": "far_west",
+              "beds": 4,
+              "sqft": 2183,
+              "est_hours": 2.5,
+              "lat": 39.8466,
+              "lon": -105.0904,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-08",
+              "next_checkout": "2026-07-12",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 5
             },
             {
               "property_id": 440656,
@@ -533,120 +800,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 4
-            },
-            {
-              "name": "BlueDream",
-              "address": "1475 S Pierce St, Lakewood 80232",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-13",
-              "source": "breezeway-reconcile",
-              "order": 5
-            },
-            {
-              "name": "Elevation",
-              "address": "3431 E 105th Ct, Northglenn 80233",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-08",
-              "source": "breezeway-reconcile",
               "order": 6
-            },
-            {
-              "name": "Grant",
-              "address": "261 Grant Way, Denver 80229",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-09",
-              "source": "breezeway-reconcile",
-              "order": 7
-            },
-            {
-              "name": "GrownSexy",
-              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-10",
-              "source": "breezeway-reconcile",
-              "order": 8
-            },
-            {
-              "name": "Indica",
-              "address": "7682 Shoshone St, Denver 80221",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-08",
-              "source": "breezeway-reconcile",
-              "order": 9
-            },
-            {
-              "name": "JoyStick",
-              "address": "8228 Balsam Way, Arvada 80005",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-08",
-              "source": "breezeway-reconcile",
-              "order": 10
-            },
-            {
-              "name": "Sheridan",
-              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "",
-              "source": "breezeway-reconcile",
-              "order": 11
-            }
-          ],
-          "isLaundry": false
-        },
-        {
-          "name": "Equipo 2",
-          "lead": "Gabby",
-          "members": [
-            "Gabby",
-            "Yolanda",
-            "Julie"
-          ],
-          "properties": [
-            {
-              "property_id": 435859,
-              "name": "Airport",
-              "address": "19990 E 40th Ave, Denver 80249",
-              "zone": "far_east",
-              "beds": 4,
-              "sqft": 1642,
-              "est_hours": 2.0,
-              "lat": 39.7706,
-              "lon": -104.7548,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-05",
-              "next_checkout": "2026-07-12",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
-              "property_id": 399039,
-              "name": "Altitude",
-              "address": "4350 Xenon St, Wheat Ridge 80033",
-              "zone": "far_west",
-              "beds": 6,
-              "sqft": 1868,
-              "est_hours": 2.5,
-              "lat": 39.7773,
-              "lon": -105.1396,
-              "priority": "tomorrow_checkin",
-              "priority_locked": false,
-              "next_checkin": "2026-07-06",
-              "next_checkout": "2026-07-09",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
             }
           ],
           "isLaundry": false
@@ -672,9 +826,9 @@
         "Wonderland"
       ],
       "payrollEstimate": 850,
-      "sameDayTurns": 2,
+      "sameDayTurns": 3,
       "tomorrowCheckins": 2,
-      "totalCheckouts": 5,
+      "totalCheckouts": 13,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -685,20 +839,30 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Marii",
+          "lead": "Gabby",
           "members": [
-            "Marii",
-            "Yenny",
-            "Alexandria"
+            "Gabby",
+            "Yolanda",
+            "Julie"
           ],
           "properties": [
             {
+              "property_id": 362638,
               "name": "Sativa",
               "address": "391 E 83rd Dr, Denver 80229",
-              "priority": "same_day",
+              "zone": "hq",
+              "beds": 6,
+              "sqft": 1782,
               "est_hours": 2.0,
-              "notes": "CI 2026-07-06",
-              "source": "breezeway-reconcile",
+              "lat": 39.8458,
+              "lon": -104.9816,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-06",
+              "next_checkout": "2026-07-08",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
               "order": 1
             },
             {
@@ -721,21 +885,41 @@
               "order": 2
             },
             {
+              "property_id": 470233,
               "name": "BuffaloGolf",
               "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "zone": "far_east",
+              "beds": 5,
+              "sqft": 2146,
+              "est_hours": 2.5,
+              "lat": 39.9113,
+              "lon": -104.7923,
               "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-09",
-              "source": "breezeway-reconcile",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
               "order": 3
             },
             {
+              "property_id": 447452,
               "name": "Wonderland",
               "address": "5955 S Zante Way, Aurora 80015",
+              "zone": "isolated",
+              "beds": 5,
+              "sqft": 1886,
+              "est_hours": 2.5,
+              "lat": 39.6083,
+              "lon": -104.7176,
               "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-10",
-              "source": "breezeway-reconcile",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
               "order": 4
             }
           ],
@@ -747,9 +931,9 @@
         "active": false
       },
       "off": [
-        "Gabby",
-        "Julie",
-        "Yolanda",
+        "Marii",
+        "Yenny",
+        "Alexandria",
         "Maria"
       ],
       "occupied": [
@@ -763,42 +947,42 @@
         "Quivas",
         "Sativa"
       ],
-      "payrollEstimate": 440,
-      "sameDayTurns": 0,
+      "payrollEstimate": 410,
+      "sameDayTurns": 1,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 1,
+      "totalCheckouts": 4,
       "optimizations": [],
       "startTime": "9:45 AM"
     }
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 1,
       "role": "lead",
       "dailyRate": 170
     },
     "Gabby": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 6,
       "role": "lead",
       "dailyRate": 150
     },
     "Yenny": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 1,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Julie": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 6,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Yolanda": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 6,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Alexandria": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 1,
       "role": "cleaner",
       "dailyRate": 130
     },
