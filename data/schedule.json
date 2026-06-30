@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-30T05:45:39.752360",
+  "generated": "2026-06-30T06:01:37.376470",
   "weekStart": "2026-06-30",
   "weekEnd": "2026-07-06",
   "week": [
@@ -27,6 +27,25 @@
               "order": 1
             },
             {
+              "property_id": 404868,
+              "name": "Paradise",
+              "address": "11448 Larson Ln, Northglenn 80233",
+              "zone": "north",
+              "beds": 5,
+              "sqft": 1834,
+              "est_hours": 2.5,
+              "lat": 39.9046,
+              "lon": -104.9736,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-01",
+              "next_checkout": "2026-07-06",
+              "deadline": null,
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
               "property_id": 393796,
               "name": "GameRoom",
               "address": "3921 N Colorado Blvd, Denver 80205",
@@ -43,7 +62,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             },
             {
               "name": "Beach",
@@ -52,7 +71,7 @@
               "est_hours": 2.5,
               "priority_locked": true,
               "manual_add": true,
-              "order": 3,
+              "order": 4,
               "zone": "west",
               "property_id": 281880,
               "lat": 39.7958,
@@ -67,7 +86,7 @@
               "est_hours": 2.0,
               "notes": "CI 2026-07-02",
               "source": "breezeway-reconcile",
-              "order": 4
+              "order": 5
             }
           ],
           "isLaundry": false
@@ -105,8 +124,8 @@
       ],
       "payrollEstimate": 440,
       "sameDayTurns": 0,
-      "tomorrowCheckins": 1,
-      "totalCheckouts": 2,
+      "tomorrowCheckins": 2,
+      "totalCheckouts": 3,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
