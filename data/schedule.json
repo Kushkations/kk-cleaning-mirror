@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-01T06:31:49.977713",
+  "generated": "2026-07-01T06:46:26.522920",
   "weekStart": "2026-07-01",
   "weekEnd": "2026-07-07",
   "week": [
@@ -37,25 +37,6 @@
               "order": 1
             },
             {
-              "property_id": 399039,
-              "name": "Altitude",
-              "address": "4350 Xenon St, Wheat Ridge 80033",
-              "zone": "far_west",
-              "beds": 6,
-              "sqft": 1868,
-              "est_hours": 2.5,
-              "lat": 39.7773,
-              "lon": -105.1396,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-01",
-              "next_checkout": "2026-07-05",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
               "property_id": 399810,
               "name": "Indica",
               "address": "7682 Shoshone St, Denver 80221",
@@ -72,7 +53,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 2
             },
             {
               "property_id": 387379,
@@ -91,7 +72,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 4
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -127,9 +108,9 @@
         "Wonderland"
       ],
       "payrollEstimate": 410,
-      "sameDayTurns": 2,
+      "sameDayTurns": 1,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 4,
+      "totalCheckouts": 3,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
