@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-01T06:46:26.522920",
+  "generated": "2026-07-01T07:01:17.163845",
   "weekStart": "2026-07-01",
   "weekEnd": "2026-07-07",
   "week": [
@@ -18,25 +18,6 @@
           ],
           "properties": [
             {
-              "property_id": 404868,
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
-              "zone": "north",
-              "beds": 5,
-              "sqft": 1834,
-              "est_hours": 2.5,
-              "lat": 39.9046,
-              "lon": -104.9736,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-01",
-              "next_checkout": "2026-07-06",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
               "property_id": 399810,
               "name": "Indica",
               "address": "7682 Shoshone St, Denver 80221",
@@ -53,7 +34,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 1
             },
             {
               "property_id": 387379,
@@ -72,7 +53,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -108,9 +89,9 @@
         "Wonderland"
       ],
       "payrollEstimate": 410,
-      "sameDayTurns": 1,
+      "sameDayTurns": 0,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 3,
+      "totalCheckouts": 2,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -129,25 +110,6 @@
           ],
           "properties": [
             {
-              "property_id": 400224,
-              "name": "BlueDream",
-              "address": "1475 S Pierce St, Lakewood 80232",
-              "zone": "isolated",
-              "beds": 3,
-              "sqft": 1100,
-              "est_hours": 1.5,
-              "lat": 39.6902,
-              "lon": -105.073,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-02",
-              "next_checkout": "2026-07-05",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
               "property_id": 447452,
               "name": "Wonderland",
               "address": "5955 S Zante Way, Aurora 80015",
@@ -164,7 +126,7 @@
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 1
             },
             {
               "property_id": 387216,
@@ -183,7 +145,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -221,9 +183,9 @@
         "Wonderland"
       ],
       "payrollEstimate": 410,
-      "sameDayTurns": 2,
+      "sameDayTurns": 1,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 3,
+      "totalCheckouts": 2,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
