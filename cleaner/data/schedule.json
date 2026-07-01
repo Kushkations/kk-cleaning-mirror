@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-01T17:31:35.437181",
+  "generated": "2026-07-01T17:46:05.028375",
   "weekStart": "2026-07-01",
   "weekEnd": "2026-07-07",
   "week": [
@@ -48,8 +48,8 @@
               "lon": -105.1483,
               "priority": "checkout_only",
               "priority_locked": true,
-              "next_checkin": "2026-07-03",
-              "next_checkout": "2026-07-08",
+              "next_checkin": "2026-07-01",
+              "next_checkout": "2026-07-03",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -82,6 +82,7 @@
         "Hotbox",
         "JoyStick",
         "Paradise",
+        "PlayHouse",
         "Pueblo",
         "Quivas",
         "Sativa",
@@ -176,6 +177,7 @@
         "JoyStick",
         "Palace",
         "Paradise",
+        "PlayHouse",
         "Pueblo",
         "Quivas",
         "Sativa",
@@ -223,6 +225,25 @@
               "order": 1
             },
             {
+              "property_id": 387379,
+              "name": "PlayHouse",
+              "address": "7350 Alkire Ct, Arvada 80005",
+              "zone": "far_west",
+              "beds": 7,
+              "sqft": 2976,
+              "est_hours": 3.5,
+              "lat": 39.8294,
+              "lon": -105.1483,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-03",
+              "next_checkout": "2026-07-08",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
               "property_id": 470233,
               "name": "BuffaloGolf",
               "address": "16714 Buffalo Run Dr, Commerce City 80022",
@@ -239,7 +260,7 @@
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -279,9 +300,9 @@
         "Wonderland"
       ],
       "payrollEstimate": 410,
-      "sameDayTurns": 2,
+      "sameDayTurns": 3,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 2,
+      "totalCheckouts": 3,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
