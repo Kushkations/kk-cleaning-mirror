@@ -19,7 +19,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.retry.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -27,5 +27,16 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
+      # GitHub Pages' queue sometimes stalls a deployment past the 10-min limit (transient,
+      # server-side). Attempt 1 tolerates that; the retry runs only after a failure, so a
+      # one-off stall never fails the run (or emails). Both attempts failing = a real problem.
       - id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - name: Pause for Pages queue to clear
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 60
+      - id: retry
+        name: Retry deploy (transient Pages queue stall)
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
