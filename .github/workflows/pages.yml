@@ -21,15 +21,17 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url || steps.retry.outputs.page_url }}
     runs-on: ubuntu-latest
+    # This mirror is a FALLBACK (canonical = kk-cleaning.vercel.app). A push lands every 15 min,
+    # so the next commit is the real retry for any GitHub Pages queue stall. Deploy failures here
+    # are therefore never worth an email: the run stays green, and Luna's watchdog alerts instead
+    # if the mirror CONTENT goes stale (>3h), which is the only signal that matters.
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
-      # GitHub Pages' queue sometimes stalls a deployment past the 10-min limit (transient,
-      # server-side). Attempt 1 tolerates that; the retry runs only after a failure, so a
-      # one-off stall never fails the run (or emails). Both attempts failing = a real problem.
       - id: deployment
         uses: actions/deploy-pages@v4
         continue-on-error: true
