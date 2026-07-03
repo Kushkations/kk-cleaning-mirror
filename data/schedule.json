@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-03T00:02:32.134028",
+  "generated": "2026-07-02T18:15:22.213480",
   "weekStart": "2026-07-03",
   "weekEnd": "2026-07-09",
   "week": [
@@ -73,6 +73,27 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 3
+            },
+            {
+              "property_id": 387216,
+              "name": "GrownSexy",
+              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1200,
+              "est_hours": 1.5,
+              "lat": 39.7652,
+              "lon": -105.0535,
+              "priority": "same_day",
+              "priority_locked": true,
+              "next_checkin": "2026-07-10",
+              "next_checkout": "2026-07-13",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 4,
+              "manual_add": true,
+              "notes": "Booking confirmado - tarea BZ pendiente"
             }
           ],
           "isLaundry": false
