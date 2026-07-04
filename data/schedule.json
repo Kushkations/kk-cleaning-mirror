@@ -1,142 +1,8 @@
 {
-  "generated": "2026-07-03T23:45:44.771287",
-  "weekStart": "2026-07-03",
-  "weekEnd": "2026-07-09",
+  "generated": "2026-07-04T00:01:41.900001",
+  "weekStart": "2026-07-04",
+  "weekEnd": "2026-07-10",
   "week": [
-    {
-      "date": "2026-07-03",
-      "dayNameEs": "Viernes",
-      "dayNameEn": "Friday",
-      "teams": [
-        {
-          "name": "Equipo 1",
-          "lead": "Gabby",
-          "members": [
-            "Gabby",
-            "Yolanda",
-            "Julie"
-          ],
-          "properties": [
-            {
-              "property_id": 320255,
-              "name": "Hotbox",
-              "address": "761 E 83rd Pl, Denver 80229",
-              "zone": "hq",
-              "beds": 4,
-              "sqft": 1822,
-              "est_hours": 2.0,
-              "lat": 39.8488,
-              "lon": -104.9769,
-              "priority": "same_day",
-              "priority_locked": true,
-              "next_checkin": "2026-07-03",
-              "next_checkout": "2026-07-09",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
-              "property_id": 387216,
-              "name": "GrownSexy",
-              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
-              "zone": "west",
-              "beds": 2,
-              "sqft": 1200,
-              "est_hours": 1.5,
-              "lat": 39.7652,
-              "lon": -105.0535,
-              "priority": "same_day",
-              "priority_locked": true,
-              "next_checkin": "2026-07-03",
-              "next_checkout": "2026-07-05",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
-              "property_id": 387379,
-              "name": "PlayHouse",
-              "address": "7350 Alkire Ct, Arvada 80005",
-              "zone": "far_west",
-              "beds": 7,
-              "sqft": 2976,
-              "est_hours": 3.5,
-              "lat": 39.8294,
-              "lon": -105.1483,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-03",
-              "next_checkout": "2026-07-08",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
-            },
-            {
-              "property_id": 470233,
-              "name": "BuffaloGolf",
-              "address": "16714 Buffalo Run Dr, Commerce City 80022",
-              "zone": "far_east",
-              "beds": 5,
-              "sqft": 2146,
-              "est_hours": 2.5,
-              "lat": 39.9113,
-              "lon": -104.7923,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-03",
-              "next_checkout": "2026-07-06",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 4
-            }
-          ],
-          "isLaundry": false
-        }
-      ],
-      "laundry": {
-        "assigned": [],
-        "active": false
-      },
-      "off": [
-        "Marii",
-        "Yenny",
-        "Alexandria",
-        "Maria"
-      ],
-      "occupied": [
-        "Airport",
-        "Alpha",
-        "Altitude",
-        "Beach",
-        "BlueDream",
-        "BuffaloGolf",
-        "Elevation",
-        "GameRoom",
-        "Grant",
-        "GrownSexy",
-        "Hotbox",
-        "Indica",
-        "JoyStick",
-        "Palace",
-        "Paradise",
-        "PlayHouse",
-        "Pueblo",
-        "Quivas",
-        "Sativa",
-        "Sheridan",
-        "Wonderland"
-      ],
-      "payrollEstimate": 410,
-      "sameDayTurns": 4,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 4,
-      "optimizations": [],
-      "startTime": "9:45 AM"
-    },
     {
       "date": "2026-07-04",
       "dayNameEs": "Sabado",
@@ -959,36 +825,110 @@
       "totalCheckouts": 5,
       "optimizations": [],
       "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-10",
+      "dayNameEs": "Viernes",
+      "dayNameEn": "Friday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Marii",
+          "members": [
+            "Marii",
+            "Yenny",
+            "Alexandria"
+          ],
+          "properties": [
+            {
+              "property_id": 399810,
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 1700,
+              "est_hours": 2.0,
+              "lat": 39.8361,
+              "lon": -105.0096,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-10",
+              "next_checkout": "2026-07-13",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Gabby",
+        "Julie",
+        "Yolanda",
+        "Maria"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Altitude",
+        "Beach",
+        "BuffaloGolf",
+        "Elevation",
+        "Grant",
+        "GrownSexy",
+        "Hotbox",
+        "Indica",
+        "JoyStick",
+        "Palace",
+        "Paradise",
+        "PlayHouse",
+        "Quivas",
+        "Sativa",
+        "Sheridan",
+        "Wonderland"
+      ],
+      "payrollEstimate": 440,
+      "sameDayTurns": 1,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 1,
+      "optimizations": [],
+      "startTime": "9:45 AM"
     }
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 4,
       "role": "lead",
       "dailyRate": 170
     },
     "Gabby": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 4,
       "role": "lead",
       "dailyRate": 150
     },
     "Yenny": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Julie": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Yolanda": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Alexandria": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 130
     },
