@@ -1,56 +1,8 @@
 {
-  "generated": "2026-07-04T23:45:49.107583",
-  "weekStart": "2026-07-04",
-  "weekEnd": "2026-07-10",
+  "generated": "2026-07-05T00:00:51.878496",
+  "weekStart": "2026-07-05",
+  "weekEnd": "2026-07-11",
   "week": [
-    {
-      "date": "2026-07-04",
-      "dayNameEs": "Sabado",
-      "dayNameEn": "Saturday",
-      "teams": [],
-      "laundry": {
-        "assigned": [],
-        "active": false
-      },
-      "off": [
-        "Marii",
-        "Gabby",
-        "Yenny",
-        "Julie",
-        "Yolanda",
-        "Alexandria",
-        "Maria"
-      ],
-      "occupied": [
-        "Airport",
-        "Alpha",
-        "Altitude",
-        "Beach",
-        "BlueDream",
-        "BuffaloGolf",
-        "Elevation",
-        "GameRoom",
-        "Grant",
-        "GrownSexy",
-        "Hotbox",
-        "Indica",
-        "JoyStick",
-        "Palace",
-        "Paradise",
-        "PlayHouse",
-        "Pueblo",
-        "Quivas",
-        "Sativa",
-        "Sheridan",
-        "Wonderland"
-      ],
-      "payrollEstimate": 0,
-      "sameDayTurns": 0,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 0,
-      "optimizations": [],
-      "startTime": "9:45 AM"
-    },
     {
       "date": "2026-07-05",
       "dayNameEs": "Domingo",
@@ -315,8 +267,8 @@
               "lon": -105.073,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-07-13",
+              "next_checkout": "2026-07-21",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -897,6 +849,51 @@
       "sameDayTurns": 1,
       "tomorrowCheckins": 0,
       "totalCheckouts": 1,
+      "optimizations": [],
+      "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-11",
+      "dayNameEs": "Sabado",
+      "dayNameEn": "Saturday",
+      "teams": [],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Gabby",
+        "Yenny",
+        "Julie",
+        "Yolanda",
+        "Alexandria",
+        "Maria"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Altitude",
+        "Beach",
+        "BuffaloGolf",
+        "Elevation",
+        "Grant",
+        "GrownSexy",
+        "Hotbox",
+        "Indica",
+        "JoyStick",
+        "Palace",
+        "Paradise",
+        "PlayHouse",
+        "Quivas",
+        "Sativa",
+        "Sheridan",
+        "Wonderland"
+      ],
+      "payrollEstimate": 0,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 0,
       "optimizations": [],
       "startTime": "9:45 AM"
     }
