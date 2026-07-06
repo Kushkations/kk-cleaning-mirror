@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-06T01:31:32.197369",
+  "generated": "2026-07-06T01:45:32.855698",
   "weekStart": "2026-07-06",
   "weekEnd": "2026-07-12",
   "week": [
@@ -37,8 +37,17 @@
               "order": 1
             },
             {
+              "name": "Wonderland",
+              "address": "5955 S Zante Way, Aurora 80015",
+              "priority": "tomorrow_checkin",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-07",
+              "source": "breezeway-reconcile",
+              "order": 2
+            },
+            {
               "property_id": 404868,
-              "name": "Paradise",
+              "name": "Paradise (Salida anticipada; vac\u00edo)",
               "address": "11448 Larson Ln, Northglenn 80233",
               "zone": "north",
               "beds": 5,
@@ -53,7 +62,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             },
             {
               "property_id": 470233,
@@ -72,7 +81,16 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 4
+            },
+            {
+              "name": "Paradise",
+              "address": "11448 Larson Ln, Northglenn 80233",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-10",
+              "source": "breezeway-reconcile",
+              "order": 5
             }
           ],
           "isLaundry": false
@@ -88,7 +106,7 @@
           "properties": [
             {
               "property_id": 447452,
-              "name": "Wonderland",
+              "name": "Wonderland (Salida 12 PM)",
               "address": "5955 S Zante Way, Aurora 80015",
               "zone": "isolated",
               "beds": 5,
