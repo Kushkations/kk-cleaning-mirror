@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-06T12:02:59.796864",
+  "generated": "2026-07-06T12:15:46.471568",
   "weekStart": "2026-07-06",
   "weekEnd": "2026-07-12",
   "week": [
@@ -65,24 +65,13 @@
               "order": 3
             },
             {
-              "property_id": 370631,
-              "name": "Grant",
-              "address": "261 Grant Way, Denver 80229",
-              "zone": "hq",
-              "beds": 6,
-              "sqft": 1782,
-              "est_hours": 2.0,
-              "lat": 39.8455,
-              "lon": -104.9828,
+              "name": "Paradise (Salida anticipada; vac\u00edo)",
+              "address": "11448 Larson Ln, Northglenn 80233",
               "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-07-09",
-              "next_checkout": "2026-07-12",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 4,
-              "manual_add": true
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-10",
+              "source": "breezeway-reconcile",
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -116,25 +105,6 @@
               "order": 1
             },
             {
-              "property_id": 404868,
-              "name": "Paradise (Salida anticipada; vac\u00edo)",
-              "address": "11448 Larson Ln, Northglenn 80233",
-              "zone": "north",
-              "beds": 5,
-              "sqft": 1834,
-              "est_hours": 2.5,
-              "lat": 39.9046,
-              "lon": -104.9736,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-07-10",
-              "next_checkout": "2026-07-17",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
               "property_id": 409557,
               "name": "Elevation",
               "address": "3431 E 105th Ct, Northglenn 80233",
@@ -147,6 +117,26 @@
               "priority": "checkout_only",
               "priority_locked": false,
               "next_checkin": "2026-07-08",
+              "next_checkout": "2026-07-12",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2,
+              "manual_add": true
+            },
+            {
+              "property_id": 370631,
+              "name": "Grant",
+              "address": "261 Grant Way, Denver 80229",
+              "zone": "hq",
+              "beds": 6,
+              "sqft": 1782,
+              "est_hours": 2.0,
+              "lat": 39.8455,
+              "lon": -104.9828,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-09",
               "next_checkout": "2026-07-12",
               "deadline": null,
               "checkout_time": "10:00 AM",
