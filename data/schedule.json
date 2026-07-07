@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-07T06:19:44.273519",
+  "generated": "2026-07-07T19:15:57.803130",
   "weekStart": "2026-07-08",
   "weekEnd": "2026-07-14",
   "week": [
@@ -267,7 +267,7 @@
               "next_checkin": null,
               "next_checkout": null,
               "deadline": null,
-              "checkout_time": "10:00 AM",
+              "checkout_time": null,
               "is_late_checkout": false,
               "order": 3
             }
@@ -909,11 +909,11 @@
               "est_hours": 2.0,
               "lat": 39.7958,
               "lon": -105.0185,
-              "priority": "checkout_only",
+              "priority": "same_day",
               "priority_locked": false,
-              "next_checkin": "2026-07-16",
-              "next_checkout": "2026-07-19",
-              "deadline": null,
+              "next_checkin": "2026-07-14",
+              "next_checkout": "2026-07-16",
+              "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
@@ -934,6 +934,7 @@
       ],
       "occupied": [
         "Alpha",
+        "Beach",
         "BlueDream",
         "Elevation",
         "Hotbox",
@@ -946,7 +947,7 @@
         "Sheridan"
       ],
       "payrollEstimate": 440,
-      "sameDayTurns": 1,
+      "sameDayTurns": 2,
       "tomorrowCheckins": 0,
       "totalCheckouts": 2,
       "optimizations": [],
