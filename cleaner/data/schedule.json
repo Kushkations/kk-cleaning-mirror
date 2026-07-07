@@ -236,8 +236,10 @@
         }
       ],
       "laundry": {
-        "assigned": [],
-        "active": false
+        "assigned": [
+          "Yolanda"
+        ],
+        "active": true
       },
       "off": [
         "Marii",
