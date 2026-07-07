@@ -1,118 +1,8 @@
 {
-  "generated": "2026-07-06T19:47:12.334567",
-  "weekStart": "2026-07-07",
-  "weekEnd": "2026-07-13",
+  "generated": "2026-07-07T02:01:00.225226",
+  "weekStart": "2026-07-08",
+  "weekEnd": "2026-07-14",
   "week": [
-    {
-      "date": "2026-07-07",
-      "dayNameEs": "Martes",
-      "dayNameEn": "Tuesday",
-      "teams": [
-        {
-          "name": "Equipo 1",
-          "lead": "Gabby",
-          "members": [
-            "Gabby",
-            "Yolanda",
-            "Julie"
-          ],
-          "properties": [
-            {
-              "property_id": 447452,
-              "name": "Wonderland",
-              "address": "5955 S Zante Way, Aurora 80015",
-              "zone": "isolated",
-              "beds": 5,
-              "sqft": 1886,
-              "est_hours": 2.5,
-              "lat": 39.6083,
-              "lon": -104.7176,
-              "priority": "moved_sameday",
-              "priority_locked": true,
-              "next_checkin": "2026-07-07",
-              "next_checkout": "2026-07-10",
-              "deadline": null,
-              "checkout_time": null,
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
-              "property_id": 354421,
-              "name": "JoyStick",
-              "address": "8228 Balsam Way, Arvada 80005",
-              "zone": "far_west",
-              "beds": 4,
-              "sqft": 2183,
-              "est_hours": 2.5,
-              "lat": 39.8466,
-              "lon": -105.0904,
-              "priority": "moved_nextday",
-              "priority_locked": true,
-              "next_checkin": "2026-07-08",
-              "next_checkout": "2026-07-12",
-              "deadline": null,
-              "checkout_time": null,
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
-              "property_id": 470233,
-              "name": "BuffaloGolf",
-              "address": "16714 Buffalo Run Dr, Commerce City 80022",
-              "zone": "far_east",
-              "beds": 5,
-              "sqft": 2146,
-              "est_hours": 2.5,
-              "lat": 39.9113,
-              "lon": -104.7923,
-              "priority": "moved",
-              "priority_locked": true,
-              "next_checkin": "2026-07-09",
-              "next_checkout": "2026-07-12",
-              "deadline": null,
-              "checkout_time": null,
-              "is_late_checkout": false,
-              "order": 3
-            }
-          ],
-          "isLaundry": false
-        }
-      ],
-      "laundry": {
-        "assigned": [
-          "Yolanda"
-        ],
-        "active": true
-      },
-      "off": [
-        "Marii",
-        "Yenny",
-        "Alexandria",
-        "Maria"
-      ],
-      "occupied": [
-        "Airport",
-        "Alpha",
-        "Altitude",
-        "Beach",
-        "BlueDream",
-        "GameRoom",
-        "Hotbox",
-        "Indica",
-        "PlayHouse",
-        "Pueblo",
-        "Quivas",
-        "Sativa",
-        "Sheridan",
-        "Wonderland"
-      ],
-      "payrollEstimate": 540,
-      "sameDayTurns": 0,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 3,
-      "optimizations": [],
-      "startTime": "9:45 AM"
-    },
     {
       "date": "2026-07-08",
       "dayNameEs": "Miercoles",
@@ -312,25 +202,6 @@
               "order": 3,
               "manual_add": true,
               "notes": "Next-day check-in"
-            },
-            {
-              "property_id": 393796,
-              "name": "GameRoom",
-              "address": "3921 N Colorado Blvd, Denver 80205",
-              "zone": "central",
-              "beds": 7,
-              "sqft": 1257,
-              "est_hours": 2.0,
-              "lat": 39.7714,
-              "lon": -104.9413,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 4
             }
           ],
           "isLaundry": false
@@ -381,6 +252,25 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
+            },
+            {
+              "property_id": 393796,
+              "name": "GameRoom",
+              "address": "3921 N Colorado Blvd, Denver 80205",
+              "zone": "central",
+              "beds": 7,
+              "sqft": 1257,
+              "est_hours": 2.0,
+              "lat": 39.7714,
+              "lon": -104.9413,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -414,8 +304,8 @@
       ],
       "payrollEstimate": 850,
       "sameDayTurns": 3,
-      "tomorrowCheckins": 1,
-      "totalCheckouts": 5,
+      "tomorrowCheckins": 2,
+      "totalCheckouts": 6,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -642,8 +532,8 @@
               "lon": -104.9828,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-07-16",
+              "next_checkout": "2026-07-19",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -768,8 +658,8 @@
               "lon": -104.7923,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-07-16",
+              "next_checkout": "2026-07-19",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -853,8 +743,8 @@
               "lon": -105.0535,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-07-16",
+              "next_checkout": "2026-07-20",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -872,8 +762,8 @@
               "lon": -105.1483,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-07-16",
+              "next_checkout": "2026-07-19",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -922,8 +812,8 @@
               "lon": -105.0086,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-07-16",
+              "next_checkout": "2026-07-19",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -941,8 +831,8 @@
               "lon": -104.7176,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-07-16",
+              "next_checkout": "2026-07-20",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -978,36 +868,120 @@
       "totalCheckouts": 6,
       "optimizations": [],
       "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-14",
+      "dayNameEs": "Martes",
+      "dayNameEn": "Tuesday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Marii",
+          "members": [
+            "Marii",
+            "Yenny",
+            "Alexandria"
+          ],
+          "properties": [
+            {
+              "property_id": null,
+              "name": "1967 E 115th",
+              "address": "1967 E 115th Place, Northglenn 80233",
+              "zone": "north",
+              "beds": 3,
+              "sqft": 1200,
+              "est_hours": 2.0,
+              "lat": 39.8878,
+              "lon": -104.9458,
+              "priority": "same_day",
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": "4:00 PM",
+              "notes": "External client - Beloved Soul Healer. Door code: 1067.",
+              "order": 1
+            },
+            {
+              "property_id": 281880,
+              "name": "Beach",
+              "address": "5467 Beach Ct, Denver 80221",
+              "zone": "west",
+              "beds": 4,
+              "sqft": 2000,
+              "est_hours": 2.0,
+              "lat": 39.7958,
+              "lon": -105.0185,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-16",
+              "next_checkout": "2026-07-19",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Gabby",
+        "Julie",
+        "Yolanda",
+        "Maria"
+      ],
+      "occupied": [
+        "Alpha",
+        "BlueDream",
+        "Elevation",
+        "Hotbox",
+        "Indica",
+        "JoyStick",
+        "Palace",
+        "Paradise",
+        "Pueblo",
+        "Sativa",
+        "Sheridan"
+      ],
+      "payrollEstimate": 440,
+      "sameDayTurns": 1,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 2,
+      "optimizations": [],
+      "startTime": "9:45 AM"
     }
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 4,
       "role": "lead",
       "dailyRate": 170
     },
     "Gabby": {
-      "daysThisWeek": 6,
+      "daysThisWeek": 5,
       "role": "lead",
       "dailyRate": 150
     },
     "Yenny": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Julie": {
-      "daysThisWeek": 6,
+      "daysThisWeek": 5,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Yolanda": {
-      "daysThisWeek": 7,
+      "daysThisWeek": 5,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Alexandria": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 130
     },
