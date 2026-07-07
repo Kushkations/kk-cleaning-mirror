@@ -293,6 +293,27 @@
               "order": 2
             },
             {
+              "property_id": 387216,
+              "name": "GrownSexy",
+              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1200,
+              "est_hours": 1.5,
+              "lat": 39.7652,
+              "lon": -105.0535,
+              "priority": "tomorrow_checkin",
+              "priority_locked": true,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3,
+              "manual_add": true,
+              "notes": "Next-day check-in"
+            },
+            {
               "property_id": 393796,
               "name": "GameRoom",
               "address": "3921 N Colorado Blvd, Denver 80205",
@@ -309,7 +330,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 4
             }
           ],
           "isLaundry": false
