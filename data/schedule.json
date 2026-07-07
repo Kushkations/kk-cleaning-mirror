@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-07T00:30:58.156381",
+  "generated": "2026-07-07T00:46:31.843558",
   "weekStart": "2026-07-07",
   "weekEnd": "2026-07-13",
   "week": [
@@ -7,17 +7,65 @@
       "date": "2026-07-07",
       "dayNameEs": "Martes",
       "dayNameEn": "Tuesday",
-      "teams": [],
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Gabby",
+          "members": [
+            "Gabby",
+            "Yolanda",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 447452,
+              "name": "Wonderland",
+              "address": "5955 S Zante Way, Aurora 80015",
+              "zone": "isolated",
+              "beds": 5,
+              "sqft": 1886,
+              "est_hours": 2.5,
+              "lat": 39.6083,
+              "lon": -104.7176,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-07",
+              "next_checkout": "2026-07-10",
+              "deadline": "4:00 PM",
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 354421,
+              "name": "JoyStick",
+              "address": "8228 Balsam Way, Arvada 80005",
+              "zone": "far_west",
+              "beds": 4,
+              "sqft": 2183,
+              "est_hours": 2.5,
+              "lat": 39.8466,
+              "lon": -105.0904,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-08",
+              "next_checkout": "2026-07-12",
+              "deadline": null,
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 2
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
       "laundry": {
         "assigned": [],
         "active": false
       },
       "off": [
         "Marii",
-        "Gabby",
         "Yenny",
-        "Julie",
-        "Yolanda",
         "Alexandria",
         "Maria"
       ],
@@ -37,10 +85,10 @@
         "Sheridan",
         "Wonderland"
       ],
-      "payrollEstimate": 0,
-      "sameDayTurns": 0,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 0,
+      "payrollEstimate": 410,
+      "sameDayTurns": 1,
+      "tomorrowCheckins": 1,
+      "totalCheckouts": 2,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -897,7 +945,7 @@
       "dailyRate": 170
     },
     "Gabby": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 6,
       "role": "lead",
       "dailyRate": 150
     },
@@ -907,12 +955,12 @@
       "dailyRate": 140
     },
     "Julie": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 6,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Yolanda": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 6,
       "role": "cleaner",
       "dailyRate": 130
     },
