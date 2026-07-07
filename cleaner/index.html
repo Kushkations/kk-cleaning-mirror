@@ -209,10 +209,27 @@ function cellClass(p) {
   return map[p] || 'gray';
 }
 
+// LIVE data source — updated every 15 min by the Railway cron (no redeploy needed).
+// The dashboard reads this so it is ALWAYS current. Falls back to the bundled
+// static file if the live source is ever unreachable.
+const LIVE_URL = 'https://gist.githubusercontent.com/Kushkations/60c05be462321d834f7b4249243992da/raw/cleaning_schedule.json';
+const STATIC_URL = 'data/schedule.json';
+
+async function fetchSchedule() {
+  // Try the live gist first; fall back to the bundled static file.
+  try {
+    const resp = await fetch(LIVE_URL + '?t=' + Date.now(), {cache: 'no-store'});
+    if (!resp.ok) throw new Error('live ' + resp.status);
+    return await resp.json();
+  } catch(e) {
+    const resp = await fetch(STATIC_URL + '?t=' + Date.now(), {cache: 'no-store'});
+    return await resp.json();
+  }
+}
+
 async function loadData() {
   try {
-    const resp = await fetch('data/schedule.json?' + Date.now());
-    data = await resp.json();
+    data = await fetchSchedule();
 
     // Start on first day that has cleanings
     currentDayIndex = 0;
@@ -243,8 +260,7 @@ async function manualRefresh() {
   // keep the user on the same tab/day after refresh
   const keepIdx = currentDayIndex, keepIdxEs = currentDayIndexEs;
   try {
-    const resp = await fetch('data/schedule.json?' + Date.now(), {cache: 'no-store'});
-    data = await resp.json();
+    data = await fetchSchedule();
     currentDayIndex = Math.min(keepIdx, data.week.length - 1);
     currentDayIndexEs = Math.min(keepIdxEs, data.week.length - 1);
     renderWeekTab();
