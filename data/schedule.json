@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-08T18:49:50.326060",
+  "generated": "2026-07-08T18:56:05.416326",
   "weekStart": "2026-07-08",
   "weekEnd": "2026-07-14",
   "week": [
@@ -184,6 +184,15 @@
               "order": 2
             },
             {
+              "name": "Beach (Salida 10:30 AM)",
+              "address": "5467 Beach Ct, Denver 80221",
+              "priority": "same_day",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-09",
+              "source": "breezeway-reconcile",
+              "order": 3
+            },
+            {
               "property_id": 313164,
               "name": "Quivas",
               "address": "7240 Quivas St, Denver 80221",
@@ -200,7 +209,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -214,25 +223,6 @@
             "Julie"
           ],
           "properties": [
-            {
-              "property_id": 281880,
-              "name": "Beach (Salida 10:30 AM)",
-              "address": "5467 Beach Ct, Denver 80221",
-              "zone": "west",
-              "beds": 4,
-              "sqft": 2000,
-              "est_hours": 2.0,
-              "lat": 39.7958,
-              "lon": -105.0185,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-09",
-              "next_checkout": "2026-07-14",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:30 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
             {
               "property_id": 387216,
               "name": "GrownSexy",
@@ -250,7 +240,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 1
             },
             {
               "property_id": 393796,
@@ -269,7 +259,7 @@
               "deadline": null,
               "checkout_time": null,
               "is_late_checkout": false,
-              "order": 3
+              "order": 2
             }
           ],
           "isLaundry": false
