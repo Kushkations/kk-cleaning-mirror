@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-10T22:16:02.193760",
+  "generated": "2026-07-10T22:31:40.783351",
   "weekStart": "2026-07-11",
   "weekEnd": "2026-07-17",
   "week": [
@@ -58,6 +58,7 @@
         "BlueDream",
         "BuffaloGolf",
         "Elevation",
+        "GameRoom",
         "Grant",
         "GrownSexy",
         "Hotbox",
@@ -311,6 +312,7 @@
       "occupied": [
         "Alpha",
         "Elevation",
+        "GameRoom",
         "GrownSexy",
         "Hotbox",
         "Indica",
@@ -486,6 +488,7 @@
       "occupied": [
         "Alpha",
         "BlueDream",
+        "GameRoom",
         "Hotbox",
         "Indica",
         "JoyStick",
@@ -553,6 +556,7 @@
         "Beach",
         "BlueDream",
         "Elevation",
+        "GameRoom",
         "Hotbox",
         "Indica",
         "JoyStick",
@@ -642,6 +646,7 @@
         "Beach",
         "BlueDream",
         "Elevation",
+        "GameRoom",
         "Hotbox",
         "Indica",
         "JoyStick",
@@ -798,6 +803,7 @@
         "BlueDream",
         "BuffaloGolf",
         "Elevation",
+        "GameRoom",
         "Grant",
         "GrownSexy",
         "Hotbox",
@@ -875,6 +881,7 @@
         "BlueDream",
         "BuffaloGolf",
         "Elevation",
+        "GameRoom",
         "Grant",
         "GrownSexy",
         "Hotbox",
