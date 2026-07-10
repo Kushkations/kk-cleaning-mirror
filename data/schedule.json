@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-10T01:01:09.473377",
+  "generated": "2026-07-10T01:16:23.899055",
   "weekStart": "2026-07-10",
   "weekEnd": "2026-07-16",
   "week": [
@@ -37,6 +37,26 @@
               "order": 1
             },
             {
+              "property_id": 387216,
+              "name": "GrownSexy",
+              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1200,
+              "est_hours": 1.5,
+              "lat": 39.7652,
+              "lon": -105.0535,
+              "priority": "same_day",
+              "priority_locked": true,
+              "manual_add": true,
+              "next_checkin": "2026-07-10",
+              "next_checkout": "2026-07-13",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
               "property_id": 447452,
               "name": "Wonderland",
               "address": "5955 S Zante Way, Aurora 80015",
@@ -53,7 +73,7 @@
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -66,8 +86,9 @@
       "off": [
         "Marii",
         "Yenny",
-        "Alexandria",
-        "Maria"
+        "Dexabeth",
+        "Roxi",
+        "Danyerlin"
       ],
       "occupied": [
         "Airport",
@@ -92,9 +113,9 @@
         "Wonderland"
       ],
       "payrollEstimate": 410,
-      "sameDayTurns": 2,
+      "sameDayTurns": 3,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 2,
+      "totalCheckouts": 3,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -112,9 +133,9 @@
         "Gabby",
         "Yenny",
         "Julie",
-        "Yolanda",
-        "Alexandria",
-        "Maria"
+        "Dexabeth",
+        "Roxi",
+        "Danyerlin"
       ],
       "occupied": [
         "Airport",
@@ -370,7 +391,9 @@
         "active": false
       },
       "off": [
-        "Maria"
+        "Dexabeth",
+        "Roxi",
+        "Danyerlin"
       ],
       "occupied": [
         "Alpha",
@@ -544,7 +567,9 @@
         "active": false
       },
       "off": [
-        "Maria"
+        "Dexabeth",
+        "Roxi",
+        "Danyerlin"
       ],
       "occupied": [
         "Alpha",
@@ -627,8 +652,9 @@
       "off": [
         "Gabby",
         "Julie",
-        "Yolanda",
-        "Maria"
+        "Dexabeth",
+        "Roxi",
+        "Danyerlin"
       ],
       "occupied": [
         "Alpha",
@@ -714,8 +740,9 @@
       "off": [
         "Marii",
         "Yenny",
-        "Alexandria",
-        "Maria"
+        "Dexabeth",
+        "Roxi",
+        "Danyerlin"
       ],
       "occupied": [
         "Alpha",
@@ -868,7 +895,9 @@
         "active": false
       },
       "off": [
-        "Maria"
+        "Dexabeth",
+        "Roxi",
+        "Danyerlin"
       ],
       "occupied": [
         "Alpha",
@@ -920,17 +949,17 @@
       "role": "cleaner",
       "dailyRate": 130
     },
-    "Yolanda": {
-      "daysThisWeek": 5,
+    "Dexabeth": {
+      "daysThisWeek": 0,
       "role": "cleaner",
       "dailyRate": 130
     },
-    "Alexandria": {
-      "daysThisWeek": 4,
+    "Roxi": {
+      "daysThisWeek": 0,
       "role": "cleaner",
       "dailyRate": 130
     },
-    "Maria": {
+    "Danyerlin": {
       "daysThisWeek": 0,
       "role": "cleaner",
       "dailyRate": 130
