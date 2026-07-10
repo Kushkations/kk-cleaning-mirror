@@ -214,6 +214,9 @@ function cellClass(p) {
 // static file if the live source is ever unreachable.
 const LIVE_URL = 'https://gist.githubusercontent.com/Kushkations/60c05be462321d834f7b4249243992da/raw/cleaning_schedule.json';
 const STATIC_URL = 'data/schedule.json';
+// Assigned crew per date, written by @LunaCleaning_bot when Shaquan/Rosandri send.
+const CREW_URL = 'https://gist.githubusercontent.com/Kushkations/60c05be462321d834f7b4249243992da/raw/crew.json';
+let crewByDate = {};
 
 async function fetchSchedule() {
   // Try the live gist first; fall back to the bundled static file.
@@ -227,9 +230,20 @@ async function fetchSchedule() {
   }
 }
 
+async function fetchCrew() {
+  // Assigned crew is optional — if it isn't published yet, the dashboard still works.
+  try {
+    const resp = await fetch(CREW_URL + '?t=' + Date.now(), {cache: 'no-store'});
+    if (!resp.ok) return {};
+    const doc = await resp.json();
+    return (doc && doc.days) ? doc.days : {};
+  } catch(e) { return {}; }
+}
+
 async function loadData() {
   try {
     data = await fetchSchedule();
+    crewByDate = await fetchCrew();
 
     // Start on first day that has cleanings
     currentDayIndex = 0;
@@ -261,6 +275,7 @@ async function manualRefresh() {
   const keepIdx = currentDayIndex, keepIdxEs = currentDayIndexEs;
   try {
     data = await fetchSchedule();
+    crewByDate = await fetchCrew();
     currentDayIndex = Math.min(keepIdx, data.week.length - 1);
     currentDayIndexEs = Math.min(keepIdxEs, data.week.length - 1);
     renderWeekTab();
@@ -340,16 +355,18 @@ function renderWeekTab() {
   });
   g += '</tr>';
 
-  // Row: Teams
+  // Row: Teams — ONLY the assigned crew (crew.json). Blank when nothing was sent.
   g += `<tr><td class="row-label">TEAMS</td>`;
   data.week.forEach(d => {
+    const c = crewByDate[d.date];
     let cells = '';
-    d.teams.forEach(t => {
-      const names = t.members.join(', ');
-      cells += `<div style="font-size:.72em;color:#94a3b8;padding:2px 0">${names}</div>`;
-    });
-    if (d.laundry && d.laundry.active) {
-      cells += `<div style="font-size:.72em;color:#f1c40f;padding:2px 0">${d.laundry.assigned.join(', ')}</div>`;
+    if (c) {
+      (c.groups || []).forEach(gr => {
+        if (gr.cleaners && gr.cleaners.length)
+          cells += `<div style="font-size:.72em;color:#94a3b8;padding:2px 0">${gr.cleaners.join(', ')}</div>`;
+      });
+      if (c.laundry && c.laundry.length)
+        cells += `<div style="font-size:.72em;color:#f1c40f;padding:2px 0">&#129530; ${c.laundry.join(', ')}</div>`;
     }
     if (!cells) cells = '<div style="font-size:.7em;color:#475569;text-align:center;padding:4px">—</div>';
     g += `<td>${cells}</td>`;
@@ -442,6 +459,33 @@ function renderWeekTab() {
   else document.getElementById('week-grid').insertAdjacentHTML('afterend', `<div id="week-total-card">${listHtml}</div>`);
 }
 
+// Assigned-crew banner from crew.json (who Shaquan/Rosandri assigned for this date).
+function crewBanner(dateIso, lang) {
+  const c = crewByDate[dateIso];
+  if (!c || (!(c.groups && c.groups.length) && !(c.laundry && c.laundry.length))) return '';
+  const es = lang === 'es';
+  const title = es ? 'Equipo de Hoy' : "Today's Crew";
+  let h = `<div class="summary-card" style="margin-bottom:14px;border:1px solid #22c55e;background:#052e16">`;
+  h += `<h3 style="color:#4ade80">&#128101; ${title}</h3>`;
+  if (c.start_time) {
+    h += `<div class="summary-row"><span class="prop">&#9200; ${es ? 'Hora de inicio' : 'Start time'}</span><span style="color:#fff;font-weight:700">${c.start_time}</span></div>`;
+  }
+  (c.groups || []).forEach((g, i) => {
+    const who = (g.cleaners || []).join(', ') || (es ? '(sin asignar)' : '(unassigned)');
+    const props = (g.properties || []).join(', ');
+    h += `<div class="summary-row" style="align-items:flex-start"><span class="prop" style="color:#fff;font-weight:700">${es ? 'Grupo' : 'Group'} ${i + 1}: ${who}</span>`;
+    h += props ? `<span style="color:#94a3b8;text-align:right;max-width:55%">${props}</span>` : '';
+    h += `</div>`;
+  });
+  if (c.laundry && c.laundry.length) {
+    const lt = c.laundry_time ? ` (${c.laundry_time})` : '';
+    h += `<div class="summary-row"><span class="prop">&#129530; ${es ? 'Lavandería' : 'Laundry'}${lt}</span><span style="color:#fde047;font-weight:700">${c.laundry.join(', ')}</span></div>`;
+  }
+  if (c.source) h += `<div style="font-size:.68em;color:#64748b;margin-top:6px">${es ? 'Enviado por' : 'Sent by'} ${c.source}</div>`;
+  h += `</div>`;
+  return h;
+}
+
 function renderScheduleDay(idx) {
   currentDayIndex = idx;
   const d = data.week[idx];
@@ -449,21 +493,24 @@ function renderScheduleDay(idx) {
 
   document.getElementById('day-label').textContent = d.dayNameEn + ' ' + formatDate(d.date);
 
+  const crew = crewByDate[d.date];
   if (data.hq) {
-    document.getElementById('start-time').textContent = d.startTime || data.hq.startTime;
+    document.getElementById('start-time').textContent = (crew && crew.start_time) || d.startTime || data.hq.startTime;
   }
 
+  const banner = crewBanner(d.date, 'en');
   let html = '';
 
   if (d.teams.length === 0) {
-    html = `<div class="no-work"><div class="emoji">&#127769;</div><div class="msg">No cleanings today.</div></div>`;
+    html = banner + `<div class="no-work"><div class="emoji">&#127769;</div><div class="msg">No cleanings today.</div></div>`;
     document.getElementById('schedule-content').innerHTML = html;
     return;
   }
+  html = banner;
 
   d.teams.forEach((team, ti) => {
     const t2 = ti > 0 ? 't2' : '';
-    html += `<div class="team-info ${t2}"><div class="lead">${team.name} — ${team.lead}</div><div class="members">${team.members.join(', ')}</div></div>`;
+    html += `<div class="team-info ${t2}"><div class="lead">${team.name}</div></div>`;
 
     team.properties.forEach(p => {
       const tc = priorityTag(p.priority);
@@ -551,19 +598,22 @@ function renderEquipoDay(idx) {
   if (!d) return;
 
   document.getElementById('day-label-es').textContent = d.dayNameEs + ' ' + formatDate(d.date);
-  document.getElementById('start-time-es').textContent = d.startTime || data.hq.startTime;
+  const crewEs = crewByDate[d.date];
+  document.getElementById('start-time-es').textContent = (crewEs && crewEs.start_time) || d.startTime || data.hq.startTime;
 
+  const banner = crewBanner(d.date, 'es');
   let html = '';
 
   if (d.teams.length === 0) {
-    html = '<div class="no-work"><div class="emoji">&#127769;</div><div class="msg">No hay limpiezas hoy. Dia libre.</div></div>';
+    html = banner + '<div class="no-work"><div class="emoji">&#127769;</div><div class="msg">No hay limpiezas hoy. Dia libre.</div></div>';
     document.getElementById('equipo-content').innerHTML = html;
     return;
   }
+  html = banner;
 
   d.teams.forEach((team, ti) => {
     const t2 = ti > 0 ? 't2' : '';
-    html += '<div class="team-info ' + t2 + '"><div class="lead">' + team.name + ' — ' + team.lead + '</div><div class="members">' + team.members.join(', ') + '</div></div>';
+    html += '<div class="team-info ' + t2 + '"><div class="lead">' + team.name + '</div></div>';
 
     team.properties.forEach(p => {
       const tc = priorityTagEs(p.priority);
