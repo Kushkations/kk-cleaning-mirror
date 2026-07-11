@@ -240,6 +240,12 @@ async function fetchCrew() {
   } catch(e) { return {}; }
 }
 
+// A date can be flagged "No Cleaning" (crew.json no_cleaning:true) — overrides the schedule.
+function isNoCleaning(dateIso) {
+  const c = crewByDate[dateIso];
+  return !!(c && c.no_cleaning);
+}
+
 async function loadData() {
   try {
     data = await fetchSchedule();
@@ -306,8 +312,13 @@ function renderWeekTab() {
 
   for (let i = 0; i < Math.min(2, data.week.length); i++) {
     const d = data.week[i];
-    if (!d || d.totalCheckouts === 0) continue;
+    if (!d) continue;
     const label = i === 0 ? 'Today' : 'Tomorrow';
+    if (isNoCleaning(d.date)) {
+      summaryHtml += `<div class="summary-card"><h3>${label} — ${d.dayNameEn} ${formatDate(d.date)}</h3><div class="summary-row"><span class="prop" style="color:#f87171;font-weight:800">&#128683; No Cleaning</span></div></div>`;
+      continue;
+    }
+    if (d.totalCheckouts === 0) continue;
     summaryHtml += `<div class="summary-card"><h3>${label} — ${d.dayNameEn} ${formatDate(d.date)}</h3>`;
     const allProps = d.teams.flatMap(t => t.properties);
     allProps.sort((a, b) => {
@@ -340,6 +351,10 @@ function renderWeekTab() {
   // Row: Properties
   g += `<tr><td class="row-label">CLEANINGS</td>`;
   data.week.forEach(d => {
+    if (isNoCleaning(d.date)) {
+      g += `<td><div class="cell" style="background:#7f1d1d;color:#fecaca;font-weight:700">No Cleaning</div></td>`;
+      return;
+    }
     let cells = '';
     const poWeek = {same_day:0,moved_sameday:0,tomorrow_checkin:1,moved_nextday:1,moved:2,checkout_only:3};
     const sortedProps = d.teams.flatMap(t => t.properties).slice().sort((a,b) => ((poWeek[a.priority]!==undefined?poWeek[a.priority]:9)) - ((poWeek[b.priority]!==undefined?poWeek[b.priority]:9)));
@@ -493,6 +508,12 @@ function renderScheduleDay(idx) {
 
   document.getElementById('day-label').textContent = d.dayNameEn + ' ' + formatDate(d.date);
 
+  if (isNoCleaning(d.date)) {
+    if (data.hq) document.getElementById('start-time').textContent = '—';
+    document.getElementById('schedule-content').innerHTML = '<div class="no-work"><div class="emoji">&#128683;</div><div class="msg">No Cleaning</div></div>';
+    return;
+  }
+
   const crew = crewByDate[d.date];
   if (data.hq) {
     document.getElementById('start-time').textContent = (crew && crew.start_time) || d.startTime || data.hq.startTime;
@@ -598,6 +619,13 @@ function renderEquipoDay(idx) {
   if (!d) return;
 
   document.getElementById('day-label-es').textContent = d.dayNameEs + ' ' + formatDate(d.date);
+
+  if (isNoCleaning(d.date)) {
+    document.getElementById('start-time-es').textContent = '—';
+    document.getElementById('equipo-content').innerHTML = '<div class="no-work"><div class="emoji">&#128683;</div><div class="msg">Sin Limpieza / No Cleaning</div></div>';
+    return;
+  }
+
   const crewEs = crewByDate[d.date];
   document.getElementById('start-time-es').textContent = (crewEs && crewEs.start_time) || d.startTime || data.hq.startTime;
 
