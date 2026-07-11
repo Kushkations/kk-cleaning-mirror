@@ -196,7 +196,7 @@ function priorityTag(p) {
   const map = {
     same_day:        {cls:'red',    text:'*Same-Day Cleaning'},
     tomorrow_checkin: {cls:'green', text:'^Next-Day Check-In'},
-    regular:         {cls:'blue',   text:'Regular Cleaning'},
+    regular:         {cls:'gray',   text:'Regular Cleaning'},
     moved:           {cls:'blue',   text:'Moved Cleaning'},
     moved_sameday:   {cls:'orange', text:'Moved Same-Day'},
     moved_nextday:   {cls:'cyan',   text:'Moved Next-Day'},
@@ -206,7 +206,7 @@ function priorityTag(p) {
 }
 
 function cellClass(p) {
-  const map = {same_day:'red',tomorrow_checkin:'green',regular:'blue',moved:'blue',moved_sameday:'orange',moved_nextday:'cyan',checkout_only:'gray',light_blue:'cyan',yellow:'yellow'};
+  const map = {same_day:'red',tomorrow_checkin:'green',regular:'gray',moved:'blue',moved_sameday:'orange',moved_nextday:'cyan',checkout_only:'gray',light_blue:'cyan',yellow:'yellow'};
   return map[p] || 'gray';
 }
 
@@ -641,7 +641,7 @@ function priorityTagEs(p) {
   const map = {
     same_day:        {cls:'red',    text:'Limpieza Mismo Dia'},
     tomorrow_checkin: {cls:'green', text:'Check-In Manana'},
-    regular:         {cls:'blue',   text:'Limpieza Regular'},
+    regular:         {cls:'gray',   text:'Limpieza Regular'},
     moved:           {cls:'blue',   text:'Limpieza Movida'},
     moved_sameday:   {cls:'orange', text:'Movida Mismo Dia'},
     moved_nextday:   {cls:'cyan',   text:'Movida Manana'},
