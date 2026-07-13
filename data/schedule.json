@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-13T00:16:05.226222",
+  "generated": "2026-07-13T00:32:11.683173",
   "weekStart": "2026-07-13",
   "weekEnd": "2026-07-19",
   "week": [
@@ -15,6 +15,132 @@
             "Marii",
             "Yenny",
             "Alexandria"
+          ],
+          "properties": [
+            {
+              "property_id": 440656,
+              "name": "Palace",
+              "address": "12332 Quince St, Thornton 80602",
+              "zone": "north",
+              "beds": 6,
+              "sqft": 4406,
+              "est_hours": 4.0,
+              "lat": 39.9199,
+              "lon": -104.9018,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-13",
+              "next_checkout": "2026-07-16",
+              "deadline": "4:00 PM",
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 400224,
+              "name": "BlueDream",
+              "address": "1475 S Pierce St, Lakewood 80232",
+              "zone": "isolated",
+              "beds": 3,
+              "sqft": 1100,
+              "est_hours": 1.5,
+              "lat": 39.6902,
+              "lon": -105.073,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-13",
+              "next_checkout": "2026-07-21",
+              "deadline": "4:00 PM",
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
+              "property_id": 281880,
+              "name": "Beach",
+              "address": "5467 Beach Ct, Denver 80221",
+              "zone": "west",
+              "beds": 4,
+              "sqft": 2000,
+              "est_hours": 2.0,
+              "lat": 39.7958,
+              "lon": -105.0185,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-14",
+              "next_checkout": "2026-07-16",
+              "deadline": null,
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 3
+            },
+            {
+              "property_id": 387216,
+              "name": "GrownSexy",
+              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1200,
+              "est_hours": 1.5,
+              "lat": 39.7652,
+              "lon": -105.0535,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-16",
+              "next_checkout": "2026-07-20",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 4
+            },
+            {
+              "property_id": 399039,
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "zone": "far_west",
+              "beds": 6,
+              "sqft": 1868,
+              "est_hours": 2.5,
+              "lat": 39.7773,
+              "lon": -105.1396,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-15",
+              "next_checkout": "2026-07-21",
+              "deadline": null,
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 5
+            },
+            {
+              "property_id": 447452,
+              "name": "Wonderland",
+              "address": "5955 S Zante Way, Aurora 80015",
+              "zone": "isolated",
+              "beds": 5,
+              "sqft": 1886,
+              "est_hours": 2.5,
+              "lat": 39.6083,
+              "lon": -104.7176,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-16",
+              "next_checkout": "2026-07-20",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 6
+            }
+          ],
+          "isLaundry": false
+        },
+        {
+          "name": "Equipo 2",
+          "lead": "Gabby",
+          "members": [
+            "Gabby",
+            "Yolanda",
+            "Julie"
           ],
           "properties": [
             {
@@ -37,56 +163,6 @@
               "order": 1
             },
             {
-              "property_id": 387216,
-              "name": "GrownSexy",
-              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
-              "zone": "west",
-              "beds": 2,
-              "sqft": 1200,
-              "est_hours": 1.5,
-              "lat": 39.7652,
-              "lon": -105.0535,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-07-16",
-              "next_checkout": "2026-07-20",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
-              "property_id": 387379,
-              "name": "PlayHouse",
-              "address": "7350 Alkire Ct, Arvada 80005",
-              "zone": "far_west",
-              "beds": 7,
-              "sqft": 2976,
-              "est_hours": 3.5,
-              "lat": 39.8294,
-              "lon": -105.1483,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-07-16",
-              "next_checkout": "2026-07-19",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
-            }
-          ],
-          "isLaundry": false
-        },
-        {
-          "name": "Equipo 2",
-          "lead": "Gabby",
-          "members": [
-            "Gabby",
-            "Yolanda",
-            "Julie"
-          ],
-          "properties": [
-            {
               "property_id": 409557,
               "name": "Elevation",
               "address": "3431 E 105th Ct, Northglenn 80233",
@@ -103,7 +179,26 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 1
+              "order": 2
+            },
+            {
+              "property_id": 370631,
+              "name": "Grant",
+              "address": "261 Grant Way, Denver 80229",
+              "zone": "hq",
+              "beds": 6,
+              "sqft": 1782,
+              "est_hours": 2.0,
+              "lat": 39.8455,
+              "lon": -104.9828,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-16",
+              "next_checkout": "2026-07-19",
+              "deadline": null,
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 3
             },
             {
               "property_id": 313164,
@@ -122,26 +217,26 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 4
             },
             {
-              "property_id": 447452,
-              "name": "Wonderland",
-              "address": "5955 S Zante Way, Aurora 80015",
-              "zone": "isolated",
-              "beds": 5,
-              "sqft": 1886,
-              "est_hours": 2.5,
-              "lat": 39.6083,
-              "lon": -104.7176,
+              "property_id": 387379,
+              "name": "PlayHouse",
+              "address": "7350 Alkire Ct, Arvada 80005",
+              "zone": "far_west",
+              "beds": 7,
+              "sqft": 2976,
+              "est_hours": 3.5,
+              "lat": 39.8294,
+              "lon": -105.1483,
               "priority": "checkout_only",
               "priority_locked": false,
               "next_checkin": "2026-07-16",
-              "next_checkout": "2026-07-20",
+              "next_checkout": "2026-07-19",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 5
             }
           ],
           "isLaundry": false
@@ -172,9 +267,9 @@
         "Sheridan"
       ],
       "payrollEstimate": 850,
-      "sameDayTurns": 1,
-      "tomorrowCheckins": 1,
-      "totalCheckouts": 6,
+      "sameDayTurns": 3,
+      "tomorrowCheckins": 2,
+      "totalCheckouts": 11,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
