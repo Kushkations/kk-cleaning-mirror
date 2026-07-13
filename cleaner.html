@@ -283,6 +283,21 @@ function applyScheduleOverrides() {
         }
       });
     }
+    // Carryover = houses not cleaned yesterday (auto-detected). Dark red, wins over prio.
+    if (ov.carryover && ov.carryover.length) {
+      if (!d.teams.length) d.teams.push({name:'Equipo 1', lead:'', members:[], properties:[]});
+      ov.carryover.forEach(nm => {
+        let found = false;
+        d.teams.forEach(t => t.properties.forEach(p => {
+          if (p.name.split(' (')[0] === nm) { p.priority = 'carryover'; found = true; }
+        }));
+        if (!found) {
+          d.teams[0].properties.push({name: nm, priority: 'carryover',
+                                      order: d.teams[0].properties.length + 1, manual: true});
+          if (typeof d.totalCheckouts === 'number') d.totalCheckouts += 1;
+        }
+      });
+    }
   });
 }
 
