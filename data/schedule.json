@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-13T00:32:11.683173",
+  "generated": "2026-07-13T00:46:26.295917",
   "weekStart": "2026-07-13",
   "weekEnd": "2026-07-19",
   "week": [
@@ -18,61 +18,42 @@
           ],
           "properties": [
             {
-              "property_id": 440656,
-              "name": "Palace",
-              "address": "12332 Quince St, Thornton 80602",
-              "zone": "north",
+              "property_id": 370631,
+              "name": "Grant",
+              "address": "261 Grant Way, Denver 80229",
+              "zone": "hq",
               "beds": 6,
-              "sqft": 4406,
-              "est_hours": 4.0,
-              "lat": 39.9199,
-              "lon": -104.9018,
+              "sqft": 1782,
+              "est_hours": 2.0,
+              "lat": 39.8455,
+              "lon": -104.9828,
               "priority": "same_day",
               "priority_locked": false,
               "next_checkin": "2026-07-13",
-              "next_checkout": "2026-07-16",
+              "next_checkout": "2026-07-14",
               "deadline": "4:00 PM",
               "checkout_time": null,
               "is_late_checkout": false,
               "order": 1
             },
             {
-              "property_id": 400224,
-              "name": "BlueDream",
-              "address": "1475 S Pierce St, Lakewood 80232",
-              "zone": "isolated",
-              "beds": 3,
-              "sqft": 1100,
-              "est_hours": 1.5,
-              "lat": 39.6902,
-              "lon": -105.073,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-13",
-              "next_checkout": "2026-07-21",
-              "deadline": "4:00 PM",
-              "checkout_time": null,
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
-              "property_id": 281880,
-              "name": "Beach",
-              "address": "5467 Beach Ct, Denver 80221",
-              "zone": "west",
-              "beds": 4,
-              "sqft": 2000,
-              "est_hours": 2.0,
-              "lat": 39.7958,
-              "lon": -105.0185,
+              "property_id": 409557,
+              "name": "Elevation",
+              "address": "3431 E 105th Ct, Northglenn 80233",
+              "zone": "north",
+              "beds": 5,
+              "sqft": 2376,
+              "est_hours": 2.5,
+              "lat": 39.8878,
+              "lon": -104.9458,
               "priority": "tomorrow_checkin",
               "priority_locked": false,
               "next_checkin": "2026-07-14",
               "next_checkout": "2026-07-16",
               "deadline": null,
-              "checkout_time": null,
+              "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 2
             },
             {
               "property_id": 387216,
@@ -91,7 +72,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 4
+              "order": 3
             },
             {
               "property_id": 399039,
@@ -110,7 +91,7 @@
               "deadline": null,
               "checkout_time": null,
               "is_late_checkout": false,
-              "order": 5
+              "order": 4
             },
             {
               "property_id": 447452,
@@ -129,7 +110,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 6
+              "order": 5
             }
           ],
           "isLaundry": false
@@ -163,42 +144,61 @@
               "order": 1
             },
             {
-              "property_id": 409557,
-              "name": "Elevation",
-              "address": "3431 E 105th Ct, Northglenn 80233",
+              "property_id": 440656,
+              "name": "Palace",
+              "address": "12332 Quince St, Thornton 80602",
               "zone": "north",
-              "beds": 5,
-              "sqft": 2376,
-              "est_hours": 2.5,
-              "lat": 39.8878,
-              "lon": -104.9458,
+              "beds": 6,
+              "sqft": 4406,
+              "est_hours": 4.0,
+              "lat": 39.9199,
+              "lon": -104.9018,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-13",
+              "next_checkout": "2026-07-16",
+              "deadline": "4:00 PM",
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
+              "property_id": 400224,
+              "name": "BlueDream",
+              "address": "1475 S Pierce St, Lakewood 80232",
+              "zone": "isolated",
+              "beds": 3,
+              "sqft": 1100,
+              "est_hours": 1.5,
+              "lat": 39.6902,
+              "lon": -105.073,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-13",
+              "next_checkout": "2026-07-21",
+              "deadline": "4:00 PM",
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 3
+            },
+            {
+              "property_id": 281880,
+              "name": "Beach",
+              "address": "5467 Beach Ct, Denver 80221",
+              "zone": "west",
+              "beds": 4,
+              "sqft": 2000,
+              "est_hours": 2.0,
+              "lat": 39.7958,
+              "lon": -105.0185,
               "priority": "tomorrow_checkin",
               "priority_locked": false,
               "next_checkin": "2026-07-14",
               "next_checkout": "2026-07-16",
               "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
-              "property_id": 370631,
-              "name": "Grant",
-              "address": "261 Grant Way, Denver 80229",
-              "zone": "hq",
-              "beds": 6,
-              "sqft": 1782,
-              "est_hours": 2.0,
-              "lat": 39.8455,
-              "lon": -104.9828,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-07-16",
-              "next_checkout": "2026-07-19",
-              "deadline": null,
               "checkout_time": null,
               "is_late_checkout": false,
-              "order": 3
+              "order": 4
             },
             {
               "property_id": 313164,
@@ -217,7 +217,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 4
+              "order": 5
             },
             {
               "property_id": 387379,
@@ -236,7 +236,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 5
+              "order": 6
             }
           ],
           "isLaundry": false
@@ -257,6 +257,7 @@
         "BlueDream",
         "BuffaloGolf",
         "GameRoom",
+        "Grant",
         "Hotbox",
         "Indica",
         "JoyStick",
@@ -267,7 +268,7 @@
         "Sheridan"
       ],
       "payrollEstimate": 850,
-      "sameDayTurns": 3,
+      "sameDayTurns": 4,
       "tomorrowCheckins": 2,
       "totalCheckouts": 11,
       "optimizations": [],
@@ -305,6 +306,25 @@
               "order": 1
             },
             {
+              "property_id": 370631,
+              "name": "Grant",
+              "address": "261 Grant Way, Denver 80229",
+              "zone": "hq",
+              "beds": 6,
+              "sqft": 1782,
+              "est_hours": 2.0,
+              "lat": 39.8455,
+              "lon": -104.9828,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-16",
+              "next_checkout": "2026-07-19",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
               "property_id": 470233,
               "name": "BuffaloGolf",
               "address": "16714 Buffalo Run Dr, Commerce City 80022",
@@ -321,7 +341,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -357,7 +377,7 @@
       "payrollEstimate": 410,
       "sameDayTurns": 1,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 2,
+      "totalCheckouts": 3,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
