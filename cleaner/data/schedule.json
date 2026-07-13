@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-13T22:01:07.380157",
+  "generated": "2026-07-13T22:38:12.014609",
   "weekStart": "2026-07-14",
   "weekEnd": "2026-07-27",
   "week": [
@@ -446,6 +446,7 @@
         "Palace",
         "Paradise",
         "PlayHouse",
+        "Pueblo",
         "Quivas",
         "Sativa",
         "Sheridan",
@@ -523,6 +524,7 @@
         "Palace",
         "Paradise",
         "PlayHouse",
+        "Pueblo",
         "Quivas",
         "Sativa",
         "Wonderland"
@@ -811,6 +813,7 @@
         "Palace",
         "Paradise",
         "PlayHouse",
+        "Pueblo",
         "Wonderland"
       ],
       "payrollEstimate": 850,
@@ -934,7 +937,8 @@
         "Hotbox",
         "JoyStick",
         "Palace",
-        "PlayHouse"
+        "PlayHouse",
+        "Pueblo"
       ],
       "payrollEstimate": 410,
       "sameDayTurns": 0,
@@ -1019,6 +1023,7 @@
         "JoyStick",
         "Palace",
         "PlayHouse",
+        "Pueblo",
         "Wonderland"
       ],
       "payrollEstimate": 410,
@@ -1084,6 +1089,7 @@
         "JoyStick",
         "Palace",
         "PlayHouse",
+        "Pueblo",
         "Sativa",
         "Wonderland"
       ],
@@ -1170,6 +1176,7 @@
         "Hotbox",
         "Indica",
         "Palace",
+        "Pueblo",
         "Sativa",
         "Wonderland"
       ],
@@ -1257,6 +1264,7 @@
         "Hotbox",
         "Indica",
         "PlayHouse",
+        "Pueblo",
         "Sativa",
         "Wonderland"
       ],
@@ -1341,6 +1349,7 @@
         "Hotbox",
         "Indica",
         "PlayHouse",
+        "Pueblo",
         "Sativa",
         "Wonderland"
       ],
