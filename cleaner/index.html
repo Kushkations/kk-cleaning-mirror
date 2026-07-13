@@ -41,6 +41,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .cell.green{background:#2ecc71;color:#000}
 .cell.cyan{background:#5dade2;color:#000}
 .cell.orange{background:#e67e22;color:#fff}
+.cell.carryover{background:#7a0000;color:#fff;border:1px solid #ff5252}
 .cell.blue{background:#3498db;color:#fff}
 .cell.gray{background:#95a5a6;color:#000}
 .cell.laundry{background:#f1c40f;color:#000}
@@ -63,6 +64,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .tag.green{background:#2ecc71;color:#000}
 .tag.cyan{background:#5dade2;color:#000}
 .tag.orange{background:#e67e22;color:#fff}
+.tag.carryover{background:#7a0000;color:#fff;border:1px solid #ff5252}
 .tag.blue{background:#3498db;color:#fff}
 .tag.gray{background:#95a5a6;color:#000}
 
@@ -123,6 +125,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 <div class="tab active" id="tab-week">
 
 <div class="legend">
+<div class="legend-item"><div class="legend-dot" style="background:#7a0000;border:1px solid #ff5252"></div>No Limpiada Ayer</div>
 <div class="legend-item"><div class="legend-dot" style="background:#e74c3c"></div>*Mismo Día</div>
 <div class="legend-item"><div class="legend-dot" style="background:#2ecc71"></div>^Check-In Mañana</div>
 <div class="legend-item"><div class="legend-dot" style="background:#95a5a6"></div>Limpieza Regular</div>
@@ -196,6 +199,7 @@ let currentDayIndex = 0;
 
 function priorityTag(p) {
   const map = {
+    carryover:       {cls:'carryover', text:'Not Cleaned Yesterday'},
     same_day:        {cls:'red',    text:'*Same-Day Cleaning'},
     tomorrow_checkin: {cls:'green', text:'^Next-Day Check-In'},
     regular:         {cls:'gray',   text:'Regular Cleaning'},
@@ -208,7 +212,7 @@ function priorityTag(p) {
 }
 
 function cellClass(p) {
-  const map = {same_day:'red',tomorrow_checkin:'green',regular:'gray',moved:'blue',moved_sameday:'orange',moved_nextday:'cyan',checkout_only:'gray',light_blue:'cyan',yellow:'yellow'};
+  const map = {carryover:'carryover',same_day:'red',tomorrow_checkin:'green',regular:'gray',moved:'blue',moved_sameday:'orange',moved_nextday:'cyan',checkout_only:'gray',light_blue:'cyan',yellow:'yellow'};
   return map[p] || 'gray';
 }
 
@@ -360,7 +364,7 @@ function renderWeekTab() {
     summaryHtml += `<div class="summary-card"><h3>${label} — ${d.dayNameEn} ${formatDate(d.date)}</h3>`;
     const allProps = d.teams.flatMap(t => t.properties);
     allProps.sort((a, b) => {
-      const po = {same_day:0,moved_sameday:0,tomorrow_checkin:1,moved_nextday:1,regular:2,moved:2,checkout_only:3};
+      const po = {carryover:-1,same_day:0,moved_sameday:0,tomorrow_checkin:1,moved_nextday:1,regular:2,moved:2,checkout_only:3};
       return ((po[a.priority]!==undefined?po[a.priority]:9)) - ((po[b.priority]!==undefined?po[b.priority]:9));
     });
     allProps.forEach(p => {
@@ -394,7 +398,7 @@ function renderWeekTab() {
       return;
     }
     let cells = '';
-    const poWeek = {same_day:0,moved_sameday:0,tomorrow_checkin:1,moved_nextday:1,regular:2,moved:2,checkout_only:3};
+    const poWeek = {carryover:-1,same_day:0,moved_sameday:0,tomorrow_checkin:1,moved_nextday:1,regular:2,moved:2,checkout_only:3};
     const sortedProps = d.teams.flatMap(t => t.properties).slice().sort((a,b) => ((poWeek[a.priority]!==undefined?poWeek[a.priority]:9)) - ((poWeek[b.priority]!==undefined?poWeek[b.priority]:9)));
     sortedProps.forEach(p => {
       const coTime = isLateCheckout(p.checkout_time) ? `<span style="font-size:.85em;opacity:.85"> ${p.checkout_time}</span>` : '';
@@ -573,9 +577,9 @@ function renderScheduleDay(idx) {
 
     team.properties.forEach(p => {
       const tc = priorityTag(p.priority);
-      const borderColors = {same_day:'#e74c3c',moved_sameday:'#e67e22',tomorrow_checkin:'#2ecc71',moved_nextday:'#5dade2',moved:'#3498db',checkout_only:'#95a5a6'};
+      const borderColors = {carryover:'#7a0000',same_day:'#e74c3c',moved_sameday:'#e67e22',tomorrow_checkin:'#2ecc71',moved_nextday:'#5dade2',moved:'#3498db',checkout_only:'#95a5a6'};
       const bc = borderColors[p.priority] || '#95a5a6';
-      const numCls = (p.priority === 'same_day' || p.priority === 'moved_sameday') ? 'red' : (p.priority === 'tomorrow_checkin' || p.priority === 'moved_nextday') ? 'yellow' : 'g';
+      const numCls = (p.priority === 'carryover' || p.priority === 'same_day' || p.priority === 'moved_sameday') ? 'red' : (p.priority === 'tomorrow_checkin' || p.priority === 'moved_nextday') ? 'yellow' : 'g';
       const dl = p.deadline ? `<div class="prop-deadline">Must be clean by ${p.deadline}</div>` : '';
       const isLate = isLateCheckout(p.checkout_time);
       const coTime = isLate ? `<span style="font-size:.72em;font-weight:700;color:${bc};margin-left:8px">${p.checkout_time}</span>` : '';
@@ -641,6 +645,7 @@ function nextDayEs() { if (currentDayIndexEs < data.week.length - 1) { currentDa
 
 function priorityTagEs(p) {
   const map = {
+    carryover:       {cls:'carryover', text:'No Limpiada Ayer'},
     same_day:        {cls:'red',    text:'Limpieza Mismo Dia'},
     tomorrow_checkin: {cls:'green', text:'Check-In Manana'},
     regular:         {cls:'gray',   text:'Limpieza Regular'},
@@ -684,9 +689,9 @@ function renderEquipoDay(idx) {
 
     team.properties.forEach(p => {
       const tc = priorityTagEs(p.priority);
-      const borderColors = {same_day:'#e74c3c',moved_sameday:'#e67e22',tomorrow_checkin:'#2ecc71',moved_nextday:'#5dade2',moved:'#3498db',checkout_only:'#95a5a6'};
+      const borderColors = {carryover:'#7a0000',same_day:'#e74c3c',moved_sameday:'#e67e22',tomorrow_checkin:'#2ecc71',moved_nextday:'#5dade2',moved:'#3498db',checkout_only:'#95a5a6'};
       const bc = borderColors[p.priority] || '#95a5a6';
-      const numCls = (p.priority === 'same_day' || p.priority === 'moved_sameday') ? 'red' : (p.priority === 'tomorrow_checkin' || p.priority === 'moved_nextday') ? 'yellow' : 'g';
+      const numCls = (p.priority === 'carryover' || p.priority === 'same_day' || p.priority === 'moved_sameday') ? 'red' : (p.priority === 'tomorrow_checkin' || p.priority === 'moved_nextday') ? 'yellow' : 'g';
       const dl = p.deadline ? `<div class="prop-deadline">Listo antes de ${p.deadline}</div>` : '';
       const isLate = isLateCheckout(p.checkout_time);
       const coTime = isLate ? `<span style="font-size:.72em;font-weight:700;color:${bc};margin-left:8px">${p.checkout_time}</span>` : '';
