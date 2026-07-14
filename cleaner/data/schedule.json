@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-14T14:46:13.914735",
+  "generated": "2026-07-14T15:01:27.297122",
   "weekStart": "2026-07-14",
   "weekEnd": "2026-07-27",
   "week": [
@@ -14,7 +14,7 @@
           "members": [
             "Marii",
             "Yenny",
-            "Alexandria"
+            "Dexabeth"
           ],
           "properties": [
             {
@@ -98,10 +98,10 @@
         },
         {
           "name": "Equipo 2",
-          "lead": "Gabby",
+          "lead": "Dexabeth",
           "members": [
-            "Gabby",
-            "Yolanda",
+            "Dexabeth",
+            "Yasnielis",
             "Julie"
           ],
           "properties": [
@@ -168,11 +168,7 @@
         "assigned": [],
         "active": false
       },
-      "off": [
-        "Dexabeth",
-        "Roxi",
-        "Danyerlin"
-      ],
+      "off": [],
       "occupied": [
         "Airport",
         "Alpha",
@@ -189,7 +185,7 @@
         "Sativa",
         "Sheridan"
       ],
-      "payrollEstimate": 850,
+      "payrollEstimate": 830,
       "sameDayTurns": 2,
       "tomorrowCheckins": 0,
       "totalCheckouts": 7,
@@ -203,10 +199,10 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Gabby",
+          "lead": "Dexabeth",
           "members": [
-            "Gabby",
-            "Yolanda",
+            "Dexabeth",
+            "Yasnielis",
             "Julie"
           ],
           "properties": [
@@ -296,10 +292,7 @@
       },
       "off": [
         "Marii",
-        "Yenny",
-        "Dexabeth",
-        "Roxi",
-        "Danyerlin"
+        "Yenny"
       ],
       "occupied": [
         "Alpha",
@@ -315,7 +308,7 @@
         "Pueblo",
         "Sheridan"
       ],
-      "payrollEstimate": 410,
+      "payrollEstimate": 390,
       "sameDayTurns": 1,
       "tomorrowCheckins": 2,
       "totalCheckouts": 4,
@@ -333,7 +326,7 @@
           "members": [
             "Marii",
             "Yenny",
-            "Alexandria"
+            "Dexabeth"
           ],
           "properties": [
             {
@@ -421,11 +414,8 @@
         "active": false
       },
       "off": [
-        "Gabby",
         "Julie",
-        "Dexabeth",
-        "Roxi",
-        "Danyerlin"
+        "Yasnielis"
       ],
       "occupied": [
         "Alpha",
@@ -467,7 +457,7 @@
           "members": [
             "Marii",
             "Yenny",
-            "Alexandria"
+            "Dexabeth"
           ],
           "properties": [
             {
@@ -498,11 +488,8 @@
         "active": false
       },
       "off": [
-        "Gabby",
         "Julie",
-        "Dexabeth",
-        "Roxi",
-        "Danyerlin"
+        "Yasnielis"
       ],
       "occupied": [
         "Airport",
@@ -545,7 +532,7 @@
           "members": [
             "Marii",
             "Yenny",
-            "Alexandria"
+            "Dexabeth"
           ],
           "properties": [
             {
@@ -576,11 +563,8 @@
         "active": false
       },
       "off": [
-        "Gabby",
         "Julie",
-        "Dexabeth",
-        "Roxi",
-        "Danyerlin"
+        "Yasnielis"
       ],
       "occupied": [
         "Airport",
@@ -622,7 +606,7 @@
           "members": [
             "Marii",
             "Yenny",
-            "Alexandria"
+            "Dexabeth"
           ],
           "properties": [
             {
@@ -744,10 +728,10 @@
         },
         {
           "name": "Equipo 2",
-          "lead": "Gabby",
+          "lead": "Dexabeth",
           "members": [
-            "Gabby",
-            "Yolanda",
+            "Dexabeth",
+            "Yasnielis",
             "Julie"
           ],
           "properties": [
@@ -871,11 +855,7 @@
         "assigned": [],
         "active": false
       },
-      "off": [
-        "Dexabeth",
-        "Roxi",
-        "Danyerlin"
-      ],
+      "off": [],
       "occupied": [
         "Airport",
         "Alpha",
@@ -891,7 +871,7 @@
         "Pueblo",
         "Wonderland"
       ],
-      "payrollEstimate": 850,
+      "payrollEstimate": 830,
       "sameDayTurns": 5,
       "tomorrowCheckins": 1,
       "totalCheckouts": 12,
@@ -905,10 +885,10 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Gabby",
+          "lead": "Dexabeth",
           "members": [
-            "Gabby",
-            "Yolanda",
+            "Dexabeth",
+            "Yasnielis",
             "Julie"
           ],
           "properties": [
@@ -998,10 +978,7 @@
       },
       "off": [
         "Marii",
-        "Yenny",
-        "Dexabeth",
-        "Roxi",
-        "Danyerlin"
+        "Yenny"
       ],
       "occupied": [
         "Alpha",
@@ -1015,7 +992,7 @@
         "PlayHouse",
         "Pueblo"
       ],
-      "payrollEstimate": 410,
+      "payrollEstimate": 390,
       "sameDayTurns": 0,
       "tomorrowCheckins": 1,
       "totalCheckouts": 4,
@@ -1029,10 +1006,10 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Gabby",
+          "lead": "Dexabeth",
           "members": [
-            "Gabby",
-            "Yolanda",
+            "Dexabeth",
+            "Yasnielis",
             "Julie"
           ],
           "properties": [
@@ -1084,10 +1061,7 @@
       },
       "off": [
         "Marii",
-        "Yenny",
-        "Dexabeth",
-        "Roxi",
-        "Danyerlin"
+        "Yenny"
       ],
       "occupied": [
         "Alpha",
@@ -1101,7 +1075,7 @@
         "Pueblo",
         "Wonderland"
       ],
-      "payrollEstimate": 410,
+      "payrollEstimate": 390,
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
       "totalCheckouts": 2,
@@ -1119,7 +1093,7 @@
           "members": [
             "Marii",
             "Yenny",
-            "Alexandria"
+            "Dexabeth"
           ],
           "properties": [
             {
@@ -1150,11 +1124,8 @@
         "active": false
       },
       "off": [
-        "Gabby",
         "Julie",
-        "Dexabeth",
-        "Roxi",
-        "Danyerlin"
+        "Yasnielis"
       ],
       "occupied": [
         "Alpha",
@@ -1182,10 +1153,10 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Gabby",
+          "lead": "Dexabeth",
           "members": [
-            "Gabby",
-            "Yolanda",
+            "Dexabeth",
+            "Yasnielis",
             "Julie"
           ],
           "properties": [
@@ -1237,10 +1208,7 @@
       },
       "off": [
         "Marii",
-        "Yenny",
-        "Dexabeth",
-        "Roxi",
-        "Danyerlin"
+        "Yenny"
       ],
       "occupied": [
         "Alpha",
@@ -1255,7 +1223,7 @@
         "Sativa",
         "Wonderland"
       ],
-      "payrollEstimate": 410,
+      "payrollEstimate": 390,
       "sameDayTurns": 0,
       "tomorrowCheckins": 1,
       "totalCheckouts": 2,
@@ -1273,7 +1241,7 @@
           "members": [
             "Marii",
             "Yenny",
-            "Alexandria"
+            "Dexabeth"
           ],
           "properties": [
             {
@@ -1323,11 +1291,8 @@
         "active": false
       },
       "off": [
-        "Gabby",
         "Julie",
-        "Dexabeth",
-        "Roxi",
-        "Danyerlin"
+        "Yasnielis"
       ],
       "occupied": [
         "Airport",
@@ -1361,7 +1326,7 @@
           "members": [
             "Marii",
             "Yenny",
-            "Alexandria"
+            "Dexabeth"
           ],
           "properties": [
             {
@@ -1409,11 +1374,8 @@
         "active": false
       },
       "off": [
-        "Gabby",
         "Julie",
-        "Dexabeth",
-        "Roxi",
-        "Danyerlin"
+        "Yasnielis"
       ],
       "occupied": [
         "Airport",
@@ -1446,7 +1408,7 @@
           "members": [
             "Marii",
             "Yenny",
-            "Alexandria"
+            "Dexabeth"
           ],
           "properties": [
             {
@@ -1511,10 +1473,10 @@
         },
         {
           "name": "Equipo 2",
-          "lead": "Gabby",
+          "lead": "Dexabeth",
           "members": [
-            "Gabby",
-            "Yolanda",
+            "Dexabeth",
+            "Yasnielis",
             "Julie"
           ],
           "properties": [
@@ -1564,11 +1526,7 @@
         "assigned": [],
         "active": false
       },
-      "off": [
-        "Dexabeth",
-        "Roxi",
-        "Danyerlin"
-      ],
+      "off": [],
       "occupied": [
         "Airport",
         "Alpha",
@@ -1578,7 +1536,7 @@
         "PlayHouse",
         "Sativa"
       ],
-      "payrollEstimate": 850,
+      "payrollEstimate": 830,
       "sameDayTurns": 2,
       "tomorrowCheckins": 0,
       "totalCheckouts": 5,
@@ -1592,10 +1550,10 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Gabby",
+          "lead": "Dexabeth",
           "members": [
-            "Gabby",
-            "Yolanda",
+            "Dexabeth",
+            "Yasnielis",
             "Julie"
           ],
           "properties": [
@@ -1647,10 +1605,7 @@
       },
       "off": [
         "Marii",
-        "Yenny",
-        "Dexabeth",
-        "Roxi",
-        "Danyerlin"
+        "Yenny"
       ],
       "occupied": [
         "Alpha",
@@ -1660,7 +1615,7 @@
         "Indica",
         "PlayHouse"
       ],
-      "payrollEstimate": 410,
+      "payrollEstimate": 390,
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
       "totalCheckouts": 2,
@@ -1674,11 +1629,6 @@
       "role": "lead",
       "dailyRate": 170
     },
-    "Gabby": {
-      "daysThisWeek": 8,
-      "role": "lead",
-      "dailyRate": 150
-    },
     "Yenny": {
       "daysThisWeek": 9,
       "role": "cleaner",
@@ -1690,17 +1640,12 @@
       "dailyRate": 130
     },
     "Dexabeth": {
-      "daysThisWeek": 0,
+      "daysThisWeek": 14,
       "role": "cleaner",
       "dailyRate": 130
     },
-    "Roxi": {
-      "daysThisWeek": 0,
-      "role": "cleaner",
-      "dailyRate": 130
-    },
-    "Danyerlin": {
-      "daysThisWeek": 0,
+    "Yasnielis": {
+      "daysThisWeek": 8,
       "role": "cleaner",
       "dailyRate": 130
     }
