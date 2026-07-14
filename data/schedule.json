@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-14T02:48:36.924137",
+  "generated": "2026-07-14T03:34:43.474581",
   "weekStart": "2026-07-14",
   "weekEnd": "2026-07-27",
   "week": [
@@ -180,6 +180,7 @@
         "BlueDream",
         "Elevation",
         "GameRoom",
+        "GrownSexy",
         "Hotbox",
         "JoyStick",
         "Palace",
@@ -229,6 +230,25 @@
               "order": 1
             },
             {
+              "property_id": 387216,
+              "name": "GrownSexy",
+              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1200,
+              "est_hours": 1.5,
+              "lat": 39.7652,
+              "lon": -105.0535,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-16",
+              "next_checkout": "2026-07-20",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
               "property_id": 362638,
               "name": "Sativa",
               "address": "391 E 83rd Dr, Denver 80229",
@@ -245,7 +265,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             },
             {
               "property_id": 435859,
@@ -264,7 +284,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -297,8 +317,8 @@
       ],
       "payrollEstimate": 410,
       "sameDayTurns": 1,
-      "tomorrowCheckins": 1,
-      "totalCheckouts": 3,
+      "tomorrowCheckins": 2,
+      "totalCheckouts": 4,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
