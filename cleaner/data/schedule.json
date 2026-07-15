@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-15T18:31:51.507174",
+  "generated": "2026-07-15T18:46:47.803761",
   "weekStart": "2026-07-15",
   "weekEnd": "2026-07-28",
   "week": [
@@ -112,7 +112,6 @@
       },
       "off": [
         "Marii",
-        "Yenny",
         "Neidys",
         "Juliana"
       ],
@@ -148,7 +147,7 @@
           "lead": "Marii",
           "members": [
             "Marii",
-            "Yenny",
+            "Neidys",
             "Dexabeth"
           ],
           "properties": [
@@ -239,7 +238,6 @@
       "off": [
         "Julie",
         "Yasnielis",
-        "Neidys",
         "Juliana"
       ],
       "occupied": [
@@ -265,7 +263,7 @@
         "Sheridan",
         "Wonderland"
       ],
-      "payrollEstimate": 440,
+      "payrollEstimate": 430,
       "sameDayTurns": 4,
       "tomorrowCheckins": 0,
       "totalCheckouts": 4,
@@ -334,7 +332,6 @@
       },
       "off": [
         "Marii",
-        "Yenny",
         "Neidys",
         "Juliana"
       ],
@@ -378,7 +375,7 @@
           "lead": "Marii",
           "members": [
             "Marii",
-            "Yenny",
+            "Neidys",
             "Dexabeth"
           ],
           "properties": [
@@ -412,7 +409,6 @@
       "off": [
         "Julie",
         "Yasnielis",
-        "Neidys",
         "Juliana"
       ],
       "occupied": [
@@ -437,7 +433,7 @@
         "Sativa",
         "Wonderland"
       ],
-      "payrollEstimate": 440,
+      "payrollEstimate": 430,
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
       "totalCheckouts": 1,
@@ -454,7 +450,7 @@
           "lead": "Marii",
           "members": [
             "Marii",
-            "Yenny",
+            "Neidys",
             "Dexabeth"
           ],
           "properties": [
@@ -705,7 +701,6 @@
         "active": false
       },
       "off": [
-        "Neidys",
         "Juliana"
       ],
       "occupied": [
@@ -723,7 +718,7 @@
         "Pueblo",
         "Wonderland"
       ],
-      "payrollEstimate": 830,
+      "payrollEstimate": 820,
       "sameDayTurns": 5,
       "tomorrowCheckins": 1,
       "totalCheckouts": 12,
@@ -830,7 +825,6 @@
       },
       "off": [
         "Marii",
-        "Yenny",
         "Neidys",
         "Juliana"
       ],
@@ -915,7 +909,6 @@
       },
       "off": [
         "Marii",
-        "Yenny",
         "Neidys",
         "Juliana"
       ],
@@ -948,7 +941,7 @@
           "lead": "Marii",
           "members": [
             "Marii",
-            "Yenny",
+            "Neidys",
             "Dexabeth"
           ],
           "properties": [
@@ -982,7 +975,6 @@
       "off": [
         "Julie",
         "Yasnielis",
-        "Neidys",
         "Juliana"
       ],
       "occupied": [
@@ -997,7 +989,7 @@
         "Sativa",
         "Wonderland"
       ],
-      "payrollEstimate": 440,
+      "payrollEstimate": 430,
       "sameDayTurns": 0,
       "tomorrowCheckins": 1,
       "totalCheckouts": 1,
@@ -1066,7 +1058,6 @@
       },
       "off": [
         "Marii",
-        "Yenny",
         "Neidys",
         "Juliana"
       ],
@@ -1100,7 +1091,7 @@
           "lead": "Marii",
           "members": [
             "Marii",
-            "Yenny",
+            "Neidys",
             "Dexabeth"
           ],
           "properties": [
@@ -1153,7 +1144,6 @@
       "off": [
         "Julie",
         "Yasnielis",
-        "Neidys",
         "Juliana"
       ],
       "occupied": [
@@ -1170,7 +1160,7 @@
         "Sativa",
         "Wonderland"
       ],
-      "payrollEstimate": 440,
+      "payrollEstimate": 430,
       "sameDayTurns": 1,
       "tomorrowCheckins": 0,
       "totalCheckouts": 2,
@@ -1187,7 +1177,7 @@
           "lead": "Marii",
           "members": [
             "Marii",
-            "Yenny",
+            "Neidys",
             "Dexabeth"
           ],
           "properties": [
@@ -1238,7 +1228,6 @@
       "off": [
         "Julie",
         "Yasnielis",
-        "Neidys",
         "Juliana"
       ],
       "occupied": [
@@ -1254,7 +1243,7 @@
         "Sativa",
         "Wonderland"
       ],
-      "payrollEstimate": 440,
+      "payrollEstimate": 430,
       "sameDayTurns": 1,
       "tomorrowCheckins": 0,
       "totalCheckouts": 2,
@@ -1271,7 +1260,7 @@
           "lead": "Marii",
           "members": [
             "Marii",
-            "Yenny",
+            "Neidys",
             "Dexabeth"
           ],
           "properties": [
@@ -1391,7 +1380,6 @@
         "active": false
       },
       "off": [
-        "Neidys",
         "Juliana"
       ],
       "occupied": [
@@ -1403,7 +1391,7 @@
         "PlayHouse",
         "Sativa"
       ],
-      "payrollEstimate": 830,
+      "payrollEstimate": 820,
       "sameDayTurns": 2,
       "tomorrowCheckins": 0,
       "totalCheckouts": 5,
@@ -1472,7 +1460,6 @@
       },
       "off": [
         "Marii",
-        "Yenny",
         "Neidys",
         "Juliana"
       ],
@@ -1502,7 +1489,6 @@
       },
       "off": [
         "Marii",
-        "Yenny",
         "Julie",
         "Dexabeth",
         "Yasnielis",
@@ -1532,11 +1518,6 @@
       "role": "lead",
       "dailyRate": 170
     },
-    "Yenny": {
-      "daysThisWeek": 7,
-      "role": "cleaner",
-      "dailyRate": 140
-    },
     "Julie": {
       "daysThisWeek": 8,
       "role": "cleaner",
@@ -1553,7 +1534,7 @@
       "dailyRate": 130
     },
     "Neidys": {
-      "daysThisWeek": 0,
+      "daysThisWeek": 7,
       "role": "cleaner",
       "dailyRate": 130
     },
