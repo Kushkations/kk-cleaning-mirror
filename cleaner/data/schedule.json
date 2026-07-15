@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-15T12:58:33.062390",
+  "generated": "2026-07-15T13:15:55.617395",
   "weekStart": "2026-07-15",
   "weekEnd": "2026-07-28",
   "week": [
@@ -70,8 +70,8 @@
               "next_checkin": "2026-07-16",
               "next_checkout": "2026-07-19",
               "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
+              "checkout_time": "12:00 PM",
+              "is_late_checkout": true,
               "order": 3
             },
             {
@@ -153,12 +153,10 @@
               "priority": "same_day",
               "priority_locked": false,
               "next_checkin": "2026-07-16",
-              "next_checkout": "2026-07-16",
+              "next_checkout": "2026-07-19",
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 1
             },
             {
@@ -174,12 +172,10 @@
               "priority": "same_day",
               "priority_locked": false,
               "next_checkin": "2026-07-16",
-              "next_checkout": "2026-07-16",
+              "next_checkout": "2026-07-19",
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 2
             },
             {
@@ -214,12 +210,10 @@
               "priority": "same_day",
               "priority_locked": false,
               "next_checkin": "2026-07-16",
-              "next_checkout": "2026-07-16",
+              "next_checkout": "2026-07-19",
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 4
             }
           ],
@@ -439,29 +433,29 @@
               "priority": "same_day",
               "priority_locked": false,
               "next_checkin": "2026-07-19",
-              "next_checkout": "2026-07-19",
+              "next_checkout": "2026-07-22",
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 1
             },
             {
-              "property_id": null,
-              "name": "1967 E 115th",
-              "address": "1967 E 115th Place, Northglenn 80233",
+              "property_id": 440656,
+              "name": "Palace",
+              "address": "12332 Quince St, Thornton 80602",
               "zone": "north",
-              "beds": 3,
-              "sqft": 1200,
-              "est_hours": 2.0,
-              "lat": 39.8878,
-              "lon": -104.9458,
+              "beds": 6,
+              "sqft": 4406,
+              "est_hours": 4.0,
+              "lat": 39.9199,
+              "lon": -104.9018,
               "priority": "same_day",
-              "next_checkin": null,
-              "next_checkout": null,
+              "priority_locked": false,
+              "next_checkin": "2026-07-19",
+              "next_checkout": "2026-07-24",
               "deadline": "4:00 PM",
-              "notes": "External client - Beloved Soul Healer. Door code: 1067.",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
               "order": 2
             },
             {
@@ -484,6 +478,25 @@
               "order": 3
             },
             {
+              "property_id": 281880,
+              "name": "Beach",
+              "address": "5467 Beach Ct, Denver 80221",
+              "zone": "west",
+              "beds": 4,
+              "sqft": 2000,
+              "est_hours": 2.0,
+              "lat": 39.7958,
+              "lon": -105.0185,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-21",
+              "next_checkout": "2026-07-25",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 4
+            },
+            {
               "property_id": 313164,
               "name": "Quivas",
               "address": "7240 Quivas St, Denver 80221",
@@ -496,32 +509,30 @@
               "priority": "checkout_only",
               "priority_locked": false,
               "next_checkin": "2026-07-28",
-              "next_checkout": "2026-07-19",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
-              "order": 4
-            },
-            {
-              "property_id": 362638,
-              "name": "Sativa",
-              "address": "391 E 83rd Dr, Denver 80229",
-              "zone": "hq",
-              "beds": 6,
-              "sqft": 1782,
-              "est_hours": 2.0,
-              "lat": 39.8458,
-              "lon": -104.9816,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-07-22",
-              "next_checkout": "2026-07-24",
+              "next_checkout": "2026-08-02",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 5
+            },
+            {
+              "property_id": 370631,
+              "name": "Grant",
+              "address": "261 Grant Way, Denver 80229",
+              "zone": "hq",
+              "beds": 6,
+              "sqft": 1782,
+              "est_hours": 2.0,
+              "lat": 39.8455,
+              "lon": -104.9828,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-30",
+              "next_checkout": "2026-08-02",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 6
             }
           ],
           "isLaundry": false
@@ -548,31 +559,27 @@
               "priority": "same_day",
               "priority_locked": false,
               "next_checkin": "2026-07-19",
-              "next_checkout": "2026-07-19",
+              "next_checkout": "2026-07-26",
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 1
             },
             {
-              "property_id": 440656,
-              "name": "Palace",
-              "address": "12332 Quince St, Thornton 80602",
+              "property_id": null,
+              "name": "1967 E 115th",
+              "address": "1967 E 115th Place, Northglenn 80233",
               "zone": "north",
-              "beds": 6,
-              "sqft": 4406,
-              "est_hours": 4.0,
-              "lat": 39.9199,
-              "lon": -104.9018,
+              "beds": 3,
+              "sqft": 1200,
+              "est_hours": 2.0,
+              "lat": 39.8878,
+              "lon": -104.9458,
               "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-19",
-              "next_checkout": "2026-07-24",
+              "next_checkin": null,
+              "next_checkout": null,
               "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
+              "notes": "External client - Beloved Soul Healer. Door code: 1067.",
               "order": 2
             },
             {
@@ -607,55 +614,30 @@
               "priority": "checkout_only",
               "priority_locked": false,
               "next_checkin": "2026-07-23",
-              "next_checkout": "2026-07-19",
+              "next_checkout": "2026-07-26",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 4
             },
             {
-              "property_id": 370631,
-              "name": "Grant",
-              "address": "261 Grant Way, Denver 80229",
+              "property_id": 362638,
+              "name": "Sativa",
+              "address": "391 E 83rd Dr, Denver 80229",
               "zone": "hq",
               "beds": 6,
               "sqft": 1782,
               "est_hours": 2.0,
-              "lat": 39.8455,
-              "lon": -104.9828,
+              "lat": 39.8458,
+              "lon": -104.9816,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": "2026-08-06",
-              "next_checkout": "2026-07-19",
+              "next_checkin": "2026-07-22",
+              "next_checkout": "2026-07-24",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 5
-            },
-            {
-              "property_id": 281880,
-              "name": "Beach",
-              "address": "5467 Beach Ct, Denver 80221",
-              "zone": "west",
-              "beds": 4,
-              "sqft": 2000,
-              "est_hours": 2.0,
-              "lat": 39.7958,
-              "lon": -105.0185,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-07-21",
-              "next_checkout": "2026-07-19",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
-              "order": 6
             },
             {
               "property_id": 470233,
@@ -669,14 +651,12 @@
               "lon": -104.7923,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": "2026-08-06",
-              "next_checkout": "2026-07-19",
+              "next_checkin": "2026-07-23",
+              "next_checkout": "2026-07-26",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
-              "order": 7
+              "order": 6
             }
           ],
           "isLaundry": false
@@ -857,12 +837,10 @@
               "priority": "checkout_only",
               "priority_locked": false,
               "next_checkin": "2026-07-29",
-              "next_checkout": "2026-07-21",
+              "next_checkout": "2026-08-04",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 1
             },
             {
@@ -878,12 +856,10 @@
               "priority": "checkout_only",
               "priority_locked": false,
               "next_checkin": "2026-07-30",
-              "next_checkout": "2026-07-21",
+              "next_checkout": "2026-08-02",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 2
             }
           ],
@@ -944,12 +920,10 @@
               "priority": "tomorrow_checkin",
               "priority_locked": false,
               "next_checkin": "2026-07-23",
-              "next_checkout": "2026-07-22",
+              "next_checkout": "2026-07-26",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 1
             }
           ],
@@ -1195,13 +1169,11 @@
               "lon": -105.0185,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": "2026-08-07",
-              "next_checkout": "2026-07-25",
+              "next_checkin": "2026-07-30",
+              "next_checkout": "2026-08-02",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 2
             }
           ],
@@ -1243,11 +1215,11 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Dexabeth",
+          "lead": "Marii",
           "members": [
-            "Dexabeth",
-            "Yasnielis",
-            "Julie"
+            "Marii",
+            "Yenny",
+            "Dexabeth"
           ],
           "properties": [
             {
@@ -1263,34 +1235,11 @@
               "priority": "same_day",
               "priority_locked": false,
               "next_checkin": "2026-07-26",
-              "next_checkout": "2026-07-26",
+              "next_checkout": "2026-07-29",
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 1
-            },
-            {
-              "property_id": 399810,
-              "name": "Indica",
-              "address": "7682 Shoshone St, Denver 80221",
-              "zone": "west",
-              "beds": 5,
-              "sqft": 1700,
-              "est_hours": 2.0,
-              "lat": 39.8361,
-              "lon": -105.0096,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-26",
-              "next_checkout": "2026-07-26",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
-              "order": 2
             },
             {
               "property_id": 409557,
@@ -1304,14 +1253,12 @@
               "lon": -104.9458,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": "2026-08-06",
-              "next_checkout": "2026-07-26",
+              "next_checkin": null,
+              "next_checkout": null,
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
-              "order": 3
+              "order": 2
             },
             {
               "property_id": 447452,
@@ -1330,16 +1277,57 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 4
+              "order": 3
+            }
+          ],
+          "isLaundry": false
+        },
+        {
+          "name": "Equipo 2",
+          "lead": "Dexabeth",
+          "members": [
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 399810,
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 1700,
+              "est_hours": 2.0,
+              "lat": 39.8361,
+              "lon": -105.0096,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-26",
+              "next_checkout": "2026-07-30",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
             },
             {
+              "property_id": 470233,
               "name": "BuffaloGolf",
               "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "zone": "far_east",
+              "beds": 5,
+              "sqft": 2146,
+              "est_hours": 2.5,
+              "lat": 39.9113,
+              "lon": -104.7923,
               "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-30",
-              "source": "breezeway-reconcile",
-              "order": 5
+              "priority_locked": false,
+              "next_checkin": "2026-07-30",
+              "next_checkout": "2026-08-02",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -1349,10 +1337,7 @@
         "assigned": [],
         "active": false
       },
-      "off": [
-        "Marii",
-        "Yenny"
-      ],
+      "off": [],
       "occupied": [
         "Airport",
         "Alpha",
@@ -1362,10 +1347,10 @@
         "PlayHouse",
         "Sativa"
       ],
-      "payrollEstimate": 390,
+      "payrollEstimate": 830,
       "sameDayTurns": 2,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 4,
+      "totalCheckouts": 5,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1483,12 +1468,12 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 7,
+      "daysThisWeek": 8,
       "role": "lead",
       "dailyRate": 170
     },
     "Yenny": {
-      "daysThisWeek": 7,
+      "daysThisWeek": 8,
       "role": "cleaner",
       "dailyRate": 140
     },
