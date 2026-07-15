@@ -270,6 +270,15 @@ function applyScheduleOverrides() {
         }
       }));
     }
+    // notes: append a "(Salida 12 PM)"-style annotation behind a property's name
+    if (ov.notes) {
+      d.teams.forEach(t => t.properties.forEach(p => {
+        const base = p.name.split(' (')[0];
+        if (ov.notes[base] !== undefined && !p.name.includes('(')) {
+          p.name = base + ' (' + ov.notes[base] + ')';
+        }
+      }));
+    }
     if (ov.add_props && ov.add_props.length) {
       if (!d.teams.length) d.teams.push({name:'Equipo 1', lead:'', members:[], properties:[]});
       const team = d.teams[0];
