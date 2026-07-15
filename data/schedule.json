@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-15T18:15:44.699567",
+  "generated": "2026-07-15T18:31:51.507174",
   "weekStart": "2026-07-15",
   "weekEnd": "2026-07-28",
   "week": [
@@ -37,31 +37,31 @@
               "order": 1
             },
             {
+              "property_id": 435859,
+              "name": "Airport",
+              "address": "19990 E 40th Ave, Denver 80249",
+              "zone": "far_east",
+              "beds": 4,
+              "sqft": 1642,
+              "est_hours": 2.0,
+              "lat": 39.7706,
+              "lon": -104.7548,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-15",
+              "next_checkout": "2026-07-17",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
               "name": "Sativa",
               "address": "391 E 83rd Dr, Denver 80229",
               "priority": "same_day",
               "est_hours": 2.0,
               "notes": "CI 2026-07-15",
               "source": "breezeway-reconcile",
-              "order": 2
-            },
-            {
-              "property_id": 387216,
-              "name": "GrownSexy",
-              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
-              "zone": "west",
-              "beds": 2,
-              "sqft": 1200,
-              "est_hours": 1.5,
-              "lat": 39.7652,
-              "lon": -105.0535,
-              "priority": "tomorrow_checkin",
-              "priority_locked": false,
-              "next_checkin": "2026-07-16",
-              "next_checkout": "2026-07-20",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
               "order": 3
             },
             {
@@ -84,18 +84,18 @@
               "order": 4
             },
             {
-              "property_id": 435859,
-              "name": "Airport",
-              "address": "19990 E 40th Ave, Denver 80249",
-              "zone": "far_east",
-              "beds": 4,
-              "sqft": 1642,
-              "est_hours": 2.0,
-              "lat": 39.7706,
-              "lon": -104.7548,
-              "priority": "checkout_only",
+              "property_id": 387216,
+              "name": "GrownSexy",
+              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1200,
+              "est_hours": 1.5,
+              "lat": 39.7652,
+              "lon": -105.0535,
+              "priority": "tomorrow_checkin",
               "priority_locked": false,
-              "next_checkin": "2026-07-17",
+              "next_checkin": "2026-07-16",
               "next_checkout": "2026-07-20",
               "deadline": null,
               "checkout_time": "10:00 AM",
@@ -117,6 +117,7 @@
         "Juliana"
       ],
       "occupied": [
+        "Airport",
         "Alpha",
         "Altitude",
         "Beach",
@@ -131,7 +132,7 @@
         "Sheridan"
       ],
       "payrollEstimate": 390,
-      "sameDayTurns": 1,
+      "sameDayTurns": 2,
       "tomorrowCheckins": 2,
       "totalCheckouts": 4,
       "optimizations": [],
@@ -242,6 +243,7 @@
         "Juliana"
       ],
       "occupied": [
+        "Airport",
         "Alpha",
         "Altitude",
         "Beach",
@@ -277,11 +279,11 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Marii",
+          "lead": "Dexabeth",
           "members": [
-            "Marii",
-            "Yenny",
-            "Dexabeth"
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
           ],
           "properties": [
             {
@@ -302,6 +304,25 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 1
+            },
+            {
+              "property_id": 435859,
+              "name": "Airport",
+              "address": "19990 E 40th Ave, Denver 80249",
+              "zone": "far_east",
+              "beds": 4,
+              "sqft": 1642,
+              "est_hours": 2.0,
+              "lat": 39.7706,
+              "lon": -104.7548,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-17",
+              "next_checkout": "2026-07-20",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -312,8 +333,8 @@
         "active": false
       },
       "off": [
-        "Julie",
-        "Yasnielis",
+        "Marii",
+        "Yenny",
         "Neidys",
         "Juliana"
       ],
@@ -340,10 +361,10 @@
         "Sheridan",
         "Wonderland"
       ],
-      "payrollEstimate": 440,
-      "sameDayTurns": 1,
+      "payrollEstimate": 390,
+      "sameDayTurns": 2,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 1,
+      "totalCheckouts": 2,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1507,17 +1528,17 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 8,
+      "daysThisWeek": 7,
       "role": "lead",
       "dailyRate": 170
     },
     "Yenny": {
-      "daysThisWeek": 8,
+      "daysThisWeek": 7,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Julie": {
-      "daysThisWeek": 7,
+      "daysThisWeek": 8,
       "role": "cleaner",
       "dailyRate": 130
     },
@@ -1527,7 +1548,7 @@
       "dailyRate": 130
     },
     "Yasnielis": {
-      "daysThisWeek": 7,
+      "daysThisWeek": 8,
       "role": "cleaner",
       "dailyRate": 130
     },
