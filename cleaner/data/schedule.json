@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-15T16:16:07.553642",
+  "generated": "2026-07-15T16:31:53.251198",
   "weekStart": "2026-07-15",
   "weekEnd": "2026-07-28",
   "week": [
@@ -37,6 +37,15 @@
               "order": 1
             },
             {
+              "name": "Sativa",
+              "address": "391 E 83rd Dr, Denver 80229",
+              "priority": "same_day",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-15",
+              "source": "breezeway-reconcile",
+              "order": 2
+            },
+            {
               "property_id": 387216,
               "name": "GrownSexy",
               "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
@@ -53,11 +62,11 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             },
             {
               "property_id": 362638,
-              "name": "Sativa",
+              "name": "Sativa (Salida 12 PM)",
               "address": "391 E 83rd Dr, Denver 80229",
               "zone": "hq",
               "beds": 6,
@@ -72,7 +81,7 @@
               "deadline": null,
               "checkout_time": "12:00 PM",
               "is_late_checkout": true,
-              "order": 3
+              "order": 4
             },
             {
               "property_id": 435859,
@@ -91,7 +100,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 4
+              "order": 5
             }
           ],
           "isLaundry": false
@@ -103,7 +112,9 @@
       },
       "off": [
         "Marii",
-        "Yenny"
+        "Yenny",
+        "Neidys",
+        "Juliana"
       ],
       "occupied": [
         "Alpha",
@@ -226,7 +237,9 @@
       },
       "off": [
         "Julie",
-        "Yasnielis"
+        "Yasnielis",
+        "Neidys",
+        "Juliana"
       ],
       "occupied": [
         "Alpha",
@@ -300,7 +313,9 @@
       },
       "off": [
         "Julie",
-        "Yasnielis"
+        "Yasnielis",
+        "Neidys",
+        "Juliana"
       ],
       "occupied": [
         "Airport",
@@ -375,7 +390,9 @@
       },
       "off": [
         "Julie",
-        "Yasnielis"
+        "Yasnielis",
+        "Neidys",
+        "Juliana"
       ],
       "occupied": [
         "Airport",
@@ -666,7 +683,10 @@
         "assigned": [],
         "active": false
       },
-      "off": [],
+      "off": [
+        "Neidys",
+        "Juliana"
+      ],
       "occupied": [
         "Airport",
         "Alpha",
@@ -789,7 +809,9 @@
       },
       "off": [
         "Marii",
-        "Yenny"
+        "Yenny",
+        "Neidys",
+        "Juliana"
       ],
       "occupied": [
         "Alpha",
@@ -872,7 +894,9 @@
       },
       "off": [
         "Marii",
-        "Yenny"
+        "Yenny",
+        "Neidys",
+        "Juliana"
       ],
       "occupied": [
         "Alpha",
@@ -936,7 +960,9 @@
       },
       "off": [
         "Julie",
-        "Yasnielis"
+        "Yasnielis",
+        "Neidys",
+        "Juliana"
       ],
       "occupied": [
         "Alpha",
@@ -1019,7 +1045,9 @@
       },
       "off": [
         "Marii",
-        "Yenny"
+        "Yenny",
+        "Neidys",
+        "Juliana"
       ],
       "occupied": [
         "Alpha",
@@ -1103,7 +1131,9 @@
       },
       "off": [
         "Julie",
-        "Yasnielis"
+        "Yasnielis",
+        "Neidys",
+        "Juliana"
       ],
       "occupied": [
         "Airport",
@@ -1186,7 +1216,9 @@
       },
       "off": [
         "Julie",
-        "Yasnielis"
+        "Yasnielis",
+        "Neidys",
+        "Juliana"
       ],
       "occupied": [
         "Airport",
@@ -1337,7 +1369,10 @@
         "assigned": [],
         "active": false
       },
-      "off": [],
+      "off": [
+        "Neidys",
+        "Juliana"
+      ],
       "occupied": [
         "Airport",
         "Alpha",
@@ -1416,7 +1451,9 @@
       },
       "off": [
         "Marii",
-        "Yenny"
+        "Yenny",
+        "Neidys",
+        "Juliana"
       ],
       "occupied": [
         "Alpha",
@@ -1447,7 +1484,9 @@
         "Yenny",
         "Julie",
         "Dexabeth",
-        "Yasnielis"
+        "Yasnielis",
+        "Neidys",
+        "Juliana"
       ],
       "occupied": [
         "Alpha",
@@ -1489,6 +1528,16 @@
     },
     "Yasnielis": {
       "daysThisWeek": 7,
+      "role": "cleaner",
+      "dailyRate": 130
+    },
+    "Neidys": {
+      "daysThisWeek": 0,
+      "role": "cleaner",
+      "dailyRate": 130
+    },
+    "Juliana": {
+      "daysThisWeek": 0,
       "role": "cleaner",
       "dailyRate": 130
     }
