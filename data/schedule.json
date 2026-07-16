@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-16T06:45:35.376819",
+  "generated": "2026-07-16T07:01:31.970536",
   "weekStart": "2026-07-16",
   "weekEnd": "2026-07-29",
   "week": [
@@ -38,7 +38,7 @@
             },
             {
               "property_id": 409557,
-              "name": "Elevation",
+              "name": "Elevation (Solicitud de registro de entrada anticipado a las 12:00 p. m.)",
               "address": "3431 E 105th Ct, Northglenn 80233",
               "zone": "north",
               "beds": 5,
