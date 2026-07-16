@@ -1,151 +1,8 @@
 {
-  "generated": "2026-07-16T18:45:51.235623",
-  "weekStart": "2026-07-16",
-  "weekEnd": "2026-07-29",
+  "generated": "2026-07-16T19:00:48.390806",
+  "weekStart": "2026-07-17",
+  "weekEnd": "2026-07-30",
   "week": [
-    {
-      "date": "2026-07-16",
-      "dayNameEs": "Jueves",
-      "dayNameEn": "Thursday",
-      "teams": [
-        {
-          "name": "Equipo 1",
-          "lead": "Marii",
-          "members": [
-            "Marii",
-            "Neidys",
-            "Dexabeth"
-          ],
-          "properties": [
-            {
-              "property_id": 320255,
-              "name": "Hotbox",
-              "address": "761 E 83rd Pl, Denver 80229",
-              "zone": "hq",
-              "beds": 4,
-              "sqft": 1822,
-              "est_hours": 2.0,
-              "lat": 39.8488,
-              "lon": -104.9769,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-16",
-              "next_checkout": "2026-07-19",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
-              "property_id": 409557,
-              "name": "Elevation (Solicitud de registro de entrada anticipado a las 12:00 p. m.)",
-              "address": "3431 E 105th Ct, Northglenn 80233",
-              "zone": "north",
-              "beds": 5,
-              "sqft": 2376,
-              "est_hours": 2.5,
-              "lat": 39.8878,
-              "lon": -104.9458,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-16",
-              "next_checkout": "2026-07-19",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
-              "property_id": 440656,
-              "name": "Palace",
-              "address": "12332 Quince St, Thornton 80602",
-              "zone": "north",
-              "beds": 6,
-              "sqft": 4406,
-              "est_hours": 4.0,
-              "lat": 39.9199,
-              "lon": -104.9018,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-16",
-              "next_checkout": "2026-07-19",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
-            },
-            {
-              "property_id": 281880,
-              "name": "Beach",
-              "address": "5467 Beach Ct, Denver 80221",
-              "zone": "west",
-              "beds": 4,
-              "sqft": 2000,
-              "est_hours": 2.0,
-              "lat": 39.7958,
-              "lon": -105.0185,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-16",
-              "next_checkout": "2026-07-19",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 4
-            }
-          ],
-          "isLaundry": false
-        }
-      ],
-      "laundry": {
-        "assigned": [
-          "Rosie",
-          "Marii",
-          "Dex",
-          "Yasnielis",
-          "Juliana",
-          "Neidys"
-        ],
-        "active": true,
-        "location": "261 Grant Way",
-        "time": "8:00 AM",
-        "source": "breezeway"
-      },
-      "off": [
-        "Julie",
-        "Yasnielis",
-        "Juliana"
-      ],
-      "occupied": [
-        "Airport",
-        "Alpha",
-        "Altitude",
-        "Beach",
-        "BlueDream",
-        "BuffaloGolf",
-        "Elevation",
-        "GameRoom",
-        "Grant",
-        "GrownSexy",
-        "Hotbox",
-        "Indica",
-        "JoyStick",
-        "Palace",
-        "Paradise",
-        "PlayHouse",
-        "Pueblo",
-        "Quivas",
-        "Sativa",
-        "Sheridan",
-        "Wonderland"
-      ],
-      "payrollEstimate": 1250,
-      "sameDayTurns": 4,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 4,
-      "optimizations": [],
-      "startTime": "9:45 AM"
-    },
     {
       "date": "2026-07-17",
       "dayNameEs": "Viernes",
@@ -1430,8 +1287,8 @@
               "lon": -104.9769,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-08-01",
+              "next_checkout": "2026-08-05",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -1466,16 +1323,122 @@
       "totalCheckouts": 1,
       "optimizations": [],
       "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-07-30",
+      "dayNameEs": "Jueves",
+      "dayNameEn": "Thursday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Dexabeth",
+          "members": [
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 399810,
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 1700,
+              "est_hours": 2.0,
+              "lat": 39.8361,
+              "lon": -105.0096,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-30",
+              "next_checkout": "2026-08-03",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": null,
+              "name": "1967 E 115th",
+              "address": "1967 E 115th Place, Northglenn 80233",
+              "zone": "north",
+              "beds": 3,
+              "sqft": 1200,
+              "est_hours": 2.0,
+              "lat": 39.8878,
+              "lon": -104.9458,
+              "priority": "same_day",
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": "4:00 PM",
+              "notes": "External client - Beloved Soul Healer. Door code: 1067.",
+              "order": 2
+            },
+            {
+              "property_id": 387379,
+              "name": "PlayHouse",
+              "address": "7350 Alkire Ct, Arvada 80005",
+              "zone": "far_west",
+              "beds": 7,
+              "sqft": 2976,
+              "est_hours": 3.5,
+              "lat": 39.8294,
+              "lon": -105.1483,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-30",
+              "next_checkout": "2026-08-02",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Neidys",
+        "Juliana"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Altitude",
+        "Beach",
+        "BlueDream",
+        "BuffaloGolf",
+        "GameRoom",
+        "Grant",
+        "GrownSexy",
+        "Indica",
+        "Palace",
+        "Paradise",
+        "PlayHouse",
+        "Quivas",
+        "Sativa"
+      ],
+      "payrollEstimate": 390,
+      "sameDayTurns": 3,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 3,
+      "optimizations": [],
+      "startTime": "9:45 AM"
     }
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 9,
+      "daysThisWeek": 7,
       "role": "lead",
       "dailyRate": 170
     },
     "Julie": {
-      "daysThisWeek": 7,
+      "daysThisWeek": 8,
       "role": "cleaner",
       "dailyRate": 130
     },
@@ -1490,12 +1453,12 @@
       "dailyRate": 130
     },
     "Neidys": {
-      "daysThisWeek": 9,
+      "daysThisWeek": 7,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Juliana": {
-      "daysThisWeek": 1,
+      "daysThisWeek": 0,
       "role": "cleaner",
       "dailyRate": 130
     }
