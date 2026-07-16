@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-16T13:16:22.283177",
+  "generated": "2026-07-16T13:31:28.393411",
   "weekStart": "2026-07-16",
   "weekEnd": "2026-07-29",
   "week": [
@@ -1150,6 +1150,73 @@
               "order": 1
             },
             {
+              "property_id": 399810,
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 1700,
+              "est_hours": 2.0,
+              "lat": 39.8361,
+              "lon": -105.0096,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-26",
+              "next_checkout": "2026-07-30",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
+              "property_id": 470233,
+              "name": "BuffaloGolf",
+              "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "zone": "far_east",
+              "beds": 5,
+              "sqft": 2146,
+              "est_hours": 2.5,
+              "lat": 39.9113,
+              "lon": -104.7923,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-30",
+              "next_checkout": "2026-08-02",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
+            }
+          ],
+          "isLaundry": false
+        },
+        {
+          "name": "Equipo 2",
+          "lead": "Dexabeth",
+          "members": [
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": null,
+              "name": "1967 E 115th",
+              "address": "1967 E 115th Place, Northglenn 80233",
+              "zone": "north",
+              "beds": 3,
+              "sqft": 1200,
+              "est_hours": 2.0,
+              "lat": 39.8878,
+              "lon": -104.9458,
+              "priority": "same_day",
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": "4:00 PM",
+              "notes": "External client - Beloved Soul Healer. Door code: 1067.",
+              "order": 1
+            },
+            {
               "property_id": 409557,
               "name": "Elevation",
               "address": "3431 E 105th Ct, Northglenn 80233",
@@ -1189,56 +1256,6 @@
             }
           ],
           "isLaundry": false
-        },
-        {
-          "name": "Equipo 2",
-          "lead": "Dexabeth",
-          "members": [
-            "Dexabeth",
-            "Yasnielis",
-            "Julie"
-          ],
-          "properties": [
-            {
-              "property_id": 399810,
-              "name": "Indica",
-              "address": "7682 Shoshone St, Denver 80221",
-              "zone": "west",
-              "beds": 5,
-              "sqft": 1700,
-              "est_hours": 2.0,
-              "lat": 39.8361,
-              "lon": -105.0096,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-26",
-              "next_checkout": "2026-07-30",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
-              "property_id": 470233,
-              "name": "BuffaloGolf",
-              "address": "16714 Buffalo Run Dr, Commerce City 80022",
-              "zone": "far_east",
-              "beds": 5,
-              "sqft": 2146,
-              "est_hours": 2.5,
-              "lat": 39.9113,
-              "lon": -104.7923,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-07-30",
-              "next_checkout": "2026-08-02",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            }
-          ],
-          "isLaundry": false
         }
       ],
       "laundry": {
@@ -1258,9 +1275,9 @@
         "Sativa"
       ],
       "payrollEstimate": 820,
-      "sameDayTurns": 2,
+      "sameDayTurns": 3,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 5,
+      "totalCheckouts": 6,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
