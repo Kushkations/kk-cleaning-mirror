@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-17T05:02:08.426225",
+  "generated": "2026-07-17T05:16:20.253187",
   "weekStart": "2026-07-17",
   "weekEnd": "2026-07-30",
   "week": [
@@ -524,8 +524,8 @@
               "lon": -104.9736,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": "2026-07-30",
-              "next_checkout": "2026-08-02",
+              "next_checkin": "2026-07-24",
+              "next_checkout": "2026-07-28",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -917,6 +917,7 @@
         "GameRoom",
         "Hotbox",
         "Indica",
+        "Paradise",
         "PlayHouse",
         "Pueblo",
         "Quivas",
@@ -1039,6 +1040,7 @@
         "GameRoom",
         "Hotbox",
         "Indica",
+        "Paradise",
         "PlayHouse",
         "Pueblo",
         "Sativa",
@@ -1206,6 +1208,7 @@
         "GameRoom",
         "Hotbox",
         "Indica",
+        "Paradise",
         "PlayHouse",
         "Sativa"
       ],
@@ -1287,6 +1290,7 @@
         "GrownSexy",
         "Hotbox",
         "Indica",
+        "Paradise",
         "PlayHouse"
       ],
       "payrollEstimate": 390,
