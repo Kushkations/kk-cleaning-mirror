@@ -261,6 +261,20 @@ function applyScheduleOverrides() {
   data.week.forEach(d => {
     const ov = crewByDate[d.date];
     if (!ov) return;
+    // remove_props: pull a property OFF this day — its cleaning moved to another date.
+    // Runs first so the rest of the overrides never re-touch it. Pair with add_props on
+    // the target date to complete a move.
+    if (ov.remove_props && ov.remove_props.length) {
+      let dropped = 0;
+      d.teams.forEach(t => {
+        const before = t.properties.length;
+        t.properties = t.properties.filter(p => !ov.remove_props.includes(p.name.split(' (')[0]));
+        dropped += before - t.properties.length;
+        t.properties.forEach((p, i) => { p.order = i + 1; });
+      });
+      d.teams = d.teams.filter(t => t.properties.length);
+      if (typeof d.totalCheckouts === 'number') d.totalCheckouts = Math.max(0, d.totalCheckouts - dropped);
+    }
     if (ov.prio) {
       d.teams.forEach(t => t.properties.forEach(p => {
         const base = p.name.split(' (')[0];
