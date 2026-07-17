@@ -270,6 +270,12 @@ function applyScheduleOverrides() {
         }
       }));
     }
+    // laundry: crew.json (what the bot sends) is the source of truth. The schedule's
+    // own laundry flag is always {active:false}, so the yellow "Laundry" job cell never
+    // showed. Surface it here -> Week-grid Laundry cell + day-view laundry banner.
+    if (ov.laundry && ov.laundry.length) {
+      d.laundry = {active: true, assigned: ov.laundry, time: ov.laundry_time || ov.start_time || ""};
+    }
     // notes: append a "(Salida 12 PM)"-style annotation behind a property's name
     if (ov.notes) {
       d.teams.forEach(t => t.properties.forEach(p => {
@@ -633,7 +639,7 @@ function renderScheduleDay(idx) {
   });
 
   if (d.laundry && d.laundry.active) {
-    html += `<div class="laundry-banner" style="margin-top:10px"><h2>Laundry</h2><div class="detail">${d.laundry.assigned.join(' + ')} — 8:00 AM at 261 Grant Way</div></div>`;
+    html += `<div class="laundry-banner" style="margin-top:10px"><h2>Laundry</h2><div class="detail">${d.laundry.assigned.join(' + ')}${d.laundry.time ? ' — ' + d.laundry.time : ''} at 261 Grant Way</div></div>`;
   }
 
   if (d.headcount && (d.headcount.out_total || d.headcount.in_total)) {
@@ -736,7 +742,7 @@ function renderEquipoDay(idx) {
   });
 
   if (d.laundry && d.laundry.active) {
-    html += '<div class="laundry-banner" style="margin-top:10px"><h2>Lavandería</h2><div class="detail">' + d.laundry.assigned.join(' + ') + ' — 8:00 AM en 261 Grant Way</div></div>';
+    html += '<div class="laundry-banner" style="margin-top:10px"><h2>Lavandería</h2><div class="detail">' + d.laundry.assigned.join(' + ') + (d.laundry.time ? ' — ' + d.laundry.time : '') + ' en 261 Grant Way</div></div>';
   }
 
   document.getElementById('equipo-content').innerHTML = html;
