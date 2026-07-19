@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-19T20:03:21.539936",
+  "generated": "2026-07-19T20:31:51.275935",
   "weekStart": "2026-07-20",
   "weekEnd": "2026-08-02",
   "week": [
@@ -118,7 +118,8 @@
         "Palace",
         "PlayHouse",
         "Pueblo",
-        "Quivas"
+        "Quivas",
+        "Sheridan"
       ],
       "payrollEstimate": 390,
       "sameDayTurns": 0,
@@ -222,6 +223,7 @@
         "PlayHouse",
         "Pueblo",
         "Quivas",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 390,
@@ -289,6 +291,7 @@
         "Pueblo",
         "Quivas",
         "Sativa",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 430,
@@ -376,6 +379,7 @@
         "Pueblo",
         "Quivas",
         "Sativa",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 390,
@@ -465,6 +469,7 @@
         "Pueblo",
         "Quivas",
         "Sativa",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 430,
@@ -587,6 +592,7 @@
         "PlayHouse",
         "Pueblo",
         "Sativa",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 390,
@@ -661,12 +667,10 @@
               "priority": "checkout_only",
               "priority_locked": false,
               "next_checkin": null,
-              "next_checkout": "2026-07-26",
+              "next_checkout": null,
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 3
             },
             {
