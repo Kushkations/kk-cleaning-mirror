@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-19T22:16:05.137889",
+  "generated": "2026-07-19T22:30:47.762894",
   "weekStart": "2026-07-20",
   "weekEnd": "2026-08-02",
   "week": [
@@ -114,6 +114,7 @@
         "Elevation",
         "GameRoom",
         "Hotbox",
+        "Indica",
         "JoyStick",
         "Palace",
         "PlayHouse",
@@ -198,6 +199,25 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 3
+            },
+            {
+              "property_id": 399810,
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 1700,
+              "est_hours": 2.0,
+              "lat": 39.8361,
+              "lon": -105.0096,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-23",
+              "next_checkout": "2026-07-26",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -229,7 +249,7 @@
       "payrollEstimate": 390,
       "sameDayTurns": 1,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 3,
+      "totalCheckouts": 4,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
