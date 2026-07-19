@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-19T23:32:11.026316",
+  "generated": "2026-07-19T23:45:36.682672",
   "weekStart": "2026-07-20",
   "weekEnd": "2026-08-02",
   "week": [
@@ -10,13 +10,32 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Dexabeth",
+          "lead": "Marii",
           "members": [
-            "Dexabeth",
-            "Yasnielis",
-            "Julie"
+            "Marii",
+            "Neidys",
+            "Dexabeth"
           ],
           "properties": [
+            {
+              "property_id": 399810,
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 1700,
+              "est_hours": 2.0,
+              "lat": 39.8361,
+              "lon": -105.0096,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-20",
+              "next_checkout": "2026-07-21",
+              "deadline": "4:00 PM",
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 1
+            },
             {
               "property_id": 447452,
               "name": "Wonderland",
@@ -34,7 +53,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 1
+              "order": 2
             },
             {
               "property_id": 435859,
@@ -53,7 +72,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             },
             {
               "property_id": 404868,
@@ -72,7 +91,38 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 4
+            }
+          ],
+          "isLaundry": false
+        },
+        {
+          "name": "Equipo 2",
+          "lead": "Dexabeth",
+          "members": [
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 354421,
+              "name": "JoyStick",
+              "address": "8228 Balsam Way, Arvada 80005",
+              "zone": "far_west",
+              "beds": 4,
+              "sqft": 2183,
+              "est_hours": 2.5,
+              "lat": 39.8466,
+              "lon": -105.0904,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-20",
+              "next_checkout": "2026-07-23",
+              "deadline": "4:00 PM",
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 1
             },
             {
               "property_id": 387216,
@@ -91,6 +141,44 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
+              "order": 2
+            },
+            {
+              "property_id": 370631,
+              "name": "Grant",
+              "address": "261 Grant Way, Denver 80229",
+              "zone": "hq",
+              "beds": 6,
+              "sqft": 1782,
+              "est_hours": 2.0,
+              "lat": 39.8455,
+              "lon": -104.9828,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-30",
+              "next_checkout": "2026-08-02",
+              "deadline": null,
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 3
+            },
+            {
+              "property_id": 470233,
+              "name": "BuffaloGolf",
+              "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "zone": "far_east",
+              "beds": 5,
+              "sqft": 2146,
+              "est_hours": 2.5,
+              "lat": 39.9113,
+              "lon": -104.7923,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-23",
+              "next_checkout": "2026-07-26",
+              "deadline": null,
+              "checkout_time": null,
+              "is_late_checkout": false,
               "order": 4
             }
           ],
@@ -102,8 +190,6 @@
         "active": false
       },
       "off": [
-        "Marii",
-        "Neidys",
         "Juliana"
       ],
       "occupied": [
@@ -122,10 +208,10 @@
         "Quivas",
         "Sheridan"
       ],
-      "payrollEstimate": 390,
-      "sameDayTurns": 0,
+      "payrollEstimate": 820,
+      "sameDayTurns": 2,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 4,
+      "totalCheckouts": 8,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1462,7 +1548,7 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 7,
+      "daysThisWeek": 8,
       "role": "lead",
       "dailyRate": 170
     },
@@ -1482,7 +1568,7 @@
       "dailyRate": 130
     },
     "Neidys": {
-      "daysThisWeek": 7,
+      "daysThisWeek": 8,
       "role": "cleaner",
       "dailyRate": 130
     },
