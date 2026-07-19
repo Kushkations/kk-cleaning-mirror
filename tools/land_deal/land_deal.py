@@ -431,6 +431,55 @@ def _skip_batchdata(name: Dict[str, Any], addr: Dict[str, Any],
 
 
 # --------------------------------------------------------------------------
+# Step 3b: manual free-lookup links (TruePeopleSearch / FastPeopleSearch)
+# --------------------------------------------------------------------------
+# These sites are FREE but forbid automated scraping and use anti-bot blocking.
+# So we don't fetch them — we build the exact search URLs for a human to click
+# and read the phone/email off the page. ToS-compliant and reliable.
+def _slug(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", (text or "").lower()).strip("-")
+
+
+def people_search_links(owner_name: str, mailing: str) -> Dict[str, Optional[str]]:
+    import urllib.parse as _up
+    nm = split_owner_name(owner_name)
+    addr = split_mailing(mailing)
+    first, last = nm.get("first") or "", nm.get("last") or ""
+    city, state, zc = addr.get("city") or "", addr.get("state") or "", addr.get("zip") or ""
+    name_q = ("%s %s" % (first, last)).strip()
+    citystate = (", ".join(p for p in [city, state] if p)).strip(", ")
+
+    tps = None
+    if name_q:
+        tps = ("https://www.truepeoplesearch.com/results?name=%s"
+               % _up.quote(name_q))
+        if citystate:
+            tps += "&citystatezip=%s" % _up.quote(citystate)
+
+    fps_name = None
+    if last:
+        who = _slug("%s %s" % (first, last))
+        where = _slug("%s %s" % (city, state)) if (city or state) else ""
+        fps_name = "https://www.fastpeoplesearch.com/name/%s%s" % (
+            who, ("_" + where) if where else "")
+
+    fps_addr = None
+    if addr.get("street") and (city or state):
+        z = (zc or "").split("-")[0]
+        loc = _slug("%s %s" % (city, state))
+        z_part = "-" + z if z else ""
+        fps_addr = "https://www.fastpeoplesearch.com/address/%s_%s%s" % (
+            _slug(addr["street"]), loc, z_part)
+
+    return {
+        "truepeoplesearch_by_name": tps,
+        "fastpeoplesearch_by_name": fps_name,
+        "fastpeoplesearch_by_address": fps_addr,
+        "match_against": mailing,
+    }
+
+
+# --------------------------------------------------------------------------
 # Step 4: offer letter
 # --------------------------------------------------------------------------
 def offer_letter(owner_name: str, mailing: str, situs: str,
