@@ -462,10 +462,11 @@ function renderWeekTab() {
     const c = crewByDate[d.date];
     let cells = '';
     if (c) {
-      (c.groups || []).forEach(gr => {
-        if (gr.cleaners && gr.cleaners.length)
-          cells += `<div style="font-size:.72em;color:#94a3b8;padding:2px 0">${gr.cleaners.join(', ')}</div>`;
-      });
+      // Merged single cleaner list per day (laundry stays separate below).
+      const merged = [];
+      (c.groups || []).forEach(gr => (gr.cleaners || []).forEach(n => { if (n && !merged.includes(n)) merged.push(n); }));
+      if (merged.length)
+        cells += `<div style="font-size:.72em;color:#94a3b8;padding:2px 0">${merged.join(', ')}</div>`;
       if (c.laundry && c.laundry.length)
         cells += `<div style="font-size:.72em;color:#f1c40f;padding:2px 0">&#129530; ${c.laundry.join(', ')}</div>`;
     }
@@ -571,13 +572,18 @@ function crewBanner(dateIso, lang) {
   if (c.start_time) {
     h += `<div class="summary-row"><span class="prop">&#9200; ${es ? 'Hora de inicio' : 'Start time'}</span><span style="color:#fff;font-weight:700">${c.start_time}</span></div>`;
   }
-  (c.groups || []).forEach((g, i) => {
-    const who = (g.cleaners || []).join(', ') || (es ? '(sin asignar)' : '(unassigned)');
-    const props = (g.properties || []).join(', ');
-    h += `<div class="summary-row" style="align-items:flex-start"><span class="prop" style="color:#fff;font-weight:700">${es ? 'Grupo' : 'Group'} ${i + 1}: ${who}</span>`;
-    h += props ? `<span style="color:#94a3b8;text-align:right;max-width:55%">${props}</span>` : '';
+  // Merge ALL group cleaners into ONE combined list (Shaquan 2026-07-19). Laundry
+  // stays on its own separate line below — it's a distinct task.
+  const allCleaners = [];
+  (c.groups || []).forEach(g => (g.cleaners || []).forEach(n => { if (n && !allCleaners.includes(n)) allCleaners.push(n); }));
+  const allProps = [];
+  (c.groups || []).forEach(g => (g.properties || []).forEach(p => { if (p && !allProps.includes(p)) allProps.push(p); }));
+  if (allCleaners.length) {
+    const who = allCleaners.join(', ');
+    h += `<div class="summary-row" style="align-items:flex-start"><span class="prop" style="color:#fff;font-weight:700">${es ? 'Limpiadores' : 'Cleaners'}: ${who}</span>`;
+    h += allProps.length ? `<span style="color:#94a3b8;text-align:right;max-width:55%">${allProps.join(', ')}</span>` : '';
     h += `</div>`;
-  });
+  }
   if (c.laundry && c.laundry.length) {
     const lt = c.laundry_time ? ` (${c.laundry_time})` : '';
     h += `<div class="summary-row"><span class="prop">&#129530; ${es ? 'Lavandería' : 'Laundry'}${lt}</span><span style="color:#fde047;font-weight:700">${c.laundry.join(', ')}</span></div>`;
