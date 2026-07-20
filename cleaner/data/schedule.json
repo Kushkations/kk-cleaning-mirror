@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-20T19:31:04.384540",
+  "generated": "2026-07-20T19:46:24.927828",
   "weekStart": "2026-07-21",
   "weekEnd": "2026-08-03",
   "week": [
@@ -303,6 +303,7 @@
         "Indica",
         "JoyStick",
         "Palace",
+        "Paradise",
         "Pueblo",
         "Quivas",
         "Sativa",
@@ -350,6 +351,15 @@
               "order": 1
             },
             {
+              "name": "Paradise",
+              "address": "11448 Larson Ln, Northglenn 80233",
+              "priority": "same_day",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-24",
+              "source": "breezeway-reconcile",
+              "order": 2
+            },
+            {
               "property_id": 387216,
               "name": "GrownSexy",
               "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
@@ -366,7 +376,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             },
             {
               "property_id": 440656,
@@ -385,7 +395,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 4
             }
           ],
           "isLaundry": false
