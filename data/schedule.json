@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-20T09:01:46.694598",
+  "generated": "2026-07-20T09:16:26.435569",
   "weekStart": "2026-07-20",
   "weekEnd": "2026-08-02",
   "week": [
@@ -582,6 +582,25 @@
               "order": 1
             },
             {
+              "property_id": 387216,
+              "name": "GrownSexy",
+              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1200,
+              "est_hours": 1.5,
+              "lat": 39.7652,
+              "lon": -105.0535,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-27",
+              "next_checkout": "2026-07-31",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
               "property_id": 440656,
               "name": "Palace",
               "address": "12332 Quince St, Thornton 80602",
@@ -598,7 +617,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -635,7 +654,7 @@
       "payrollEstimate": 430,
       "sameDayTurns": 1,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 2,
+      "totalCheckouts": 3,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
