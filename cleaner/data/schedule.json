@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-20T19:46:24.927828",
+  "generated": "2026-07-20T20:01:14.437826",
   "weekStart": "2026-07-21",
   "weekEnd": "2026-08-03",
   "week": [
@@ -351,32 +351,23 @@
               "order": 1
             },
             {
+              "property_id": 404868,
               "name": "Paradise",
               "address": "11448 Larson Ln, Northglenn 80233",
+              "zone": "north",
+              "beds": 5,
+              "sqft": 1834,
+              "est_hours": 2.5,
+              "lat": 39.9046,
+              "lon": -104.9736,
               "priority": "same_day",
-              "est_hours": 2.0,
-              "notes": "CI 2026-07-24",
-              "source": "breezeway-reconcile",
-              "order": 2
-            },
-            {
-              "property_id": 387216,
-              "name": "GrownSexy",
-              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
-              "zone": "west",
-              "beds": 2,
-              "sqft": 1200,
-              "est_hours": 1.5,
-              "lat": 39.7652,
-              "lon": -105.0535,
-              "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": "2026-07-27",
-              "next_checkout": "2026-07-31",
-              "deadline": null,
+              "next_checkin": "2026-07-24",
+              "next_checkout": "2026-07-28",
+              "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 2
             },
             {
               "property_id": 440656,
@@ -392,6 +383,25 @@
               "priority_locked": false,
               "next_checkin": "2026-07-29",
               "next_checkout": "2026-08-03",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
+            },
+            {
+              "property_id": 387216,
+              "name": "GrownSexy",
+              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1200,
+              "est_hours": 1.5,
+              "lat": 39.7652,
+              "lon": -105.0535,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-27",
+              "next_checkout": "2026-07-31",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -430,9 +440,9 @@
         "Wonderland"
       ],
       "payrollEstimate": 430,
-      "sameDayTurns": 1,
+      "sameDayTurns": 2,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 3,
+      "totalCheckouts": 4,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
