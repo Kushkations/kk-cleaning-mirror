@@ -312,6 +312,17 @@ function applyScheduleOverrides() {
         }
       });
     }
+    // top_props: pin a property to the TOP of the day (Shaquan: "must be the top
+    // priority"). Reorders the array + renumbers so EVERY view (day, equipo, week,
+    // and the Telegram PNG) shows it first, and flags pinTop so the priority sorts
+    // keep it there. Colour is untouched — pinning is independent of priority.
+    if (ov.top_props && ov.top_props.length) {
+      const isTop = p => ov.top_props.includes(p.name.split(' (')[0]);
+      d.teams.forEach(t => {
+        t.properties = t.properties.filter(isTop).concat(t.properties.filter(p => !isTop(p)));
+        t.properties.forEach((p, i) => { p.order = i + 1; if (isTop(p)) p.pinTop = true; });
+      });
+    }
     // Carryover = houses not cleaned yesterday (auto-detected). Dark red, wins over prio.
     if (ov.carryover && ov.carryover.length) {
       if (!d.teams.length) d.teams.push({name:'Equipo 1', lead:'', members:[], properties:[]});
@@ -408,6 +419,7 @@ function renderWeekTab() {
     summaryHtml += `<div class="summary-card"><h3>${label} — ${d.dayNameEn} ${formatDate(d.date)}</h3>`;
     const allProps = d.teams.flatMap(t => t.properties);
     allProps.sort((a, b) => {
+      if (!!a.pinTop !== !!b.pinTop) return a.pinTop ? -1 : 1;   // pinned always first
       const po = {carryover:-1,same_day:0,moved_sameday:0,tomorrow_checkin:1,moved_nextday:1,regular:2,moved:2,checkout_only:3};
       return ((po[a.priority]!==undefined?po[a.priority]:9)) - ((po[b.priority]!==undefined?po[b.priority]:9));
     });
@@ -443,7 +455,10 @@ function renderWeekTab() {
     }
     let cells = '';
     const poWeek = {carryover:-1,same_day:0,moved_sameday:0,tomorrow_checkin:1,moved_nextday:1,regular:2,moved:2,checkout_only:3};
-    const sortedProps = d.teams.flatMap(t => t.properties).slice().sort((a,b) => ((poWeek[a.priority]!==undefined?poWeek[a.priority]:9)) - ((poWeek[b.priority]!==undefined?poWeek[b.priority]:9)));
+    const sortedProps = d.teams.flatMap(t => t.properties).slice().sort((a,b) => {
+      if (!!a.pinTop !== !!b.pinTop) return a.pinTop ? -1 : 1;   // pinned always first
+      return ((poWeek[a.priority]!==undefined?poWeek[a.priority]:9)) - ((poWeek[b.priority]!==undefined?poWeek[b.priority]:9));
+    });
     sortedProps.forEach(p => {
       const coTime = isLateCheckout(p.checkout_time) ? `<span style="font-size:.85em;opacity:.85"> ${p.checkout_time}</span>` : '';
       cells += `<div class="cell ${cellClass(p.priority)}">${p.name}${coTime}</div>`;
