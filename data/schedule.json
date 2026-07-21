@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-21T00:08:39.986095",
+  "generated": "2026-07-21T00:30:59.450983",
   "weekStart": "2026-07-21",
   "weekEnd": "2026-08-03",
   "week": [
@@ -274,12 +274,10 @@
               "priority": "tomorrow_checkin",
               "priority_locked": false,
               "next_checkin": "2026-07-24",
-              "next_checkout": "2026-07-23",
+              "next_checkout": "2026-07-30",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 2
             },
             {
@@ -770,7 +768,6 @@
         "JoyStick",
         "Paradise",
         "PlayHouse",
-        "Pueblo",
         "Sativa"
       ],
       "payrollEstimate": 820,
@@ -1068,15 +1065,13 @@
               "est_hours": 3.5,
               "lat": 39.8294,
               "lon": -105.1483,
-              "priority": "checkout_only",
+              "priority": "same_day",
               "priority_locked": false,
-              "next_checkin": "2026-08-06",
-              "next_checkout": "2026-07-30",
-              "deadline": null,
+              "next_checkin": "2026-07-30",
+              "next_checkout": "2026-08-02",
+              "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 3
             }
           ],
@@ -1111,7 +1106,7 @@
         "Sativa"
       ],
       "payrollEstimate": 390,
-      "sameDayTurns": 2,
+      "sameDayTurns": 3,
       "tomorrowCheckins": 0,
       "totalCheckouts": 3,
       "optimizations": [],
@@ -1301,15 +1296,15 @@
               "order": 3
             },
             {
-              "property_id": 400224,
-              "name": "BlueDream",
-              "address": "1475 S Pierce St, Lakewood 80232",
-              "zone": "isolated",
-              "beds": 3,
-              "sqft": 1100,
-              "est_hours": 1.5,
-              "lat": 39.6902,
-              "lon": -105.073,
+              "property_id": 470233,
+              "name": "BuffaloGolf",
+              "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "zone": "far_east",
+              "beds": 5,
+              "sqft": 2146,
+              "est_hours": 2.5,
+              "lat": 39.9113,
+              "lon": -104.7923,
               "priority": "checkout_only",
               "priority_locked": false,
               "next_checkin": null,
@@ -1318,15 +1313,6 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 4
-            },
-            {
-              "name": "PlayHouse",
-              "address": "7350 Alkire Ct, Arvada 80005",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-08-06",
-              "source": "breezeway-reconcile",
-              "order": 5
             }
           ],
           "isLaundry": false
@@ -1379,15 +1365,15 @@
               "order": 2
             },
             {
-              "property_id": 470233,
-              "name": "BuffaloGolf",
-              "address": "16714 Buffalo Run Dr, Commerce City 80022",
-              "zone": "far_east",
-              "beds": 5,
-              "sqft": 2146,
-              "est_hours": 2.5,
-              "lat": 39.9113,
-              "lon": -104.7923,
+              "property_id": 400224,
+              "name": "BlueDream",
+              "address": "1475 S Pierce St, Lakewood 80232",
+              "zone": "isolated",
+              "beds": 3,
+              "sqft": 1100,
+              "est_hours": 1.5,
+              "lat": 39.6902,
+              "lon": -105.073,
               "priority": "checkout_only",
               "priority_locked": false,
               "next_checkin": null,
@@ -1396,6 +1382,25 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 3
+            },
+            {
+              "property_id": 387379,
+              "name": "PlayHouse",
+              "address": "7350 Alkire Ct, Arvada 80005",
+              "zone": "far_west",
+              "beds": 7,
+              "sqft": 2976,
+              "est_hours": 3.5,
+              "lat": 39.8294,
+              "lon": -105.1483,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -1416,13 +1421,14 @@
         "Hotbox",
         "Indica",
         "Palace",
+        "Pueblo",
         "Sativa",
         "Wonderland"
       ],
       "payrollEstimate": 820,
       "sameDayTurns": 1,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 7,
+      "totalCheckouts": 8,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
