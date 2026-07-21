@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-21T05:31:25.248858",
+  "generated": "2026-07-21T05:45:35.179884",
   "weekStart": "2026-07-21",
   "weekEnd": "2026-08-03",
   "week": [
@@ -212,6 +212,7 @@
         "Juliana"
       ],
       "occupied": [
+        "Airport",
         "Alpha",
         "Beach",
         "Elevation",
@@ -282,6 +283,7 @@
         "Juliana"
       ],
       "occupied": [
+        "Airport",
         "Alpha",
         "Beach",
         "BlueDream",
@@ -410,6 +412,7 @@
         "Juliana"
       ],
       "occupied": [
+        "Airport",
         "Alpha",
         "Beach",
         "BlueDream",
@@ -469,42 +472,23 @@
               "order": 1
             },
             {
-              "property_id": 404868,
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
-              "zone": "north",
-              "beds": 5,
-              "sqft": 1834,
-              "est_hours": 2.5,
-              "lat": 39.9046,
-              "lon": -104.9736,
+              "property_id": 435859,
+              "name": "Airport",
+              "address": "19990 E 40th Ave, Denver 80249",
+              "zone": "far_east",
+              "beds": 4,
+              "sqft": 1642,
+              "est_hours": 2.0,
+              "lat": 39.7706,
+              "lon": -104.7548,
               "priority": "same_day",
               "priority_locked": false,
               "next_checkin": "2026-07-24",
-              "next_checkout": "2026-07-28",
+              "next_checkout": "2026-07-27",
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
-            },
-            {
-              "property_id": 440656,
-              "name": "Palace",
-              "address": "12332 Quince St, Thornton 80602",
-              "zone": "north",
-              "beds": 6,
-              "sqft": 4406,
-              "est_hours": 4.0,
-              "lat": 39.9199,
-              "lon": -104.9018,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-07-29",
-              "next_checkout": "2026-08-03",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
             },
             {
               "property_id": 387216,
@@ -523,7 +507,57 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 4
+              "order": 3
+            }
+          ],
+          "isLaundry": false
+        },
+        {
+          "name": "Equipo 2",
+          "lead": "Dexabeth",
+          "members": [
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 404868,
+              "name": "Paradise",
+              "address": "11448 Larson Ln, Northglenn 80233",
+              "zone": "north",
+              "beds": 5,
+              "sqft": 1834,
+              "est_hours": 2.5,
+              "lat": 39.9046,
+              "lon": -104.9736,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-24",
+              "next_checkout": "2026-07-28",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 440656,
+              "name": "Palace",
+              "address": "12332 Quince St, Thornton 80602",
+              "zone": "north",
+              "beds": 6,
+              "sqft": 4406,
+              "est_hours": 4.0,
+              "lat": 39.9199,
+              "lon": -104.9018,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-29",
+              "next_checkout": "2026-08-03",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -534,8 +568,6 @@
         "active": false
       },
       "off": [
-        "Julie",
-        "Yasnielis",
         "Juliana"
       ],
       "occupied": [
@@ -557,10 +589,10 @@
         "Sheridan",
         "Wonderland"
       ],
-      "payrollEstimate": 430,
-      "sameDayTurns": 2,
+      "payrollEstimate": 820,
+      "sameDayTurns": 3,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 4,
+      "totalCheckouts": 5,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1662,7 +1694,7 @@
       "dailyRate": 170
     },
     "Julie": {
-      "daysThisWeek": 9,
+      "daysThisWeek": 10,
       "role": "cleaner",
       "dailyRate": 130
     },
@@ -1672,7 +1704,7 @@
       "dailyRate": 130
     },
     "Yasnielis": {
-      "daysThisWeek": 9,
+      "daysThisWeek": 10,
       "role": "cleaner",
       "dailyRate": 130
     },
