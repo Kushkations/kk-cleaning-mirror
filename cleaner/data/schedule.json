@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-21T19:31:21.157884",
+  "generated": "2026-07-21T19:46:27.840219",
   "weekStart": "2026-07-22",
   "weekEnd": "2026-08-04",
   "week": [
@@ -52,6 +52,7 @@
       "occupied": [
         "Airport",
         "Alpha",
+        "Altitude",
         "Beach",
         "BlueDream",
         "Elevation",
@@ -162,6 +163,7 @@
       "occupied": [
         "Airport",
         "Alpha",
+        "Altitude",
         "Beach",
         "BlueDream",
         "BuffaloGolf",
@@ -321,6 +323,7 @@
       "occupied": [
         "Airport",
         "Alpha",
+        "Altitude",
         "Beach",
         "BlueDream",
         "BuffaloGolf",
@@ -450,6 +453,7 @@
       "occupied": [
         "Airport",
         "Alpha",
+        "Altitude",
         "BuffaloGolf",
         "Elevation",
         "GameRoom",
@@ -561,6 +565,15 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 4
+            },
+            {
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-29",
+              "source": "breezeway-reconcile",
+              "order": 5
             }
           ],
           "isLaundry": false
