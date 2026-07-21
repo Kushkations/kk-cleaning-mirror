@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-21T17:45:57.225238",
+  "generated": "2026-07-21T18:02:00.244297",
   "weekStart": "2026-07-21",
   "weekEnd": "2026-08-03",
   "week": [
@@ -342,6 +342,25 @@
               "order": 1
             },
             {
+              "property_id": 370631,
+              "name": "Grant",
+              "address": "261 Grant Way, Denver 80229",
+              "zone": "hq",
+              "beds": 6,
+              "sqft": 1782,
+              "est_hours": 2.0,
+              "lat": 39.8455,
+              "lon": -104.9828,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-24",
+              "next_checkout": "2026-07-28",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
               "property_id": 387379,
               "name": "PlayHouse",
               "address": "7350 Alkire Ct, Arvada 80005",
@@ -355,25 +374,6 @@
               "priority_locked": false,
               "next_checkin": "2026-07-24",
               "next_checkout": "2026-07-30",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
-              "property_id": 370631,
-              "name": "Grant",
-              "address": "261 Grant Way, Denver 80229",
-              "zone": "hq",
-              "beds": 6,
-              "sqft": 1782,
-              "est_hours": 2.0,
-              "lat": 39.8455,
-              "lon": -104.9828,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-07-30",
-              "next_checkout": "2026-08-02",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -414,7 +414,7 @@
       ],
       "payrollEstimate": 390,
       "sameDayTurns": 1,
-      "tomorrowCheckins": 1,
+      "tomorrowCheckins": 2,
       "totalCheckouts": 3,
       "optimizations": [],
       "startTime": "9:45 AM"
@@ -559,6 +559,7 @@
         "BuffaloGolf",
         "Elevation",
         "GameRoom",
+        "Grant",
         "Hotbox",
         "Indica",
         "JoyStick",
@@ -684,6 +685,7 @@
         "BuffaloGolf",
         "Elevation",
         "GameRoom",
+        "Grant",
         "Hotbox",
         "Indica",
         "JoyStick",
@@ -873,6 +875,7 @@
         "Airport",
         "Alpha",
         "GameRoom",
+        "Grant",
         "Hotbox",
         "Indica",
         "JoyStick",
@@ -975,6 +978,7 @@
       "occupied": [
         "Alpha",
         "GameRoom",
+        "Grant",
         "GrownSexy",
         "Hotbox",
         "Indica",
@@ -1022,6 +1026,15 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 1
+            },
+            {
+              "name": "Grant",
+              "address": "261 Grant Way, Denver 80229",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-30",
+              "source": "breezeway-reconcile",
+              "order": 2
             }
           ],
           "isLaundry": false
