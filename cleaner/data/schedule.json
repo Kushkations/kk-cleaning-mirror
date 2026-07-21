@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-21T05:45:35.179884",
+  "generated": "2026-07-21T06:01:20.033203",
   "weekStart": "2026-07-21",
   "weekEnd": "2026-08-03",
   "week": [
@@ -221,8 +221,8 @@
         "GrownSexy",
         "Hotbox",
         "Indica",
-        "JoyStick",
         "Palace",
+        "Paradise",
         "PlayHouse",
         "Pueblo",
         "Quivas",
@@ -292,8 +292,8 @@
         "Grant",
         "GrownSexy",
         "Indica",
-        "JoyStick",
         "Palace",
+        "Paradise",
         "PlayHouse",
         "Pueblo",
         "Quivas",
@@ -342,25 +342,6 @@
               "order": 1
             },
             {
-              "property_id": 354421,
-              "name": "JoyStick",
-              "address": "8228 Balsam Way, Arvada 80005",
-              "zone": "far_west",
-              "beds": 4,
-              "sqft": 2183,
-              "est_hours": 2.5,
-              "lat": 39.8466,
-              "lon": -105.0904,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-23",
-              "next_checkout": "2026-07-27",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
               "property_id": 387379,
               "name": "PlayHouse",
               "address": "7350 Alkire Ct, Arvada 80005",
@@ -377,7 +358,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 2
             },
             {
               "property_id": 370631,
@@ -396,7 +377,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 4
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -432,9 +413,9 @@
         "Wonderland"
       ],
       "payrollEstimate": 390,
-      "sameDayTurns": 2,
+      "sameDayTurns": 1,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 4,
+      "totalCheckouts": 3,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
