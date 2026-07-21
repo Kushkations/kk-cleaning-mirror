@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-21T01:01:41.962349",
+  "generated": "2026-07-21T01:16:53.894662",
   "weekStart": "2026-07-21",
   "weekEnd": "2026-08-03",
   "week": [
@@ -15,6 +15,75 @@
             "Marii",
             "Neidys",
             "Dexabeth"
+          ],
+          "properties": [
+            {
+              "property_id": 370631,
+              "name": "Grant",
+              "address": "261 Grant Way, Denver 80229",
+              "zone": "hq",
+              "beds": 6,
+              "sqft": 1782,
+              "est_hours": 2.0,
+              "lat": 39.8455,
+              "lon": -104.9828,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-21",
+              "next_checkout": "2026-07-23",
+              "deadline": "4:00 PM",
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 400224,
+              "name": "BlueDream",
+              "address": "1475 S Pierce St, Lakewood 80232",
+              "zone": "isolated",
+              "beds": 3,
+              "sqft": 1100,
+              "est_hours": 1.5,
+              "lat": 39.6902,
+              "lon": -105.073,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-22",
+              "next_checkout": "2026-07-25",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
+              "property_id": 399039,
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "zone": "far_west",
+              "beds": 6,
+              "sqft": 1868,
+              "est_hours": 2.5,
+              "lat": 39.7773,
+              "lon": -105.1396,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-29",
+              "next_checkout": "2026-08-04",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
+            }
+          ],
+          "isLaundry": false
+        },
+        {
+          "name": "Equipo 2",
+          "lead": "Dexabeth",
+          "members": [
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
           ],
           "properties": [
             {
@@ -76,56 +145,6 @@
             }
           ],
           "isLaundry": false
-        },
-        {
-          "name": "Equipo 2",
-          "lead": "Dexabeth",
-          "members": [
-            "Dexabeth",
-            "Yasnielis",
-            "Julie"
-          ],
-          "properties": [
-            {
-              "property_id": 400224,
-              "name": "BlueDream",
-              "address": "1475 S Pierce St, Lakewood 80232",
-              "zone": "isolated",
-              "beds": 3,
-              "sqft": 1100,
-              "est_hours": 1.5,
-              "lat": 39.6902,
-              "lon": -105.073,
-              "priority": "tomorrow_checkin",
-              "priority_locked": false,
-              "next_checkin": "2026-07-22",
-              "next_checkout": "2026-07-25",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
-              "property_id": 399039,
-              "name": "Altitude",
-              "address": "4350 Xenon St, Wheat Ridge 80033",
-              "zone": "far_west",
-              "beds": 6,
-              "sqft": 1868,
-              "est_hours": 2.5,
-              "lat": 39.7773,
-              "lon": -105.1396,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-07-29",
-              "next_checkout": "2026-08-04",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            }
-          ],
-          "isLaundry": false
         }
       ],
       "laundry": {
@@ -152,9 +171,9 @@
         "Wonderland"
       ],
       "payrollEstimate": 820,
-      "sameDayTurns": 1,
+      "sameDayTurns": 2,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 5,
+      "totalCheckouts": 6,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
