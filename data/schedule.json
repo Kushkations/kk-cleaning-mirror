@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-22T15:16:43.643351",
+  "generated": "2026-07-22T15:31:57.599260",
   "weekStart": "2026-07-22",
   "weekEnd": "2026-08-04",
   "week": [
@@ -18,25 +18,6 @@
           ],
           "properties": [
             {
-              "property_id": 320255,
-              "name": "Hotbox",
-              "address": "761 E 83rd Pl, Denver 80229",
-              "zone": "hq",
-              "beds": 4,
-              "sqft": 1822,
-              "est_hours": 2.0,
-              "lat": 39.8488,
-              "lon": -104.9769,
-              "priority": "tomorrow_checkin",
-              "priority_locked": false,
-              "next_checkin": "2026-07-23",
-              "next_checkout": "2026-07-26",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
               "property_id": 354421,
               "name": "JoyStick",
               "address": "8228 Balsam Way, Arvada 80005",
@@ -53,7 +34,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 1
             },
             {
               "property_id": 470233,
@@ -72,7 +53,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -97,6 +78,7 @@
         "GameRoom",
         "Grant",
         "GrownSexy",
+        "Hotbox",
         "Indica",
         "Palace",
         "Paradise",
@@ -109,8 +91,8 @@
       ],
       "payrollEstimate": 390,
       "sameDayTurns": 0,
-      "tomorrowCheckins": 3,
-      "totalCheckouts": 3,
+      "tomorrowCheckins": 2,
+      "totalCheckouts": 2,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -129,6 +111,25 @@
           ],
           "properties": [
             {
+              "property_id": 320255,
+              "name": "Hotbox",
+              "address": "761 E 83rd Pl, Denver 80229",
+              "zone": "hq",
+              "beds": 4,
+              "sqft": 1822,
+              "est_hours": 2.0,
+              "lat": 39.8488,
+              "lon": -104.9769,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-23",
+              "next_checkout": "2026-07-26",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
               "property_id": 404868,
               "name": "Paradise",
               "address": "11448 Larson Ln, Northglenn 80233",
@@ -145,7 +146,7 @@
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 1
+              "order": 2
             },
             {
               "property_id": 370631,
@@ -164,7 +165,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             },
             {
               "property_id": 387379,
@@ -183,7 +184,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -220,9 +221,9 @@
         "Wonderland"
       ],
       "payrollEstimate": 390,
-      "sameDayTurns": 1,
+      "sameDayTurns": 2,
       "tomorrowCheckins": 2,
-      "totalCheckouts": 3,
+      "totalCheckouts": 4,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
