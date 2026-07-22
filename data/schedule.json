@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-22T15:31:57.599260",
+  "generated": "2026-07-22T15:46:19.487463",
   "weekStart": "2026-07-22",
   "weekEnd": "2026-08-04",
   "week": [
@@ -54,6 +54,15 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
+            },
+            {
+              "name": "GrownSexy",
+              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-07-24",
+              "source": "breezeway-reconcile",
+              "order": 3
             }
           ],
           "isLaundry": false
