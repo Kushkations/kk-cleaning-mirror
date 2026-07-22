@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-22T05:02:40.673089",
+  "generated": "2026-07-22T05:17:53.333239",
   "weekStart": "2026-07-22",
   "weekEnd": "2026-08-04",
   "week": [
@@ -341,10 +341,12 @@
               "priority": "same_day",
               "priority_locked": false,
               "next_checkin": "2026-07-24",
-              "next_checkout": "2026-07-27",
+              "next_checkout": "2026-07-24",
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
+              "provisional_from_booking": true,
+              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 2
             }
           ],
@@ -804,11 +806,13 @@
               "lon": -104.7548,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": "2026-07-30",
-              "next_checkout": "2026-08-04",
+              "next_checkin": "2026-09-21",
+              "next_checkout": "2026-07-27",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
+              "provisional_from_booking": true,
+              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 3
             }
           ],
@@ -1549,22 +1553,12 @@
               "order": 1
             },
             {
-              "property_id": 435859,
               "name": "Airport",
               "address": "19990 E 40th Ave, Denver 80249",
-              "zone": "far_east",
-              "beds": 4,
-              "sqft": 1642,
-              "est_hours": 2.0,
-              "lat": 39.7706,
-              "lon": -104.7548,
               "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
+              "est_hours": 2.0,
+              "notes": "CI 2026-08-07",
+              "source": "breezeway-reconcile",
               "order": 2
             }
           ],
@@ -1591,7 +1585,7 @@
       "payrollEstimate": 390,
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 2,
+      "totalCheckouts": 1,
       "optimizations": [],
       "startTime": "9:45 AM"
     }
