@@ -308,7 +308,11 @@ function applyScheduleOverrides() {
       ov.add_props.forEach(ap => {
         const exists = d.teams.some(t => t.properties.some(p => p.name.split(' (')[0] === ap.name));
         if (!exists) {
-          team.properties.push({name: ap.name, priority: ap.priority || 'regular',
+          // notes run BEFORE this block, so an added property would miss its note —
+          // apply it here (mirrors the PNG renderer) so both stay in sync.
+          const apNote = ov.notes && ov.notes[ap.name];
+          team.properties.push({name: ap.name + (apNote ? ' (' + apNote + ')' : ''),
+                                priority: ap.priority || 'regular',
                                 order: team.properties.length + 1, checkout_time: ap.checkout_time || null,
                                 manual: true});
           if (typeof d.totalCheckouts === 'number') d.totalCheckouts += 1;
