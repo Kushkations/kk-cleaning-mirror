@@ -287,8 +287,11 @@ function applyScheduleOverrides() {
     // laundry: crew.json (what the bot sends) is the source of truth. The schedule's
     // own laundry flag is always {active:false}, so the yellow "Laundry" job cell never
     // showed. Surface it here -> Week-grid Laundry cell + day-view laundry banner.
-    if (ov.laundry && ov.laundry.length) {
-      d.laundry = {active: true, assigned: ov.laundry, time: ov.laundry_time || ov.start_time || ""};
+    // laundry_on lets us mark "there IS laundry" before anyone is assigned to it —
+    // the names fill in when Rosandri/Shaquan send the crew. Without this the row
+    // only appeared once a name existed.
+    if ((ov.laundry && ov.laundry.length) || ov.laundry_on) {
+      d.laundry = {active: true, assigned: ov.laundry || [], time: ov.laundry_time || ov.start_time || ""};
     }
     // notes: append a "(Salida 12 PM)"-style annotation behind a property's name
     if (ov.notes) {
