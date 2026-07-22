@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-22T00:31:10.303044",
+  "generated": "2026-07-22T00:46:57.237077",
   "weekStart": "2026-07-22",
   "weekEnd": "2026-08-04",
   "week": [
@@ -10,11 +10,11 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Marii",
+          "lead": "Dexabeth",
           "members": [
-            "Marii",
-            "Neidys",
-            "Dexabeth"
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
           ],
           "properties": [
             {
@@ -35,6 +35,44 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 1
+            },
+            {
+              "property_id": 354421,
+              "name": "JoyStick",
+              "address": "8228 Balsam Way, Arvada 80005",
+              "zone": "far_west",
+              "beds": 4,
+              "sqft": 2183,
+              "est_hours": 2.5,
+              "lat": 39.8466,
+              "lon": -105.0904,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-23",
+              "next_checkout": "2026-07-27",
+              "deadline": null,
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
+              "property_id": 470233,
+              "name": "BuffaloGolf",
+              "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "zone": "far_east",
+              "beds": 5,
+              "sqft": 2146,
+              "est_hours": 2.5,
+              "lat": 39.9113,
+              "lon": -104.7923,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-23",
+              "next_checkout": "2026-07-26",
+              "deadline": null,
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -45,8 +83,8 @@
         "active": false
       },
       "off": [
-        "Julie",
-        "Yasnielis",
+        "Marii",
+        "Neidys",
         "Juliana"
       ],
       "occupied": [
@@ -69,10 +107,10 @@
         "Sheridan",
         "Wonderland"
       ],
-      "payrollEstimate": 430,
+      "payrollEstimate": 390,
       "sameDayTurns": 0,
-      "tomorrowCheckins": 1,
-      "totalCheckouts": 1,
+      "tomorrowCheckins": 3,
+      "totalCheckouts": 3,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1560,12 +1598,12 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 6,
+      "daysThisWeek": 5,
       "role": "lead",
       "dailyRate": 170
     },
     "Julie": {
-      "daysThisWeek": 10,
+      "daysThisWeek": 11,
       "role": "cleaner",
       "dailyRate": 130
     },
@@ -1575,12 +1613,12 @@
       "dailyRate": 130
     },
     "Yasnielis": {
-      "daysThisWeek": 10,
+      "daysThisWeek": 11,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Neidys": {
-      "daysThisWeek": 6,
+      "daysThisWeek": 5,
       "role": "cleaner",
       "dailyRate": 130
     },
