@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-22T18:31:06.312242",
+  "generated": "2026-07-22T18:45:51.272763",
   "weekStart": "2026-07-22",
   "weekEnd": "2026-08-04",
   "week": [
@@ -577,6 +577,111 @@
               "order": 2
             },
             {
+              "property_id": 447452,
+              "name": "Wonderland",
+              "address": "5955 S Zante Way, Aurora 80015",
+              "zone": "isolated",
+              "beds": 5,
+              "sqft": 1886,
+              "est_hours": 2.5,
+              "lat": 39.6083,
+              "lon": -104.7176,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-26",
+              "next_checkout": "2026-07-31",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
+            },
+            {
+              "property_id": 409557,
+              "name": "Elevation",
+              "address": "3431 E 105th Ct, Northglenn 80233",
+              "zone": "north",
+              "beds": 5,
+              "sqft": 2376,
+              "est_hours": 2.5,
+              "lat": 39.8878,
+              "lon": -104.9458,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-08-06",
+              "next_checkout": "2026-08-11",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 4
+            },
+            {
+              "property_id": 399039,
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "zone": "far_west",
+              "beds": 6,
+              "sqft": 1868,
+              "est_hours": 2.5,
+              "lat": 39.7773,
+              "lon": -105.1396,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-29",
+              "next_checkout": "2026-08-04",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 5
+            }
+          ],
+          "isLaundry": false
+        },
+        {
+          "name": "Equipo 2",
+          "lead": "Dexabeth",
+          "members": [
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": null,
+              "name": "1967 E 115th",
+              "address": "1967 E 115th Place, Northglenn 80233",
+              "zone": "north",
+              "beds": 3,
+              "sqft": 1200,
+              "est_hours": 2.0,
+              "lat": 39.8878,
+              "lon": -104.9458,
+              "priority": "same_day",
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": "4:00 PM",
+              "notes": "External client - Beloved Soul Healer. Door code: 1067.",
+              "order": 1
+            },
+            {
+              "property_id": 470233,
+              "name": "BuffaloGolf",
+              "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "zone": "far_east",
+              "beds": 5,
+              "sqft": 2146,
+              "est_hours": 2.5,
+              "lat": 39.9113,
+              "lon": -104.7923,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-26",
+              "next_checkout": "2026-07-29",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
               "property_id": 387216,
               "name": "GrownSexy",
               "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
@@ -613,111 +718,6 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 4
-            },
-            {
-              "property_id": 470233,
-              "name": "BuffaloGolf",
-              "address": "16714 Buffalo Run Dr, Commerce City 80022",
-              "zone": "far_east",
-              "beds": 5,
-              "sqft": 2146,
-              "est_hours": 2.5,
-              "lat": 39.9113,
-              "lon": -104.7923,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-07-30",
-              "next_checkout": "2026-08-02",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 5
-            }
-          ],
-          "isLaundry": false
-        },
-        {
-          "name": "Equipo 2",
-          "lead": "Dexabeth",
-          "members": [
-            "Dexabeth",
-            "Yasnielis",
-            "Julie"
-          ],
-          "properties": [
-            {
-              "property_id": null,
-              "name": "1967 E 115th",
-              "address": "1967 E 115th Place, Northglenn 80233",
-              "zone": "north",
-              "beds": 3,
-              "sqft": 1200,
-              "est_hours": 2.0,
-              "lat": 39.8878,
-              "lon": -104.9458,
-              "priority": "same_day",
-              "next_checkin": null,
-              "next_checkout": null,
-              "deadline": "4:00 PM",
-              "notes": "External client - Beloved Soul Healer. Door code: 1067.",
-              "order": 1
-            },
-            {
-              "property_id": 447452,
-              "name": "Wonderland",
-              "address": "5955 S Zante Way, Aurora 80015",
-              "zone": "isolated",
-              "beds": 5,
-              "sqft": 1886,
-              "est_hours": 2.5,
-              "lat": 39.6083,
-              "lon": -104.7176,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-26",
-              "next_checkout": "2026-07-31",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
-              "property_id": 409557,
-              "name": "Elevation",
-              "address": "3431 E 105th Ct, Northglenn 80233",
-              "zone": "north",
-              "beds": 5,
-              "sqft": 2376,
-              "est_hours": 2.5,
-              "lat": 39.8878,
-              "lon": -104.9458,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-08-06",
-              "next_checkout": "2026-08-11",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
-            },
-            {
-              "property_id": 399039,
-              "name": "Altitude",
-              "address": "4350 Xenon St, Wheat Ridge 80033",
-              "zone": "far_west",
-              "beds": 6,
-              "sqft": 1868,
-              "est_hours": 2.5,
-              "lat": 39.7773,
-              "lon": -105.1396,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-07-29",
-              "next_checkout": "2026-08-04",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 4
             }
           ],
           "isLaundry": false
@@ -733,6 +733,7 @@
       "occupied": [
         "Airport",
         "Alpha",
+        "BuffaloGolf",
         "GameRoom",
         "Grant",
         "Hotbox",
@@ -744,7 +745,7 @@
         "Wonderland"
       ],
       "payrollEstimate": 820,
-      "sameDayTurns": 4,
+      "sameDayTurns": 5,
       "tomorrowCheckins": 1,
       "totalCheckouts": 9,
       "optimizations": [],
@@ -836,6 +837,7 @@
       ],
       "occupied": [
         "Alpha",
+        "BuffaloGolf",
         "GameRoom",
         "Grant",
         "GrownSexy",
@@ -920,6 +922,7 @@
       ],
       "occupied": [
         "Alpha",
+        "BuffaloGolf",
         "GameRoom",
         "GrownSexy",
         "Hotbox",
@@ -942,13 +945,32 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Marii",
+          "lead": "Dexabeth",
           "members": [
-            "Marii",
-            "Neidys",
-            "Dexabeth"
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
           ],
           "properties": [
+            {
+              "property_id": 470233,
+              "name": "BuffaloGolf",
+              "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "zone": "far_east",
+              "beds": 5,
+              "sqft": 2146,
+              "est_hours": 2.5,
+              "lat": 39.9113,
+              "lon": -104.7923,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-30",
+              "next_checkout": "2026-08-02",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
             {
               "property_id": 320255,
               "name": "Hotbox",
@@ -966,7 +988,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 1
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -977,8 +999,8 @@
         "active": false
       },
       "off": [
-        "Julie",
-        "Yasnielis",
+        "Marii",
+        "Neidys",
         "Juliana"
       ],
       "occupied": [
@@ -992,10 +1014,10 @@
         "Pueblo",
         "Wonderland"
       ],
-      "payrollEstimate": 430,
+      "payrollEstimate": 390,
       "sameDayTurns": 0,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 1,
+      "tomorrowCheckins": 1,
+      "totalCheckouts": 2,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1608,12 +1630,12 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 4,
       "role": "lead",
       "dailyRate": 170
     },
     "Julie": {
-      "daysThisWeek": 11,
+      "daysThisWeek": 12,
       "role": "cleaner",
       "dailyRate": 130
     },
@@ -1623,12 +1645,12 @@
       "dailyRate": 130
     },
     "Yasnielis": {
-      "daysThisWeek": 11,
+      "daysThisWeek": 12,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Neidys": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 130
     },
