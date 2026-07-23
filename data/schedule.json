@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-23T01:01:44.038698",
+  "generated": "2026-07-23T01:16:55.237439",
   "weekStart": "2026-07-23",
   "weekEnd": "2026-08-05",
   "week": [
@@ -10,11 +10,11 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Dexabeth",
+          "lead": "Marii",
           "members": [
-            "Dexabeth",
-            "Yasnielis",
-            "Julie"
+            "Marii",
+            "Neidys",
+            "Dexabeth"
           ],
           "properties": [
             {
@@ -37,42 +37,23 @@
               "order": 1
             },
             {
-              "property_id": 404868,
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
-              "zone": "north",
+              "property_id": 399810,
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "zone": "west",
               "beds": 5,
-              "sqft": 1834,
-              "est_hours": 2.5,
-              "lat": 39.9046,
-              "lon": -104.9736,
+              "sqft": 1700,
+              "est_hours": 2.0,
+              "lat": 39.8361,
+              "lon": -105.0096,
               "priority": "same_day",
               "priority_locked": false,
               "next_checkin": "2026-07-23",
-              "next_checkout": "2026-07-24",
+              "next_checkout": "2026-07-26",
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
-            },
-            {
-              "property_id": 387379,
-              "name": "PlayHouse",
-              "address": "7350 Alkire Ct, Arvada 80005",
-              "zone": "far_west",
-              "beds": 7,
-              "sqft": 2976,
-              "est_hours": 3.5,
-              "lat": 39.8294,
-              "lon": -105.1483,
-              "priority": "tomorrow_checkin",
-              "priority_locked": false,
-              "next_checkin": "2026-07-24",
-              "next_checkout": "2026-07-30",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
             },
             {
               "property_id": 370631,
@@ -91,7 +72,57 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 4
+              "order": 3
+            }
+          ],
+          "isLaundry": false
+        },
+        {
+          "name": "Equipo 2",
+          "lead": "Dexabeth",
+          "members": [
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 404868,
+              "name": "Paradise",
+              "address": "11448 Larson Ln, Northglenn 80233",
+              "zone": "north",
+              "beds": 5,
+              "sqft": 1834,
+              "est_hours": 2.5,
+              "lat": 39.9046,
+              "lon": -104.9736,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-23",
+              "next_checkout": "2026-07-24",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 387379,
+              "name": "PlayHouse",
+              "address": "7350 Alkire Ct, Arvada 80005",
+              "zone": "far_west",
+              "beds": 7,
+              "sqft": 2976,
+              "est_hours": 3.5,
+              "lat": 39.8294,
+              "lon": -105.1483,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-24",
+              "next_checkout": "2026-07-30",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -102,8 +133,6 @@
         "active": false
       },
       "off": [
-        "Marii",
-        "Neidys",
         "Juliana"
       ],
       "occupied": [
@@ -127,10 +156,10 @@
         "Sheridan",
         "Wonderland"
       ],
-      "payrollEstimate": 390,
-      "sameDayTurns": 2,
+      "payrollEstimate": 820,
+      "sameDayTurns": 3,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 4,
+      "totalCheckouts": 5,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1586,7 +1615,7 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 6,
       "role": "lead",
       "dailyRate": 170
     },
@@ -1606,7 +1635,7 @@
       "dailyRate": 130
     },
     "Neidys": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 6,
       "role": "cleaner",
       "dailyRate": 130
     },
