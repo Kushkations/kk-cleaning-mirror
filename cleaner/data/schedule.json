@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-24T02:01:52.875100",
+  "generated": "2026-07-24T02:15:51.848631",
   "weekStart": "2026-07-24",
   "weekEnd": "2026-08-06",
   "week": [
@@ -196,6 +196,25 @@
               "order": 1
             },
             {
+              "property_id": 281880,
+              "name": "Beach",
+              "address": "5467 Beach Ct, Denver 80221",
+              "zone": "west",
+              "beds": 4,
+              "sqft": 2000,
+              "est_hours": 2.0,
+              "lat": 39.7958,
+              "lon": -105.0185,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-25",
+              "next_checkout": "2026-07-29",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
               "property_id": 313164,
               "name": "Quivas",
               "address": "7240 Quivas St, Denver 80221",
@@ -209,25 +228,6 @@
               "priority_locked": false,
               "next_checkin": null,
               "next_checkout": null,
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
-              "property_id": 281880,
-              "name": "Beach",
-              "address": "5467 Beach Ct, Denver 80221",
-              "zone": "west",
-              "beds": 4,
-              "sqft": 2000,
-              "est_hours": 2.0,
-              "lat": 39.7958,
-              "lon": -105.0185,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-07-30",
-              "next_checkout": "2026-08-02",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -269,6 +269,7 @@
         "Airport",
         "Alpha",
         "Altitude",
+        "Beach",
         "BuffaloGolf",
         "Elevation",
         "GameRoom",
@@ -285,7 +286,7 @@
         "Wonderland"
       ],
       "payrollEstimate": 390,
-      "sameDayTurns": 1,
+      "sameDayTurns": 2,
       "tomorrowCheckins": 0,
       "totalCheckouts": 4,
       "optimizations": [],
@@ -501,6 +502,7 @@
         "Airport",
         "Alpha",
         "Altitude",
+        "Beach",
         "BuffaloGolf",
         "GameRoom",
         "Grant",
@@ -625,6 +627,7 @@
       "occupied": [
         "Alpha",
         "Altitude",
+        "Beach",
         "BlueDream",
         "BuffaloGolf",
         "GameRoom",
@@ -692,6 +695,7 @@
       "occupied": [
         "Alpha",
         "Altitude",
+        "Beach",
         "BlueDream",
         "BuffaloGolf",
         "GameRoom",
@@ -716,11 +720,11 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Dexabeth",
+          "lead": "Marii",
           "members": [
-            "Dexabeth",
-            "Yasnielis",
-            "Julie"
+            "Marii",
+            "Neidys",
+            "Dexabeth"
           ],
           "properties": [
             {
@@ -743,25 +747,6 @@
               "order": 1
             },
             {
-              "property_id": 400224,
-              "name": "BlueDream",
-              "address": "1475 S Pierce St, Lakewood 80232",
-              "zone": "isolated",
-              "beds": 3,
-              "sqft": 1100,
-              "est_hours": 1.5,
-              "lat": 39.6902,
-              "lon": -105.073,
-              "priority": "tomorrow_checkin",
-              "priority_locked": false,
-              "next_checkin": "2026-07-30",
-              "next_checkout": "2026-08-02",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
               "property_id": 470233,
               "name": "BuffaloGolf",
               "address": "16714 Buffalo Run Dr, Commerce City 80022",
@@ -778,7 +763,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 2
             },
             {
               "property_id": 320255,
@@ -797,7 +782,57 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 4
+              "order": 3
+            }
+          ],
+          "isLaundry": false
+        },
+        {
+          "name": "Equipo 2",
+          "lead": "Dexabeth",
+          "members": [
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 281880,
+              "name": "Beach",
+              "address": "5467 Beach Ct, Denver 80221",
+              "zone": "west",
+              "beds": 4,
+              "sqft": 2000,
+              "est_hours": 2.0,
+              "lat": 39.7958,
+              "lon": -105.0185,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-30",
+              "next_checkout": "2026-08-02",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 400224,
+              "name": "BlueDream",
+              "address": "1475 S Pierce St, Lakewood 80232",
+              "zone": "isolated",
+              "beds": 3,
+              "sqft": 1100,
+              "est_hours": 1.5,
+              "lat": 39.6902,
+              "lon": -105.073,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-30",
+              "next_checkout": "2026-08-02",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -808,8 +843,6 @@
         "active": false
       },
       "off": [
-        "Marii",
-        "Neidys",
         "Juliana"
       ],
       "occupied": [
@@ -823,10 +856,10 @@
         "Pueblo",
         "Wonderland"
       ],
-      "payrollEstimate": 390,
+      "payrollEstimate": 820,
       "sameDayTurns": 1,
-      "tomorrowCheckins": 2,
-      "totalCheckouts": 4,
+      "tomorrowCheckins": 3,
+      "totalCheckouts": 5,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1586,7 +1619,7 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 6,
+      "daysThisWeek": 7,
       "role": "lead",
       "dailyRate": 170
     },
@@ -1606,7 +1639,7 @@
       "dailyRate": 130
     },
     "Neidys": {
-      "daysThisWeek": 6,
+      "daysThisWeek": 7,
       "role": "cleaner",
       "dailyRate": 130
     },
