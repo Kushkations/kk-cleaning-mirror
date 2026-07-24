@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-24T00:30:58.660300",
+  "generated": "2026-07-24T00:46:46.024963",
   "weekStart": "2026-07-24",
   "weekEnd": "2026-08-06",
   "week": [
@@ -534,6 +534,25 @@
           ],
           "properties": [
             {
+              "property_id": 370631,
+              "name": "Grant",
+              "address": "261 Grant Way, Denver 80229",
+              "zone": "hq",
+              "beds": 6,
+              "sqft": 1782,
+              "est_hours": 2.0,
+              "lat": 39.8455,
+              "lon": -104.9828,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-30",
+              "next_checkout": "2026-08-02",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
               "property_id": 362638,
               "name": "Sativa",
               "address": "391 E 83rd Dr, Denver 80229",
@@ -550,7 +569,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 1
+              "order": 2
             },
             {
               "property_id": 354421,
@@ -569,7 +588,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             },
             {
               "property_id": 435859,
@@ -588,7 +607,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -620,7 +639,7 @@
       "payrollEstimate": 390,
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 3,
+      "totalCheckouts": 4,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
