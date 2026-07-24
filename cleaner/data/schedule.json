@@ -1,169 +1,8 @@
 {
-  "generated": "2026-07-24T18:45:34.879119",
-  "weekStart": "2026-07-24",
-  "weekEnd": "2026-08-06",
+  "generated": "2026-07-24T19:01:33.057176",
+  "weekStart": "2026-07-25",
+  "weekEnd": "2026-08-07",
   "week": [
-    {
-      "date": "2026-07-24",
-      "dayNameEs": "Viernes",
-      "dayNameEn": "Friday",
-      "teams": [
-        {
-          "name": "Equipo 1",
-          "lead": "Marii",
-          "members": [
-            "Marii",
-            "Neidys",
-            "Dexabeth"
-          ],
-          "properties": [
-            {
-              "property_id": 362638,
-              "name": "Sativa",
-              "address": "391 E 83rd Dr, Denver 80229",
-              "zone": "hq",
-              "beds": 6,
-              "sqft": 1782,
-              "est_hours": 2.0,
-              "lat": 39.8458,
-              "lon": -104.9816,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-24",
-              "next_checkout": "2026-07-27",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
-              "property_id": 387216,
-              "name": "GrownSexy",
-              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
-              "zone": "west",
-              "beds": 2,
-              "sqft": 1200,
-              "est_hours": 1.5,
-              "lat": 39.7652,
-              "lon": -105.0535,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-24",
-              "next_checkout": "2026-07-26",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
-              "property_id": 440656,
-              "name": "Palace",
-              "address": "12332 Quince St, Thornton 80602",
-              "zone": "north",
-              "beds": 6,
-              "sqft": 4406,
-              "est_hours": 4.0,
-              "lat": 39.9199,
-              "lon": -104.9018,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-07-29",
-              "next_checkout": "2026-08-03",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
-            }
-          ],
-          "isLaundry": false
-        },
-        {
-          "name": "Equipo 2",
-          "lead": "Dexabeth",
-          "members": [
-            "Dexabeth",
-            "Yasnielis",
-            "Julie"
-          ],
-          "properties": [
-            {
-              "property_id": 404868,
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
-              "zone": "north",
-              "beds": 5,
-              "sqft": 1834,
-              "est_hours": 2.5,
-              "lat": 39.9046,
-              "lon": -104.9736,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-24",
-              "next_checkout": "2026-07-28",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
-              "property_id": 435859,
-              "name": "Airport",
-              "address": "19990 E 40th Ave, Denver 80249",
-              "zone": "far_east",
-              "beds": 4,
-              "sqft": 1642,
-              "est_hours": 2.0,
-              "lat": 39.7706,
-              "lon": -104.7548,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-24",
-              "next_checkout": "2026-07-27",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            }
-          ],
-          "isLaundry": false
-        }
-      ],
-      "laundry": {
-        "assigned": [],
-        "active": false
-      },
-      "off": [
-        "Juliana"
-      ],
-      "occupied": [
-        "Airport",
-        "Alpha",
-        "Altitude",
-        "Beach",
-        "BlueDream",
-        "BuffaloGolf",
-        "Elevation",
-        "GameRoom",
-        "Grant",
-        "GrownSexy",
-        "Hotbox",
-        "Indica",
-        "JoyStick",
-        "Paradise",
-        "PlayHouse",
-        "Pueblo",
-        "Quivas",
-        "Sativa",
-        "Sheridan",
-        "Wonderland"
-      ],
-      "payrollEstimate": 820,
-      "sameDayTurns": 4,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 5,
-      "optimizations": [],
-      "startTime": "9:45 AM"
-    },
     {
       "date": "2026-07-25",
       "dayNameEs": "Sabado",
@@ -1637,6 +1476,76 @@
       "totalCheckouts": 1,
       "optimizations": [],
       "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-08-07",
+      "dayNameEs": "Viernes",
+      "dayNameEn": "Friday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Marii",
+          "members": [
+            "Marii",
+            "Neidys",
+            "Dexabeth"
+          ],
+          "properties": [
+            {
+              "property_id": 387216,
+              "name": "GrownSexy",
+              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1200,
+              "est_hours": 1.5,
+              "lat": 39.7652,
+              "lon": -105.0535,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Julie",
+        "Yasnielis",
+        "Juliana"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Altitude",
+        "Beach",
+        "BlueDream",
+        "BuffaloGolf",
+        "Elevation",
+        "GameRoom",
+        "Grant",
+        "Hotbox",
+        "JoyStick",
+        "Palace",
+        "PlayHouse",
+        "Sativa",
+        "Wonderland"
+      ],
+      "payrollEstimate": 430,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 1,
+      "optimizations": [],
+      "startTime": "9:45 AM"
     }
   ],
   "cleanerStats": {
@@ -1646,7 +1555,7 @@
       "dailyRate": 170
     },
     "Julie": {
-      "daysThisWeek": 10,
+      "daysThisWeek": 9,
       "role": "cleaner",
       "dailyRate": 130
     },
@@ -1656,7 +1565,7 @@
       "dailyRate": 130
     },
     "Yasnielis": {
-      "daysThisWeek": 10,
+      "daysThisWeek": 9,
       "role": "cleaner",
       "dailyRate": 130
     },
