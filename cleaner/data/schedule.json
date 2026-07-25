@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25T16:01:00.379856",
+  "generated": "2026-07-25T16:15:46.987510",
   "weekStart": "2026-07-25",
   "weekEnd": "2026-08-07",
   "week": [
@@ -54,6 +54,25 @@
               "order": 2
             },
             {
+              "property_id": 400224,
+              "name": "BlueDream",
+              "address": "1475 S Pierce St, Lakewood 80232",
+              "zone": "isolated",
+              "beds": 3,
+              "sqft": 1100,
+              "est_hours": 1.5,
+              "lat": 39.6902,
+              "lon": -105.073,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-25",
+              "next_checkout": "2026-07-26",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
+            },
+            {
               "property_id": 313164,
               "name": "Quivas",
               "address": "7240 Quivas St, Denver 80221",
@@ -67,25 +86,6 @@
               "priority_locked": false,
               "next_checkin": null,
               "next_checkout": null,
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
-            },
-            {
-              "property_id": 400224,
-              "name": "BlueDream",
-              "address": "1475 S Pierce St, Lakewood 80232",
-              "zone": "isolated",
-              "beds": 3,
-              "sqft": 1100,
-              "est_hours": 1.5,
-              "lat": 39.6902,
-              "lon": -105.073,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-07-27",
-              "next_checkout": "2026-07-29",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -109,6 +109,7 @@
         "Alpha",
         "Altitude",
         "Beach",
+        "BlueDream",
         "BuffaloGolf",
         "Elevation",
         "GameRoom",
@@ -126,7 +127,7 @@
         "Wonderland"
       ],
       "payrollEstimate": 390,
-      "sameDayTurns": 2,
+      "sameDayTurns": 3,
       "tomorrowCheckins": 0,
       "totalCheckouts": 4,
       "optimizations": [],
@@ -219,6 +220,25 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 4
+            },
+            {
+              "property_id": 400224,
+              "name": "BlueDream",
+              "address": "1475 S Pierce St, Lakewood 80232",
+              "zone": "isolated",
+              "beds": 3,
+              "sqft": 1100,
+              "est_hours": 1.5,
+              "lat": 39.6902,
+              "lon": -105.073,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-27",
+              "next_checkout": "2026-07-29",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 5
             }
           ],
           "isLaundry": false
@@ -358,8 +378,8 @@
       ],
       "payrollEstimate": 820,
       "sameDayTurns": 7,
-      "tomorrowCheckins": 1,
-      "totalCheckouts": 9,
+      "tomorrowCheckins": 2,
+      "totalCheckouts": 10,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
