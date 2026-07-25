@@ -1,138 +1,8 @@
 {
-  "generated": "2026-07-25T18:46:57.061964",
-  "weekStart": "2026-07-25",
-  "weekEnd": "2026-08-07",
+  "generated": "2026-07-25T19:01:32.704206",
+  "weekStart": "2026-07-26",
+  "weekEnd": "2026-08-08",
   "week": [
-    {
-      "date": "2026-07-25",
-      "dayNameEs": "Sabado",
-      "dayNameEn": "Saturday",
-      "teams": [
-        {
-          "name": "Equipo 1",
-          "lead": "Dexabeth",
-          "members": [
-            "Dexabeth",
-            "Yasnielis",
-            "Julie"
-          ],
-          "properties": [
-            {
-              "property_id": null,
-              "name": "1967 E 115th",
-              "address": "1967 E 115th Place, Northglenn 80233",
-              "zone": "north",
-              "beds": 3,
-              "sqft": 1200,
-              "est_hours": 2.0,
-              "lat": 39.8878,
-              "lon": -104.9458,
-              "priority": "same_day",
-              "next_checkin": null,
-              "next_checkout": null,
-              "deadline": "4:00 PM",
-              "notes": "External client - Beloved Soul Healer. Door code: 1067.",
-              "order": 1
-            },
-            {
-              "property_id": 281880,
-              "name": "Beach",
-              "address": "5467 Beach Ct, Denver 80221",
-              "zone": "west",
-              "beds": 4,
-              "sqft": 2000,
-              "est_hours": 2.0,
-              "lat": 39.7958,
-              "lon": -105.0185,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-25",
-              "next_checkout": "2026-07-29",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
-              "property_id": 400224,
-              "name": "BlueDream",
-              "address": "1475 S Pierce St, Lakewood 80232",
-              "zone": "isolated",
-              "beds": 3,
-              "sqft": 1100,
-              "est_hours": 1.5,
-              "lat": 39.6902,
-              "lon": -105.073,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-25",
-              "next_checkout": "2026-07-26",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
-            },
-            {
-              "property_id": 313164,
-              "name": "Quivas",
-              "address": "7240 Quivas St, Denver 80221",
-              "zone": "west",
-              "beds": 5,
-              "sqft": 2200,
-              "est_hours": 2.5,
-              "lat": 39.8282,
-              "lon": -105.0086,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 4
-            }
-          ],
-          "isLaundry": false
-        }
-      ],
-      "laundry": {
-        "assigned": [],
-        "active": false
-      },
-      "off": [
-        "Marii",
-        "Neidys",
-        "Juliana"
-      ],
-      "occupied": [
-        "Airport",
-        "Alpha",
-        "Altitude",
-        "Beach",
-        "BlueDream",
-        "BuffaloGolf",
-        "Elevation",
-        "GameRoom",
-        "Grant",
-        "GrownSexy",
-        "Hotbox",
-        "Indica",
-        "JoyStick",
-        "Palace",
-        "Paradise",
-        "PlayHouse",
-        "Pueblo",
-        "Sativa",
-        "Sheridan",
-        "Wonderland"
-      ],
-      "payrollEstimate": 390,
-      "sameDayTurns": 3,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 4,
-      "optimizations": [],
-      "startTime": "9:45 AM"
-    },
     {
       "date": "2026-07-26",
       "dayNameEs": "Domingo",
@@ -1597,6 +1467,47 @@
       "totalCheckouts": 1,
       "optimizations": [],
       "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-08-08",
+      "dayNameEs": "Sabado",
+      "dayNameEn": "Saturday",
+      "teams": [],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Julie",
+        "Dexabeth",
+        "Yasnielis",
+        "Neidys",
+        "Juliana"
+      ],
+      "occupied": [
+        "Airport",
+        "Alpha",
+        "Altitude",
+        "Beach",
+        "BlueDream",
+        "BuffaloGolf",
+        "Elevation",
+        "GameRoom",
+        "Grant",
+        "Hotbox",
+        "JoyStick",
+        "Palace",
+        "PlayHouse",
+        "Sativa",
+        "Wonderland"
+      ],
+      "payrollEstimate": 0,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 0,
+      "optimizations": [],
+      "startTime": "9:45 AM"
     }
   ],
   "cleanerStats": {
@@ -1606,17 +1517,17 @@
       "dailyRate": 170
     },
     "Julie": {
-      "daysThisWeek": 9,
+      "daysThisWeek": 8,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Dexabeth": {
-      "daysThisWeek": 13,
+      "daysThisWeek": 12,
       "role": "cleaner",
       "dailyRate": 130
     },
     "Yasnielis": {
-      "daysThisWeek": 9,
+      "daysThisWeek": 8,
       "role": "cleaner",
       "dailyRate": 130
     },
