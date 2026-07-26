@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26T13:03:10.794106",
+  "generated": "2026-07-26T13:15:54.669055",
   "weekStart": "2026-07-26",
   "weekEnd": "2026-08-08",
   "week": [
@@ -51,6 +51,113 @@
               "next_checkout": null,
               "deadline": "4:00 PM",
               "notes": "External client - Beloved Soul Healer. Door code: 1067.",
+              "order": 2
+            },
+            {
+              "property_id": 470233,
+              "name": "BuffaloGolf",
+              "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "zone": "far_east",
+              "beds": 5,
+              "sqft": 2146,
+              "est_hours": 2.5,
+              "lat": 39.9113,
+              "lon": -104.7923,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-26",
+              "next_checkout": "2026-07-29",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
+            },
+            {
+              "property_id": 370183,
+              "name": "Sheridan",
+              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1287,
+              "est_hours": 1.5,
+              "lat": 39.7653,
+              "lon": -105.0534,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-26",
+              "next_checkout": "2026-08-01",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 4
+            },
+            {
+              "property_id": 387216,
+              "name": "GrownSexy",
+              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1200,
+              "est_hours": 1.5,
+              "lat": 39.7652,
+              "lon": -105.0535,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-07-27",
+              "next_checkout": "2026-07-31",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 5
+            }
+          ],
+          "isLaundry": false
+        },
+        {
+          "name": "Equipo 2",
+          "lead": "Dexabeth",
+          "members": [
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 399810,
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 1700,
+              "est_hours": 2.0,
+              "lat": 39.8361,
+              "lon": -105.0096,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-26",
+              "next_checkout": "2026-07-30",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 409557,
+              "name": "Elevation",
+              "address": "3431 E 105th Ct, Northglenn 80233",
+              "zone": "north",
+              "beds": 5,
+              "sqft": 2376,
+              "est_hours": 2.5,
+              "lat": 39.8878,
+              "lon": -104.9458,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-26",
+              "next_checkout": "2026-07-29",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
               "order": 2
             },
             {
@@ -112,113 +219,6 @@
             }
           ],
           "isLaundry": false
-        },
-        {
-          "name": "Equipo 2",
-          "lead": "Dexabeth",
-          "members": [
-            "Dexabeth",
-            "Yasnielis",
-            "Julie"
-          ],
-          "properties": [
-            {
-              "property_id": 399810,
-              "name": "Indica",
-              "address": "7682 Shoshone St, Denver 80221",
-              "zone": "west",
-              "beds": 5,
-              "sqft": 1700,
-              "est_hours": 2.0,
-              "lat": 39.8361,
-              "lon": -105.0096,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-26",
-              "next_checkout": "2026-07-30",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
-              "property_id": 409557,
-              "name": "Elevation",
-              "address": "3431 E 105th Ct, Northglenn 80233",
-              "zone": "north",
-              "beds": 5,
-              "sqft": 2376,
-              "est_hours": 2.5,
-              "lat": 39.8878,
-              "lon": -104.9458,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-26",
-              "next_checkout": "2026-07-29",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
-              "property_id": 470233,
-              "name": "BuffaloGolf",
-              "address": "16714 Buffalo Run Dr, Commerce City 80022",
-              "zone": "far_east",
-              "beds": 5,
-              "sqft": 2146,
-              "est_hours": 2.5,
-              "lat": 39.9113,
-              "lon": -104.7923,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-26",
-              "next_checkout": "2026-07-29",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
-            },
-            {
-              "property_id": 387216,
-              "name": "GrownSexy",
-              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
-              "zone": "west",
-              "beds": 2,
-              "sqft": 1200,
-              "est_hours": 1.5,
-              "lat": 39.7652,
-              "lon": -105.0535,
-              "priority": "tomorrow_checkin",
-              "priority_locked": false,
-              "next_checkin": "2026-07-27",
-              "next_checkout": "2026-07-31",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 4
-            },
-            {
-              "property_id": 370183,
-              "name": "Sheridan",
-              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
-              "zone": "west",
-              "beds": 2,
-              "sqft": 1287,
-              "est_hours": 1.5,
-              "lat": 39.7653,
-              "lon": -105.0534,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 5
-            }
-          ],
-          "isLaundry": false
         }
       ],
       "laundry": {
@@ -242,10 +242,11 @@
         "Paradise",
         "PlayHouse",
         "Sativa",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 890,
-      "sameDayTurns": 7,
+      "sameDayTurns": 8,
       "tomorrowCheckins": 2,
       "totalCheckouts": 10,
       "optimizations": [],
@@ -395,6 +396,7 @@
         "Paradise",
         "PlayHouse",
         "Pueblo",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 890,
@@ -462,6 +464,7 @@
         "Indica",
         "PlayHouse",
         "Pueblo",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 460,
@@ -629,6 +632,7 @@
         "Palace",
         "PlayHouse",
         "Pueblo",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 890,
@@ -735,6 +739,7 @@
         "PlayHouse",
         "Pueblo",
         "Sativa",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 430,
@@ -823,6 +828,7 @@
         "PlayHouse",
         "Pueblo",
         "Sativa",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 430,
@@ -836,17 +842,46 @@
       "date": "2026-08-01",
       "dayNameEs": "Sabado",
       "dayNameEn": "Saturday",
-      "teams": [],
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Marii",
+          "members": [
+            "Marii",
+            "Neidys",
+            "Dexabeth"
+          ],
+          "properties": [
+            {
+              "property_id": 370183,
+              "name": "Sheridan",
+              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1287,
+              "est_hours": 1.5,
+              "lat": 39.7653,
+              "lon": -105.0534,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
       "laundry": {
         "assigned": [],
         "active": false
       },
       "off": [
-        "Marii",
         "Julie",
-        "Dexabeth",
-        "Yasnielis",
-        "Neidys"
+        "Yasnielis"
       ],
       "occupied": [
         "Airport",
@@ -866,10 +901,10 @@
         "Sativa",
         "Wonderland"
       ],
-      "payrollEstimate": 0,
+      "payrollEstimate": 460,
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 0,
+      "totalCheckouts": 1,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1494,7 +1529,7 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 8,
+      "daysThisWeek": 9,
       "role": "lead",
       "dailyRate": 170
     },
@@ -1504,7 +1539,7 @@
       "dailyRate": 140
     },
     "Dexabeth": {
-      "daysThisWeek": 12,
+      "daysThisWeek": 13,
       "role": "cleaner",
       "dailyRate": 150
     },
@@ -1514,7 +1549,7 @@
       "dailyRate": 140
     },
     "Neidys": {
-      "daysThisWeek": 8,
+      "daysThisWeek": 9,
       "role": "cleaner",
       "dailyRate": 140
     }
