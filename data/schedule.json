@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-27T13:02:20.775445",
+  "generated": "2026-07-27T13:17:04.998381",
   "weekStart": "2026-07-27",
   "weekEnd": "2026-08-09",
   "week": [
@@ -151,7 +151,9 @@
         "assigned": [],
         "active": false
       },
-      "off": [],
+      "off": [
+        "Luraidy"
+      ],
       "occupied": [
         "Alpha",
         "Altitude",
@@ -220,7 +222,8 @@
       },
       "off": [
         "Julie",
-        "Yasnielis"
+        "Yasnielis",
+        "Luraidy"
       ],
       "occupied": [
         "Alpha",
@@ -394,7 +397,9 @@
         "assigned": [],
         "active": false
       },
-      "off": [],
+      "off": [
+        "Luraidy"
+      ],
       "occupied": [
         "Alpha",
         "Altitude",
@@ -513,7 +518,8 @@
       },
       "off": [
         "Marii",
-        "Neidys"
+        "Neidys",
+        "Luraidy"
       ],
       "occupied": [
         "Airport",
@@ -603,7 +609,8 @@
       },
       "off": [
         "Marii",
-        "Neidys"
+        "Neidys",
+        "Luraidy"
       ],
       "occupied": [
         "Airport",
@@ -673,7 +680,8 @@
       },
       "off": [
         "Julie",
-        "Yasnielis"
+        "Yasnielis",
+        "Luraidy"
       ],
       "occupied": [
         "Airport",
@@ -865,7 +873,9 @@
         "assigned": [],
         "active": false
       },
-      "off": [],
+      "off": [
+        "Luraidy"
+      ],
       "occupied": [
         "Airport",
         "Alpha",
@@ -986,7 +996,8 @@
       },
       "off": [
         "Marii",
-        "Neidys"
+        "Neidys",
+        "Luraidy"
       ],
       "occupied": [
         "Airport",
@@ -1067,7 +1078,8 @@
       },
       "off": [
         "Marii",
-        "Neidys"
+        "Neidys",
+        "Luraidy"
       ],
       "occupied": [
         "Alpha",
@@ -1127,7 +1139,8 @@
       },
       "off": [
         "Julie",
-        "Yasnielis"
+        "Yasnielis",
+        "Luraidy"
       ],
       "occupied": [
         "Alpha",
@@ -1186,7 +1199,8 @@
       },
       "off": [
         "Julie",
-        "Yasnielis"
+        "Yasnielis",
+        "Luraidy"
       ],
       "occupied": [
         "Alpha",
@@ -1252,7 +1266,8 @@
       },
       "off": [
         "Julie",
-        "Yasnielis"
+        "Yasnielis",
+        "Luraidy"
       ],
       "occupied": [
         "Airport",
@@ -1292,7 +1307,8 @@
         "Julie",
         "Dexabeth",
         "Yasnielis",
-        "Neidys"
+        "Neidys",
+        "Luraidy"
       ],
       "occupied": [
         "Airport",
@@ -1445,7 +1461,9 @@
         "assigned": [],
         "active": false
       },
-      "off": [],
+      "off": [
+        "Luraidy"
+      ],
       "occupied": [
         "Airport",
         "Alpha",
@@ -1491,6 +1509,11 @@
     },
     "Neidys": {
       "daysThisWeek": 9,
+      "role": "cleaner",
+      "dailyRate": 140
+    },
+    "Luraidy": {
+      "daysThisWeek": 0,
       "role": "cleaner",
       "dailyRate": 140
     }
