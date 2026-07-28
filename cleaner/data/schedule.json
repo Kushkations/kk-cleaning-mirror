@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-28T14:01:28.321850",
+  "generated": "2026-07-28T14:16:12.194797",
   "weekStart": "2026-07-28",
   "weekEnd": "2026-08-10",
   "week": [
@@ -615,8 +615,8 @@
               "lon": -104.9736,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": "2026-08-06",
-              "next_checkout": "2026-08-07",
+              "next_checkin": null,
+              "next_checkout": null,
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -1077,7 +1077,6 @@
         "Indica",
         "JoyStick",
         "Palace",
-        "Paradise",
         "PlayHouse",
         "Wonderland"
       ],
@@ -1103,25 +1102,6 @@
           ],
           "properties": [
             {
-              "property_id": 404868,
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
-              "zone": "north",
-              "beds": 5,
-              "sqft": 1834,
-              "est_hours": 2.5,
-              "lat": 39.9046,
-              "lon": -104.9736,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
               "property_id": 387216,
               "name": "GrownSexy",
               "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
@@ -1138,7 +1118,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 1
             }
           ],
           "isLaundry": false
@@ -1174,7 +1154,7 @@
       "payrollEstimate": 460,
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 2,
+      "totalCheckouts": 1,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
