@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-28T01:15:43.835328",
+  "generated": "2026-07-28T01:31:09.356741",
   "weekStart": "2026-07-28",
   "weekEnd": "2026-08-10",
   "week": [
@@ -10,11 +10,11 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Marii",
+          "lead": "Dexabeth",
           "members": [
-            "Marii",
-            "Neidys",
-            "Dexabeth"
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
           ],
           "properties": [
             {
@@ -35,6 +35,25 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 1
+            },
+            {
+              "property_id": 435859,
+              "name": "Airport",
+              "address": "19990 E 40th Ave, Denver 80249",
+              "zone": "far_east",
+              "beds": 4,
+              "sqft": 1642,
+              "est_hours": 2.0,
+              "lat": 39.7706,
+              "lon": -104.7548,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-07-30",
+              "next_checkout": "2026-08-04",
+              "deadline": null,
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -45,8 +64,8 @@
         "active": false
       },
       "off": [
-        "Julie",
-        "Yasnielis",
+        "Marii",
+        "Neidys",
         "Luraidy"
       ],
       "occupied": [
@@ -66,10 +85,10 @@
         "Sheridan",
         "Wonderland"
       ],
-      "payrollEstimate": 460,
+      "payrollEstimate": 430,
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 1,
+      "totalCheckouts": 2,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1534,12 +1553,12 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 10,
+      "daysThisWeek": 9,
       "role": "lead",
       "dailyRate": 170
     },
     "Julie": {
-      "daysThisWeek": 8,
+      "daysThisWeek": 9,
       "role": "cleaner",
       "dailyRate": 140
     },
@@ -1549,12 +1568,12 @@
       "dailyRate": 150
     },
     "Yasnielis": {
-      "daysThisWeek": 8,
+      "daysThisWeek": 9,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Neidys": {
-      "daysThisWeek": 10,
+      "daysThisWeek": 9,
       "role": "cleaner",
       "dailyRate": 140
     },
