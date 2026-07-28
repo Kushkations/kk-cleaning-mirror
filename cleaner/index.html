@@ -432,7 +432,7 @@ function renderWeekTab() {
     });
     allProps.forEach(p => {
       const tc = priorityTag(p.priority);
-      const coTime = isLateCheckout(p.checkout_time) ? `<span style="font-size:.8em;color:#94a3b8;margin-left:6px">${p.checkout_time}</span>` : '';
+      const coTime = (isLateCheckout(p.checkout_time) && !p.name.includes('(')) ? `<span style="font-size:.8em;color:#94a3b8;margin-left:6px">${p.checkout_time}</span>` : '';
       summaryHtml += `<div class="summary-row"><span class="prop">${p.name}${coTime}</span><span class="tag ${tc.cls}">${tc.text}</span></div>`;
     });
     if (d.laundry && d.laundry.active) {
@@ -467,7 +467,7 @@ function renderWeekTab() {
       return ((poWeek[a.priority]!==undefined?poWeek[a.priority]:9)) - ((poWeek[b.priority]!==undefined?poWeek[b.priority]:9));
     });
     sortedProps.forEach(p => {
-      const coTime = isLateCheckout(p.checkout_time) ? `<span style="font-size:.85em;opacity:.85"> ${p.checkout_time}</span>` : '';
+      const coTime = (isLateCheckout(p.checkout_time) && !p.name.includes('(')) ? `<span style="font-size:.85em;opacity:.85"> ${p.checkout_time}</span>` : '';
       cells += `<div class="cell ${cellClass(p.priority)}">${p.name}${coTime}</div>`;
     });
     if (d.laundry && d.laundry.active) {
@@ -653,7 +653,7 @@ function renderScheduleDay(idx) {
       const bc = borderColors[p.priority] || '#95a5a6';
       const numCls = (p.priority === 'carryover' || p.priority === 'same_day' || p.priority === 'moved_sameday') ? 'red' : (p.priority === 'tomorrow_checkin' || p.priority === 'moved_nextday') ? 'yellow' : 'g';
       const dl = p.deadline ? `<div class="prop-deadline">Must be clean by ${p.deadline}</div>` : '';
-      const isLate = isLateCheckout(p.checkout_time);
+      const isLate = isLateCheckout(p.checkout_time) && !p.name.includes('(');
       const coTime = isLate ? `<span style="font-size:.72em;font-weight:700;color:${bc};margin-left:8px">${p.checkout_time}</span>` : '';
       const lateBadge = isLate ? `<div style="font-size:.72em;font-weight:800;color:#fbbf24;background:#422006;border:1px solid #fbbf24;border-radius:4px;padding:3px 6px;margin-top:4px;display:inline-block">⏰ Late Checkout — Start: ${p.checkout_time}</div>` : '';
       let guestsBadge = '';
@@ -765,7 +765,7 @@ function renderEquipoDay(idx) {
       const bc = borderColors[p.priority] || '#95a5a6';
       const numCls = (p.priority === 'carryover' || p.priority === 'same_day' || p.priority === 'moved_sameday') ? 'red' : (p.priority === 'tomorrow_checkin' || p.priority === 'moved_nextday') ? 'yellow' : 'g';
       const dl = p.deadline ? `<div class="prop-deadline">Listo antes de ${p.deadline}</div>` : '';
-      const isLate = isLateCheckout(p.checkout_time);
+      const isLate = isLateCheckout(p.checkout_time) && !p.name.includes('(');
       const coTime = isLate ? `<span style="font-size:.72em;font-weight:700;color:${bc};margin-left:8px">${p.checkout_time}</span>` : '';
       const lateBadge = isLate ? `<div style="font-size:.72em;font-weight:800;color:#fbbf24;background:#422006;border:1px solid #fbbf24;border-radius:4px;padding:3px 6px;margin-top:4px;display:inline-block">⏰ Salida Tarde — Empezar: ${p.checkout_time}</div>` : '';
 
