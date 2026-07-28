@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-28T01:46:56.172813",
+  "generated": "2026-07-28T02:00:45.581273",
   "weekStart": "2026-07-28",
   "weekEnd": "2026-08-10",
   "week": [
@@ -18,6 +18,25 @@
           ],
           "properties": [
             {
+              "property_id": 313164,
+              "name": "Quivas",
+              "address": "7240 Quivas St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 2200,
+              "est_hours": 2.5,
+              "lat": 39.8282,
+              "lon": -105.0086,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
               "property_id": 404868,
               "name": "Paradise",
               "address": "11448 Larson Ln, Northglenn 80233",
@@ -34,7 +53,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 1
+              "order": 2
             },
             {
               "property_id": 435859,
@@ -53,7 +72,7 @@
               "deadline": null,
               "checkout_time": null,
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -88,7 +107,7 @@
       "payrollEstimate": 430,
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 2,
+      "totalCheckouts": 3,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -270,73 +289,6 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Marii",
-          "members": [
-            "Marii",
-            "Neidys",
-            "Dexabeth"
-          ],
-          "properties": [
-            {
-              "property_id": null,
-              "name": "1967 E 115th",
-              "address": "1967 E 115th Place, Northglenn 80233",
-              "zone": "north",
-              "beds": 3,
-              "sqft": 1200,
-              "est_hours": 2.0,
-              "lat": 39.8878,
-              "lon": -104.9458,
-              "priority": "same_day",
-              "next_checkin": null,
-              "next_checkout": null,
-              "deadline": "4:00 PM",
-              "notes": "External client - Beloved Soul Healer. Door code: 1067.",
-              "order": 1
-            },
-            {
-              "property_id": 387379,
-              "name": "PlayHouse",
-              "address": "7350 Alkire Ct, Arvada 80005",
-              "zone": "far_west",
-              "beds": 7,
-              "sqft": 2976,
-              "est_hours": 3.5,
-              "lat": 39.8294,
-              "lon": -105.1483,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-07-30",
-              "next_checkout": "2026-08-02",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
-              "property_id": 313164,
-              "name": "Quivas",
-              "address": "7240 Quivas St, Denver 80221",
-              "zone": "west",
-              "beds": 5,
-              "sqft": 2200,
-              "est_hours": 2.5,
-              "lat": 39.8282,
-              "lon": -105.0086,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
-            }
-          ],
-          "isLaundry": false
-        },
-        {
-          "name": "Equipo 2",
           "lead": "Dexabeth",
           "members": [
             "Dexabeth",
@@ -364,6 +316,42 @@
               "order": 1
             },
             {
+              "property_id": null,
+              "name": "1967 E 115th",
+              "address": "1967 E 115th Place, Northglenn 80233",
+              "zone": "north",
+              "beds": 3,
+              "sqft": 1200,
+              "est_hours": 2.0,
+              "lat": 39.8878,
+              "lon": -104.9458,
+              "priority": "same_day",
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": "4:00 PM",
+              "notes": "External client - Beloved Soul Healer. Door code: 1067.",
+              "order": 2
+            },
+            {
+              "property_id": 387379,
+              "name": "PlayHouse",
+              "address": "7350 Alkire Ct, Arvada 80005",
+              "zone": "far_west",
+              "beds": 7,
+              "sqft": 2976,
+              "est_hours": 3.5,
+              "lat": 39.8294,
+              "lon": -105.1483,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-07-30",
+              "next_checkout": "2026-08-02",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
+            },
+            {
               "property_id": 435859,
               "name": "Airport",
               "address": "19990 E 40th Ave, Denver 80249",
@@ -380,7 +368,7 @@
               "deadline": "4:00 PM",
               "checkout_time": null,
               "is_late_checkout": false,
-              "order": 2
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -391,6 +379,8 @@
         "active": false
       },
       "off": [
+        "Marii",
+        "Neidys",
         "Luraidy"
       ],
       "occupied": [
@@ -412,10 +402,10 @@
         "Sheridan",
         "Wonderland"
       ],
-      "payrollEstimate": 890,
+      "payrollEstimate": 430,
       "sameDayTurns": 4,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 5,
+      "totalCheckouts": 4,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1553,7 +1543,7 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 9,
+      "daysThisWeek": 8,
       "role": "lead",
       "dailyRate": 170
     },
@@ -1573,7 +1563,7 @@
       "dailyRate": 140
     },
     "Neidys": {
-      "daysThisWeek": 9,
+      "daysThisWeek": 8,
       "role": "cleaner",
       "dailyRate": 140
     },
