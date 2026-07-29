@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-29T01:05:06.987732",
+  "generated": "2026-07-29T01:15:40.225953",
   "weekStart": "2026-07-29",
   "weekEnd": "2026-08-11",
   "week": [
@@ -118,12 +118,10 @@
               "priority": "tomorrow_checkin",
               "priority_locked": false,
               "next_checkin": "2026-07-30",
-              "next_checkout": "2026-07-29",
+              "next_checkout": "2026-08-02",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 2
             },
             {
@@ -657,12 +655,10 @@
               "priority": "checkout_only",
               "priority_locked": false,
               "next_checkin": "2026-08-06",
-              "next_checkout": "2026-08-02",
+              "next_checkout": "2026-08-10",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 4
             }
           ],
@@ -1375,13 +1371,11 @@
               "lon": -104.7923,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": "2026-08-25",
-              "next_checkout": "2026-08-10",
+              "next_checkin": null,
+              "next_checkout": null,
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 3
             }
           ],
