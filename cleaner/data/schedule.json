@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-30T17:46:36.772311",
+  "generated": "2026-07-30T18:02:03.608762",
   "weekStart": "2026-07-30",
   "weekEnd": "2026-08-12",
   "week": [
@@ -1092,8 +1092,8 @@
               "lon": -104.9828,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-08-13",
+              "next_checkout": "2026-08-16",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
