@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-30T03:01:50.085102",
+  "generated": "2026-07-30T03:16:40.339485",
   "weekStart": "2026-07-30",
   "weekEnd": "2026-08-12",
   "week": [
@@ -115,6 +115,7 @@
         "GameRoom",
         "Grant",
         "GrownSexy",
+        "Hotbox",
         "Indica",
         "JoyStick",
         "Palace",
@@ -208,6 +209,7 @@
         "GameRoom",
         "Grant",
         "GrownSexy",
+        "Hotbox",
         "Indica",
         "JoyStick",
         "Palace",
@@ -241,6 +243,25 @@
           ],
           "properties": [
             {
+              "property_id": 320255,
+              "name": "Hotbox",
+              "address": "761 E 83rd Pl, Denver 80229",
+              "zone": "hq",
+              "beds": 4,
+              "sqft": 1822,
+              "est_hours": 2.0,
+              "lat": 39.8488,
+              "lon": -104.9769,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-08-01",
+              "next_checkout": "2026-08-05",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
               "property_id": 370183,
               "name": "Sheridan",
               "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
@@ -257,7 +278,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 1
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -295,9 +316,9 @@
         "Wonderland"
       ],
       "payrollEstimate": 460,
-      "sameDayTurns": 0,
+      "sameDayTurns": 1,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 1,
+      "totalCheckouts": 2,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
