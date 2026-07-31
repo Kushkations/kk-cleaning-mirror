@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-31T16:01:45.932987",
+  "generated": "2026-07-31T16:16:27.845517",
   "weekStart": "2026-07-31",
   "weekEnd": "2026-08-13",
   "week": [
@@ -430,8 +430,19 @@
         }
       ],
       "laundry": {
-        "assigned": [],
-        "active": false
+        "assigned": [
+          "Rosie",
+          "Marii",
+          "Dex",
+          "Julie",
+          "Yasnielis",
+          "Juliana",
+          "Neidys"
+        ],
+        "active": true,
+        "location": "261 Grant Way",
+        "time": "8:00 AM",
+        "source": "breezeway"
       },
       "off": [
         "Luraidy"
@@ -451,7 +462,7 @@
         "Sativa",
         "Wonderland"
       ],
-      "payrollEstimate": 890,
+      "payrollEstimate": 1870,
       "sameDayTurns": 4,
       "tomorrowCheckins": 2,
       "totalCheckouts": 11,
@@ -1456,12 +1467,12 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 6,
+      "daysThisWeek": 7,
       "role": "lead",
       "dailyRate": 170
     },
     "Julie": {
-      "daysThisWeek": 9,
+      "daysThisWeek": 10,
       "role": "cleaner",
       "dailyRate": 140
     },
@@ -1471,12 +1482,12 @@
       "dailyRate": 150
     },
     "Yasnielis": {
-      "daysThisWeek": 9,
+      "daysThisWeek": 10,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Neidys": {
-      "daysThisWeek": 6,
+      "daysThisWeek": 7,
       "role": "cleaner",
       "dailyRate": 140
     },
