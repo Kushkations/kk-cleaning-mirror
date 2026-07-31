@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-31T22:31:44.433255",
+  "generated": "2026-07-31T22:45:53.705084",
   "weekStart": "2026-08-01",
   "weekEnd": "2026-08-14",
   "week": [
@@ -46,11 +46,11 @@
               "est_hours": 1.5,
               "lat": 39.7653,
               "lon": -105.0534,
-              "priority": "checkout_only",
+              "priority": "same_day",
               "priority_locked": false,
-              "next_checkin": "2026-08-14",
-              "next_checkout": "2026-08-19",
-              "deadline": null,
+              "next_checkin": "2026-08-01",
+              "next_checkout": "2026-08-13",
+              "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
@@ -88,10 +88,11 @@
         "Pueblo",
         "Quivas",
         "Sativa",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 460,
-      "sameDayTurns": 1,
+      "sameDayTurns": 2,
       "tomorrowCheckins": 0,
       "totalCheckouts": 2,
       "optimizations": [],
@@ -365,6 +366,7 @@
         "PlayHouse",
         "Pueblo",
         "Sativa",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 1870,
@@ -488,7 +490,8 @@
         "JoyStick",
         "PlayHouse",
         "Quivas",
-        "Sativa"
+        "Sativa",
+        "Sheridan"
       ],
       "payrollEstimate": 430,
       "sameDayTurns": 0,
@@ -590,7 +593,8 @@
         "Indica",
         "JoyStick",
         "Quivas",
-        "Sativa"
+        "Sativa",
+        "Sheridan"
       ],
       "payrollEstimate": 430,
       "sameDayTurns": 0,
@@ -690,7 +694,8 @@
         "Indica",
         "JoyStick",
         "Quivas",
-        "Sativa"
+        "Sativa",
+        "Sheridan"
       ],
       "payrollEstimate": 430,
       "sameDayTurns": 1,
@@ -759,6 +764,7 @@
         "Palace",
         "PlayHouse",
         "Quivas",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 460,
@@ -831,6 +837,7 @@
         "PlayHouse",
         "Quivas",
         "Sativa",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 460,
@@ -874,6 +881,7 @@
         "PlayHouse",
         "Quivas",
         "Sativa",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 0,
@@ -1027,6 +1035,7 @@
         "PlayHouse",
         "Quivas",
         "Sativa",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 890,
@@ -1214,6 +1223,7 @@
         "Indica",
         "JoyStick",
         "Sativa",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 890,
@@ -1312,7 +1322,8 @@
         "GameRoom",
         "Hotbox",
         "Indica",
-        "JoyStick"
+        "JoyStick",
+        "Sheridan"
       ],
       "payrollEstimate": 430,
       "sameDayTurns": 0,
@@ -1371,7 +1382,8 @@
         "Alpha",
         "GameRoom",
         "Hotbox",
-        "Indica"
+        "Indica",
+        "Sheridan"
       ],
       "payrollEstimate": 430,
       "sameDayTurns": 0,
@@ -1384,17 +1396,46 @@
       "date": "2026-08-13",
       "dayNameEs": "Jueves",
       "dayNameEn": "Thursday",
-      "teams": [],
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Marii",
+          "members": [
+            "Marii",
+            "Neidys",
+            "Dexabeth"
+          ],
+          "properties": [
+            {
+              "property_id": 370183,
+              "name": "Sheridan",
+              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1287,
+              "est_hours": 1.5,
+              "lat": 39.7653,
+              "lon": -105.0534,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-08-14",
+              "next_checkout": "2026-08-19",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
       "laundry": {
         "assigned": [],
         "active": false
       },
       "off": [
-        "Marii",
         "Julie",
-        "Dexabeth",
         "Yasnielis",
-        "Neidys",
         "Luraidy"
       ],
       "occupied": [
@@ -1408,10 +1449,10 @@
         "Quivas",
         "Sativa"
       ],
-      "payrollEstimate": 0,
+      "payrollEstimate": 460,
       "sameDayTurns": 0,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 0,
+      "tomorrowCheckins": 1,
+      "totalCheckouts": 1,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1484,7 +1525,7 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 8,
+      "daysThisWeek": 9,
       "role": "lead",
       "dailyRate": 170
     },
@@ -1494,7 +1535,7 @@
       "dailyRate": 140
     },
     "Dexabeth": {
-      "daysThisWeek": 12,
+      "daysThisWeek": 13,
       "role": "cleaner",
       "dailyRate": 150
     },
@@ -1504,7 +1545,7 @@
       "dailyRate": 140
     },
     "Neidys": {
-      "daysThisWeek": 8,
+      "daysThisWeek": 9,
       "role": "cleaner",
       "dailyRate": 140
     },
