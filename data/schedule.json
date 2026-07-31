@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-31T21:31:20.356285",
+  "generated": "2026-07-31T21:45:43.062770",
   "weekStart": "2026-08-01",
   "weekEnd": "2026-08-14",
   "week": [
@@ -48,8 +48,8 @@
               "lon": -105.0534,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-08-14",
+              "next_checkout": "2026-08-19",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -1471,7 +1471,8 @@
         "Hotbox",
         "Palace",
         "Quivas",
-        "Sativa"
+        "Sativa",
+        "Sheridan"
       ],
       "payrollEstimate": 460,
       "sameDayTurns": 0,
