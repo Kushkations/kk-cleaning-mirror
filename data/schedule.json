@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-31T18:16:47.236808",
+  "generated": "2026-07-31T18:31:18.842420",
   "weekStart": "2026-07-31",
   "weekEnd": "2026-08-13",
   "week": [
@@ -484,6 +484,25 @@
           ],
           "properties": [
             {
+              "property_id": 399810,
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 1700,
+              "est_hours": 2.0,
+              "lat": 39.8361,
+              "lon": -105.0096,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-08-04",
+              "next_checkout": "2026-08-05",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
               "property_id": 370631,
               "name": "Grant",
               "address": "261 Grant Way, Denver 80229",
@@ -497,25 +516,6 @@
               "priority_locked": false,
               "next_checkin": "2026-08-06",
               "next_checkout": "2026-08-09",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
-              "property_id": 399810,
-              "name": "Indica",
-              "address": "7682 Shoshone St, Denver 80221",
-              "zone": "west",
-              "beds": 5,
-              "sqft": 1700,
-              "est_hours": 2.0,
-              "lat": 39.8361,
-              "lon": -105.0096,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-08-05",
-              "next_checkout": "2026-08-14",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -587,7 +587,7 @@
       ],
       "payrollEstimate": 430,
       "sameDayTurns": 0,
-      "tomorrowCheckins": 0,
+      "tomorrowCheckins": 1,
       "totalCheckouts": 4,
       "optimizations": [],
       "startTime": "9:45 AM"
@@ -682,6 +682,7 @@
         "GameRoom",
         "GrownSexy",
         "Hotbox",
+        "Indica",
         "JoyStick",
         "Quivas",
         "Sativa"
@@ -708,6 +709,25 @@
           ],
           "properties": [
             {
+              "property_id": 399810,
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 1700,
+              "est_hours": 2.0,
+              "lat": 39.8361,
+              "lon": -105.0096,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-08-05",
+              "next_checkout": "2026-08-14",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
               "property_id": 400224,
               "name": "BlueDream",
               "address": "1475 S Pierce St, Lakewood 80232",
@@ -724,7 +744,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 1
+              "order": 2
             },
             {
               "property_id": 320255,
@@ -743,7 +763,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -768,9 +788,9 @@
         "Sativa"
       ],
       "payrollEstimate": 430,
-      "sameDayTurns": 0,
+      "sameDayTurns": 1,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 2,
+      "totalCheckouts": 3,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
