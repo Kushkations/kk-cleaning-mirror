@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-02T05:46:12.356795",
+  "generated": "2026-08-02T06:01:30.649254",
   "weekStart": "2026-08-02",
   "weekEnd": "2026-08-15",
   "week": [
@@ -210,8 +210,8 @@
               "lon": -105.0185,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": "2026-08-07",
-              "next_checkout": "2026-08-10",
+              "next_checkin": "2026-08-04",
+              "next_checkout": "2026-08-07",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -493,6 +493,7 @@
       ],
       "occupied": [
         "Alpha",
+        "Beach",
         "BlueDream",
         "GameRoom",
         "GrownSexy",
@@ -597,6 +598,7 @@
       ],
       "occupied": [
         "Alpha",
+        "Beach",
         "GameRoom",
         "GrownSexy",
         "Indica",
@@ -662,6 +664,7 @@
       "occupied": [
         "Alpha",
         "Altitude",
+        "Beach",
         "BlueDream",
         "BuffaloGolf",
         "Elevation",
@@ -699,6 +702,25 @@
           ],
           "properties": [
             {
+              "property_id": 281880,
+              "name": "Beach",
+              "address": "5467 Beach Ct, Denver 80221",
+              "zone": "west",
+              "beds": 4,
+              "sqft": 2000,
+              "est_hours": 2.0,
+              "lat": 39.7958,
+              "lon": -105.0185,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-08-07",
+              "next_checkout": "2026-08-10",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
               "property_id": 387216,
               "name": "GrownSexy",
               "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
@@ -715,7 +737,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 1
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -752,9 +774,9 @@
         "Wonderland"
       ],
       "payrollEstimate": 460,
-      "sameDayTurns": 0,
+      "sameDayTurns": 1,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 1,
+      "totalCheckouts": 2,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
