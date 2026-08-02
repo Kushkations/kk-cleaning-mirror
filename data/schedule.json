@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-02T19:46:51.156192",
+  "generated": "2026-08-02T20:01:19.689560",
   "weekStart": "2026-08-03",
   "weekEnd": "2026-08-16",
   "week": [
@@ -143,20 +143,20 @@
           ],
           "properties": [
             {
-              "property_id": 387379,
-              "name": "PlayHouse",
-              "address": "7350 Alkire Ct, Arvada 80005",
-              "zone": "far_west",
-              "beds": 7,
-              "sqft": 2976,
-              "est_hours": 3.5,
-              "lat": 39.8294,
-              "lon": -105.1483,
-              "priority": "checkout_only",
+              "property_id": 435859,
+              "name": "Airport",
+              "address": "19990 E 40th Ave, Denver 80249",
+              "zone": "far_east",
+              "beds": 4,
+              "sqft": 1642,
+              "est_hours": 2.0,
+              "lat": 39.7706,
+              "lon": -104.7548,
+              "priority": "same_day",
               "priority_locked": false,
-              "next_checkin": "2026-08-06",
-              "next_checkout": "2026-08-10",
-              "deadline": null,
+              "next_checkin": "2026-08-04",
+              "next_checkout": "2026-08-07",
+              "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 1
@@ -181,18 +181,18 @@
               "order": 2
             },
             {
-              "property_id": 435859,
-              "name": "Airport",
-              "address": "19990 E 40th Ave, Denver 80249",
-              "zone": "far_east",
-              "beds": 4,
-              "sqft": 1642,
-              "est_hours": 2.0,
-              "lat": 39.7706,
-              "lon": -104.7548,
+              "property_id": 387379,
+              "name": "PlayHouse",
+              "address": "7350 Alkire Ct, Arvada 80005",
+              "zone": "far_west",
+              "beds": 7,
+              "sqft": 2976,
+              "est_hours": 3.5,
+              "lat": 39.8294,
+              "lon": -105.1483,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": "2026-08-07",
+              "next_checkin": "2026-08-06",
               "next_checkout": "2026-08-10",
               "deadline": null,
               "checkout_time": "10:00 AM",
@@ -213,6 +213,7 @@
         "Luraidy"
       ],
       "occupied": [
+        "Airport",
         "Alpha",
         "Beach",
         "BlueDream",
@@ -227,7 +228,7 @@
         "Sheridan"
       ],
       "payrollEstimate": 430,
-      "sameDayTurns": 0,
+      "sameDayTurns": 1,
       "tomorrowCheckins": 0,
       "totalCheckouts": 3,
       "optimizations": [],
@@ -318,6 +319,7 @@
         "Luraidy"
       ],
       "occupied": [
+        "Airport",
         "Alpha",
         "Beach",
         "GameRoom",
@@ -383,6 +385,7 @@
         "Luraidy"
       ],
       "occupied": [
+        "Airport",
         "Alpha",
         "Altitude",
         "Beach",
@@ -415,11 +418,11 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Marii",
+          "lead": "Dexabeth",
           "members": [
-            "Marii",
-            "Neidys",
-            "Dexabeth"
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
           ],
           "properties": [
             {
@@ -442,6 +445,25 @@
               "order": 1
             },
             {
+              "property_id": 435859,
+              "name": "Airport",
+              "address": "19990 E 40th Ave, Denver 80249",
+              "zone": "far_east",
+              "beds": 4,
+              "sqft": 1642,
+              "est_hours": 2.0,
+              "lat": 39.7706,
+              "lon": -104.7548,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-08-07",
+              "next_checkout": "2026-08-10",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
               "property_id": 387216,
               "name": "GrownSexy",
               "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
@@ -458,7 +480,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -469,8 +491,8 @@
         "active": false
       },
       "off": [
-        "Julie",
-        "Yasnielis",
+        "Marii",
+        "Neidys",
         "Luraidy"
       ],
       "occupied": [
@@ -494,10 +516,10 @@
         "Sheridan",
         "Wonderland"
       ],
-      "payrollEstimate": 460,
-      "sameDayTurns": 1,
+      "payrollEstimate": 430,
+      "sameDayTurns": 2,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 2,
+      "totalCheckouts": 3,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1415,12 +1437,12 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 8,
+      "daysThisWeek": 7,
       "role": "lead",
       "dailyRate": 170
     },
     "Julie": {
-      "daysThisWeek": 8,
+      "daysThisWeek": 9,
       "role": "cleaner",
       "dailyRate": 140
     },
@@ -1430,12 +1452,12 @@
       "dailyRate": 150
     },
     "Yasnielis": {
-      "daysThisWeek": 8,
+      "daysThisWeek": 9,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Neidys": {
-      "daysThisWeek": 8,
+      "daysThisWeek": 7,
       "role": "cleaner",
       "dailyRate": 140
     },
