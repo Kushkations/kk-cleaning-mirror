@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-03T01:31:14.931910",
+  "generated": "2026-08-03T01:46:03.648883",
   "weekStart": "2026-08-03",
   "weekEnd": "2026-08-16",
   "week": [
@@ -10,11 +10,11 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Dexabeth",
+          "lead": "Marii",
           "members": [
-            "Dexabeth",
-            "Yasnielis",
-            "Julie"
+            "Marii",
+            "Neidys",
+            "Dexabeth"
           ],
           "properties": [
             {
@@ -37,25 +37,6 @@
               "order": 1
             },
             {
-              "property_id": 399810,
-              "name": "Indica",
-              "address": "7682 Shoshone St, Denver 80221",
-              "zone": "west",
-              "beds": 5,
-              "sqft": 1700,
-              "est_hours": 2.0,
-              "lat": 39.8361,
-              "lon": -105.0096,
-              "priority": "tomorrow_checkin",
-              "priority_locked": false,
-              "next_checkin": "2026-08-04",
-              "next_checkout": "2026-08-05",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
               "property_id": 440656,
               "name": "Palace",
               "address": "12332 Quince St, Thornton 80602",
@@ -72,7 +53,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 2
             },
             {
               "property_id": 447452,
@@ -91,7 +72,57 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 4
+              "order": 3
+            }
+          ],
+          "isLaundry": false
+        },
+        {
+          "name": "Equipo 2",
+          "lead": "Dexabeth",
+          "members": [
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 399810,
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 1700,
+              "est_hours": 2.0,
+              "lat": 39.8361,
+              "lon": -105.0096,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-08-04",
+              "next_checkout": "2026-08-05",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 470233,
+              "name": "BuffaloGolf",
+              "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "zone": "far_east",
+              "beds": 5,
+              "sqft": 2146,
+              "est_hours": 2.5,
+              "lat": 39.9113,
+              "lon": -104.7923,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-08-06",
+              "next_checkout": "2026-08-10",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -102,8 +133,6 @@
         "active": false
       },
       "off": [
-        "Marii",
-        "Neidys",
         "Luraidy"
       ],
       "occupied": [
@@ -122,10 +151,10 @@
         "Sativa",
         "Sheridan"
       ],
-      "payrollEstimate": 430,
+      "payrollEstimate": 890,
       "sameDayTurns": 1,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 4,
+      "totalCheckouts": 5,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1458,7 +1487,7 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 7,
+      "daysThisWeek": 8,
       "role": "lead",
       "dailyRate": 170
     },
@@ -1478,7 +1507,7 @@
       "dailyRate": 140
     },
     "Neidys": {
-      "daysThisWeek": 7,
+      "daysThisWeek": 8,
       "role": "cleaner",
       "dailyRate": 140
     },
