@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-03T04:16:28.827910",
+  "generated": "2026-08-03T04:31:03.577855",
   "weekStart": "2026-08-03",
   "weekEnd": "2026-08-16",
   "week": [
@@ -139,8 +139,8 @@
               "next_checkin": "2026-08-04",
               "next_checkout": "2026-08-06",
               "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
+              "checkout_time": "11:00 AM",
+              "is_late_checkout": true,
               "order": 2
             },
             {
