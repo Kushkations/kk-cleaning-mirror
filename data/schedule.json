@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-04T05:45:33.476796",
+  "generated": "2026-08-04T06:01:43.906015",
   "weekStart": "2026-08-04",
   "weekEnd": "2026-08-17",
   "week": [
@@ -27,7 +27,7 @@
               "est_hours": 2.0,
               "lat": 39.8361,
               "lon": -105.0096,
-              "priority": "same_day",
+              "priority": "carryover",
               "priority_locked": false,
               "next_checkin": "2026-08-04",
               "next_checkout": "2026-08-05",
@@ -124,7 +124,7 @@
         "Sheridan"
       ],
       "payrollEstimate": 430,
-      "sameDayTurns": 2,
+      "sameDayTurns": 1,
       "tomorrowCheckins": 0,
       "totalCheckouts": 4,
       "optimizations": [],
