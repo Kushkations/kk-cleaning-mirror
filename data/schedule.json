@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-04T01:01:54.648645",
+  "generated": "2026-08-04T01:15:36.020891",
   "weekStart": "2026-08-04",
   "weekEnd": "2026-08-17",
   "week": [
@@ -18,6 +18,25 @@
           ],
           "properties": [
             {
+              "property_id": 399810,
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 1700,
+              "est_hours": 2.0,
+              "lat": 39.8361,
+              "lon": -105.0096,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-08-04",
+              "next_checkout": "2026-08-05",
+              "deadline": "4:00 PM",
+              "checkout_time": null,
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
               "property_id": 435859,
               "name": "Airport",
               "address": "19990 E 40th Ave, Denver 80249",
@@ -34,7 +53,7 @@
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 1
+              "order": 2
             },
             {
               "property_id": 399039,
@@ -53,7 +72,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             },
             {
               "property_id": 387379,
@@ -72,7 +91,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -105,9 +124,9 @@
         "Sheridan"
       ],
       "payrollEstimate": 430,
-      "sameDayTurns": 1,
+      "sameDayTurns": 2,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 3,
+      "totalCheckouts": 4,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
