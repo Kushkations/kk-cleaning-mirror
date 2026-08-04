@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-04T17:46:35.447320",
+  "generated": "2026-08-04T18:00:52.691595",
   "weekStart": "2026-08-04",
   "weekEnd": "2026-08-17",
   "week": [
@@ -1150,6 +1150,7 @@
         "Hotbox",
         "Palace",
         "Paradise",
+        "Pueblo",
         "Quivas",
         "Sativa",
         "Sheridan"
@@ -1236,6 +1237,7 @@
         "Hotbox",
         "Palace",
         "Paradise",
+        "Pueblo",
         "Quivas",
         "Sativa",
         "Sheridan"
@@ -1405,6 +1407,7 @@
         "GameRoom",
         "GrownSexy",
         "JoyStick",
+        "Pueblo",
         "Sheridan"
       ],
       "payrollEstimate": 890,
