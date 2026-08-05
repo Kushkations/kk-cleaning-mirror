@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-05T17:01:09.315200",
+  "generated": "2026-08-05T17:15:38.613386",
   "weekStart": "2026-08-05",
   "weekEnd": "2026-08-18",
   "week": [
@@ -208,6 +208,15 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
+            },
+            {
+              "name": "Airport",
+              "address": "19990 E 40th Ave, Denver 80249",
+              "priority": "tomorrow_checkin",
+              "est_hours": 2.0,
+              "notes": "CI 2026-08-07",
+              "source": "breezeway-reconcile",
+              "order": 3
             }
           ],
           "isLaundry": false
