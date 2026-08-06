@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-06T05:45:38.421607",
+  "generated": "2026-08-06T06:01:23.142980",
   "weekStart": "2026-08-06",
   "weekEnd": "2026-08-19",
   "week": [
@@ -27,7 +27,7 @@
               "est_hours": 2.0,
               "lat": 39.8455,
               "lon": -104.9828,
-              "priority": "same_day",
+              "priority": "carryover",
               "priority_locked": false,
               "next_checkin": "2026-08-06",
               "next_checkout": "2026-08-09",
@@ -110,7 +110,7 @@
         "Wonderland"
       ],
       "payrollEstimate": 460,
-      "sameDayTurns": 2,
+      "sameDayTurns": 1,
       "tomorrowCheckins": 1,
       "totalCheckouts": 3,
       "optimizations": [],
