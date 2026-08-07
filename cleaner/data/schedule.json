@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-07T22:46:14.966741",
+  "generated": "2026-08-07T23:01:17.677139",
   "weekStart": "2026-08-08",
   "weekEnd": "2026-08-21",
   "week": [
@@ -493,8 +493,8 @@
               "lon": -104.7176,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": "2026-08-21",
-              "next_checkout": "2026-08-24",
+              "next_checkin": "2026-08-14",
+              "next_checkout": "2026-08-16",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -713,7 +713,8 @@
         "Pueblo",
         "Quivas",
         "Sativa",
-        "Sheridan"
+        "Sheridan",
+        "Wonderland"
       ],
       "payrollEstimate": 460,
       "sameDayTurns": 0,
@@ -800,7 +801,8 @@
         "Pueblo",
         "Quivas",
         "Sativa",
-        "Sheridan"
+        "Sheridan",
+        "Wonderland"
       ],
       "payrollEstimate": 430,
       "sameDayTurns": 1,
@@ -879,6 +881,25 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 3
+            },
+            {
+              "property_id": 447452,
+              "name": "Wonderland",
+              "address": "5955 S Zante Way, Aurora 80015",
+              "zone": "isolated",
+              "beds": 5,
+              "sqft": 1886,
+              "est_hours": 2.5,
+              "lat": 39.6083,
+              "lon": -104.7176,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-08-21",
+              "next_checkout": "2026-08-24",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -973,7 +994,7 @@
       "payrollEstimate": 890,
       "sameDayTurns": 0,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 6,
+      "totalCheckouts": 7,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
