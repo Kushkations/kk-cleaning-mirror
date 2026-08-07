@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-07T17:01:51.774635",
+  "generated": "2026-08-07T17:16:46.447575",
   "weekStart": "2026-08-07",
   "weekEnd": "2026-08-20",
   "week": [
@@ -139,7 +139,24 @@
       "date": "2026-08-08",
       "dayNameEs": "Sabado",
       "dayNameEn": "Saturday",
-      "teams": [],
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "TBD",
+          "members": [],
+          "properties": [
+            {
+              "name": "Paradise",
+              "address": "11448 Larson Ln, Northglenn 80233",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-08-14",
+              "source": "breezeway-reconcile",
+              "order": 1
+            }
+          ]
+        }
+      ],
       "laundry": {
         "assigned": [],
         "active": false
