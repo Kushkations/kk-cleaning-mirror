@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-07T17:31:51.393443",
+  "generated": "2026-08-07T17:46:50.904404",
   "weekStart": "2026-08-07",
   "weekEnd": "2026-08-20",
   "week": [
@@ -486,8 +486,8 @@
               "lon": -105.1483,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-08-19",
+              "next_checkout": "2026-08-25",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -1319,7 +1319,8 @@
         "BlueDream",
         "BuffaloGolf",
         "GameRoom",
-        "Hotbox"
+        "Hotbox",
+        "PlayHouse"
       ],
       "payrollEstimate": 460,
       "sameDayTurns": 0,
@@ -1417,6 +1418,7 @@
         "GameRoom",
         "JoyStick",
         "Paradise",
+        "PlayHouse",
         "Quivas"
       ],
       "payrollEstimate": 430,
