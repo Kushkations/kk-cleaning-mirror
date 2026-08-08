@@ -1,71 +1,8 @@
 {
-  "generated": "2026-08-08T18:45:42.065608",
-  "weekStart": "2026-08-08",
-  "weekEnd": "2026-08-21",
+  "generated": "2026-08-08T19:01:21.329843",
+  "weekStart": "2026-08-09",
+  "weekEnd": "2026-08-22",
   "week": [
-    {
-      "date": "2026-08-08",
-      "dayNameEs": "Sabado",
-      "dayNameEn": "Saturday",
-      "teams": [
-        {
-          "name": "Equipo 1",
-          "lead": "TBD",
-          "members": [],
-          "properties": [
-            {
-              "name": "Paradise",
-              "address": "11448 Larson Ln, Northglenn 80233",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-08-14",
-              "source": "breezeway-reconcile",
-              "order": 1
-            }
-          ]
-        }
-      ],
-      "laundry": {
-        "assigned": [],
-        "active": false
-      },
-      "off": [
-        "Marii",
-        "Julie",
-        "Dexabeth",
-        "Yasnielis",
-        "Neidys",
-        "Luraidy"
-      ],
-      "occupied": [
-        "Airport",
-        "Alpha",
-        "Altitude",
-        "Beach",
-        "BlueDream",
-        "BuffaloGolf",
-        "Elevation",
-        "GameRoom",
-        "Grant",
-        "Hotbox",
-        "Indica",
-        "JoyStick",
-        "Palace",
-        "Paradise",
-        "PlayHouse",
-        "Pueblo",
-        "Quivas",
-        "Sativa",
-        "Sheridan",
-        "Wonderland"
-      ],
-      "payrollEstimate": 0,
-      "sameDayTurns": 0,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 0,
-      "optimizations": [],
-      "startTime": "9:45 AM"
-    },
     {
       "date": "2026-08-09",
       "dayNameEs": "Domingo",
@@ -1261,8 +1198,8 @@
               "lon": -104.9769,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-08-24",
+              "next_checkout": "2026-08-28",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -1378,6 +1315,41 @@
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
       "totalCheckouts": 1,
+      "optimizations": [],
+      "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-08-22",
+      "dayNameEs": "Sabado",
+      "dayNameEn": "Saturday",
+      "teams": [],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Julie",
+        "Dexabeth",
+        "Yasnielis",
+        "Neidys",
+        "Luraidy"
+      ],
+      "occupied": [
+        "Alpha",
+        "Beach",
+        "GameRoom",
+        "Indica",
+        "JoyStick",
+        "Paradise",
+        "PlayHouse",
+        "Quivas",
+        "Wonderland"
+      ],
+      "payrollEstimate": 0,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 0,
       "optimizations": [],
       "startTime": "9:45 AM"
     }
