@@ -26,5 +26,17 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
+      # First attempt. continue-on-error so a transient GitHub Pages/artifact
+      # flake ("No artifacts named github-pages... re-run at a later time") does
+      # NOT fail the job and email everyone. (Shaquan 8/8: stop the failure spam.)
       - id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - name: Pause before retry
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 25
+      # Retry once. If THIS also fails, the job fails for real (a genuine issue,
+      # worth an email). Transient flakes self-heal here and stay silent.
+      - id: deployment_retry
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
