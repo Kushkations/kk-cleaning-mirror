@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-10T03:47:04.816228",
+  "generated": "2026-08-10T04:02:11.343623",
   "weekStart": "2026-08-10",
   "weekEnd": "2026-08-23",
   "week": [
@@ -181,7 +181,6 @@
         "GameRoom",
         "Hotbox",
         "Indica",
-        "JoyStick",
         "Palace",
         "Paradise",
         "Pueblo",
@@ -335,7 +334,6 @@
         "GameRoom",
         "Hotbox",
         "Indica",
-        "JoyStick",
         "Palace",
         "Pueblo",
         "Quivas",
