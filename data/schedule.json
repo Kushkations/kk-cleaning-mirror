@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-10T17:31:06.625878",
+  "generated": "2026-08-10T17:46:46.242327",
   "weekStart": "2026-08-10",
   "weekEnd": "2026-08-23",
   "week": [
@@ -37,42 +37,23 @@
               "order": 1
             },
             {
-              "property_id": 354421,
-              "name": "JoyStick",
-              "address": "8228 Balsam Way, Arvada 80005",
-              "zone": "far_west",
+              "property_id": 281880,
+              "name": "Beach",
+              "address": "5467 Beach Ct, Denver 80221",
+              "zone": "west",
               "beds": 4,
-              "sqft": 2183,
-              "est_hours": 2.5,
-              "lat": 39.8466,
-              "lon": -105.0904,
+              "sqft": 2000,
+              "est_hours": 2.0,
+              "lat": 39.7958,
+              "lon": -105.0185,
               "priority": "same_day",
               "priority_locked": false,
               "next_checkin": "2026-08-10",
-              "next_checkout": "2026-08-16",
+              "next_checkout": "2026-08-13",
               "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
+              "checkout_time": "11:00 AM",
+              "is_late_checkout": true,
               "order": 2
-            },
-            {
-              "property_id": 387379,
-              "name": "PlayHouse",
-              "address": "7350 Alkire Ct, Arvada 80005",
-              "zone": "far_west",
-              "beds": 7,
-              "sqft": 2976,
-              "est_hours": 3.5,
-              "lat": 39.8294,
-              "lon": -105.1483,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-08-14",
-              "next_checkout": "2026-08-16",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
             },
             {
               "property_id": 400224,
@@ -91,6 +72,25 @@
               "deadline": null,
               "checkout_time": "2:00 PM",
               "is_late_checkout": true,
+              "order": 3
+            },
+            {
+              "property_id": 387379,
+              "name": "PlayHouse",
+              "address": "7350 Alkire Ct, Arvada 80005",
+              "zone": "far_west",
+              "beds": 7,
+              "sqft": 2976,
+              "est_hours": 3.5,
+              "lat": 39.8294,
+              "lon": -105.1483,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-08-14",
+              "next_checkout": "2026-08-16",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
               "order": 4
             }
           ],
@@ -125,22 +125,22 @@
               "order": 1
             },
             {
-              "property_id": 281880,
-              "name": "Beach",
-              "address": "5467 Beach Ct, Denver 80221",
-              "zone": "west",
+              "property_id": 354421,
+              "name": "JoyStick",
+              "address": "8228 Balsam Way, Arvada 80005",
+              "zone": "far_west",
               "beds": 4,
-              "sqft": 2000,
-              "est_hours": 2.0,
-              "lat": 39.7958,
-              "lon": -105.0185,
-              "priority": "checkout_only",
+              "sqft": 2183,
+              "est_hours": 2.5,
+              "lat": 39.8466,
+              "lon": -105.0904,
+              "priority": "same_day",
               "priority_locked": false,
-              "next_checkin": "2026-08-13",
-              "next_checkout": "2026-08-17",
-              "deadline": null,
-              "checkout_time": "11:00 AM",
-              "is_late_checkout": true,
+              "next_checkin": "2026-08-10",
+              "next_checkout": "2026-08-16",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
               "order": 2
             },
             {
@@ -176,6 +176,7 @@
       "occupied": [
         "Airport",
         "Alpha",
+        "Beach",
         "Elevation",
         "GameRoom",
         "Grant",
@@ -191,7 +192,7 @@
         "Wonderland"
       ],
       "payrollEstimate": 890,
-      "sameDayTurns": 3,
+      "sameDayTurns": 4,
       "tomorrowCheckins": 0,
       "totalCheckouts": 7,
       "optimizations": [],
@@ -350,6 +351,7 @@
       ],
       "occupied": [
         "Alpha",
+        "Beach",
         "GameRoom",
         "Hotbox",
         "Indica",
@@ -385,6 +387,7 @@
       ],
       "occupied": [
         "Alpha",
+        "Beach",
         "GameRoom",
         "Hotbox",
         "Indica",
@@ -435,6 +438,25 @@
               "order": 1
             },
             {
+              "property_id": 281880,
+              "name": "Beach",
+              "address": "5467 Beach Ct, Denver 80221",
+              "zone": "west",
+              "beds": 4,
+              "sqft": 2000,
+              "est_hours": 2.0,
+              "lat": 39.7958,
+              "lon": -105.0185,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-08-13",
+              "next_checkout": "2026-08-17",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
               "property_id": 440656,
               "name": "Palace",
               "address": "12332 Quince St, Thornton 80602",
@@ -451,7 +473,7 @@
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             },
             {
               "property_id": 370183,
@@ -470,7 +492,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -500,9 +522,9 @@
         "Sativa"
       ],
       "payrollEstimate": 460,
-      "sameDayTurns": 2,
+      "sameDayTurns": 3,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 3,
+      "totalCheckouts": 4,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
