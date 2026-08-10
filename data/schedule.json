@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-10T04:02:11.343623",
+  "generated": "2026-08-10T04:16:02.252367",
   "weekStart": "2026-08-10",
   "weekEnd": "2026-08-23",
   "week": [
@@ -176,7 +176,6 @@
       "occupied": [
         "Airport",
         "Alpha",
-        "Altitude",
         "Elevation",
         "GameRoom",
         "Hotbox",
@@ -330,7 +329,6 @@
       ],
       "occupied": [
         "Alpha",
-        "Altitude",
         "GameRoom",
         "Hotbox",
         "Indica",
@@ -365,7 +363,6 @@
       ],
       "occupied": [
         "Alpha",
-        "Altitude",
         "GameRoom",
         "Hotbox",
         "Indica",
@@ -468,7 +465,6 @@
       "occupied": [
         "Airport",
         "Alpha",
-        "Altitude",
         "Beach",
         "GameRoom",
         "Grant",
@@ -535,7 +531,6 @@
       "occupied": [
         "Airport",
         "Alpha",
-        "Altitude",
         "Beach",
         "BuffaloGolf",
         "GameRoom",
@@ -625,7 +620,6 @@
       ],
       "occupied": [
         "Alpha",
-        "Altitude",
         "Beach",
         "BuffaloGolf",
         "GameRoom",
@@ -839,7 +833,6 @@
       ],
       "occupied": [
         "Alpha",
-        "Altitude",
         "Beach",
         "BuffaloGolf",
         "GameRoom",
@@ -862,11 +855,11 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Dexabeth",
+          "lead": "Marii",
           "members": [
-            "Dexabeth",
-            "Yasnielis",
-            "Julie"
+            "Marii",
+            "Neidys",
+            "Dexabeth"
           ],
           "properties": [
             {
@@ -904,25 +897,6 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
-            },
-            {
-              "property_id": 399039,
-              "name": "Altitude",
-              "address": "4350 Xenon St, Wheat Ridge 80033",
-              "zone": "far_west",
-              "beds": 6,
-              "sqft": 1868,
-              "est_hours": 2.5,
-              "lat": 39.7773,
-              "lon": -105.1396,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
             }
           ],
           "isLaundry": false
@@ -933,8 +907,8 @@
         "active": false
       },
       "off": [
-        "Marii",
-        "Neidys",
+        "Julie",
+        "Yasnielis",
         "Luraidy"
       ],
       "occupied": [
@@ -946,10 +920,10 @@
         "JoyStick",
         "Sheridan"
       ],
-      "payrollEstimate": 430,
+      "payrollEstimate": 460,
       "sameDayTurns": 1,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 3,
+      "totalCheckouts": 2,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1412,12 +1386,12 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 6,
+      "daysThisWeek": 7,
       "role": "lead",
       "dailyRate": 170
     },
     "Julie": {
-      "daysThisWeek": 9,
+      "daysThisWeek": 8,
       "role": "cleaner",
       "dailyRate": 140
     },
@@ -1427,12 +1401,12 @@
       "dailyRate": 150
     },
     "Yasnielis": {
-      "daysThisWeek": 9,
+      "daysThisWeek": 8,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Neidys": {
-      "daysThisWeek": 6,
+      "daysThisWeek": 7,
       "role": "cleaner",
       "dailyRate": 140
     },
