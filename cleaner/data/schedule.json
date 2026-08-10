@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-10T00:46:24.411776",
+  "generated": "2026-08-10T01:02:29.201612",
   "weekStart": "2026-08-10",
   "weekEnd": "2026-08-23",
   "week": [
@@ -48,8 +48,8 @@
               "lon": -105.1483,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": "2026-08-19",
-              "next_checkout": "2026-08-25",
+              "next_checkin": "2026-08-14",
+              "next_checkout": "2026-08-16",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -526,6 +526,7 @@
         "Hotbox",
         "Palace",
         "Paradise",
+        "PlayHouse",
         "Pueblo",
         "Quivas",
         "Sativa",
@@ -615,6 +616,7 @@
         "Hotbox",
         "Palace",
         "Paradise",
+        "PlayHouse",
         "Pueblo",
         "Quivas",
         "Sativa",
