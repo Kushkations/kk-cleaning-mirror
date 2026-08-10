@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-10T23:31:06.199415",
+  "generated": "2026-08-10T23:45:33.248401",
   "weekStart": "2026-08-11",
   "weekEnd": "2026-08-24",
   "week": [
@@ -176,6 +176,7 @@
       "occupied": [
         "Alpha",
         "Beach",
+        "BlueDream",
         "GameRoom",
         "Grant",
         "Hotbox",
@@ -213,6 +214,7 @@
       "occupied": [
         "Alpha",
         "Beach",
+        "BlueDream",
         "GameRoom",
         "Grant",
         "Hotbox",
@@ -367,6 +369,7 @@
         "Airport",
         "Alpha",
         "Beach",
+        "BlueDream",
         "GameRoom",
         "Grant",
         "Hotbox",
@@ -454,6 +457,7 @@
         "Airport",
         "Alpha",
         "Beach",
+        "BlueDream",
         "BuffaloGolf",
         "GameRoom",
         "Grant",
@@ -544,6 +548,7 @@
       "occupied": [
         "Alpha",
         "Beach",
+        "BlueDream",
         "BuffaloGolf",
         "GameRoom",
         "Grant",
@@ -777,6 +782,7 @@
       "occupied": [
         "Alpha",
         "Beach",
+        "BlueDream",
         "BuffaloGolf",
         "GameRoom",
         "GrownSexy",
@@ -799,11 +805,11 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Marii",
+          "lead": "Dexabeth",
           "members": [
-            "Marii",
-            "Neidys",
-            "Dexabeth"
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
           ],
           "properties": [
             {
@@ -824,6 +830,25 @@
               "order": 1
             },
             {
+              "property_id": 400224,
+              "name": "BlueDream",
+              "address": "1475 S Pierce St, Lakewood 80232",
+              "zone": "isolated",
+              "beds": 3,
+              "sqft": 1100,
+              "est_hours": 1.5,
+              "lat": 39.6902,
+              "lon": -105.073,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-08-18",
+              "next_checkout": "2026-08-21",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
               "property_id": 281880,
               "name": "Beach",
               "address": "5467 Beach Ct, Denver 80221",
@@ -840,7 +865,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -851,8 +876,8 @@
         "active": false
       },
       "off": [
-        "Julie",
-        "Yasnielis",
+        "Marii",
+        "Neidys",
         "Luraidy"
       ],
       "occupied": [
@@ -865,10 +890,10 @@
         "Sheridan",
         "Wonderland"
       ],
-      "payrollEstimate": 460,
+      "payrollEstimate": 430,
       "sameDayTurns": 1,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 2,
+      "tomorrowCheckins": 1,
+      "totalCheckouts": 3,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1429,12 +1454,12 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 4,
       "role": "lead",
       "dailyRate": 170
     },
     "Julie": {
-      "daysThisWeek": 10,
+      "daysThisWeek": 11,
       "role": "cleaner",
       "dailyRate": 140
     },
@@ -1444,12 +1469,12 @@
       "dailyRate": 150
     },
     "Yasnielis": {
-      "daysThisWeek": 10,
+      "daysThisWeek": 11,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Neidys": {
-      "daysThisWeek": 5,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 140
     },
