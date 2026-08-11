@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-11T17:01:46.053333",
+  "generated": "2026-08-11T17:15:59.747684",
   "weekStart": "2026-08-11",
   "weekEnd": "2026-08-24",
   "week": [
@@ -213,6 +213,7 @@
       ],
       "occupied": [
         "Alpha",
+        "Altitude",
         "Beach",
         "BlueDream",
         "Elevation",
@@ -369,6 +370,7 @@
       "occupied": [
         "Airport",
         "Alpha",
+        "Altitude",
         "Beach",
         "BlueDream",
         "Elevation",
@@ -458,6 +460,7 @@
       "occupied": [
         "Airport",
         "Alpha",
+        "Altitude",
         "Beach",
         "BlueDream",
         "BuffaloGolf",
@@ -550,6 +553,7 @@
       ],
       "occupied": [
         "Alpha",
+        "Altitude",
         "Beach",
         "BlueDream",
         "BuffaloGolf",
@@ -804,6 +808,7 @@
       ],
       "occupied": [
         "Alpha",
+        "Altitude",
         "Beach",
         "BlueDream",
         "BuffaloGolf",
@@ -905,6 +910,7 @@
       ],
       "occupied": [
         "Alpha",
+        "Altitude",
         "BuffaloGolf",
         "GameRoom",
         "GrownSexy",
@@ -987,6 +993,7 @@
       ],
       "occupied": [
         "Alpha",
+        "Altitude",
         "BlueDream",
         "BuffaloGolf",
         "GameRoom",
@@ -1068,6 +1075,7 @@
       ],
       "occupied": [
         "Alpha",
+        "Altitude",
         "BlueDream",
         "BuffaloGolf",
         "GameRoom",
@@ -1132,6 +1140,25 @@
               "order": 2
             },
             {
+              "property_id": 399039,
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "zone": "far_west",
+              "beds": 6,
+              "sqft": 1868,
+              "est_hours": 2.5,
+              "lat": 39.7773,
+              "lon": -105.1396,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
+            },
+            {
               "property_id": 470233,
               "name": "BuffaloGolf",
               "address": "16714 Buffalo Run Dr, Commerce City 80022",
@@ -1148,7 +1175,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -1176,7 +1203,7 @@
       "payrollEstimate": 430,
       "sameDayTurns": 1,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 3,
+      "totalCheckouts": 4,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
