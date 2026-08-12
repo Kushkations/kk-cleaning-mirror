@@ -1,8 +1,51 @@
 {
-  "generated": "2026-08-12T22:01:21.152126",
-  "weekStart": "2026-08-13",
-  "weekEnd": "2026-08-26",
+  "generated": "2026-08-12T22:16:25.278920",
+  "weekStart": "2026-08-12",
+  "weekEnd": "2026-08-25",
   "week": [
+    {
+      "date": "2026-08-12",
+      "dayNameEs": "Miercoles",
+      "dayNameEn": "Wednesday",
+      "teams": [],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Julie",
+        "Dexabeth",
+        "Yasnielis",
+        "Neidys",
+        "Luraidy"
+      ],
+      "occupied": [
+        "Alpha",
+        "Altitude",
+        "Beach",
+        "BlueDream",
+        "BuffaloGolf",
+        "Elevation",
+        "GameRoom",
+        "Grant",
+        "GrownSexy",
+        "Hotbox",
+        "Indica",
+        "JoyStick",
+        "Palace",
+        "Paradise",
+        "Pueblo",
+        "Quivas",
+        "Sheridan"
+      ],
+      "payrollEstimate": 0,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 0,
+      "optimizations": [],
+      "startTime": "9:45 AM"
+    },
     {
       "date": "2026-08-13",
       "dayNameEs": "Jueves",
@@ -453,8 +496,8 @@
               "lon": -104.9816,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": "2026-08-28",
-              "next_checkout": "2026-09-02",
+              "next_checkin": null,
+              "next_checkout": null,
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -1408,41 +1451,6 @@
       "sameDayTurns": 0,
       "tomorrowCheckins": 1,
       "totalCheckouts": 1,
-      "optimizations": [],
-      "startTime": "9:45 AM"
-    },
-    {
-      "date": "2026-08-26",
-      "dayNameEs": "Miercoles",
-      "dayNameEn": "Wednesday",
-      "teams": [],
-      "laundry": {
-        "assigned": [],
-        "active": false
-      },
-      "off": [
-        "Marii",
-        "Julie",
-        "Dexabeth",
-        "Yasnielis",
-        "Neidys",
-        "Luraidy"
-      ],
-      "occupied": [
-        "Alpha",
-        "BuffaloGolf",
-        "GameRoom",
-        "Grant",
-        "Hotbox",
-        "Paradise",
-        "PlayHouse",
-        "Pueblo",
-        "Sheridan"
-      ],
-      "payrollEstimate": 0,
-      "sameDayTurns": 0,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 0,
       "optimizations": [],
       "startTime": "9:45 AM"
     }
