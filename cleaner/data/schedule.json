@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-12T12:02:17.296840",
+  "generated": "2026-08-12T12:16:04.142671",
   "weekStart": "2026-08-12",
   "weekEnd": "2026-08-25",
   "week": [
@@ -513,8 +513,8 @@
               "lon": -104.9018,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-08-21",
+              "next_checkout": "2026-08-24",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -1110,6 +1110,7 @@
         "GameRoom",
         "Indica",
         "JoyStick",
+        "Palace",
         "Paradise",
         "PlayHouse",
         "Quivas",
@@ -1145,6 +1146,7 @@
         "GameRoom",
         "Indica",
         "JoyStick",
+        "Palace",
         "Paradise",
         "PlayHouse",
         "Quivas",
@@ -1264,6 +1266,7 @@
         "Alpha",
         "GameRoom",
         "Indica",
+        "Palace",
         "PlayHouse",
         "Wonderland"
       ],
@@ -1325,6 +1328,15 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
+            },
+            {
+              "name": "Palace",
+              "address": "12332 Quince St, Thornton 80602",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-09-03",
+              "source": "breezeway-reconcile",
+              "order": 3
             }
           ],
           "isLaundry": false
