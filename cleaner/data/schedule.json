@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-12T02:16:28.865875",
+  "generated": "2026-08-12T02:31:04.629371",
   "weekStart": "2026-08-12",
   "weekEnd": "2026-08-25",
   "week": [
@@ -34,6 +34,7 @@
         "JoyStick",
         "Palace",
         "Paradise",
+        "PlayHouse",
         "Pueblo",
         "Quivas",
         "Sheridan"
@@ -192,6 +193,7 @@
         "JoyStick",
         "Palace",
         "Paradise",
+        "PlayHouse",
         "Pueblo",
         "Quivas",
         "Sativa"
@@ -210,11 +212,11 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Marii",
+          "lead": "Dexabeth",
           "members": [
-            "Marii",
-            "Neidys",
-            "Dexabeth"
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
           ],
           "properties": [
             {
@@ -256,6 +258,25 @@
               "order": 2
             },
             {
+              "property_id": 387379,
+              "name": "PlayHouse",
+              "address": "7350 Alkire Ct, Arvada 80005",
+              "zone": "far_west",
+              "beds": 7,
+              "sqft": 2976,
+              "est_hours": 3.5,
+              "lat": 39.8294,
+              "lon": -105.1483,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-08-14",
+              "next_checkout": "2026-08-16",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
+            },
+            {
               "property_id": 399810,
               "name": "Indica",
               "address": "7682 Shoshone St, Denver 80221",
@@ -272,7 +293,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -283,8 +304,8 @@
         "active": false
       },
       "off": [
-        "Julie",
-        "Yasnielis",
+        "Marii",
+        "Neidys",
         "Luraidy"
       ],
       "occupied": [
@@ -309,10 +330,10 @@
         "Sheridan",
         "Wonderland"
       ],
-      "payrollEstimate": 460,
-      "sameDayTurns": 2,
+      "payrollEstimate": 430,
+      "sameDayTurns": 3,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 3,
+      "totalCheckouts": 4,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1393,12 +1414,12 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 2,
       "role": "lead",
       "dailyRate": 170
     },
     "Julie": {
-      "daysThisWeek": 11,
+      "daysThisWeek": 12,
       "role": "cleaner",
       "dailyRate": 140
     },
@@ -1408,12 +1429,12 @@
       "dailyRate": 150
     },
     "Yasnielis": {
-      "daysThisWeek": 11,
+      "daysThisWeek": 12,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Neidys": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 2,
       "role": "cleaner",
       "dailyRate": 140
     },
