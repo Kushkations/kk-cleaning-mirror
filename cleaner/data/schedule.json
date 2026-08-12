@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-12T12:16:04.142671",
+  "generated": "2026-08-12T12:31:39.804602",
   "weekStart": "2026-08-12",
   "weekEnd": "2026-08-25",
   "week": [
@@ -1311,6 +1311,25 @@
               "order": 1
             },
             {
+              "property_id": 440656,
+              "name": "Palace",
+              "address": "12332 Quince St, Thornton 80602",
+              "zone": "north",
+              "beds": 6,
+              "sqft": 4406,
+              "est_hours": 4.0,
+              "lat": 39.9199,
+              "lon": -104.9018,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
               "property_id": 447452,
               "name": "Wonderland",
               "address": "5955 S Zante Way, Aurora 80015",
@@ -1327,15 +1346,6 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
-            },
-            {
-              "name": "Palace",
-              "address": "12332 Quince St, Thornton 80602",
-              "priority": "checkout_only",
-              "est_hours": 2.0,
-              "notes": "CI 2026-09-03",
-              "source": "breezeway-reconcile",
               "order": 3
             }
           ],
@@ -1360,7 +1370,7 @@
       "payrollEstimate": 430,
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 2,
+      "totalCheckouts": 3,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
