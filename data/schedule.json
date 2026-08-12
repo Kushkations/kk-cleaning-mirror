@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-12T21:31:08.726219",
+  "generated": "2026-08-12T21:46:06.795523",
   "weekStart": "2026-08-13",
   "weekEnd": "2026-08-26",
   "week": [
@@ -1220,8 +1220,8 @@
               "lon": -104.9736,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-08-26",
+              "next_checkout": "2026-08-27",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -1434,6 +1434,7 @@
         "GameRoom",
         "Grant",
         "Hotbox",
+        "Paradise",
         "PlayHouse",
         "Pueblo",
         "Sheridan"
