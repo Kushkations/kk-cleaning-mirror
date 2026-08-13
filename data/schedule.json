@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-13T20:31:19.224101",
+  "generated": "2026-08-13T20:46:31.150113",
   "weekStart": "2026-08-13",
   "weekEnd": "2026-08-26",
   "week": [
@@ -905,6 +905,25 @@
           ],
           "properties": [
             {
+              "property_id": 409557,
+              "name": "Elevation",
+              "address": "3431 E 105th Ct, Northglenn 80233",
+              "zone": "north",
+              "beds": 5,
+              "sqft": 2376,
+              "est_hours": 2.5,
+              "lat": 39.8878,
+              "lon": -104.9458,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
               "property_id": 370183,
               "name": "Sheridan",
               "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
@@ -921,7 +940,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 1
+              "order": 2
             },
             {
               "property_id": 447452,
@@ -940,7 +959,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -967,7 +986,7 @@
       "payrollEstimate": 430,
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 2,
+      "totalCheckouts": 3,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
