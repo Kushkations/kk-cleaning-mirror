@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-13T00:30:51.421913",
+  "generated": "2026-08-13T00:46:51.357621",
   "weekStart": "2026-08-13",
   "weekEnd": "2026-08-26",
   "week": [
@@ -338,11 +338,11 @@
               "est_hours": 2.0,
               "lat": 39.7706,
               "lon": -104.7548,
-              "priority": "checkout_only",
+              "priority": "same_day",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
-              "deadline": null,
+              "next_checkin": "2026-08-15",
+              "next_checkout": "2026-08-17",
+              "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
@@ -361,6 +361,7 @@
         "Luraidy"
       ],
       "occupied": [
+        "Airport",
         "Alpha",
         "Altitude",
         "Beach",
@@ -383,7 +384,7 @@
         "Wonderland"
       ],
       "payrollEstimate": 430,
-      "sameDayTurns": 1,
+      "sameDayTurns": 2,
       "tomorrowCheckins": 0,
       "totalCheckouts": 2,
       "optimizations": [],
@@ -636,6 +637,7 @@
         "Luraidy"
       ],
       "occupied": [
+        "Airport",
         "Alpha",
         "Altitude",
         "Beach",
@@ -723,6 +725,15 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 3
+            },
+            {
+              "name": "Airport",
+              "address": "19990 E 40th Ave, Denver 80249",
+              "priority": "checkout_only",
+              "est_hours": 2.0,
+              "notes": "CI 2026-08-21",
+              "source": "breezeway-reconcile",
+              "order": 4
             }
           ],
           "isLaundry": false
