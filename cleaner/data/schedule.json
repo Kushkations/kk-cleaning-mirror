@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-15T22:30:41.630071",
+  "generated": "2026-08-15T22:46:05.135367",
   "weekStart": "2026-08-15",
   "weekEnd": "2026-08-28",
   "week": [
@@ -113,38 +113,38 @@
           ],
           "properties": [
             {
-              "property_id": 362638,
-              "name": "Sativa",
-              "address": "391 E 83rd Dr, Denver 80229",
+              "property_id": 370631,
+              "name": "Grant",
+              "address": "261 Grant Way, Denver 80229",
               "zone": "hq",
               "beds": 6,
               "sqft": 1782,
               "est_hours": 2.0,
-              "lat": 39.8458,
-              "lon": -104.9816,
+              "lat": 39.8455,
+              "lon": -104.9828,
               "priority": "same_day",
               "priority_locked": false,
               "next_checkin": "2026-08-16",
-              "next_checkout": "2026-08-20",
+              "next_checkout": "2026-08-23",
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 1
             },
             {
-              "property_id": 447452,
-              "name": "Wonderland",
-              "address": "5955 S Zante Way, Aurora 80015",
-              "zone": "isolated",
-              "beds": 5,
-              "sqft": 1886,
+              "property_id": 354421,
+              "name": "JoyStick",
+              "address": "8228 Balsam Way, Arvada 80005",
+              "zone": "far_west",
+              "beds": 4,
+              "sqft": 2183,
               "est_hours": 2.5,
-              "lat": 39.6083,
-              "lon": -104.7176,
+              "lat": 39.8466,
+              "lon": -105.0904,
               "priority": "same_day",
               "priority_locked": false,
               "next_checkin": "2026-08-16",
-              "next_checkout": "2026-08-19",
+              "next_checkout": "2026-08-18",
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -239,23 +239,42 @@
           ],
           "properties": [
             {
-              "property_id": 354421,
-              "name": "JoyStick",
-              "address": "8228 Balsam Way, Arvada 80005",
-              "zone": "far_west",
-              "beds": 4,
-              "sqft": 2183,
-              "est_hours": 2.5,
-              "lat": 39.8466,
-              "lon": -105.0904,
+              "property_id": 362638,
+              "name": "Sativa",
+              "address": "391 E 83rd Dr, Denver 80229",
+              "zone": "hq",
+              "beds": 6,
+              "sqft": 1782,
+              "est_hours": 2.0,
+              "lat": 39.8458,
+              "lon": -104.9816,
               "priority": "same_day",
               "priority_locked": false,
               "next_checkin": "2026-08-16",
-              "next_checkout": "2026-08-18",
+              "next_checkout": "2026-08-20",
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 1
+            },
+            {
+              "property_id": 447452,
+              "name": "Wonderland",
+              "address": "5955 S Zante Way, Aurora 80015",
+              "zone": "isolated",
+              "beds": 5,
+              "sqft": 1886,
+              "est_hours": 2.5,
+              "lat": 39.6083,
+              "lon": -104.7176,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-08-16",
+              "next_checkout": "2026-08-19",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
             },
             {
               "property_id": 409557,
@@ -274,7 +293,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             },
             {
               "property_id": 404868,
@@ -290,25 +309,6 @@
               "priority_locked": false,
               "next_checkin": "2026-08-20",
               "next_checkout": "2026-08-23",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
-            },
-            {
-              "property_id": 370631,
-              "name": "Grant",
-              "address": "261 Grant Way, Denver 80229",
-              "zone": "hq",
-              "beds": 6,
-              "sqft": 1782,
-              "est_hours": 2.0,
-              "lat": 39.8455,
-              "lon": -104.9828,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-08-26",
-              "next_checkout": "2026-08-30",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -352,6 +352,7 @@
         "BlueDream",
         "BuffaloGolf",
         "GameRoom",
+        "Grant",
         "GrownSexy",
         "JoyStick",
         "Pueblo",
@@ -360,7 +361,7 @@
         "Wonderland"
       ],
       "payrollEstimate": 890,
-      "sameDayTurns": 3,
+      "sameDayTurns": 4,
       "tomorrowCheckins": 2,
       "totalCheckouts": 11,
       "optimizations": [],
@@ -473,6 +474,7 @@
         "BuffaloGolf",
         "Elevation",
         "GameRoom",
+        "Grant",
         "GrownSexy",
         "Hotbox",
         "JoyStick",
@@ -559,6 +561,7 @@
         "BuffaloGolf",
         "Elevation",
         "GameRoom",
+        "Grant",
         "Hotbox",
         "Sativa",
         "Sheridan",
@@ -661,6 +664,7 @@
         "BlueDream",
         "BuffaloGolf",
         "GameRoom",
+        "Grant",
         "Hotbox",
         "PlayHouse",
         "Sativa"
@@ -807,6 +811,7 @@
         "Beach",
         "BlueDream",
         "GameRoom",
+        "Grant",
         "JoyStick",
         "Paradise",
         "PlayHouse",
@@ -869,6 +874,7 @@
         "Alpha",
         "Beach",
         "GameRoom",
+        "Grant",
         "Indica",
         "JoyStick",
         "Palace",
@@ -905,6 +911,7 @@
         "Alpha",
         "Beach",
         "GameRoom",
+        "Grant",
         "Indica",
         "JoyStick",
         "Palace",
@@ -927,27 +934,27 @@
       "teams": [
         {
           "name": "Equipo 1",
-          "lead": "Dexabeth",
+          "lead": "Marii",
           "members": [
-            "Dexabeth",
-            "Yasnielis",
-            "Julie"
+            "Marii",
+            "Neidys",
+            "Dexabeth"
           ],
           "properties": [
             {
-              "property_id": 313164,
-              "name": "Quivas",
-              "address": "7240 Quivas St, Denver 80221",
-              "zone": "west",
-              "beds": 5,
-              "sqft": 2200,
-              "est_hours": 2.5,
-              "lat": 39.8282,
-              "lon": -105.0086,
+              "property_id": 370631,
+              "name": "Grant",
+              "address": "261 Grant Way, Denver 80229",
+              "zone": "hq",
+              "beds": 6,
+              "sqft": 1782,
+              "est_hours": 2.0,
+              "lat": 39.8455,
+              "lon": -104.9828,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-08-26",
+              "next_checkout": "2026-08-30",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -990,6 +997,37 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 3
+            }
+          ],
+          "isLaundry": false
+        },
+        {
+          "name": "Equipo 2",
+          "lead": "Dexabeth",
+          "members": [
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 313164,
+              "name": "Quivas",
+              "address": "7240 Quivas St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 2200,
+              "est_hours": 2.5,
+              "lat": 39.8282,
+              "lon": -105.0086,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
             },
             {
               "property_id": 404868,
@@ -1008,7 +1046,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 4
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -1019,8 +1057,6 @@
         "active": false
       },
       "off": [
-        "Marii",
-        "Neidys",
         "Luraidy"
       ],
       "occupied": [
@@ -1031,10 +1067,10 @@
         "PlayHouse",
         "Wonderland"
       ],
-      "payrollEstimate": 430,
+      "payrollEstimate": 890,
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 4,
+      "totalCheckouts": 5,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1375,7 +1411,7 @@
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 4,
       "role": "lead",
       "dailyRate": 170
     },
@@ -1395,7 +1431,7 @@
       "dailyRate": 140
     },
     "Neidys": {
-      "daysThisWeek": 3,
+      "daysThisWeek": 4,
       "role": "cleaner",
       "dailyRate": 140
     },
