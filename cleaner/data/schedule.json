@@ -1,103 +1,8 @@
 {
-  "generated": "2026-08-15T23:46:22.060647",
-  "weekStart": "2026-08-15",
-  "weekEnd": "2026-08-28",
+  "generated": "2026-08-16T00:01:56.757214",
+  "weekStart": "2026-08-16",
+  "weekEnd": "2026-08-29",
   "week": [
-    {
-      "date": "2026-08-15",
-      "dayNameEs": "Sabado",
-      "dayNameEn": "Saturday",
-      "teams": [
-        {
-          "name": "Equipo 1",
-          "lead": "Dexabeth",
-          "members": [
-            "Dexabeth",
-            "Yasnielis",
-            "Julie"
-          ],
-          "properties": [
-            {
-              "property_id": 320255,
-              "name": "Hotbox",
-              "address": "761 E 83rd Pl, Denver 80229",
-              "zone": "hq",
-              "beds": 4,
-              "sqft": 1822,
-              "est_hours": 2.0,
-              "lat": 39.8488,
-              "lon": -104.9769,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-08-15",
-              "next_checkout": "2026-08-16",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
-              "property_id": 435859,
-              "name": "Airport",
-              "address": "19990 E 40th Ave, Denver 80249",
-              "zone": "far_east",
-              "beds": 4,
-              "sqft": 1642,
-              "est_hours": 2.0,
-              "lat": 39.7706,
-              "lon": -104.7548,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-08-15",
-              "next_checkout": "2026-08-17",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            }
-          ],
-          "isLaundry": false
-        }
-      ],
-      "laundry": {
-        "assigned": [],
-        "active": false
-      },
-      "off": [
-        "Marii",
-        "Neidys",
-        "Luraidy"
-      ],
-      "occupied": [
-        "Airport",
-        "Alpha",
-        "Altitude",
-        "Beach",
-        "BlueDream",
-        "BuffaloGolf",
-        "Elevation",
-        "GameRoom",
-        "Grant",
-        "GrownSexy",
-        "Hotbox",
-        "Indica",
-        "JoyStick",
-        "Palace",
-        "Paradise",
-        "PlayHouse",
-        "Pueblo",
-        "Quivas",
-        "Sativa",
-        "Sheridan",
-        "Wonderland"
-      ],
-      "payrollEstimate": 430,
-      "sameDayTurns": 2,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 2,
-      "optimizations": [],
-      "startTime": "9:45 AM"
-    },
     {
       "date": "2026-08-16",
       "dayNameEs": "Domingo",
@@ -1407,16 +1312,93 @@
       "totalCheckouts": 2,
       "optimizations": [],
       "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-08-29",
+      "dayNameEs": "Sabado",
+      "dayNameEn": "Saturday",
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Marii",
+          "members": [
+            "Marii",
+            "Neidys",
+            "Dexabeth"
+          ],
+          "properties": [
+            {
+              "property_id": null,
+              "name": "1967 E 115th",
+              "address": "1967 E 115th Place, Northglenn 80233",
+              "zone": "north",
+              "beds": 3,
+              "sqft": 1200,
+              "est_hours": 2.0,
+              "lat": 39.8878,
+              "lon": -104.9458,
+              "priority": "same_day",
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": "4:00 PM",
+              "notes": "External client - Beloved Soul Healer. Door code: 1067.",
+              "order": 1
+            },
+            {
+              "property_id": 370183,
+              "name": "Sheridan",
+              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1287,
+              "est_hours": 1.5,
+              "lat": 39.7653,
+              "lon": -105.0534,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Julie",
+        "Yasnielis",
+        "Luraidy"
+      ],
+      "occupied": [
+        "Alpha",
+        "GameRoom",
+        "Grant",
+        "PlayHouse",
+        "Pueblo"
+      ],
+      "payrollEstimate": 460,
+      "sameDayTurns": 1,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 2,
+      "optimizations": [],
+      "startTime": "9:45 AM"
     }
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 5,
       "role": "lead",
       "dailyRate": 170
     },
     "Julie": {
-      "daysThisWeek": 11,
+      "daysThisWeek": 10,
       "role": "cleaner",
       "dailyRate": 140
     },
@@ -1426,12 +1408,12 @@
       "dailyRate": 150
     },
     "Yasnielis": {
-      "daysThisWeek": 11,
+      "daysThisWeek": 10,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Neidys": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 5,
       "role": "cleaner",
       "dailyRate": 140
     },
