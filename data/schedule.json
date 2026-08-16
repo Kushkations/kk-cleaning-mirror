@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-16T22:31:48.006167",
+  "generated": "2026-08-16T22:45:27.945750",
   "weekStart": "2026-08-16",
   "weekEnd": "2026-08-29",
   "week": [
@@ -354,8 +354,8 @@
               "lon": -104.7548,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-08-21",
+              "next_checkout": "2026-08-23",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -799,6 +799,7 @@
         "Luraidy"
       ],
       "occupied": [
+        "Airport",
         "Alpha",
         "Beach",
         "GameRoom",
@@ -836,6 +837,7 @@
         "Luraidy"
       ],
       "occupied": [
+        "Airport",
         "Alpha",
         "Beach",
         "GameRoom",
@@ -975,6 +977,25 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
+            },
+            {
+              "property_id": 435859,
+              "name": "Airport",
+              "address": "19990 E 40th Ave, Denver 80249",
+              "zone": "far_east",
+              "beds": 4,
+              "sqft": 1642,
+              "est_hours": 2.0,
+              "lat": 39.7706,
+              "lon": -104.7548,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -998,7 +1019,7 @@
       "payrollEstimate": 890,
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 5,
+      "totalCheckouts": 6,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
