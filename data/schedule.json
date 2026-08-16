@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-16T01:30:48.471865",
+  "generated": "2026-08-16T01:46:22.317767",
   "weekStart": "2026-08-16",
   "weekEnd": "2026-08-29",
   "week": [
@@ -617,56 +617,6 @@
               "order": 1
             },
             {
-              "property_id": 470233,
-              "name": "BuffaloGolf",
-              "address": "16714 Buffalo Run Dr, Commerce City 80022",
-              "zone": "far_east",
-              "beds": 5,
-              "sqft": 2146,
-              "est_hours": 2.5,
-              "lat": 39.9113,
-              "lon": -104.7923,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-08-25",
-              "next_checkout": "2026-08-28",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            }
-          ],
-          "isLaundry": false
-        },
-        {
-          "name": "Equipo 2",
-          "lead": "Dexabeth",
-          "members": [
-            "Dexabeth",
-            "Yasnielis",
-            "Julie"
-          ],
-          "properties": [
-            {
-              "property_id": 362638,
-              "name": "Sativa",
-              "address": "391 E 83rd Dr, Denver 80229",
-              "zone": "hq",
-              "beds": 6,
-              "sqft": 1782,
-              "est_hours": 2.0,
-              "lat": 39.8458,
-              "lon": -104.9816,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
               "property_id": 320255,
               "name": "Hotbox",
               "address": "761 E 83rd Pl, Denver 80229",
@@ -706,6 +656,75 @@
             }
           ],
           "isLaundry": false
+        },
+        {
+          "name": "Equipo 2",
+          "lead": "Dexabeth",
+          "members": [
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 399810,
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 1700,
+              "est_hours": 2.0,
+              "lat": 39.8361,
+              "lon": -105.0096,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-08-21",
+              "next_checkout": "2026-08-24",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 362638,
+              "name": "Sativa",
+              "address": "391 E 83rd Dr, Denver 80229",
+              "zone": "hq",
+              "beds": 6,
+              "sqft": 1782,
+              "est_hours": 2.0,
+              "lat": 39.8458,
+              "lon": -104.9816,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
+              "property_id": 470233,
+              "name": "BuffaloGolf",
+              "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "zone": "far_east",
+              "beds": 5,
+              "sqft": 2146,
+              "est_hours": 2.5,
+              "lat": 39.9113,
+              "lon": -104.7923,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-08-25",
+              "next_checkout": "2026-08-28",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
+            }
+          ],
+          "isLaundry": false
         }
       ],
       "laundry": {
@@ -728,8 +747,8 @@
       ],
       "payrollEstimate": 890,
       "sameDayTurns": 1,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 5,
+      "tomorrowCheckins": 1,
+      "totalCheckouts": 6,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
