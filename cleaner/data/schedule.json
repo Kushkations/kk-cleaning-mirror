@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-17T02:45:34.781793",
+  "generated": "2026-08-17T03:01:55.838480",
   "weekStart": "2026-08-17",
   "weekEnd": "2026-08-30",
   "week": [
@@ -286,8 +286,8 @@
               "lon": -104.9458,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-08-21",
+              "next_checkout": "2026-08-25",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -580,6 +580,7 @@
         "Airport",
         "Alpha",
         "Beach",
+        "Elevation",
         "GameRoom",
         "Grant",
         "Indica",
@@ -618,6 +619,7 @@
         "Airport",
         "Alpha",
         "Beach",
+        "Elevation",
         "GameRoom",
         "Grant",
         "Indica",
@@ -788,6 +790,7 @@
       ],
       "occupied": [
         "Alpha",
+        "Elevation",
         "GameRoom",
         "Indica",
         "Palace",
@@ -887,6 +890,7 @@
       ],
       "occupied": [
         "Alpha",
+        "Elevation",
         "GameRoom",
         "Hotbox",
         "PlayHouse"
