@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-17T03:15:57.316161",
+  "generated": "2026-08-17T03:31:19.383669",
   "weekStart": "2026-08-17",
   "weekEnd": "2026-08-30",
   "week": [
@@ -934,6 +934,25 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 1
+            },
+            {
+              "property_id": 409557,
+              "name": "Elevation",
+              "address": "3431 E 105th Ct, Northglenn 80233",
+              "zone": "north",
+              "beds": 5,
+              "sqft": 2376,
+              "est_hours": 2.5,
+              "lat": 39.8878,
+              "lon": -104.9458,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
             }
           ],
           "isLaundry": false
@@ -957,7 +976,7 @@
       "payrollEstimate": 430,
       "sameDayTurns": 0,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 1,
+      "totalCheckouts": 2,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
