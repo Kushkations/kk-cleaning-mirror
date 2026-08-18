@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-18T03:33:21.689018",
+  "generated": "2026-08-18T03:46:32.968072",
   "weekStart": "2026-08-18",
   "weekEnd": "2026-08-31",
   "week": [
@@ -573,13 +573,11 @@
               "lon": -104.7548,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": "2026-09-04",
-              "next_checkout": "2026-08-23",
+              "next_checkin": null,
+              "next_checkout": null,
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "provisional_from_booking": true,
-              "notes": "Reserva confirmada; tarea de Breezeway pendiente / Booking confirmed, Breezeway task pending",
               "order": 4
             }
           ],
