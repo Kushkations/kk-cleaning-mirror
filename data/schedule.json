@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-18T15:30:56.660290",
+  "generated": "2026-08-18T15:46:32.565702",
   "weekStart": "2026-08-18",
   "weekEnd": "2026-08-31",
   "week": [
@@ -98,6 +98,7 @@
         "GrownSexy",
         "Hotbox",
         "Indica",
+        "Palace",
         "Sativa",
         "Sheridan",
         "Wonderland"
@@ -143,6 +144,25 @@
               "order": 1
             },
             {
+              "property_id": 440656,
+              "name": "Palace",
+              "address": "12332 Quince St, Thornton 80602",
+              "zone": "north",
+              "beds": 6,
+              "sqft": 4406,
+              "est_hours": 4.0,
+              "lat": 39.9199,
+              "lon": -104.9018,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-08-21",
+              "next_checkout": "2026-08-24",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
               "property_id": 370183,
               "name": "Sheridan",
               "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
@@ -159,7 +179,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             },
             {
               "property_id": 447452,
@@ -178,7 +198,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 3
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -209,7 +229,7 @@
       "payrollEstimate": 430,
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 3,
+      "totalCheckouts": 4,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
