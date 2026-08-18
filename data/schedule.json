@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-18T16:45:44.354143",
+  "generated": "2026-08-18T17:01:54.394055",
   "weekStart": "2026-08-18",
   "weekEnd": "2026-08-31",
   "week": [
@@ -913,8 +913,8 @@
               "lon": -104.9736,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-08-31",
+              "next_checkout": "2026-09-04",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -1204,6 +1204,7 @@
       "occupied": [
         "Alpha",
         "GameRoom",
+        "Paradise",
         "Pueblo"
       ],
       "payrollEstimate": 0,
