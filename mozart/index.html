@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1c5cab">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Rent Book">
+<title>Mozart Properties — Rent Book</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%A0%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7;
+    --surface: #fcfcfb;
+    --ink: #0b0b0b;
+    --ink2: #52514e;
+    --muted: #898781;
+    --line: #e1e0d9;
+    --border: rgba(11,11,11,.10);
+    --accent: #1c5cab;
+    --accent-soft: #e4eefb;
+    --good: #0ca30c;
+    --good-text: #006300;
+    --good-bg: #e9f5e7;
+    --warn: #fab219;
+    --warn-text: #8a5b00;
+    --warn-bg: #fdf3dc;
+    --bad: #d03b3b;
+    --bad-text: #b32e2e;
+    --bad-bg: #fbe9e9;
+    --shadow: 0 1px 3px rgba(11,11,11,.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --page: #0d0d0d;
+      --surface: #1a1a19;
+      --ink: #ffffff;
+      --ink2: #c3c2b7;
+      --muted: #898781;
+      --line: #2c2c2a;
+      --border: rgba(255,255,255,.12);
+      --accent: #3987e5;
+      --accent-soft: #16283f;
+      --good: #0ca30c;
+      --good-text: #4cc24c;
+      --good-bg: #142b14;
+      --warn: #fab219;
+      --warn-text: #fab219;
+      --warn-bg: #2f2610;
+      --bad: #e66767;
+      --bad-text: #e66767;
+      --bad-bg: #331414;
+      --shadow: none;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--page);
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.45;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 14px 14px 96px; }
+  header.top {
+    max-width: 760px; margin: 0 auto; padding: 16px 16px 4px;
+    display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
+  }
+  header.top h1 { font-size: 21px; font-weight: 800; letter-spacing: -.01em; }
+  header.top .sub { color: var(--muted); font-size: 14px; font-weight: 600; }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; box-shadow: var(--shadow); overflow: hidden;
+  }
+  .money { font-variant-numeric: tabular-nums; }
+
+  /* ---- month nav ---- */
+  .monthnav { display: flex; align-items: center; gap: 8px; margin: 6px 0 14px; }
+  .monthnav .mlabel { flex: 1; text-align: center; }
+  .monthnav .mlabel b { font-size: 20px; display: block; }
+  .monthnav .mlabel .today-link { font-size: 13px; color: var(--accent); font-weight: 700; cursor: pointer; background: none; border: 0; padding: 2px 6px; }
+  .navbtn {
+    width: 52px; height: 48px; border-radius: 12px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--ink); font-size: 22px; font-weight: 700; cursor: pointer;
+  }
+  .navbtn:active { background: var(--accent-soft); }
+
+  /* ---- stat tiles ---- */
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 10px; }
+  .tile { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 12px 12px 10px; box-shadow: var(--shadow); }
+  .tile .tl { font-size: 13px; font-weight: 700; color: var(--ink2); text-transform: uppercase; letter-spacing: .03em; }
+  .tile .tv { font-size: 24px; font-weight: 800; margin-top: 2px; letter-spacing: -.01em; }
+  .tile .ts { font-size: 13px; color: var(--muted); margin-top: 1px; }
+  .tile.good .tv { color: var(--good-text); }
+  .tile.bad .tv { color: var(--bad-text); }
+  @media (max-width: 460px) { .tile .tv { font-size: 20px; } }
+
+  .progress-card { padding: 12px 14px; margin-bottom: 10px; }
+  .progress-label { display: flex; justify-content: space-between; font-size: 14px; color: var(--ink2); font-weight: 600; margin-bottom: 6px; }
+  .bar { height: 14px; border-radius: 7px; background: var(--line); overflow: hidden; }
+  .bar > div { height: 100%; border-radius: 7px; background: var(--accent); transition: width .3s; }
+  .methods { font-size: 14px; color: var(--ink2); margin-top: 8px; }
+  .methods b { color: var(--ink); }
+
+  /* ---- filter chips ---- */
+  .chips { display: flex; gap: 8px; margin: 12px 0; }
+  .chip {
+    flex: 1; padding: 10px 6px; border-radius: 12px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--ink2); font-size: 15px; font-weight: 700; cursor: pointer; text-align: center;
+  }
+  .chip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  /* ---- unit list ---- */
+  .group { margin-bottom: 16px; }
+  .group h2 {
+    font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em;
+    color: var(--ink2); padding: 4px 4px 6px; position: sticky; top: 0; background: var(--page); z-index: 2;
+  }
+  .group .gsum { font-weight: 600; color: var(--muted); float: right; text-transform: none; letter-spacing: 0; }
+  .rows { border-radius: 14px; }
+  .row {
+    display: flex; align-items: center; gap: 10px; padding: 12px 14px;
+    border-bottom: 1px solid var(--line); cursor: pointer; background: transparent;
+  }
+  .row:last-child { border-bottom: 0; }
+  .row:active { background: var(--accent-soft); }
+  .row .who { flex: 1; min-width: 0; }
+  .row .who .u { font-weight: 800; font-size: 17px; }
+  .row .who .t { color: var(--ink2); font-size: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .row .amt { text-align: right; }
+  .row .amt .r { font-weight: 800; font-size: 17px; }
+  .row.vacant .who, .row.vacant .amt { opacity: .5; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 999px; white-space: nowrap;
+  }
+  .badge.paid { color: var(--good-text); background: var(--good-bg); }
+  .badge.partial { color: var(--warn-text); background: var(--warn-bg); }
+  .badge.due { color: var(--bad-text); background: var(--bad-bg); }
+  .badge.idle { color: var(--muted); background: var(--line); }
+  .markbtn {
+    border: 0; border-radius: 12px; background: var(--accent); color: #fff;
+    font-size: 15px; font-weight: 800; padding: 11px 14px; cursor: pointer; white-space: nowrap;
+  }
+  .markbtn:active { opacity: .8; }
+
+  /* ---- generic buttons ---- */
+  .btn {
+    display: block; width: 100%; border: 0; border-radius: 13px; background: var(--accent); color: #fff;
+    font-size: 17px; font-weight: 800; padding: 14px; cursor: pointer; margin-top: 10px;
+    text-align: center; text-decoration: none; font-family: inherit;
+  }
+  .btn.ghost { background: var(--surface); color: var(--ink); border: 1px solid var(--border); }
+  .btn.green { background: var(--good); }
+  .btn.danger { background: var(--bad); }
+  .btn:active { opacity: .85; }
+
+  /* ---- modal ---- */
+  .overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 50;
+    display: flex; align-items: flex-end; justify-content: center;
+  }
+  @media (min-width: 600px) { .overlay { align-items: center; } }
+  .sheet {
+    background: var(--surface); width: 100%; max-width: 560px; max-height: 88vh; overflow-y: auto;
+    border-radius: 18px 18px 0 0; padding: 18px 18px 26px;
+  }
+  @media (min-width: 600px) { .sheet { border-radius: 18px; } }
+  .sheet h3 { font-size: 19px; font-weight: 800; }
+  .sheet .subtitle { color: var(--ink2); font-size: 15px; margin-top: 2px; }
+  .sheet .x {
+    float: right; border: 0; background: var(--line); color: var(--ink2); width: 34px; height: 34px;
+    border-radius: 999px; font-size: 17px; font-weight: 800; cursor: pointer;
+  }
+  .field { margin-top: 14px; }
+  .field label { display: block; font-size: 14px; font-weight: 700; color: var(--ink2); margin-bottom: 5px; }
+  .field input[type=text], .field input[type=tel], .field input[type=number], .field input[type=date], .field input[type=password], .field select {
+    width: 100%; padding: 13px; font-size: 17px; border-radius: 12px; border: 1px solid var(--border);
+    background: var(--page); color: var(--ink); font-family: inherit;
+  }
+  .mchips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .mchip {
+    padding: 10px 14px; border-radius: 999px; border: 1px solid var(--border); background: var(--page);
+    color: var(--ink); font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit;
+  }
+  .mchip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .paylist { margin-top: 14px; }
+  .payitem { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .payitem .pi { flex: 1; }
+  .payitem .pi b { font-size: 16px; }
+  .payitem .pi .pm { color: var(--ink2); font-size: 14px; }
+  .payitem .del { border: 0; background: var(--bad-bg); color: var(--bad-text); border-radius: 10px; padding: 8px 12px; font-weight: 800; cursor: pointer; }
+  .sumline { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
+  .sumline b { font-size: 16px; }
+  .reportedtag { color: var(--accent); font-weight: 700; }
+
+  /* ---- year view ---- */
+  .yearwrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table.year { border-collapse: collapse; width: 100%; min-width: 680px; font-size: 14px; }
+  table.year th, table.year td { padding: 7px 6px; text-align: center; border-bottom: 1px solid var(--line); }
+  table.year th { color: var(--ink2); font-size: 12px; text-transform: uppercase; letter-spacing: .03em; }
+  table.year td.unitcell, table.year th.unitcell {
+    text-align: left; position: sticky; left: 0; background: var(--surface); z-index: 1;
+    max-width: 150px; min-width: 130px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700;
+  }
+  table.year td.unitcell small { display: block; color: var(--muted); font-weight: 600; }
+  table.year tr.grouphead td { background: var(--page); font-weight: 800; color: var(--ink2); text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; position: sticky; left: 0; }
+  .yc { cursor: pointer; font-weight: 800; }
+  .yc.p { color: var(--good-text); }
+  .yc.h { color: var(--warn-text); }
+  .yc.m { color: var(--bad-text); }
+  .yc.f { color: var(--muted); font-weight: 400; }
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 14px; color: var(--ink2); margin: 10px 2px; }
+  .legend span b { font-weight: 800; }
+  .legend .lp b { color: var(--good-text); } .legend .lh b { color: var(--warn-text); } .legend .lm b { color: var(--bad-text); }
+
+  /* ---- tenants & settings ---- */
+  .setrow { display: flex; align-items: center; gap: 10px; padding: 13px 14px; border-bottom: 1px solid var(--line); }
+  .setrow:last-child { border-bottom: 0; }
+  .setrow .sl { flex: 1; }
+  .setrow .sl b { display: block; font-size: 16px; }
+  .setrow .sl span { color: var(--ink2); font-size: 14px; }
+  .copybtn { border: 1px solid var(--border); background: var(--page); color: var(--accent); border-radius: 10px; padding: 8px 12px; font-weight: 800; font-size: 14px; cursor: pointer; }
+  .sharebtn { border: 0; background: var(--accent-soft); color: var(--accent); border-radius: 10px; padding: 9px 11px; font-size: 17px; cursor: pointer; }
+  .note { color: var(--muted); font-size: 14px; margin: 10px 4px; }
+  .sectionlabel { font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: var(--ink2); margin: 18px 4px 8px; }
+
+  /* ---- tenant page ---- */
+  .tp-hero { text-align: center; padding: 22px 16px 18px; }
+  .tp-hero .tp-unit { font-size: 15px; font-weight: 700; color: var(--ink2); text-transform: uppercase; letter-spacing: .04em; }
+  .tp-hero .tp-amount { font-size: 44px; font-weight: 800; letter-spacing: -.02em; margin: 4px 0 2px; }
+  .tp-hero .tp-due { color: var(--ink2); font-size: 16px; }
+  .paylink {
+    display: flex; align-items: center; gap: 12px; padding: 14px; border-bottom: 1px solid var(--line);
+    text-decoration: none; color: var(--ink);
+  }
+  .paylink:last-child { border-bottom: 0; }
+  .paylink .pl-ic { font-size: 24px; width: 34px; text-align: center; }
+  .paylink .pl-t { flex: 1; }
+  .paylink .pl-t b { display: block; font-size: 17px; }
+  .paylink .pl-t span { color: var(--ink2); font-size: 14px; }
+  .paylink .pl-go { color: var(--accent); font-weight: 800; font-size: 14px; white-space: nowrap; }
+  .stepnum {
+    display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px;
+    border-radius: 999px; background: var(--accent); color: #fff; font-weight: 800; font-size: 15px; margin-right: 8px;
+  }
+
+  /* ---- confirmation page ---- */
+  .confirm-hero { text-align: center; padding: 34px 16px 8px; }
+  .confirm-hero .big { font-size: 56px; }
+  .confirm-hero h2 { font-size: 22px; margin-top: 8px; }
+  .confirm-hero p { color: var(--ink2); margin-top: 6px; }
+
+  /* ---- bottom nav ---- */
+  nav.bottom {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 40;
+    background: var(--surface); border-top: 1px solid var(--border);
+    display: flex; padding-bottom: env(safe-area-inset-bottom);
+  }
+  nav.bottom button {
+    flex: 1; border: 0; background: none; padding: 9px 4px 8px; cursor: pointer;
+    color: var(--muted); font-size: 12px; font-weight: 700; font-family: inherit;
+  }
+  nav.bottom button .ic { display: block; font-size: 22px; line-height: 1.2; }
+  nav.bottom button.on { color: var(--accent); }
+
+  /* ---- PIN ---- */
+  #pinscreen {
+    position: fixed; inset: 0; background: var(--page); z-index: 100;
+    display: none; flex-direction: column; align-items: center; justify-content: center; padding: 24px; text-align: center;
+  }
+  #pinscreen h1 { font-size: 24px; margin-bottom: 4px; }
+  #pinscreen p { color: var(--ink2); margin-bottom: 18px; }
+  #pinscreen input {
+    font-size: 28px; text-align: center; letter-spacing: 8px; width: 220px; padding: 12px;
+    border-radius: 14px; border: 1px solid var(--border); background: var(--surface); color: var(--ink);
+  }
+  #pinscreen .btn { max-width: 220px; }
+  #pinerr { color: var(--bad-text); font-weight: 700; margin-top: 10px; min-height: 24px; }
+  #pinhint { color: var(--muted); font-size: 14px; margin-top: 14px; }
+
+  @media print {
+    nav.bottom, .monthnav .navbtn, .chips, .markbtn, header.top .sub, .today-link, .btn { display: none !important; }
+    body { background: #fff; color: #000; font-size: 13px; }
+    .wrap { padding: 0; max-width: none; }
+    .card, .tile { box-shadow: none; border-color: #bbb; }
+    .row { padding: 6px 10px; }
+    .group h2 { position: static; }
+  }
+</style>
+</head>
+<body>
+
+<div id="pinscreen">
+  <h1>Mozart Properties</h1>
+  <p>Enter your PIN to open the rent book</p>
+  <input id="pininput" type="password" inputmode="numeric" autocomplete="off" maxlength="8">
+  <div id="pinerr"></div>
+  <button class="btn" onclick="App.tryUnlock()">Unlock</button>
+  <div id="pinhint"></div>
+</div>
+
+<header class="top">
+  <h1 id="toptitle">Mozart Properties</h1>
+  <span class="sub" id="topsub">Rent Book</span>
+</header>
+<div class="wrap" id="app"></div>
+
+<nav class="bottom" id="nav" style="display:none"></nav>
+<div id="modalhost"></div>
+<input type="file" id="importfile" accept=".json,application/json" style="display:none">
+
+<script>
+'use strict';
+
+/* ================= seed data (from the AUG 26 paper sheet — total $37,643.00) ================= */
+const SEED_GROUPS = [
+  { id:'g6th', name:'6th Ave' },
+  { id:'gcol', name:'Colorado' },
+  { id:'gdup', name:'Duplex Loan' },
+  { id:'ggra', name:'Granby Condo' },
+  { id:'ghom', name:'Home Mortgage' },
+  { id:'gmlk', name:'Martin Luther King Duplex' },
+  { id:'gmzp', name:'Mozart Place' },
+  { id:'gmoz', name:'Mozart Properties' },
+  { id:'gshe', name:'Sheridan Apts' },
+  { id:'gtrk', name:'Truck Loan' }
+];
+const SEED_UNITS = [
+  { id:'u01', groupId:'g6th', label:'1016 A',    tenant:'David Bloch',          rent:600,  active:true },
+  { id:'u02', groupId:'g6th', label:'1016 B',    tenant:'Filadelfio Trujillo',  rent:550,  active:true },
+  { id:'u03', groupId:'g6th', label:'A',         tenant:'Arika Montoya',        rent:600,  active:true },
+  { id:'u04', groupId:'g6th', label:'B',         tenant:'Elizabeth Lopez',      rent:550,  active:true },
+  { id:'u05', groupId:'gcol', label:'Colorado',  tenant:'Ron Pittman',          rent:2000, active:true },
+  { id:'u06', groupId:'gdup', label:'Duplex Loan', tenant:'Josh Wilson',        rent:175,  active:true },
+  { id:'u07', groupId:'ggra', label:'Granby Condo', tenant:'Sherman Investments', rent:318, active:true },
+  { id:'u08', groupId:'ghom', label:'Home Mortgage', tenant:'Scott Gus',        rent:350,  active:true },
+  { id:'u09', groupId:'gmlk', label:'4327',      tenant:'Ivan Perez',           rent:1000, active:true },
+  { id:'u10', groupId:'gmlk', label:'4331',      tenant:'Maricela Castillo',    rent:1050, active:true },
+  { id:'u11', groupId:'gmzp', label:'Unit 1',    tenant:'June Saiz',            rent:950,  active:true },
+  { id:'u12', groupId:'gmzp', label:'Unit 2',    tenant:'Sue Baca',             rent:650,  active:true },
+  { id:'u13', groupId:'gmzp', label:'Unit 3',    tenant:'Frank Gallegos',       rent:650,  active:true },
+  { id:'u14', groupId:'gmoz', label:'Unit 1',    tenant:'Daniel Farrelly',      rent:1575, active:true },
+  { id:'u15', groupId:'gmoz', label:'Unit 2',    tenant:'Ken L Williams',       rent:1345, active:true },
+  { id:'u16', groupId:'gmoz', label:'Unit 3',    tenant:'Richard Price',        rent:1050, active:true },
+  { id:'u17', groupId:'gmoz', label:'Unit 4',    tenant:'Paul Vernig',          rent:1200, active:true },
+  { id:'u18', groupId:'gmoz', label:'Unit 5',    tenant:'Brenton Bostick',      rent:1600, active:true },
+  { id:'u19', groupId:'gmoz', label:'Unit 6',    tenant:'Shawn Eckels',         rent:1400, active:true },
+  { id:'u20', groupId:'gmoz', label:'Unit 7',    tenant:'Shaq 3',               rent:1650, active:true },
+  { id:'u21', groupId:'gmoz', label:'Unit 8',    tenant:'David Guerrero',       rent:1785, active:true },
+  { id:'u22', groupId:'gmoz', label:'Garage 1',  tenant:'Rey Vauhns',           rent:100,  active:true },
+  { id:'u23', groupId:'gmoz', label:'Garage 2',  tenant:'Mike Concrete',        rent:275,  active:true },
+  { id:'u24', groupId:'gmoz', label:'Garage 3',  tenant:'Mic',                  rent:50,   active:true },
+  { id:'u25', groupId:'gmoz', label:'Garage 4',  tenant:'Gayland Allen',        rent:100,  active:true },
+  { id:'u26', groupId:'gmoz', label:'Garage 5',  tenant:'Kevin Gray',           rent:100,  active:true },
+  { id:'u27', groupId:'gmoz', label:'Parking',   tenant:'Mike Truck',           rent:50,   active:true },
+  { id:'u28', groupId:'gmoz', label:'Parking 1', tenant:'Tim Robinson',         rent:50,   active:true },
+  { id:'u29', groupId:'gmoz', label:'Parking 2', tenant:'Dalila',               rent:100,  active:true },
+  { id:'u30', groupId:'gshe', label:'3445',      tenant:'Shaq 1',               rent:1000, active:true },
+  { id:'u31', groupId:'gshe', label:'3447',      tenant:'Betty Cole',           rent:1000, active:true },
+  { id:'u32', groupId:'gshe', label:'3449',      tenant:'Joshua Dondelinger',   rent:1100, active:true },
+  { id:'u33', groupId:'gshe', label:'3451',      tenant:'Shaq 2',               rent:1300, active:true },
+  { id:'u34', groupId:'gshe', label:'3451 (2)',  tenant:'Nicole Williamson',    rent:1300, active:true },
+  { id:'u35', groupId:'gshe', label:'3453',      tenant:'Daniel Stined',        rent:1000, active:true },
+  { id:'u36', groupId:'gshe', label:'3455',      tenant:'Karl Haynes',          rent:1450, active:true },
+  { id:'u37', groupId:'gshe', label:'3457',      tenant:'Robert Sequra',        rent:1500, active:true },
+  { id:'u38', groupId:'gshe', label:'3485',      tenant:'William S. Hogan',     rent:1120, active:true },
+  { id:'u39', groupId:'gshe', label:'3487',      tenant:'Rosa Gutierrez',       rent:1150, active:true },
+  { id:'u40', groupId:'gshe', label:'3489',      tenant:'Martain Garcia',       rent:950,  active:true },
+  { id:'u41', groupId:'gshe', label:'5220',      tenant:'Gloria Ponce',         rent:1000, active:true },
+  { id:'u42', groupId:'gshe', label:'5230',      tenant:'Jamie Rivemar',        rent:1100, active:true },
+  { id:'u43', groupId:'gshe', label:'5240',      tenant:'C.L. Walker',          rent:800,  active:true },
+  { id:'u44', groupId:'gtrk', label:'Truck',     tenant:'',                     rent:0,    active:true }
+];
+const METHODS = ['Venmo', 'Cash App', 'Zelle', 'Direct Deposit', 'Cash', 'Check', 'Other'];
+
+/* ================= storage ================= */
+const LS_KEY = 'mozart.rentbook.v1';
+const UNLOCK_KEY = 'mozart.rentbook.unlock';
+
+function freshData() {
+  return {
+    v: 1,
+    pin: '1234',
+    settings: { owner:'', phone:'', venmo:'', cashapp:'', zelle:'', deposit:'' },
+    groups: JSON.parse(JSON.stringify(SEED_GROUPS)),
+    units: JSON.parse(JSON.stringify(SEED_UNITS)),
+    payments: [],
+    imported: []
+  };
+}
+function loadData() {
+  try {
+    const raw = localStorage.getItem(LS_KEY);
+    if (raw) {
+      const d = JSON.parse(raw);
+      if (d && Array.isArray(d.units) && Array.isArray(d.payments)) {
+        d.settings = Object.assign({ owner:'', phone:'', venmo:'', cashapp:'', zelle:'', deposit:'' }, d.settings || {});
+        d.groups = d.groups || [];
+        d.pin = d.pin || '1234';
+        d.imported = d.imported || [];
+        return d;
+      }
+    }
+  } catch (e) { /* corrupted storage — start fresh */ }
+  return freshData();
+}
+let data = loadData();
+function save() { localStorage.setItem(LS_KEY, JSON.stringify(data)); }
+function uid() { return 'p' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7); }
+
+/* ================= helpers ================= */
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c =>
+    ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+}
+function money(n) {
+  const v = Math.round((Number(n) || 0) * 100) / 100;
+  const opts = Number.isInteger(v) ? { maximumFractionDigits: 0 } : { minimumFractionDigits: 2, maximumFractionDigits: 2 };
+  return '$' + v.toLocaleString('en-US', opts);
+}
+function ymKey(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0'); }
+function nowKey() { return ymKey(new Date()); }
+function addMonths(key, delta) {
+  const [y, m] = key.split('-').map(Number);
+  const d = new Date(y, m - 1 + delta, 1);
+  return ymKey(d);
+}
+function monthLabel(key) {
+  const [y, m] = key.split('-').map(Number);
+  return new Date(y, m - 1, 1).toLocaleString('en-US', { month: 'long', year: 'numeric' });
+}
+function monthShort(key) {
+  const [y, m] = key.split('-').map(Number);
+  return new Date(y, m - 1, 1).toLocaleString('en-US', { month: 'short' });
+}
+function todayISO() {
+  const d = new Date();
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+}
+function fmtDate(iso) {
+  if (!iso) return '';
+  const [y, m, d] = iso.split('-').map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+function groupById(id) { return data.groups.find(g => g.id === id); }
+function unitById(id) { return data.units.find(u => u.id === id); }
+function unitsInGroup(gid) { return data.units.filter(u => u.groupId === gid); }
+function paymentsFor(unitId, month) { return data.payments.filter(p => p.unitId === unitId && p.month === month); }
+function paidSum(unitId, month) { return paymentsFor(unitId, month).reduce((s, p) => s + (Number(p.amount) || 0), 0); }
+function statusOf(unit, month) {
+  if (!unit.active) return 'vacant';
+  const sum = paidSum(unit.id, month);
+  if (sum > 0 && sum >= unit.rent) return 'paid';
+  if (sum > 0) return 'partial';
+  if (unit.rent <= 0) return 'none';
+  return month > nowKey() ? 'upcoming' : 'due';
+}
+/* url-safe base64 for link payloads (unicode-safe) */
+function encPayload(obj) {
+  const s = btoa(unescape(encodeURIComponent(JSON.stringify(obj))));
+  return s.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+function decPayload(s) {
+  try {
+    let b = s.replace(/-/g, '+').replace(/_/g, '/');
+    while (b.length % 4) b += '=';
+    return JSON.parse(decodeURIComponent(escape(atob(b))));
+  } catch (e) { return null; }
+}
+function baseURL() { return location.origin + location.pathname; }
+function cleanPhone(p) { return String(p || '').replace(/[^\d+]/g, ''); }
+
+/* ================= app state ================= */
+const App = {
+  view: 'month',
+  month: nowKey(),
+  year: new Date().getFullYear(),
+  filter: 'all',
+  _method: null,
+  _pendingApply: null,
+  _tenant: null,
+
+  /* ---------- boot & routing ---------- */
+  boot() {
+    const q = new URLSearchParams(location.search);
+    if (q.get('p')) {
+      const t = decPayload(q.get('p'));
+      if (t && t.u) { this._tenant = t; this.renderTenantPage(); return; }
+    }
+    document.getElementById('nav').style.display = 'flex';
+    const applyPayload = q.get('apply') ? decPayload(q.get('apply')) : null;
+    if (applyPayload) this._pendingApply = applyPayload;
+
+    const unlocked = localStorage.getItem(UNLOCK_KEY) === data.pin;
+    if (!unlocked) {
+      document.getElementById('pinscreen').style.display = 'flex';
+      document.getElementById('pinhint').textContent = data.pin === '1234' ? 'First time here? The starting PIN is 1234 — you can change it in Settings.' : '';
+      document.getElementById('pininput').addEventListener('keydown', e => { if (e.key === 'Enter') App.tryUnlock(); });
+      this.render();
+      return;
+    }
+    this.afterUnlock();
+  },
+  afterUnlock() {
+    if (this._pendingApply) {
+      const payload = this._pendingApply;
+      this._pendingApply = null;
+      history.replaceState(null, '', baseURL());
+      this.applyReport(payload);
+      return;
+    }
+    this.render();
+  },
+  tryUnlock() {
+    const v = document.getElementById('pininput').value.trim();
+    if (v === data.pin) {
+      localStorage.setItem(UNLOCK_KEY, data.pin);
+      document.getElementById('pinscreen').style.display = 'none';
+      this.afterUnlock();
+    } else {
+      document.getElementById('pinerr').textContent = 'Wrong PIN — try again';
+      document.getElementById('pininput').value = '';
+    }
+  },
+
+  /* ---------- tenant "I paid" auto-record ---------- */
+  applyReport(r) {
+    if (!r || !r.u || !(Number(r.a) > 0) || !r.m) {
+      alert('That payment link is not complete — nothing was recorded.');
+      this.render();
+      return;
+    }
+    const rid = String(r.id || '');
+    if (rid && data.imported.includes(rid)) {
+      this.confirmScreen('Already recorded', `This payment from ${esc(r.t || 'the tenant')} was recorded before. Nothing was added twice.`, r);
+      return;
+    }
+    let unit = unitById(r.u) || data.units.find(u => u.label === r.l && (!r.t || u.tenant === r.t));
+    if (!unit) {
+      alert('This payment is for a unit that is not in the book anymore (' + (r.l || r.u) + '). Add the unit first, then tap the link again.');
+      this.render();
+      return;
+    }
+    data.payments.push({
+      id: uid(), unitId: unit.id, month: String(r.m),
+      amount: Math.round(Number(r.a) * 100) / 100,
+      method: METHODS.includes(r.me) ? r.me : 'Other',
+      date: /^\d{4}-\d{2}-\d{2}$/.test(String(r.d)) ? r.d : todayISO(),
+      note: String(r.n || '').slice(0, 200),
+      reported: true
+    });
+    if (rid) data.imported.push(rid);
+    save();
+    this.month = String(r.m);
+    const g = groupById(unit.groupId);
+    this.confirmScreen('Payment recorded ✓',
+      `${esc(unit.tenant || 'Tenant')} — ${esc(g ? g.name : '')} ${esc(unit.label)}<br><b class="money" style="font-size:22px">${money(r.a)}</b> by ${esc(r.me || 'unknown method')} for ${monthLabel(String(r.m))}.<br><br>It is marked off in the book. Double-check the money actually arrived in your ${esc(r.me || 'account')}.`, r);
+  },
+  confirmScreen(title, msg, r) {
+    document.getElementById('app').innerHTML = `
+      <div class="confirm-hero">
+        <div class="big">✅</div>
+        <h2>${title}</h2>
+        <p>${msg}</p>
+      </div>
+      <button class="btn" onclick="App.render()">Open the rent book</button>`;
+    document.getElementById('topsub').textContent = 'Payment received';
+    this.renderNav();
+  },
+
+  /* ---------- navigation ---------- */
+  go(view) { this.view = view; this.render(); window.scrollTo(0, 0); },
+  shiftMonth(d) { this.month = addMonths(this.month, d); this.render(); },
+  goToday() { this.month = nowKey(); this.render(); },
+  shiftYear(d) { this.year += d; this.render(); },
+  setFilter(f) { this.filter = f; this.render(); },
+
+  /* ---------- rendering ---------- */
+  render() {
+    const host = document.getElementById('app');
+    if (this.view === 'month') host.innerHTML = this.renderMonth();
+    else if (this.view === 'year') host.innerHTML = this.renderYear();
+    else if (this.view === 'tenants') host.innerHTML = this.renderTenants();
+    else host.innerHTML = this.renderSettings();
+    document.getElementById('topsub').textContent =
+      this.view === 'month' ? monthLabel(this.month) :
+      this.view === 'year' ? String(this.year) :
+      this.view === 'tenants' ? 'Tenants & Units' : 'Settings';
+    this.renderNav();
+  },
+  renderNav() {
+    const items = [
+      ['month', '📅', 'Month'],
+      ['year', '🗓️', 'Year'],
+      ['tenants', '👥', 'Tenants'],
+      ['settings', '⚙️', 'Settings']
+    ];
+    document.getElementById('nav').innerHTML = items.map(([v, ic, lb]) =>
+      `<button class="${this.view === v ? 'on' : ''}" onclick="App.go('${v}')"><span class="ic">${ic}</span>${lb}</button>`
+    ).join('');
+  },
+
+  badgeFor(unit, month) {
+    const st = statusOf(unit, month);
+    const sum = paidSum(unit.id, month);
+    if (st === 'vacant') return '<span class="badge idle">— Vacant</span>';
+    if (st === 'paid') return '<span class="badge paid">✓ Paid</span>';
+    if (st === 'partial') return `<span class="badge partial">◐ ${money(sum)} of ${money(unit.rent)}</span>`;
+    if (st === 'due') return '<span class="badge due">✕ Not paid</span>';
+    if (st === 'upcoming') return '<span class="badge idle">Due on the 1st</span>';
+    return '<span class="badge idle">No amount set</span>';
+  },
+
+  renderMonth() {
+    const m = this.month;
+    const active = data.units.filter(u => u.active);
+    const expected = active.reduce((s, u) => s + u.rent, 0);
+    let collected = 0, paidCount = 0, dueCount = 0;
+    const byMethod = {};
+    for (const u of active) {
+      const sum = paidSum(u.id, m);
+      collected += sum;
+      const st = statusOf(u, m);
+      if (st === 'paid') paidCount++;
+      else if (st === 'due' || st === 'partial') dueCount++;
+      for (const p of paymentsFor(u.id, m)) byMethod[p.method] = (byMethod[p.method] || 0) + (Number(p.amount) || 0);
+    }
+    const owed = Math.max(0, expected - collected);
+    const pct = expected > 0 ? Math.min(100, Math.round(collected / expected * 100)) : 0;
+    const methodLine = Object.keys(byMethod).length
+      ? 'Received: ' + Object.entries(byMethod).map(([k, v]) => `<b>${esc(k)}</b> ${money(v)}`).join(' &nbsp;·&nbsp; ')
+      : 'No payments recorded yet this month.';
+
+    let html = `
+      <div class="monthnav">
+        <button class="navbtn" onclick="App.shiftMonth(-1)" aria-label="Previous month">‹</button>
+        <div class="mlabel"><b>${monthLabel(m)}</b>${m !== nowKey() ? `<button class="today-link" onclick="App.goToday()">Back to this month</button>` : `<span style="font-size:13px;color:var(--muted)">Rent due on the 1st</span>`}</div>
+        <button class="navbtn" onclick="App.shiftMonth(1)" aria-label="Next month">›</button>
+      </div>
+      <div class="tiles">
+        <div class="tile good"><div class="tl">Collected</div><div class="tv money">${money(collected)}</div><div class="ts">of ${money(expected)}</div></div>
+        <div class="tile ${owed > 0 ? 'bad' : 'good'}"><div class="tl">Still owed</div><div class="tv money">${money(owed)}</div><div class="ts">${dueCount} not paid up</div></div>
+        <div class="tile"><div class="tl">Paid up</div><div class="tv money">${paidCount} of ${active.filter(u=>u.rent>0).length}</div><div class="ts">units this month</div></div>
+      </div>
+      <div class="card progress-card">
+        <div class="progress-label"><span>Month progress</span><span class="money">${pct}%</span></div>
+        <div class="bar"><div style="width:${pct}%"></div></div>
+        <div class="methods">${methodLine}</div>
+      </div>
+      <div class="chips">
+        <button class="chip ${this.filter==='all'?'on':''}" onclick="App.setFilter('all')">All</button>
+        <button class="chip ${this.filter==='due'?'on':''}" onclick="App.setFilter('due')">Not paid</button>
+        <button class="chip ${this.filter==='paid'?'on':''}" onclick="App.setFilter('paid')">Paid</button>
+      </div>`;
+
+    for (const g of data.groups) {
+      const units = unitsInGroup(g.id).filter(u => {
+        const st = statusOf(u, m);
+        if (this.filter === 'due') return st === 'due' || st === 'partial';
+        if (this.filter === 'paid') return st === 'paid';
+        return true;
+      });
+      if (!units.length) continue;
+      const gExpected = unitsInGroup(g.id).filter(u => u.active).reduce((s, u) => s + u.rent, 0);
+      const gPaid = unitsInGroup(g.id).filter(u => u.active).reduce((s, u) => s + paidSum(u.id, m), 0);
+      html += `<div class="group"><h2>${esc(g.name)}<span class="gsum money">${money(gPaid)} / ${money(gExpected)}</span></h2><div class="card rows">`;
+      for (const u of units) {
+        const st = statusOf(u, m);
+        const pays = paymentsFor(u.id, m);
+        const last = pays.slice(-1)[0];
+        const wasReported = pays.some(p => p.reported);
+        const sub = (st === 'paid' || st === 'partial') && last
+          ? `${esc(last.method)} · ${fmtDate(last.date)}${wasReported ? ' · 📲 sent by tenant' : ''}`
+          : esc(u.tenant || 'No tenant');
+        const needsBtn = u.active && u.rent > 0 && (st === 'due' || st === 'partial' || st === 'upcoming');
+        html += `
+          <div class="row ${st === 'vacant' ? 'vacant' : ''}" onclick="App.openUnit('${u.id}','${m}')">
+            <div class="who"><div class="u">${esc(u.label)}</div><div class="t">${sub}</div></div>
+            <div class="amt"><div class="r money">${money(u.rent)}</div>${this.badgeFor(u, m)}</div>
+            ${needsBtn ? `<button class="markbtn" onclick="event.stopPropagation();App.openUnit('${u.id}','${m}')">Mark paid</button>` : ''}
+          </div>`;
+      }
+      html += `</div></div>`;
+    }
+    html += `<button class="btn ghost" onclick="window.print()">🖨️ Print this month</button>`;
+    return html;
+  },
+
+  renderYear() {
+    const y = this.year;
+    const months = Array.from({ length: 12 }, (_, i) => y + '-' + String(i + 1).padStart(2, '0'));
+    let yearTotal = 0;
+    const colTotals = months.map(mk => {
+      const t = data.units.reduce((s, u) => s + paidSum(u.id, mk), 0);
+      yearTotal += t; return t;
+    });
+
+    let rows = '';
+    for (const g of data.groups) {
+      const units = unitsInGroup(g.id);
+      if (!units.length) continue;
+      rows += `<tr class="grouphead"><td class="unitcell" colspan="14">${esc(g.name)}</td></tr>`;
+      for (const u of units) {
+        let unitTotal = 0;
+        const cells = months.map(mk => {
+          const st = statusOf(u, mk);
+          const sum = paidSum(u.id, mk);
+          unitTotal += sum;
+          let sym = '·', cls = 'f', title = 'Nothing recorded';
+          if (st === 'paid') { sym = '✓'; cls = 'p'; title = 'Paid ' + money(sum); }
+          else if (st === 'partial') { sym = '◐'; cls = 'h'; title = 'Partial ' + money(sum) + ' of ' + money(u.rent); }
+          else if (st === 'due') { sym = '✕'; cls = 'm'; title = 'Not paid'; }
+          else if (st === 'vacant' || st === 'none') { sym = ''; cls = 'f'; title = ''; }
+          return `<td class="yc ${cls}" title="${title}" onclick="App.openUnit('${u.id}','${mk}')">${sym}</td>`;
+        }).join('');
+        rows += `<tr><td class="unitcell">${esc(u.label)}<small>${esc(u.tenant || (u.active ? '' : 'Vacant'))}</small></td>${cells}<td class="money" style="font-weight:800">${money(unitTotal)}</td></tr>`;
+      }
+    }
+    return `
+      <div class="monthnav">
+        <button class="navbtn" onclick="App.shiftYear(-1)" aria-label="Previous year">‹</button>
+        <div class="mlabel"><b>${y}</b><span style="font-size:13px;color:var(--muted)">Collected this year: <span class="money" style="font-weight:800;color:var(--good-text)">${money(yearTotal)}</span></span></div>
+        <button class="navbtn" onclick="App.shiftYear(1)" aria-label="Next year">›</button>
+      </div>
+      <div class="legend">
+        <span class="lp"><b>✓</b> Paid</span><span class="lh"><b>◐</b> Partial</span><span class="lm"><b>✕</b> Not paid</span><span><b style="color:var(--muted)">·</b> Nothing yet</span>
+      </div>
+      <div class="card yearwrap">
+        <table class="year">
+          <thead><tr><th class="unitcell">Unit</th>${months.map(mk => `<th>${monthShort(mk)}</th>`).join('')}<th>Total</th></tr></thead>
+          <tbody>${rows}
+            <tr><td class="unitcell" style="font-weight:800">Collected</td>${colTotals.map(t => `<td class="money" style="font-weight:700">${t ? money(t) : '·'}</td>`).join('')}<td class="money" style="font-weight:800">${money(yearTotal)}</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Tap any square to see or record payments for that unit and month.</p>`;
+  },
+
+  renderTenants() {
+    let html = `<button class="btn" onclick="App.editUnit(null)">＋ Add a unit or tenant</button>
+      <p class="note">📲 = copy that tenant's personal payment page link (send it to them by text). When they pay and tap “I sent it”, you get a text — tap the link in it and the payment marks itself off.</p>`;
+    for (const g of data.groups) {
+      const units = unitsInGroup(g.id);
+      if (!units.length) continue;
+      const gTotal = units.filter(u => u.active).reduce((s, u) => s + u.rent, 0);
+      html += `<div class="group" style="margin-top:16px"><h2>${esc(g.name)}<span class="gsum money">${money(gTotal)}/mo</span></h2><div class="card rows">`;
+      for (const u of units) {
+        html += `
+          <div class="row ${u.active ? '' : 'vacant'}" onclick="App.editUnit('${u.id}')">
+            <div class="who"><div class="u">${esc(u.label)}</div><div class="t">${esc(u.tenant || '—')}</div></div>
+            <div class="amt"><div class="r money">${money(u.rent)}</div>${u.active ? '' : '<span class="badge idle">— Vacant</span>'}</div>
+            ${u.active && u.rent > 0 ? `<button class="sharebtn" title="Copy payment link" onclick="event.stopPropagation();App.copyTenantLink('${u.id}')">📲</button>` : ''}
+          </div>`;
+      }
+      html += `</div></div>`;
+    }
+    html += `<p class="note">Tap a row to change the tenant, the rent amount, or mark the unit vacant. Monthly total (occupied): <b class="money">${money(data.units.filter(u=>u.active).reduce((s,u)=>s+u.rent,0))}</b></p>`;
+    return html;
+  },
+
+  renderSettings() {
+    const s = data.settings;
+    const handle = (label, key) => `
+      <div class="setrow">
+        <div class="sl"><b>${label}</b><span>${s[key] ? esc(s[key]) : '<i>not set up yet</i>'}</span></div>
+        ${s[key] ? `<button class="copybtn" onclick="App.copy('${key}')">Copy</button>` : ''}
+      </div>`;
+    return `
+      <div class="sectionlabel">How tenants can pay</div>
+      <div class="card">
+        ${handle('Venmo', 'venmo')}
+        ${handle('Cash App', 'cashapp')}
+        ${handle('Zelle', 'zelle')}
+        ${handle('Direct deposit', 'deposit')}
+        ${handle('Your phone (for “I paid” texts)', 'phone')}
+      </div>
+      <button class="btn ghost" onclick="App.editHandles()">✏️ Edit payment info & phone</button>
+      <button class="btn" onclick="App.copyInstructions()">📋 Copy payment instructions to text a tenant</button>
+      <p class="note">Tip: in the Tenants tab, tap 📲 next to a tenant to copy their personal payment page. Send it to them once — they can pay from it every month, and their “I paid” text marks the book automatically when you tap it.</p>
+
+      <div class="sectionlabel">Keep your records safe</div>
+      <div class="card">
+        <div class="setrow"><div class="sl"><b>Everything is saved on this phone or computer</b><span>Save a backup file once in a while — you can load it on a new device if this one is lost.</span></div></div>
+      </div>
+      <button class="btn ghost" onclick="App.exportBackup()">⬇️ Save a backup file</button>
+      <button class="btn ghost" onclick="document.getElementById('importfile').click()">⬆️ Load a backup file</button>
+      <button class="btn ghost" onclick="App.exportCSV()">📄 Download this month as a spreadsheet (CSV)</button>
+
+      <div class="sectionlabel">Security</div>
+      <button class="btn ghost" onclick="App.changePin()">🔒 Change PIN${data.pin === '1234' ? ' (still 1234 — please change it)' : ''}</button>
+
+      <div class="sectionlabel">Danger zone</div>
+      <button class="btn danger" onclick="App.resetAll()">Erase everything and start over</button>
+      <p class="note">Mozart Properties Rent Book · Rents due on the 1st · Started from the Aug 2026 paper sheet ($37,643/mo).</p>`;
+  },
+
+  /* ---------- tenant page (opened from a ?p= link — no PIN, sees only their unit) ---------- */
+  renderTenantPage() {
+    const t = this._tenant;
+    document.getElementById('toptitle').textContent = 'Mozart Properties';
+    document.getElementById('topsub').textContent = 'Rent';
+    this._method = null;
+    const monthNow = nowKey();
+    const monthOpts = [addMonths(monthNow, -1), monthNow, addMonths(monthNow, 1)]
+      .map(mk => `<option value="${mk}" ${mk === monthNow ? 'selected' : ''}>${monthLabel(mk)}</option>`).join('');
+    const rent = Number(t.r) || 0;
+    const vmHandle = String(t.vm || '').replace(/^@/, '');
+    const caHandle = String(t.ca || '').replace(/^\$/, '');
+    const payRows = [
+      t.vm ? `<a class="paylink" target="_blank" rel="noopener" href="https://venmo.com/u/${encodeURIComponent(vmHandle)}"><span class="pl-ic">💙</span><div class="pl-t"><b>Venmo</b><span>${esc(t.vm)}</span></div><span class="pl-go">Open ›</span></a>` : '',
+      t.ca ? `<a class="paylink" target="_blank" rel="noopener" href="https://cash.app/$${encodeURIComponent(caHandle)}"><span class="pl-ic">💵</span><div class="pl-t"><b>Cash App</b><span>$${esc(caHandle)}</span></div><span class="pl-go">Open ›</span></a>` : '',
+      t.ze ? `<div class="paylink" style="cursor:pointer" onclick="App.copyText('${esc(t.ze)}')"><span class="pl-ic">🏦</span><div class="pl-t"><b>Zelle</b><span>${esc(t.ze)}</span></div><span class="pl-go">Copy</span></div>` : '',
+      t.dd ? `<div class="paylink"><span class="pl-ic">🏛️</span><div class="pl-t"><b>Direct deposit</b><span>${esc(t.dd)}</span></div></div>` : ''
+    ].join('') || `<div class="paylink"><span class="pl-ic">💬</span><div class="pl-t"><b>Ask the landlord</b><span>Venmo, Cash App, Zelle, cash, or check</span></div></div>`;
+
+    document.getElementById('app').innerHTML = `
+      <div class="card tp-hero">
+        <div class="tp-unit">${esc(t.g || '')} · ${esc(t.l || '')}</div>
+        <div class="tp-amount money">${money(rent)}</div>
+        <div class="tp-due">${esc(t.t || '')} — rent is due on the <b>1st</b> of every month</div>
+      </div>
+
+      <div class="sectionlabel"><span class="stepnum">1</span>Pay your rent</div>
+      <div class="card">${payRows}</div>
+
+      <div class="sectionlabel"><span class="stepnum">2</span>Tell the landlord you paid</div>
+      <div class="card" style="padding:4px 14px 16px">
+        <div class="field"><label>Amount you sent</label>
+          <input type="number" id="tp-amt" inputmode="decimal" step="0.01" min="0" value="${rent || ''}"></div>
+        <div class="field"><label>How you paid</label>
+          <div class="mchips" id="mchips">${METHODS.map(mt => `<button class="mchip" onclick="App.pickMethod(this,'${mt}')">${mt}</button>`).join('')}</div></div>
+        <div class="field"><label>Which month is this rent for?</label>
+          <select id="tp-month">${monthOpts}</select></div>
+        <div class="field"><label>Note (optional)</label><input type="text" id="tp-note" placeholder="anything the landlord should know"></div>
+      </div>
+      ${t.ph ? `<a class="btn green" id="tp-send" href="#" onclick="return App.tenantSend(true)">💬 Text the landlord — “I paid” ✓</a>
+        <button class="btn ghost" onclick="App.tenantSend(false)">Or copy the message instead</button>` :
+        `<button class="btn green" onclick="App.tenantSend(false)">Copy the “I paid” message ✓</button>
+        <p class="note" style="text-align:center">Paste it in a text to your landlord.</p>`}
+      <p class="note" style="text-align:center">When the landlord taps the link in your text, the payment is marked off in the rent book automatically.</p>`;
+  },
+  tenantSend(viaSMS) {
+    const t = this._tenant;
+    const amt = parseFloat(document.getElementById('tp-amt').value);
+    if (!(amt > 0)) { alert('Please enter the amount you sent.'); return false; }
+    if (!this._method) { alert('Please tap how you paid (Venmo, Zelle, cash…).'); return false; }
+    const m = document.getElementById('tp-month').value;
+    const note = document.getElementById('tp-note').value.trim();
+    const payload = {
+      v: 1, id: uid(),
+      u: t.u, l: t.l, t: t.t, m,
+      a: Math.round(amt * 100) / 100,
+      me: this._method,
+      d: todayISO(),
+      n: note
+    };
+    const link = baseURL() + '?apply=' + encPayload(payload);
+    const msg = `Hi, this is ${t.t || 'your tenant'} (${t.g || ''} ${t.l || ''}). I paid ${money(amt)} rent for ${monthLabel(m)} by ${this._method}.` +
+      (note ? ` Note: ${note}.` : '') +
+      ` Tap this link to mark it in the rent book: ${link}`;
+    if (viaSMS && t.ph) {
+      location.href = 'sms:' + cleanPhone(t.ph) + '?&body=' + encodeURIComponent(msg);
+      return false;
+    }
+    navigator.clipboard.writeText(msg).then(
+      () => alert('Copied! Paste it into a text message to your landlord.'),
+      () => prompt('Copy this message and text it to your landlord:', msg));
+    return false;
+  },
+  copyText(s) {
+    navigator.clipboard.writeText(s).then(() => alert('Copied: ' + s), () => prompt('Copy this:', s));
+  },
+
+  /* ---------- tenant link sharing (landlord side) ---------- */
+  tenantLinkFor(unitId) {
+    const u = unitById(unitId);
+    const g = groupById(u.groupId);
+    const s = data.settings;
+    const payload = {
+      v: 1, u: u.id, g: g ? g.name : '', l: u.label, t: u.tenant, r: u.rent,
+      ph: s.phone, vm: s.venmo, ca: s.cashapp, ze: s.zelle, dd: s.deposit
+    };
+    return baseURL() + '?p=' + encPayload(payload);
+  },
+  copyTenantLink(unitId) {
+    const u = unitById(unitId);
+    const link = this.tenantLinkFor(unitId);
+    const msg = `Hi ${u.tenant || ''}! Here is your personal rent page for ${u.label}. ` +
+      `You can pay from it and tap “I paid” so it gets marked in the book: ${link}`;
+    navigator.clipboard.writeText(msg).then(
+      () => alert(`Copied! Text it to ${u.tenant || 'the tenant'}. The link always shows their current rent (${money(u.rent)}). If you change the rent, send them a fresh link.`),
+      () => prompt('Copy this and text it to the tenant:', msg));
+  },
+
+  /* ---------- unit / payment modal ---------- */
+  openUnit(unitId, month) {
+    const u = unitById(unitId);
+    if (!u) return;
+    const pays = paymentsFor(unitId, month);
+    const sum = paidSum(unitId, month);
+    const remaining = Math.max(0, u.rent - sum);
+    const lastMethod = data.payments.filter(p => p.unitId === unitId).slice(-1)[0]?.method || null;
+    this._method = lastMethod;
+    const g = groupById(u.groupId);
+    const payRows = pays.map(p => `
+      <div class="payitem">
+        <div class="pi"><b class="money">${money(p.amount)}</b> — ${esc(p.method)}${p.reported ? ' <span class="reportedtag">📲 sent by tenant</span>' : ''}<div class="pm">${fmtDate(p.date)}${p.note ? ' · ' + esc(p.note) : ''}</div></div>
+        <button class="del" onclick="App.deletePayment('${p.id}','${unitId}','${month}')">Remove</button>
+      </div>`).join('');
+    this.modal(`
+      <button class="x" onclick="App.closeModal()">✕</button>
+      <h3>${esc(g ? g.name : '')} — ${esc(u.label)}</h3>
+      <div class="subtitle">${esc(u.tenant || 'No tenant')} · ${monthLabel(month)}</div>
+      <div class="sumline"><span>Rent for the month</span><b class="money">${money(u.rent)}</b></div>
+      <div class="sumline"><span>Paid so far</span><b class="money" style="color:var(--good-text)">${money(sum)}</b></div>
+      <div class="sumline"><span>Still owed</span><b class="money" style="color:${remaining > 0 ? 'var(--bad-text)' : 'var(--good-text)'}">${money(remaining)}</b></div>
+      ${payRows ? `<div class="paylist">${payRows}</div>` : ''}
+      <div class="field"><label>Amount received</label>
+        <input type="number" id="payamt" inputmode="decimal" step="0.01" min="0" value="${remaining > 0 ? remaining : u.rent || ''}"></div>
+      <div class="field"><label>How did they pay?</label>
+        <div class="mchips" id="mchips">${METHODS.map(mt => `<button class="mchip ${this._method === mt ? 'on' : ''}" onclick="App.pickMethod(this,'${mt}')">${mt}</button>`).join('')}</div></div>
+      <div class="field"><label>Date received</label><input type="date" id="paydate" value="${todayISO()}"></div>
+      <div class="field"><label>Note (optional)</label><input type="text" id="paynote" placeholder="for example: paid half, rest on Friday"></div>
+      <button class="btn" onclick="App.savePayment('${unitId}','${month}')">✓ Save payment</button>
+      ${u.active && u.rent > 0 ? `<button class="btn ghost" onclick="App.copyTenantLink('${unitId}')">📲 Copy this tenant's payment page link</button>` : ''}
+    `);
+  },
+  pickMethod(btn, mt) {
+    this._method = mt;
+    document.querySelectorAll('#mchips .mchip').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+  },
+  savePayment(unitId, month) {
+    const amt = parseFloat(document.getElementById('payamt').value);
+    if (!(amt > 0)) { alert('Please enter the amount received.'); return; }
+    if (!this._method) { alert('Please tap how they paid (Venmo, Zelle, cash…).'); return; }
+    data.payments.push({
+      id: uid(), unitId, month,
+      amount: Math.round(amt * 100) / 100,
+      method: this._method,
+      date: document.getElementById('paydate').value || todayISO(),
+      note: document.getElementById('paynote').value.trim()
+    });
+    save();
+    this.closeModal();
+    this.render();
+  },
+  deletePayment(pid, unitId, month) {
+    if (!confirm('Remove this payment?')) return;
+    data.payments = data.payments.filter(p => p.id !== pid);
+    save();
+    this.openUnit(unitId, month);
+    this.render();
+  },
+
+  /* ---------- tenant editing ---------- */
+  editUnit(unitId) {
+    const u = unitId ? unitById(unitId) : null;
+    const groupOpts = data.groups.map(g =>
+      `<option value="${g.id}" ${u && u.groupId === g.id ? 'selected' : ''}>${esc(g.name)}</option>`).join('');
+    const history = u ? data.payments.filter(p => p.unitId === u.id).slice(-12).reverse().map(p =>
+      `<div class="payitem"><div class="pi"><b class="money">${money(p.amount)}</b> — ${esc(p.method)}${p.reported ? ' <span class="reportedtag">📲</span>' : ''}<div class="pm">${monthLabel(p.month)} · received ${fmtDate(p.date)}</div></div></div>`).join('') : '';
+    this.modal(`
+      <button class="x" onclick="App.closeModal()">✕</button>
+      <h3>${u ? 'Edit ' + esc(u.label) : 'Add a unit'}</h3>
+      <div class="field"><label>Property</label><select id="eu-group">${groupOpts}<option value="__new__">＋ New property…</option></select></div>
+      <div class="field" id="eu-newgroup-wrap" style="display:none"><label>New property name</label><input type="text" id="eu-newgroup" placeholder="for example: Elm Street"></div>
+      <div class="field"><label>Unit (apartment number, garage…)</label><input type="text" id="eu-label" value="${u ? esc(u.label) : ''}" placeholder="for example: 3451 or Garage 6"></div>
+      <div class="field"><label>Tenant name</label><input type="text" id="eu-tenant" value="${u ? esc(u.tenant) : ''}" placeholder="who lives there"></div>
+      <div class="field"><label>Monthly rent ($)</label><input type="number" id="eu-rent" inputmode="decimal" step="0.01" min="0" value="${u ? u.rent : ''}"></div>
+      <div class="field"><label style="display:flex;align-items:center;gap:10px;font-size:16px;color:var(--ink)">
+        <input type="checkbox" id="eu-active" style="width:22px;height:22px" ${!u || u.active ? 'checked' : ''}> Occupied (counts toward the monthly total)</label></div>
+      <button class="btn" onclick="App.saveUnit(${u ? `'${u.id}'` : 'null'})">✓ Save</button>
+      ${u ? `<button class="btn danger" onclick="App.deleteUnit('${u.id}')">Delete this unit and its history</button>` : ''}
+      ${history ? `<div class="sectionlabel" style="margin-left:0">Recent payments</div><div class="paylist">${history}</div>` : ''}
+    `);
+    document.getElementById('eu-group').addEventListener('change', e => {
+      document.getElementById('eu-newgroup-wrap').style.display = e.target.value === '__new__' ? 'block' : 'none';
+    });
+  },
+  saveUnit(unitId) {
+    let gid = document.getElementById('eu-group').value;
+    if (gid === '__new__') {
+      const name = document.getElementById('eu-newgroup').value.trim();
+      if (!name) { alert('Please type a name for the new property.'); return; }
+      gid = 'g' + Date.now().toString(36);
+      data.groups.push({ id: gid, name });
+    }
+    const label = document.getElementById('eu-label').value.trim();
+    if (!label) { alert('Please type the unit (like 3451 or Garage 6).'); return; }
+    const tenant = document.getElementById('eu-tenant').value.trim();
+    const rent = parseFloat(document.getElementById('eu-rent').value) || 0;
+    const active = document.getElementById('eu-active').checked;
+    if (unitId) {
+      const u = unitById(unitId);
+      Object.assign(u, { groupId: gid, label, tenant, rent, active });
+    } else {
+      data.units.push({ id: 'u' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5), groupId: gid, label, tenant, rent, active });
+    }
+    save();
+    this.closeModal();
+    this.render();
+  },
+  deleteUnit(unitId) {
+    const u = unitById(unitId);
+    if (!confirm(`Delete ${u.label} (${u.tenant || 'no tenant'}) and all of its payment history? This cannot be undone.`)) return;
+    data.units = data.units.filter(x => x.id !== unitId);
+    data.payments = data.payments.filter(p => p.unitId !== unitId);
+    save();
+    this.closeModal();
+    this.render();
+  },
+
+  /* ---------- settings ---------- */
+  editHandles() {
+    const s = data.settings;
+    this.modal(`
+      <button class="x" onclick="App.closeModal()">✕</button>
+      <h3>Payment info</h3>
+      <div class="subtitle">This is what tenants see on their payment page.</div>
+      <div class="field"><label>Venmo username</label><input type="text" id="h-venmo" value="${esc(s.venmo)}" placeholder="@your-venmo-name"></div>
+      <div class="field"><label>Cash App cashtag</label><input type="text" id="h-cashapp" value="${esc(s.cashapp)}" placeholder="$YourCashtag"></div>
+      <div class="field"><label>Zelle (phone or email)</label><input type="text" id="h-zelle" value="${esc(s.zelle)}" placeholder="(555) 555-5555"></div>
+      <div class="field"><label>Direct deposit note</label><input type="text" id="h-deposit" value="${esc(s.deposit)}" placeholder="for example: ask me for the account details"></div>
+      <div class="field"><label>Your cell number (tenants' “I paid” texts go here)</label><input type="tel" id="h-phone" value="${esc(s.phone)}" placeholder="(555) 555-5555"></div>
+      <button class="btn" onclick="App.saveHandles()">✓ Save</button>
+    `);
+  },
+  saveHandles() {
+    data.settings = Object.assign({}, data.settings, {
+      venmo: document.getElementById('h-venmo').value.trim(),
+      cashapp: document.getElementById('h-cashapp').value.trim(),
+      zelle: document.getElementById('h-zelle').value.trim(),
+      deposit: document.getElementById('h-deposit').value.trim(),
+      phone: document.getElementById('h-phone').value.trim()
+    });
+    save();
+    this.closeModal();
+    this.render();
+  },
+  copy(key) {
+    navigator.clipboard.writeText(data.settings[key]).then(() => alert('Copied!'), () => alert('Could not copy on this device.'));
+  },
+  copyInstructions() {
+    const s = data.settings;
+    const lines = ['Hi! Rent is due on the 1st of the month. You can pay any of these ways:'];
+    if (s.venmo) lines.push('• Venmo: ' + s.venmo);
+    if (s.cashapp) lines.push('• Cash App: ' + s.cashapp);
+    if (s.zelle) lines.push('• Zelle: ' + s.zelle);
+    if (s.deposit) lines.push('• Direct deposit: ' + s.deposit);
+    lines.push('• Or cash / check in person.');
+    lines.push('Please put your unit number in the payment note. Thank you!');
+    if (!s.venmo && !s.cashapp && !s.zelle && !s.deposit) {
+      alert('First tap “Edit payment info” and add your Venmo, Cash App, or Zelle.');
+      return;
+    }
+    navigator.clipboard.writeText(lines.join('\n')).then(() => alert('Copied! Now paste it into a text message.'), () => alert('Could not copy on this device.'));
+  },
+  changePin() {
+    this.modal(`
+      <button class="x" onclick="App.closeModal()">✕</button>
+      <h3>Change PIN</h3>
+      <div class="field"><label>New PIN (4 to 8 numbers)</label><input type="password" id="newpin" inputmode="numeric" maxlength="8"></div>
+      <div class="field"><label>Type it again</label><input type="password" id="newpin2" inputmode="numeric" maxlength="8"></div>
+      <button class="btn" onclick="App.savePin()">✓ Save new PIN</button>
+    `);
+  },
+  savePin() {
+    const a = document.getElementById('newpin').value.trim();
+    const b = document.getElementById('newpin2').value.trim();
+    if (!/^\d{4,8}$/.test(a)) { alert('The PIN needs to be 4 to 8 numbers.'); return; }
+    if (a !== b) { alert('The two PINs do not match — try again.'); return; }
+    data.pin = a;
+    save();
+    localStorage.setItem(UNLOCK_KEY, a);
+    this.closeModal();
+    alert('PIN changed. Don’t forget it!');
+    this.render();
+  },
+  exportBackup() {
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'mozart-rent-backup-' + todayISO() + '.json';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  },
+  importBackup(file) {
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const d = JSON.parse(reader.result);
+        if (!d || !Array.isArray(d.units) || !Array.isArray(d.payments)) throw new Error('bad');
+        if (!confirm('Load this backup? It will replace what is on this device.')) return;
+        data = d;
+        data.pin = data.pin || '1234';
+        data.settings = Object.assign({ owner:'', phone:'', venmo:'', cashapp:'', zelle:'', deposit:'' }, data.settings || {});
+        data.imported = data.imported || [];
+        save();
+        localStorage.setItem(UNLOCK_KEY, data.pin);
+        this.render();
+        alert('Backup loaded.');
+      } catch (e) {
+        alert('That file does not look like a rent book backup.');
+      }
+    };
+    reader.readAsText(file);
+  },
+  exportCSV() {
+    const m = this.month;
+    const rows = [['Property', 'Unit', 'Tenant', 'Monthly rent', 'Paid', 'Still owed', 'Status', 'Methods', 'Dates']];
+    for (const g of data.groups) {
+      for (const u of unitsInGroup(g.id)) {
+        const pays = paymentsFor(u.id, m);
+        const sum = paidSum(u.id, m);
+        const st = statusOf(u, m);
+        rows.push([
+          g.name, u.label, u.tenant, u.rent.toFixed(2), sum.toFixed(2),
+          Math.max(0, u.rent - sum).toFixed(2),
+          st === 'paid' ? 'Paid' : st === 'partial' ? 'Partial' : st === 'vacant' ? 'Vacant' : st === 'none' ? '-' : 'Not paid',
+          pays.map(p => p.method).join('; '),
+          pays.map(p => p.date).join('; ')
+        ]);
+      }
+    }
+    const csv = rows.map(r => r.map(c => '"' + String(c).replace(/"/g, '""') + '"').join(',')).join('\r\n');
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'mozart-rent-' + m + '.csv';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  },
+  resetAll() {
+    if (!confirm('Erase ALL tenants and ALL payment history on this device?')) return;
+    if (!confirm('Are you completely sure? There is no undo. (Save a backup file first!)')) return;
+    data = freshData();
+    save();
+    this.render();
+  },
+
+  /* ---------- modal plumbing ---------- */
+  modal(html) {
+    document.getElementById('modalhost').innerHTML =
+      `<div class="overlay" onclick="if(event.target===this)App.closeModal()"><div class="sheet">${html}</div></div>`;
+  },
+  closeModal() { document.getElementById('modalhost').innerHTML = ''; }
+};
+
+document.getElementById('importfile').addEventListener('change', e => {
+  if (e.target.files[0]) App.importBackup(e.target.files[0]);
+  e.target.value = '';
+});
+
+App.boot();
+</script>
+</body>
+</html>
