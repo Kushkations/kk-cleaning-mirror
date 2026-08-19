@@ -1,114 +1,8 @@
 {
-  "generated": "2026-08-18T23:46:24.211701",
-  "weekStart": "2026-08-18",
-  "weekEnd": "2026-08-31",
+  "generated": "2026-08-19T00:02:30.436786",
+  "weekStart": "2026-08-19",
+  "weekEnd": "2026-09-01",
   "week": [
-    {
-      "date": "2026-08-18",
-      "dayNameEs": "Martes",
-      "dayNameEn": "Tuesday",
-      "teams": [
-        {
-          "name": "Equipo 1",
-          "lead": "Dexabeth",
-          "members": [
-            "Dexabeth",
-            "Yasnielis",
-            "Julie"
-          ],
-          "properties": [
-            {
-              "property_id": 387216,
-              "name": "GrownSexy",
-              "address": "3445 Sheridan Blvd, Wheat Ridge 80212",
-              "zone": "west",
-              "beds": 2,
-              "sqft": 1200,
-              "est_hours": 1.5,
-              "lat": 39.7652,
-              "lon": -105.0535,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-08-18",
-              "next_checkout": "2026-08-23",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
-              "property_id": 400224,
-              "name": "BlueDream",
-              "address": "1475 S Pierce St, Lakewood 80232",
-              "zone": "isolated",
-              "beds": 3,
-              "sqft": 1100,
-              "est_hours": 1.5,
-              "lat": 39.6902,
-              "lon": -105.073,
-              "priority": "same_day",
-              "priority_locked": false,
-              "next_checkin": "2026-08-18",
-              "next_checkout": "2026-08-21",
-              "deadline": "4:00 PM",
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
-              "property_id": 354421,
-              "name": "JoyStick",
-              "address": "8228 Balsam Way, Arvada 80005",
-              "zone": "far_west",
-              "beds": 4,
-              "sqft": 2183,
-              "est_hours": 2.5,
-              "lat": 39.8466,
-              "lon": -105.0904,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-08-20",
-              "next_checkout": "2026-08-23",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
-            }
-          ],
-          "isLaundry": false
-        }
-      ],
-      "laundry": {
-        "assigned": [],
-        "active": false
-      },
-      "off": [
-        "Marii",
-        "Neidys",
-        "Luraidy"
-      ],
-      "occupied": [
-        "Alpha",
-        "Altitude",
-        "BlueDream",
-        "BuffaloGolf",
-        "Elevation",
-        "GameRoom",
-        "Grant",
-        "GrownSexy",
-        "Hotbox",
-        "Indica",
-        "Sativa",
-        "Sheridan",
-        "Wonderland"
-      ],
-      "payrollEstimate": 430,
-      "sameDayTurns": 2,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 3,
-      "optimizations": [],
-      "startTime": "9:45 AM"
-    },
     {
       "date": "2026-08-19",
       "dayNameEs": "Miercoles",
@@ -554,8 +448,8 @@
               "lon": -105.0185,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-09-03",
+              "next_checkout": "2026-09-06",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -819,8 +713,8 @@
               "lon": -104.9458,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-09-03",
+              "next_checkout": "2026-09-07",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -1133,8 +1027,8 @@
               "lon": -104.9828,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-09-03",
+              "next_checkout": "2026-09-07",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -1152,8 +1046,8 @@
               "lon": -105.1483,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-09-03",
+              "next_checkout": "2026-09-07",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -1213,6 +1107,36 @@
       "totalCheckouts": 0,
       "optimizations": [],
       "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-09-01",
+      "dayNameEs": "Martes",
+      "dayNameEn": "Tuesday",
+      "teams": [],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Julie",
+        "Dexabeth",
+        "Yasnielis",
+        "Neidys",
+        "Luraidy"
+      ],
+      "occupied": [
+        "Alpha",
+        "GameRoom",
+        "Paradise",
+        "Pueblo"
+      ],
+      "payrollEstimate": 0,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 0,
+      "optimizations": [],
+      "startTime": "9:45 AM"
     }
   ],
   "cleanerStats": {
@@ -1222,17 +1146,17 @@
       "dailyRate": 170
     },
     "Julie": {
-      "daysThisWeek": 9,
+      "daysThisWeek": 8,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Dexabeth": {
-      "daysThisWeek": 11,
+      "daysThisWeek": 10,
       "role": "cleaner",
       "dailyRate": 150
     },
     "Yasnielis": {
-      "daysThisWeek": 9,
+      "daysThisWeek": 8,
       "role": "cleaner",
       "dailyRate": 140
     },
