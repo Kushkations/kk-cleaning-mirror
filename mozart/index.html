@@ -356,11 +356,35 @@ const SEED_UNITS = [
 ];
 const METHODS = ['Venmo', 'Cash App', 'Zelle', 'Direct Deposit', 'Cash', 'Check', 'Other'];
 
+/* Rows scratched off on the Aug 2026 paper sheet = already paid for August 2026 */
+const SHEET_AUG26_PAID = [
+  { u:'u09', a:1000 }, { u:'u10', a:1050 },
+  { u:'u14', a:1575 }, { u:'u16', a:1050 }, { u:'u17', a:1200 }, { u:'u18', a:1600 },
+  { u:'u20', a:1650 }, { u:'u21', a:1785 }, { u:'u22', a:100 },
+  { u:'u30', a:1000 }, { u:'u31', a:1000 }, { u:'u33', a:1300 }, { u:'u34', a:1300 },
+  { u:'u35', a:1000, n:'sheet also shows a handwritten 5600' },
+  { u:'u37', a:1500, n:'sheet shows handwritten 1492' },
+  { u:'u38', a:1120 }, { u:'u39', a:1150 }, { u:'u41', a:1000 }, { u:'u43', a:800 }
+];
+function applySheetAug26(d) {
+  const M = '2026-08';
+  for (const s of SHEET_AUG26_PAID) {
+    if (!d.units.some(x => x.id === s.u)) continue;
+    if (d.payments.some(p => p.unitId === s.u && p.month === M)) continue;
+    d.payments.push({
+      id: 'sheet-aug26-' + s.u, unitId: s.u, month: M, amount: s.a,
+      method: 'Other', date: '2026-08-19',
+      note: s.n || 'marked off on the Aug 2026 paper sheet'
+    });
+  }
+  d.sheetAug26 = true;
+}
+
 /* ================= storage ================= */
 const LS_KEY = 'mozart.rentbook.v1';
 
 function freshData() {
-  return {
+  const d = {
     v: 1,
     pin: '1234',
     settings: { owner:'', phone:'', venmo:'', cashapp:'', zelle:'', deposit:'' },
@@ -369,6 +393,8 @@ function freshData() {
     payments: [],
     imported: []
   };
+  applySheetAug26(d);
+  return d;
 }
 function loadData() {
   try {
@@ -380,6 +406,10 @@ function loadData() {
         d.groups = d.groups || [];
         d.pin = d.pin || '1234';
         d.imported = d.imported || [];
+        if (!d.sheetAug26) {
+          applySheetAug26(d);
+          try { localStorage.setItem(LS_KEY, JSON.stringify(d)); } catch (e) {}
+        }
         return d;
       }
     }
