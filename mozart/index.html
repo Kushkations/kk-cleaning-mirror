@@ -5,11 +5,13 @@
 <meta name="google" content="notranslate">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#1c5cab">
+<meta name="theme-color" content="#189BD7">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Rent Book">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="manifest" href="manifest.json">
 <title>Mozart Properties — Rent Book</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%A0%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 100'%3E%3Crect width='96' height='100' fill='%23ffffff'/%3E%3Cpath d='M12 90 L12 58 L26 50 L26 90 Z' fill='%2333B0E4'/%3E%3Cpath d='M24 46 L40 34 L40 90 L24 90 Z' fill='%23A6A8AB'/%3E%3Cpath d='M42 30 L58 16 L58 90 L42 90 Z' fill='%23189BD7'/%3E%3Cpath d='M60 90 L60 50 Q60 42 68 42 L80 42 L80 90 Z' fill='%23A6A8AB'/%3E%3Cpath d='M4 44 C2 74 22 94 48 94 C70 94 86 84 92 68 C84 80 68 86 48 86 C26 86 12 70 14 44 Z' fill='%23189BD7'/%3E%3C/svg%3E">
 <style>
   :root {
     color-scheme: light;
@@ -68,11 +70,15 @@
   }
   .wrap { max-width: 760px; margin: 0 auto; padding: 14px 14px 96px; }
   header.top {
-    max-width: 760px; margin: 0 auto; padding: 16px 16px 4px;
-    display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
+    max-width: 760px; margin: 0 auto; padding: 14px 16px 4px;
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
   }
-  header.top h1 { font-size: 21px; font-weight: 800; letter-spacing: -.01em; }
   header.top .sub { color: var(--muted); font-size: 14px; font-weight: 600; }
+
+  /* ---- Mozart Properties logo ---- */
+  .mzlogo { display: block; height: 30px; width: auto; flex-shrink: 0; }
+  .mzlogo.big { height: 48px; margin: 0 auto 12px; }
+  .mzlogo.rcpt { height: 24px; margin-bottom: 10px; }
 
   .card {
     background: var(--surface); border: 1px solid var(--border);
@@ -283,7 +289,18 @@
 <body>
 
 <header class="top">
-  <h1 id="toptitle">Mozart Properties</h1>
+  <svg class="mzlogo" id="toptitle" viewBox="0 0 306 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mozart Properties">
+    <path d="M14 92 L14 58 L30 49 L30 92 Z" fill="#33B0E4"/>
+    <path d="M28 45 L46 32 L46 92 L28 92 Z" fill="#A6A8AB"/>
+    <path d="M48 28 L66 13 L66 92 L48 92 Z" fill="#189BD7"/>
+    <path d="M68 92 L68 50 Q68 41 77 41 L91 41 L91 92 Z" fill="#A6A8AB"/>
+    <g stroke="#7E8184" stroke-width="1.8">
+      <line x1="73" y1="49" x2="73" y2="90"/><line x1="79" y1="45" x2="79" y2="90"/><line x1="85" y1="44" x2="85" y2="90"/>
+    </g>
+    <path d="M6 34 C0 66 20 96 52 96 C78 96 93 85 99 70 C90 81 74 88 52 88 C26 88 10 64 18 36 Z" fill="#189BD7"/>
+    <text x="112" y="45" textLength="190" lengthAdjust="spacingAndGlyphs" font-family="system-ui,-apple-system,'Segoe UI',Arial,sans-serif" font-weight="800" font-size="42" fill="#189BD7">MOZART</text>
+    <text x="112" y="90" textLength="190" lengthAdjust="spacingAndGlyphs" font-family="system-ui,-apple-system,'Segoe UI',Arial,sans-serif" font-weight="800" font-size="40" fill="#5BC4E8">PROPERTIES</text>
+  </svg>
   <span class="sub" id="topsub">Rent Book</span>
 </header>
 <div class="wrap" id="app"></div>
@@ -296,79 +313,28 @@
 'use strict';
 
 /* ================= seed data (from the AUG 26 paper sheet — total $37,643.00) ================= */
-const SEED_GROUPS = [
-  { id:'g6th', name:'6th Ave' },
-  { id:'gcol', name:'Colorado' },
-  { id:'gdup', name:'Duplex Loan' },
-  { id:'ggra', name:'Granby Condo' },
-  { id:'ghom', name:'Home Mortgage' },
-  { id:'gmlk', name:'Martin Luther King Duplex' },
-  { id:'gmzp', name:'Mozart Place' },
-  { id:'gmoz', name:'Mozart Properties' },
-  { id:'gshe', name:'Sheridan Apts' },
-  { id:'gtrk', name:'Truck Loan' }
-];
-const SEED_UNITS = [
-  { id:'u01', groupId:'g6th', label:'1016 A',    tenant:'David Bloch',          rent:600,  active:true },
-  { id:'u02', groupId:'g6th', label:'1016 B',    tenant:'Filadelfio Trujillo',  rent:550,  active:true },
-  { id:'u03', groupId:'g6th', label:'A',         tenant:'Arika Montoya',        rent:600,  active:true },
-  { id:'u04', groupId:'g6th', label:'B',         tenant:'Elizabeth Lopez',      rent:550,  active:true },
-  { id:'u05', groupId:'gcol', label:'Colorado',  tenant:'Ron Pittman',          rent:2000, active:true },
-  { id:'u06', groupId:'gdup', label:'Duplex Loan', tenant:'Josh Wilson',        rent:175,  active:true },
-  { id:'u07', groupId:'ggra', label:'Granby Condo', tenant:'Sherman Investments', rent:318, active:true },
-  { id:'u08', groupId:'ghom', label:'Home Mortgage', tenant:'Scott Gus',        rent:350,  active:true },
-  { id:'u09', groupId:'gmlk', label:'4327',      tenant:'Ivan Perez',           rent:1000, active:true },
-  { id:'u10', groupId:'gmlk', label:'4331',      tenant:'Maricela Castillo',    rent:1050, active:true },
-  { id:'u11', groupId:'gmzp', label:'Unit 1',    tenant:'June Saiz',            rent:950,  active:true },
-  { id:'u12', groupId:'gmzp', label:'Unit 2',    tenant:'Sue Baca',             rent:650,  active:true },
-  { id:'u13', groupId:'gmzp', label:'Unit 3',    tenant:'Frank Gallegos',       rent:650,  active:true },
-  { id:'u14', groupId:'gmoz', label:'Unit 1',    tenant:'Daniel Farrelly',      rent:1575, active:true },
-  { id:'u15', groupId:'gmoz', label:'Unit 2',    tenant:'Ken L Williams',       rent:1345, active:true },
-  { id:'u16', groupId:'gmoz', label:'Unit 3',    tenant:'Richard Price',        rent:1050, active:true },
-  { id:'u17', groupId:'gmoz', label:'Unit 4',    tenant:'Paul Vernig',          rent:1200, active:true },
-  { id:'u18', groupId:'gmoz', label:'Unit 5',    tenant:'Brenton Bostick',      rent:1600, active:true },
-  { id:'u19', groupId:'gmoz', label:'Unit 6',    tenant:'Shawn Eckels',         rent:1400, active:true },
-  { id:'u20', groupId:'gmoz', label:'Unit 7',    tenant:'Shaq 3',               rent:1650, active:true },
-  { id:'u21', groupId:'gmoz', label:'Unit 8',    tenant:'David Guerrero',       rent:1785, active:true },
-  { id:'u22', groupId:'gmoz', label:'Garage 1',  tenant:'Rey Vauhns',           rent:100,  active:true },
-  { id:'u23', groupId:'gmoz', label:'Garage 2',  tenant:'Mike Concrete',        rent:275,  active:true },
-  { id:'u24', groupId:'gmoz', label:'Garage 3',  tenant:'Mic',                  rent:50,   active:true },
-  { id:'u25', groupId:'gmoz', label:'Garage 4',  tenant:'Gayland Allen',        rent:100,  active:true },
-  { id:'u26', groupId:'gmoz', label:'Garage 5',  tenant:'Kevin Gray',           rent:100,  active:true },
-  { id:'u27', groupId:'gmoz', label:'Parking',   tenant:'Mike Truck',           rent:50,   active:true },
-  { id:'u28', groupId:'gmoz', label:'Parking 1', tenant:'Tim Robinson',         rent:50,   active:true },
-  { id:'u29', groupId:'gmoz', label:'Parking 2', tenant:'Dalila',               rent:100,  active:true },
-  { id:'u30', groupId:'gshe', label:'3445',      tenant:'Shaq 1',               rent:1000, active:true },
-  { id:'u31', groupId:'gshe', label:'3447',      tenant:'Betty Cole',           rent:1000, active:true },
-  { id:'u32', groupId:'gshe', label:'3449',      tenant:'Joshua Dondelinger',   rent:1100, active:true },
-  { id:'u33', groupId:'gshe', label:'3451',      tenant:'Shaq 2',               rent:1300, active:true },
-  { id:'u34', groupId:'gshe', label:'3451 (2)',  tenant:'Nicole Williamson',    rent:1300, active:true },
-  { id:'u35', groupId:'gshe', label:'3453',      tenant:'Daniel Stined',        rent:1000, active:true },
-  { id:'u36', groupId:'gshe', label:'3455',      tenant:'Karl Haynes',          rent:1450, active:true },
-  { id:'u37', groupId:'gshe', label:'3457',      tenant:'Robert Sequra',        rent:1500, active:true },
-  { id:'u38', groupId:'gshe', label:'3485',      tenant:'William S. Hogan',     rent:1120, active:true },
-  { id:'u39', groupId:'gshe', label:'3487',      tenant:'Rosa Gutierrez',       rent:1150, active:true },
-  { id:'u40', groupId:'gshe', label:'3489',      tenant:'Martain Garcia',       rent:950,  active:true },
-  { id:'u41', groupId:'gshe', label:'5220',      tenant:'Gloria Ponce',         rent:1000, active:true },
-  { id:'u42', groupId:'gshe', label:'5230',      tenant:'Jamie Rivemar',        rent:1100, active:true },
-  { id:'u43', groupId:'gshe', label:'5240',      tenant:'C.L. Walker',          rent:800,  active:true },
-  { id:'u44', groupId:'gtrk', label:'Truck',     tenant:'',                     rent:0,    active:true }
-];
 const METHODS = ['Venmo', 'Cash App', 'Zelle', 'Direct Deposit', 'Cash', 'Check', 'Other'];
 
+/* Mozart Properties logo (matches the company decal) */
+function logoSVG(cls) {
+  return `<svg class="mzlogo ${cls || ''}" viewBox="0 0 306 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mozart Properties">
+    <path d="M14 92 L14 58 L30 49 L30 92 Z" fill="#33B0E4"/>
+    <path d="M28 45 L46 32 L46 92 L28 92 Z" fill="#A6A8AB"/>
+    <path d="M48 28 L66 13 L66 92 L48 92 Z" fill="#189BD7"/>
+    <path d="M68 92 L68 50 Q68 41 77 41 L91 41 L91 92 Z" fill="#A6A8AB"/>
+    <g stroke="#7E8184" stroke-width="1.8">
+      <line x1="73" y1="49" x2="73" y2="90"/><line x1="79" y1="45" x2="79" y2="90"/><line x1="85" y1="44" x2="85" y2="90"/>
+    </g>
+    <path d="M6 34 C0 66 20 96 52 96 C78 96 93 85 99 70 C90 81 74 88 52 88 C26 88 10 64 18 36 Z" fill="#189BD7"/>
+    <text x="112" y="45" textLength="190" lengthAdjust="spacingAndGlyphs" font-family="system-ui,-apple-system,'Segoe UI',Arial,sans-serif" font-weight="800" font-size="42" fill="#189BD7">MOZART</text>
+    <text x="112" y="90" textLength="190" lengthAdjust="spacingAndGlyphs" font-family="system-ui,-apple-system,'Segoe UI',Arial,sans-serif" font-weight="800" font-size="40" fill="#5BC4E8">PROPERTIES</text>
+  </svg>`;
+}
+
 /* Rows scratched off on the Aug 2026 paper sheet = already paid for August 2026 */
-const SHEET_AUG26_PAID = [
-  { u:'u09', a:1000 }, { u:'u10', a:1050 },
-  { u:'u14', a:1575 }, { u:'u16', a:1050 }, { u:'u17', a:1200 }, { u:'u18', a:1600 },
-  { u:'u20', a:1650 }, { u:'u21', a:1785 }, { u:'u22', a:100 },
-  { u:'u30', a:1000 }, { u:'u31', a:1000 }, { u:'u33', a:1300 }, { u:'u34', a:1300 },
-  { u:'u35', a:1000, n:'sheet also shows a handwritten 5600' },
-  { u:'u37', a:1500, n:'sheet shows handwritten 1492' },
-  { u:'u38', a:1120 }, { u:'u39', a:1150 }, { u:'u41', a:1000 }, { u:'u43', a:800 }
-];
-function applySheetAug26(d) {
+function applySheetAug26(d, augustPaid) {
   const M = '2026-08';
-  for (const s of SHEET_AUG26_PAID) {
+  for (const s of (augustPaid || [])) {
     if (!d.units.some(x => x.id === s.u)) continue;
     if (d.payments.some(p => p.unitId === s.u && p.month === M)) continue;
     d.payments.push({
@@ -383,40 +349,50 @@ function applySheetAug26(d) {
 /* ================= storage ================= */
 const LS_KEY = 'mozart.rentbook.v1';
 
-function freshData() {
+function freshData(seed) {
   const d = {
     v: 1,
     pin: '1234',
     settings: { owner:'', phone:'', venmo:'', cashapp:'', zelle:'', deposit:'' },
-    groups: JSON.parse(JSON.stringify(SEED_GROUPS)),
-    units: JSON.parse(JSON.stringify(SEED_UNITS)),
+    groups: JSON.parse(JSON.stringify(seed.groups)),
+    units: JSON.parse(JSON.stringify(seed.units)),
     payments: [],
     imported: []
   };
-  applySheetAug26(d);
+  applySheetAug26(d, seed.augustPaid);
   return d;
 }
-function loadData() {
+async function fetchSeed() {
+  const r = await fetch('seed.json', { cache: 'no-cache' });
+  if (!r.ok) throw new Error('seed ' + r.status);
+  return await r.json();
+}
+async function initData() {
+  let stored = null;
   try {
     const raw = localStorage.getItem(LS_KEY);
     if (raw) {
       const d = JSON.parse(raw);
-      if (d && Array.isArray(d.units) && Array.isArray(d.payments)) {
-        d.settings = Object.assign({ owner:'', phone:'', venmo:'', cashapp:'', zelle:'', deposit:'' }, d.settings || {});
-        d.groups = d.groups || [];
-        d.pin = d.pin || '1234';
-        d.imported = d.imported || [];
-        if (!d.sheetAug26) {
-          applySheetAug26(d);
-          try { localStorage.setItem(LS_KEY, JSON.stringify(d)); } catch (e) {}
-        }
-        return d;
-      }
+      if (d && Array.isArray(d.units) && Array.isArray(d.payments)) stored = d;
     }
-  } catch (e) { /* corrupted storage — start fresh */ }
-  return freshData();
+  } catch (e) { /* corrupted storage - start fresh */ }
+  if (stored) {
+    stored.settings = Object.assign({ owner:'', phone:'', venmo:'', cashapp:'', zelle:'', deposit:'' }, stored.settings || {});
+    stored.groups = stored.groups || [];
+    stored.pin = stored.pin || '1234';
+    stored.imported = stored.imported || [];
+    data = stored;
+    if (!data.sheetAug26) {
+      try { const seed = await fetchSeed(); applySheetAug26(data, seed.augustPaid); }
+      catch (e) { data.sheetAug26 = true; }
+      save();
+    }
+    return;
+  }
+  data = freshData(await fetchSeed());
+  save();
 }
-let data = loadData();
+let data = null;
 function save() { localStorage.setItem(LS_KEY, JSON.stringify(data)); }
 function uid() { return 'p' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7); }
 
@@ -493,8 +469,9 @@ const App = {
   _tenant: null,
 
   /* ---------- boot & routing ---------- */
-  boot() {
+  async boot() {
     const q = new URLSearchParams(location.search);
+    // Tenant links never load the rent book or the tenant list — they only show that one unit.
     if (q.get('p')) {
       const t = decPayload(q.get('p'));
       if (t && t.u) { this._tenant = t; this.renderTenantPage(); return; }
@@ -503,6 +480,18 @@ const App = {
     const applyPayload = q.get('apply') ? decPayload(q.get('apply')) : null;
     if (applyPayload) this._pendingApply = applyPayload;
 
+    try {
+      await initData();
+    } catch (e) {
+      document.getElementById('app').innerHTML = `
+        <div class="confirm-hero">
+          <div class="big">📡</div>
+          <h2>Could not open the rent book</h2>
+          <p>Check your internet connection, then try again. Nothing was lost.</p>
+        </div>
+        <button class="btn" onclick="location.reload()">Try again</button>`;
+      return;
+    }
     this.afterUnlock();
   },
   afterUnlock() {
@@ -790,7 +779,6 @@ const App = {
   /* ---------- tenant page (opened from a ?p= link — no PIN, sees only their unit) ---------- */
   renderTenantPage() {
     const t = this._tenant;
-    document.getElementById('toptitle').textContent = 'Mozart Properties';
     document.getElementById('topsub').textContent = 'Rent';
     this._method = null;
     const monthNow = nowKey();
@@ -808,6 +796,7 @@ const App = {
 
     document.getElementById('app').innerHTML = `
       <div class="card tp-hero">
+        ${logoSVG('big')}
         <div class="tp-unit">${esc(t.g || '')} · ${esc(t.l || '')}</div>
         <div class="tp-amount money">${money(rent)}</div>
         <div class="tp-due">${esc(t.t || '')} — rent is due on the <b>1st</b> of every month</div>
@@ -895,7 +884,7 @@ const App = {
       <button class="x" onclick="App.closeModal()">✕</button>
       <h3>🧾 Receipt</h3>
       <div class="subtitle">${esc(u.tenant || 'Tenant')} · ${esc(u.label)}</div>
-      <div class="card" style="margin-top:12px;padding:14px;white-space:pre-wrap;font-size:15px;line-height:1.6">${esc(text)}</div>
+      <div class="card" style="margin-top:12px;padding:14px;font-size:15px;line-height:1.6">${logoSVG('rcpt')}<div style="white-space:pre-wrap">${esc(text)}</div></div>
       <a class="btn green" href="${smsHref}">💬 Text this receipt${u.phone ? ' to ' + esc(u.phone) : ''}</a>
       <a class="btn ghost" href="${mailHref}">✉️ Email this receipt${u.email ? ' to ' + esc(u.email) : ''}</a>
       <button class="btn ghost" onclick="App.copyPlain(App._lastReceipt)">📋 Copy it</button>
@@ -1146,12 +1135,16 @@ const App = {
     a.click();
     URL.revokeObjectURL(a.href);
   },
-  resetAll() {
+  async resetAll() {
     if (!confirm('Erase ALL tenants and ALL payment history on this device?')) return;
     if (!confirm('Are you completely sure? There is no undo. (Save a backup file first!)')) return;
-    data = freshData();
-    save();
-    this.render();
+    try {
+      data = freshData(await fetchSeed());
+      save();
+      this.render();
+    } catch (e) {
+      alert('Could not load the starting tenant list — check your internet connection and try again.');
+    }
   },
 
   /* ---------- modal plumbing ---------- */

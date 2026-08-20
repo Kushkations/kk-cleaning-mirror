@@ -1,0 +1,13 @@
+{
+  "name": "Mozart Properties Rent Book",
+  "short_name": "Rent Book",
+  "description": "Track rent, payments and receipts for Mozart Properties.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f9f9f7",
+  "theme_color": "#189BD7",
+  "icons": [
+    { "src": "icon.png", "sizes": "192x192", "type": "image/png", "purpose": "any" }
+  ]
+}
