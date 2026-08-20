@@ -14,6 +14,7 @@ import json
 import os
 import re
 import shutil
+import subprocess
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DIST = os.path.join(HERE, 'dist')
@@ -61,8 +62,10 @@ def main():
     seed = json.load(open(os.path.join(HERE, 'seed.json')))
     with open(os.path.join(DIST, 'seed.json'), 'w') as f:
         f.write(json.dumps(seed, separators=(',', ':')))
-    for name in ('manifest.json', 'icon.png'):
-        shutil.copyfile(os.path.join(HERE, name), os.path.join(DIST, name))
+    shutil.copyfile(os.path.join(HERE, 'manifest.json'),
+                    os.path.join(DIST, 'manifest.json'))
+    subprocess.run(['node', os.path.join(HERE, 'make-icon.js'),
+                    os.path.join(DIST, 'icon.png')], check=True)
 
     print('source : %6d bytes' % len(src.encode()))
     print('dist   : %6d bytes' % len(dist_html.encode()))

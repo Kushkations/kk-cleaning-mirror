@@ -1,0 +1,5 @@
+{
+  "buildCommand": "node make-icon.js public/icon.png",
+  "outputDirectory": "public",
+  "framework": null
+}
