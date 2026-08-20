@@ -309,7 +309,7 @@
   {
    "id": "u34",
    "groupId": "gshe",
-   "label": "3451 (2)",
+   "label": "3453",
    "tenant": "Nicole Williamson",
    "rent": 1300,
    "active": true
@@ -317,7 +317,7 @@
   {
    "id": "u35",
    "groupId": "gshe",
-   "label": "3453",
+   "label": "3455",
    "tenant": "Daniel Stined",
    "rent": 1000,
    "active": true
@@ -325,7 +325,7 @@
   {
    "id": "u36",
    "groupId": "gshe",
-   "label": "3455",
+   "label": "3457",
    "tenant": "Karl Haynes",
    "rent": 1450,
    "active": true
@@ -333,7 +333,7 @@
   {
    "id": "u37",
    "groupId": "gshe",
-   "label": "3457",
+   "label": "3485",
    "tenant": "Robert Sequra",
    "rent": 1500,
    "active": true
@@ -341,7 +341,7 @@
   {
    "id": "u38",
    "groupId": "gshe",
-   "label": "3485",
+   "label": "3487",
    "tenant": "William S. Hogan",
    "rent": 1120,
    "active": true
@@ -349,7 +349,7 @@
   {
    "id": "u39",
    "groupId": "gshe",
-   "label": "3487",
+   "label": "3489",
    "tenant": "Rosa Gutierrez",
    "rent": 1150,
    "active": true
@@ -357,7 +357,7 @@
   {
    "id": "u40",
    "groupId": "gshe",
-   "label": "3489",
+   "label": "5220",
    "tenant": "Martain Garcia",
    "rent": 950,
    "active": true
@@ -365,7 +365,7 @@
   {
    "id": "u41",
    "groupId": "gshe",
-   "label": "5220",
+   "label": "5230",
    "tenant": "Gloria Ponce",
    "rent": 1000,
    "active": true
@@ -373,25 +373,17 @@
   {
    "id": "u42",
    "groupId": "gshe",
-   "label": "5230",
+   "label": "5240",
    "tenant": "Jamie Rivemar",
    "rent": 1100,
    "active": true
   },
   {
-   "id": "u43",
-   "groupId": "gshe",
-   "label": "5240",
-   "tenant": "C.L. Walker",
-   "rent": 800,
-   "active": true
-  },
-  {
    "id": "u44",
    "groupId": "gtrk",
-   "label": "Truck",
-   "tenant": "",
-   "rent": 0,
+   "label": "Truck loan",
+   "tenant": "C.L. Walker",
+   "rent": 800,
    "active": true
   }
  ],
@@ -471,7 +463,7 @@
    "a": 1000
   },
   {
-   "u": "u43",
+   "u": "u44",
    "a": 800
   }
  ]
