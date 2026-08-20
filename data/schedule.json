@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-20T00:45:48.029760",
+  "generated": "2026-08-20T01:02:38.410391",
   "weekStart": "2026-08-20",
   "weekEnd": "2026-09-02",
   "week": [
@@ -52,6 +52,25 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 2
+            },
+            {
+              "property_id": 470233,
+              "name": "BuffaloGolf",
+              "address": "16714 Buffalo Run Dr, Commerce City 80022",
+              "zone": "far_east",
+              "beds": 5,
+              "sqft": 2146,
+              "est_hours": 2.5,
+              "lat": 39.9113,
+              "lon": -104.7923,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-08-25",
+              "next_checkout": "2026-08-28",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
             }
           ],
           "isLaundry": false
@@ -85,6 +104,25 @@
               "order": 1
             },
             {
+              "property_id": 370183,
+              "name": "Sheridan",
+              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1287,
+              "est_hours": 1.5,
+              "lat": 39.7653,
+              "lon": -105.0534,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-08-26",
+              "next_checkout": "2026-08-29",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 2
+            },
+            {
               "property_id": 362638,
               "name": "Sativa",
               "address": "391 E 83rd Dr, Denver 80229",
@@ -101,7 +139,7 @@
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 2
+              "order": 3
             },
             {
               "property_id": 320255,
@@ -116,25 +154,6 @@
               "priority": "checkout_only",
               "priority_locked": false,
               "next_checkin": "2026-08-24",
-              "next_checkout": "2026-08-28",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
-            },
-            {
-              "property_id": 470233,
-              "name": "BuffaloGolf",
-              "address": "16714 Buffalo Run Dr, Commerce City 80022",
-              "zone": "far_east",
-              "beds": 5,
-              "sqft": 2146,
-              "est_hours": 2.5,
-              "lat": 39.9113,
-              "lon": -104.7923,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-08-25",
               "next_checkout": "2026-08-28",
               "deadline": null,
               "checkout_time": "10:00 AM",
@@ -168,7 +187,7 @@
       "payrollEstimate": 890,
       "sameDayTurns": 2,
       "tomorrowCheckins": 1,
-      "totalCheckouts": 6,
+      "totalCheckouts": 7,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
