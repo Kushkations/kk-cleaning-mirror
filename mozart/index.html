@@ -315,20 +315,12 @@
 /* ================= seed data (from the AUG 26 paper sheet — total $37,643.00) ================= */
 const METHODS = ['Venmo', 'Cash App', 'Zelle', 'Direct Deposit', 'Cash', 'Check', 'Other'];
 
-/* Mozart Properties logo (matches the company decal) */
+/* Mozart Properties logo — one copy lives in the header; reuse it everywhere else */
 function logoSVG(cls) {
-  return `<svg class="mzlogo ${cls || ''}" viewBox="0 0 306 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mozart Properties">
-    <path d="M14 92 L14 58 L30 49 L30 92 Z" fill="#33B0E4"/>
-    <path d="M28 45 L46 32 L46 92 L28 92 Z" fill="#A6A8AB"/>
-    <path d="M48 28 L66 13 L66 92 L48 92 Z" fill="#189BD7"/>
-    <path d="M68 92 L68 50 Q68 41 77 41 L91 41 L91 92 Z" fill="#A6A8AB"/>
-    <g stroke="#7E8184" stroke-width="1.8">
-      <line x1="73" y1="49" x2="73" y2="90"/><line x1="79" y1="45" x2="79" y2="90"/><line x1="85" y1="44" x2="85" y2="90"/>
-    </g>
-    <path d="M6 34 C0 66 20 96 52 96 C78 96 93 85 99 70 C90 81 74 88 52 88 C26 88 10 64 18 36 Z" fill="#189BD7"/>
-    <text x="112" y="45" textLength="190" lengthAdjust="spacingAndGlyphs" font-family="system-ui,-apple-system,'Segoe UI',Arial,sans-serif" font-weight="800" font-size="42" fill="#189BD7">MOZART</text>
-    <text x="112" y="90" textLength="190" lengthAdjust="spacingAndGlyphs" font-family="system-ui,-apple-system,'Segoe UI',Arial,sans-serif" font-weight="800" font-size="40" fill="#5BC4E8">PROPERTIES</text>
-  </svg>`;
+  const n = document.getElementById('toptitle').cloneNode(true);
+  n.removeAttribute('id');
+  n.setAttribute('class', 'mzlogo ' + (cls || ''));
+  return n.outerHTML;
 }
 
 /* Rows scratched off on the Aug 2026 paper sheet = already paid for August 2026 */
