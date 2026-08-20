@@ -45,6 +45,7 @@ def main():
     body, rest = rest.split('<script>', 1)
     js, tail = rest.split('</script>', 1)
 
+    body = '\n'.join(l.strip() for l in body.split('\n') if l.strip())
     dist_html = (head + '<style>' + compact_css(css) + '</style>'
                  + body + '<script>' + compact_js(js) + '</script>' + tail)
 

@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" href="icon.png">
 <link rel="manifest" href="manifest.json">
 <title>Mozart Properties — Rent Book</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 100'%3E%3Crect width='96' height='100' fill='%23ffffff'/%3E%3Cpath d='M12 90 L12 58 L26 50 L26 90 Z' fill='%2333B0E4'/%3E%3Cpath d='M24 46 L40 34 L40 90 L24 90 Z' fill='%23A6A8AB'/%3E%3Cpath d='M42 30 L58 16 L58 90 L42 90 Z' fill='%23189BD7'/%3E%3Cpath d='M60 90 L60 50 Q60 42 68 42 L80 42 L80 90 Z' fill='%23A6A8AB'/%3E%3Cpath d='M4 44 C2 74 22 94 48 94 C70 94 86 84 92 68 C84 80 68 86 48 86 C26 86 12 70 14 44 Z' fill='%23189BD7'/%3E%3C/svg%3E">
+<link rel="icon" href="icon.png">
 <style>
   :root {
     color-scheme: light;
@@ -344,7 +344,6 @@ const LS_KEY = 'mozart.rentbook.v1';
 function freshData(seed) {
   const d = {
     v: 1,
-    pin: '1234',
     settings: { owner:'', phone:'', venmo:'', cashapp:'', zelle:'', deposit:'' },
     groups: JSON.parse(JSON.stringify(seed.groups)),
     units: JSON.parse(JSON.stringify(seed.units)),
@@ -371,7 +370,6 @@ async function initData() {
   if (stored) {
     stored.settings = Object.assign({ owner:'', phone:'', venmo:'', cashapp:'', zelle:'', deposit:'' }, stored.settings || {});
     stored.groups = stored.groups || [];
-    stored.pin = stored.pin || '1234';
     stored.imported = stored.imported || [];
     data = stored;
     if (!data.sheetAug26) {
@@ -459,6 +457,7 @@ const App = {
   _method: null,
   _pendingApply: null,
   _tenant: null,
+  _review: null,
 
   /* ---------- boot & routing ---------- */
   async boot() {
@@ -496,7 +495,7 @@ const App = {
     }
     this.render();
   },
-  /* ---------- tenant "I paid" auto-record ---------- */
+  /* ---------- tenant "I paid" — landlord reviews before it is recorded ---------- */
   applyReport(r) {
     if (!r || !r.u || !(Number(r.a) > 0) || !r.m) {
       alert('That payment link is not complete — nothing was recorded.');
@@ -509,12 +508,48 @@ const App = {
       this.confirmScreen('Already recorded', `This payment from ${esc(r.t || 'the tenant')} was recorded before. Nothing was added twice.`, prev ? prev.id : null);
       return;
     }
-    let unit = unitById(r.u) || data.units.find(u => u.label === r.l && (!r.t || u.tenant === r.t));
+    const unit = unitById(r.u) || data.units.find(u => u.label === r.l && (!r.t || u.tenant === r.t));
     if (!unit) {
       alert('This payment is for a unit that is not in the book anymore (' + (r.l || r.u) + '). Add the unit first, then tap the link again.');
       this.render();
       return;
     }
+    this._review = r;
+    const g = groupById(unit.groupId);
+    const amt = Math.round(Number(r.a) * 100) / 100;
+    const already = paidSum(unit.id, String(r.m));
+    const over = amt + already - unit.rent;
+    const short = unit.rent - amt - already;
+    let flag = '';
+    if (over > 0) flag = `<p class="note" style="color:var(--bad-text);font-weight:700">⚠️ That is ${money(over)} MORE than the ${money(unit.rent)} rent${already > 0 ? ' (they have already paid ' + money(already) + ' this month)' : ''}. Check your account before recording.</p>`;
+    else if (short > 0) flag = `<p class="note">If you record this, ${money(short)} is still owed for the month.</p>`;
+    document.getElementById('app').innerHTML = `
+      <div class="confirm-hero">
+        <div class="big">💬</div>
+        <h2>${esc(r.t || 'A tenant')} says they paid</h2>
+        <p>Nothing is recorded yet. Check the money actually arrived in your ${esc(r.me || 'account')} first.</p>
+      </div>
+      <div class="card" style="padding:2px 14px 10px">
+        <div class="sumline"><span>Unit</span><b>${esc(g ? g.name : '')} ${esc(unit.label)}</b></div>
+        <div class="sumline"><span>They say they sent</span><b class="money">${money(amt)}</b></div>
+        <div class="sumline"><span>How</span><b>${esc(r.me || '—')}</b></div>
+        <div class="sumline"><span>For</span><b>${monthLabel(String(r.m))}</b></div>
+        <div class="sumline"><span>Rent for that month</span><b class="money">${money(unit.rent)}</b></div>
+        ${r.n ? `<div class="sumline"><span>Their note</span><b>${esc(r.n)}</b></div>` : ''}
+      </div>
+      ${flag}
+      <button class="btn green" onclick="App.recordReport()">✓ Yes — record ${money(amt)}</button>
+      <button class="btn ghost" onclick="App._review = null; App.render()">No — do not record this</button>`;
+    document.getElementById('topsub').textContent = 'Tenant says they paid';
+    this.renderNav();
+  },
+  recordReport() {
+    const r = this._review;
+    if (!r) { this.render(); return; }
+    this._review = null;
+    const unit = unitById(r.u) || data.units.find(u => u.label === r.l && (!r.t || u.tenant === r.t));
+    if (!unit) { alert('That unit is not in the book anymore.'); this.render(); return; }
+    const rid = String(r.id || '');
     const pay = {
       id: uid(), unitId: unit.id, month: String(r.m),
       amount: Math.round(Number(r.a) * 100) / 100,
@@ -530,7 +565,7 @@ const App = {
     this.month = String(r.m);
     const g = groupById(unit.groupId);
     this.confirmScreen('Payment recorded ✓',
-      `${esc(unit.tenant || 'Tenant')} — ${esc(g ? g.name : '')} ${esc(unit.label)}<br><b class="money" style="font-size:22px">${money(r.a)}</b> by ${esc(r.me || 'unknown method')} for ${monthLabel(String(r.m))}.<br><br>It is marked off in the book. Double-check the money actually arrived in your ${esc(r.me || 'account')}.`, pay.id);
+      `${esc(unit.tenant || 'Tenant')} — ${esc(g ? g.name : '')} ${esc(unit.label)}<br><b class="money" style="font-size:22px">${money(pay.amount)}</b> by ${esc(pay.method)} for ${monthLabel(pay.month)}.`, pay.id);
   },
   confirmScreen(title, msg, pid) {
     document.getElementById('app').innerHTML = `
@@ -1090,7 +1125,6 @@ const App = {
         if (!d || !Array.isArray(d.units) || !Array.isArray(d.payments)) throw new Error('bad');
         if (!confirm('Load this backup? It will replace what is on this device.')) return;
         data = d;
-        data.pin = data.pin || '1234';
         data.settings = Object.assign({ owner:'', phone:'', venmo:'', cashapp:'', zelle:'', deposit:'' }, data.settings || {});
         data.imported = data.imported || [];
         save();
