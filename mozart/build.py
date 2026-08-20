@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Build the deployable copy of the rent book into mozart/dist/.
 
+Prefer `node minify.js` (terser + clean-css) when the dev deps are installed;
+this script is the dependency-free fallback and produces a slightly larger
+but equivalent bundle.
+
 index.html is kept readable in git; the deployed copy is compacted so it fits
 in a single Vercel deploy call. Run from the mozart/ folder:
 

@@ -1,0 +1,12 @@
+{
+  "name": "mozart-rent-book",
+  "private": true,
+  "description": "Rent tracking app for Mozart Properties. Source is mozart/index.html; dist/ is the deployed build.",
+  "scripts": {
+    "build": "node minify.js"
+  },
+  "devDependencies": {
+    "clean-css": "^5.3.3",
+    "terser": "^5.31.0"
+  }
+}
