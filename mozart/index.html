@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
 <meta charset="UTF-8">
+<meta name="google" content="notranslate">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#1c5cab">
@@ -269,21 +270,6 @@
   nav.bottom button .ic { display: block; font-size: 22px; line-height: 1.2; }
   nav.bottom button.on { color: var(--accent); }
 
-  /* ---- PIN ---- */
-  #pinscreen {
-    position: fixed; inset: 0; background: var(--page); z-index: 100;
-    display: none; flex-direction: column; align-items: center; justify-content: center; padding: 24px; text-align: center;
-  }
-  #pinscreen h1 { font-size: 24px; margin-bottom: 4px; }
-  #pinscreen p { color: var(--ink2); margin-bottom: 18px; }
-  #pinscreen input {
-    font-size: 28px; text-align: center; letter-spacing: 8px; width: 220px; padding: 12px;
-    border-radius: 14px; border: 1px solid var(--border); background: var(--surface); color: var(--ink);
-  }
-  #pinscreen .btn { max-width: 220px; }
-  #pinerr { color: var(--bad-text); font-weight: 700; margin-top: 10px; min-height: 24px; }
-  #pinhint { color: var(--muted); font-size: 14px; margin-top: 14px; }
-
   @media print {
     nav.bottom, .monthnav .navbtn, .chips, .markbtn, header.top .sub, .today-link, .btn { display: none !important; }
     body { background: #fff; color: #000; font-size: 13px; }
@@ -295,15 +281,6 @@
 </style>
 </head>
 <body>
-
-<div id="pinscreen">
-  <h1>Mozart Properties</h1>
-  <p>Enter your PIN to open the rent book</p>
-  <input id="pininput" type="password" inputmode="numeric" autocomplete="off" maxlength="8">
-  <div id="pinerr"></div>
-  <button class="btn" onclick="App.tryUnlock()">Unlock</button>
-  <div id="pinhint"></div>
-</div>
 
 <header class="top">
   <h1 id="toptitle">Mozart Properties</h1>
@@ -381,7 +358,6 @@ const METHODS = ['Venmo', 'Cash App', 'Zelle', 'Direct Deposit', 'Cash', 'Check'
 
 /* ================= storage ================= */
 const LS_KEY = 'mozart.rentbook.v1';
-const UNLOCK_KEY = 'mozart.rentbook.unlock';
 
 function freshData() {
   return {
@@ -497,14 +473,6 @@ const App = {
     const applyPayload = q.get('apply') ? decPayload(q.get('apply')) : null;
     if (applyPayload) this._pendingApply = applyPayload;
 
-    const unlocked = localStorage.getItem(UNLOCK_KEY) === data.pin;
-    if (!unlocked) {
-      document.getElementById('pinscreen').style.display = 'flex';
-      document.getElementById('pinhint').textContent = data.pin === '1234' ? 'First time here? The starting PIN is 1234 — you can change it in Settings.' : '';
-      document.getElementById('pininput').addEventListener('keydown', e => { if (e.key === 'Enter') App.tryUnlock(); });
-      this.render();
-      return;
-    }
     this.afterUnlock();
   },
   afterUnlock() {
@@ -517,18 +485,6 @@ const App = {
     }
     this.render();
   },
-  tryUnlock() {
-    const v = document.getElementById('pininput').value.trim();
-    if (v === data.pin) {
-      localStorage.setItem(UNLOCK_KEY, data.pin);
-      document.getElementById('pinscreen').style.display = 'none';
-      this.afterUnlock();
-    } else {
-      document.getElementById('pinerr').textContent = 'Wrong PIN — try again';
-      document.getElementById('pininput').value = '';
-    }
-  },
-
   /* ---------- tenant "I paid" auto-record ---------- */
   applyReport(r) {
     if (!r || !r.u || !(Number(r.a) > 0) || !r.m) {
@@ -791,9 +747,6 @@ const App = {
       <button class="btn ghost" onclick="App.exportBackup()">⬇️ Save a backup file</button>
       <button class="btn ghost" onclick="document.getElementById('importfile').click()">⬆️ Load a backup file</button>
       <button class="btn ghost" onclick="App.exportCSV()">📄 Download this month as a spreadsheet (CSV)</button>
-
-      <div class="sectionlabel">Security</div>
-      <button class="btn ghost" onclick="App.changePin()">🔒 Change PIN${data.pin === '1234' ? ' (still 1234 — please change it)' : ''}</button>
 
       <div class="sectionlabel">Danger zone</div>
       <button class="btn danger" onclick="App.resetAll()">Erase everything and start over</button>
@@ -1062,27 +1015,6 @@ const App = {
     }
     navigator.clipboard.writeText(lines.join('\n')).then(() => alert('Copied! Now paste it into a text message.'), () => alert('Could not copy on this device.'));
   },
-  changePin() {
-    this.modal(`
-      <button class="x" onclick="App.closeModal()">✕</button>
-      <h3>Change PIN</h3>
-      <div class="field"><label>New PIN (4 to 8 numbers)</label><input type="password" id="newpin" inputmode="numeric" maxlength="8"></div>
-      <div class="field"><label>Type it again</label><input type="password" id="newpin2" inputmode="numeric" maxlength="8"></div>
-      <button class="btn" onclick="App.savePin()">✓ Save new PIN</button>
-    `);
-  },
-  savePin() {
-    const a = document.getElementById('newpin').value.trim();
-    const b = document.getElementById('newpin2').value.trim();
-    if (!/^\d{4,8}$/.test(a)) { alert('The PIN needs to be 4 to 8 numbers.'); return; }
-    if (a !== b) { alert('The two PINs do not match — try again.'); return; }
-    data.pin = a;
-    save();
-    localStorage.setItem(UNLOCK_KEY, a);
-    this.closeModal();
-    alert('PIN changed. Don’t forget it!');
-    this.render();
-  },
   exportBackup() {
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
     const a = document.createElement('a');
@@ -1103,7 +1035,6 @@ const App = {
         data.settings = Object.assign({ owner:'', phone:'', venmo:'', cashapp:'', zelle:'', deposit:'' }, data.settings || {});
         data.imported = data.imported || [];
         save();
-        localStorage.setItem(UNLOCK_KEY, data.pin);
         this.render();
         alert('Backup loaded.');
       } catch (e) {
