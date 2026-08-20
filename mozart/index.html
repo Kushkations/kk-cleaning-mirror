@@ -139,6 +139,7 @@
   .row .who { flex: 1; min-width: 0; }
   .row .who .u { font-weight: 800; font-size: 17px; }
   .row .who .t { color: var(--ink2); font-size: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .row .who .p { color: var(--muted); font-size: 13px; margin-top: 1px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .row .amt { text-align: right; }
   .row .amt .r { font-weight: 800; font-size: 17px; }
   .row.vacant .who, .row.vacant .amt { opacity: .5; }
@@ -331,7 +332,7 @@ function applySheetAug26(d, augustPaid) {
     if (d.payments.some(p => p.unitId === s.u && p.month === M)) continue;
     d.payments.push({
       id: 'sheet-aug26-' + s.u, unitId: s.u, month: M, amount: s.a,
-      method: 'Other', date: '2026-08-19',
+      method: 'Paper sheet', date: '2026-08-19',
       note: s.n || 'marked off on the Aug 2026 paper sheet'
     });
   }
@@ -372,6 +373,9 @@ async function initData() {
     stored.groups = stored.groups || [];
     stored.imported = stored.imported || [];
     data = stored;
+    for (const p of data.payments) {   // older builds labelled these 'Other'
+      if (String(p.id).startsWith('sheet-aug26-') && p.method === 'Other') p.method = 'Paper sheet';
+    }
     if (!data.sheetAug26) {
       try { const seed = await fetchSeed(); applySheetAug26(data, seed.augustPaid); }
       catch (e) { data.sheetAug26 = true; }
@@ -681,13 +685,13 @@ const App = {
         const pays = paymentsFor(u.id, m);
         const last = pays.slice(-1)[0];
         const wasReported = pays.some(p => p.reported);
-        const sub = (st === 'paid' || st === 'partial') && last
-          ? `${esc(last.method)} · ${fmtDate(last.date)}${wasReported ? ' · 📲 sent by tenant' : ''}`
-          : esc(u.tenant || 'No tenant');
+        const payLine = (st === 'paid' || st === 'partial') && last
+          ? `<div class="p">${esc(last.method)} · ${fmtDate(last.date)}${wasReported ? ' · 📲 sent by tenant' : ''}</div>`
+          : '';
         const needsBtn = u.active && u.rent > 0 && (st === 'due' || st === 'partial' || st === 'upcoming');
         html += `
           <div class="row ${st === 'vacant' ? 'vacant' : ''}" onclick="App.openUnit('${u.id}','${m}')">
-            <div class="who"><div class="u">${esc(u.label)}</div><div class="t">${sub}</div></div>
+            <div class="who"><div class="u">${esc(u.label)}</div><div class="t">${esc(u.tenant || 'No tenant')}</div>${payLine}</div>
             <div class="amt"><div class="r money">${money(u.rent)}</div>${this.badgeFor(u, m)}</div>
             ${needsBtn ? `<button class="markbtn" onclick="event.stopPropagation();App.openUnit('${u.id}','${m}')">Mark paid</button>` : ''}
           </div>`;
