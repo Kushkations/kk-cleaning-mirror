@@ -1,112 +1,8 @@
 {
-  "generated": "2026-08-19T23:46:30.437496",
-  "weekStart": "2026-08-19",
-  "weekEnd": "2026-09-01",
+  "generated": "2026-08-20T00:02:04.348098",
+  "weekStart": "2026-08-20",
+  "weekEnd": "2026-09-02",
   "week": [
-    {
-      "date": "2026-08-19",
-      "dayNameEs": "Miercoles",
-      "dayNameEn": "Wednesday",
-      "teams": [
-        {
-          "name": "Equipo 1",
-          "lead": "Dexabeth",
-          "members": [
-            "Dexabeth",
-            "Yasnielis",
-            "Julie"
-          ],
-          "properties": [
-            {
-              "property_id": 409557,
-              "name": "Elevation",
-              "address": "3431 E 105th Ct, Northglenn 80233",
-              "zone": "north",
-              "beds": 5,
-              "sqft": 2376,
-              "est_hours": 2.5,
-              "lat": 39.8878,
-              "lon": -104.9458,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-08-21",
-              "next_checkout": "2026-08-25",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 1
-            },
-            {
-              "property_id": 370183,
-              "name": "Sheridan",
-              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
-              "zone": "west",
-              "beds": 2,
-              "sqft": 1287,
-              "est_hours": 1.5,
-              "lat": 39.7653,
-              "lon": -105.0534,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-08-26",
-              "next_checkout": "2026-08-29",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
-              "property_id": 447452,
-              "name": "Wonderland",
-              "address": "5955 S Zante Way, Aurora 80015",
-              "zone": "isolated",
-              "beds": 5,
-              "sqft": 1886,
-              "est_hours": 2.5,
-              "lat": 39.6083,
-              "lon": -104.7176,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-08-21",
-              "next_checkout": "2026-08-24",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
-            }
-          ],
-          "isLaundry": false
-        }
-      ],
-      "laundry": {
-        "assigned": [],
-        "active": false
-      },
-      "off": [
-        "Marii",
-        "Neidys",
-        "Luraidy"
-      ],
-      "occupied": [
-        "Alpha",
-        "Altitude",
-        "BlueDream",
-        "BuffaloGolf",
-        "GameRoom",
-        "Grant",
-        "GrownSexy",
-        "Hotbox",
-        "Indica",
-        "PlayHouse",
-        "Sativa"
-      ],
-      "payrollEstimate": 430,
-      "sameDayTurns": 0,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 3,
-      "optimizations": [],
-      "startTime": "9:45 AM"
-    },
     {
       "date": "2026-08-20",
       "dayNameEs": "Jueves",
@@ -200,8 +96,8 @@
               "lon": -104.9816,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-09-04",
+              "next_checkout": "2026-09-07",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -470,8 +366,8 @@
               "lon": -104.7548,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-09-04",
+              "next_checkout": "2026-09-07",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -520,8 +416,8 @@
               "lon": -105.0904,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-09-04",
+              "next_checkout": "2026-09-07",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -893,8 +789,8 @@
               "lon": -104.9769,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-09-04",
+              "next_checkout": "2026-09-07",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -912,8 +808,8 @@
               "lon": -104.7923,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-09-04",
+              "next_checkout": "2026-09-07",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -1160,6 +1056,38 @@
       "totalCheckouts": 0,
       "optimizations": [],
       "startTime": "9:45 AM"
+    },
+    {
+      "date": "2026-09-02",
+      "dayNameEs": "Miercoles",
+      "dayNameEn": "Wednesday",
+      "teams": [],
+      "laundry": {
+        "assigned": [],
+        "active": false
+      },
+      "off": [
+        "Marii",
+        "Julie",
+        "Dexabeth",
+        "Yasnielis",
+        "Neidys",
+        "Luraidy"
+      ],
+      "occupied": [
+        "Alpha",
+        "BlueDream",
+        "GameRoom",
+        "Paradise",
+        "Pueblo",
+        "Wonderland"
+      ],
+      "payrollEstimate": 0,
+      "sameDayTurns": 0,
+      "tomorrowCheckins": 0,
+      "totalCheckouts": 0,
+      "optimizations": [],
+      "startTime": "9:45 AM"
     }
   ],
   "cleanerStats": {
@@ -1169,17 +1097,17 @@
       "dailyRate": 170
     },
     "Julie": {
-      "daysThisWeek": 8,
+      "daysThisWeek": 7,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Dexabeth": {
-      "daysThisWeek": 10,
+      "daysThisWeek": 9,
       "role": "cleaner",
       "dailyRate": 150
     },
     "Yasnielis": {
-      "daysThisWeek": 8,
+      "daysThisWeek": 7,
       "role": "cleaner",
       "dailyRate": 140
     },
