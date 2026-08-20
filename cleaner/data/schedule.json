@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-20T19:31:10.029514",
+  "generated": "2026-08-20T19:46:47.058553",
   "weekStart": "2026-08-20",
   "weekEnd": "2026-09-02",
   "week": [
@@ -35,75 +35,6 @@
               "order": 1
             },
             {
-              "property_id": 399810,
-              "name": "Indica",
-              "address": "7682 Shoshone St, Denver 80221",
-              "zone": "west",
-              "beds": 5,
-              "sqft": 1700,
-              "est_hours": 2.0,
-              "lat": 39.8361,
-              "lon": -105.0096,
-              "priority": "tomorrow_checkin",
-              "priority_locked": false,
-              "next_checkin": "2026-08-21",
-              "next_checkout": "2026-08-24",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 2
-            },
-            {
-              "property_id": 320255,
-              "name": "Hotbox",
-              "address": "761 E 83rd Pl, Denver 80229",
-              "zone": "hq",
-              "beds": 4,
-              "sqft": 1822,
-              "est_hours": 2.0,
-              "lat": 39.8488,
-              "lon": -104.9769,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-08-22",
-              "next_checkout": "2026-08-24",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 3
-            },
-            {
-              "property_id": 370183,
-              "name": "Sheridan",
-              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
-              "zone": "west",
-              "beds": 2,
-              "sqft": 1287,
-              "est_hours": 1.5,
-              "lat": 39.7653,
-              "lon": -105.0534,
-              "priority": "checkout_only",
-              "priority_locked": false,
-              "next_checkin": "2026-08-26",
-              "next_checkout": "2026-08-29",
-              "deadline": null,
-              "checkout_time": "10:00 AM",
-              "is_late_checkout": false,
-              "order": 4
-            }
-          ],
-          "isLaundry": false
-        },
-        {
-          "name": "Equipo 2",
-          "lead": "Dexabeth",
-          "members": [
-            "Dexabeth",
-            "Yasnielis",
-            "Julie"
-          ],
-          "properties": [
-            {
               "property_id": 399039,
               "name": "Altitude",
               "address": "4350 Xenon St, Wheat Ridge 80033",
@@ -120,7 +51,7 @@
               "deadline": "4:00 PM",
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
-              "order": 1
+              "order": 2
             },
             {
               "property_id": 470233,
@@ -132,6 +63,56 @@
               "est_hours": 2.5,
               "lat": 39.9113,
               "lon": -104.7923,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-08-21",
+              "next_checkout": "2026-08-24",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 3
+            }
+          ],
+          "isLaundry": false
+        },
+        {
+          "name": "Equipo 2",
+          "lead": "Dexabeth",
+          "members": [
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 370183,
+              "name": "Sheridan",
+              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1287,
+              "est_hours": 1.5,
+              "lat": 39.7653,
+              "lon": -105.0534,
+              "priority": "same_day",
+              "priority_locked": false,
+              "next_checkin": "2026-08-20",
+              "next_checkout": "2026-08-23",
+              "deadline": "4:00 PM",
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            },
+            {
+              "property_id": 399810,
+              "name": "Indica",
+              "address": "7682 Shoshone St, Denver 80221",
+              "zone": "west",
+              "beds": 5,
+              "sqft": 1700,
+              "est_hours": 2.0,
+              "lat": 39.8361,
+              "lon": -105.0096,
               "priority": "tomorrow_checkin",
               "priority_locked": false,
               "next_checkin": "2026-08-21",
@@ -159,6 +140,25 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 3
+            },
+            {
+              "property_id": 320255,
+              "name": "Hotbox",
+              "address": "761 E 83rd Pl, Denver 80229",
+              "zone": "hq",
+              "beds": 4,
+              "sqft": 1822,
+              "est_hours": 2.0,
+              "lat": 39.8488,
+              "lon": -104.9769,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-08-22",
+              "next_checkout": "2026-08-24",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -182,10 +182,11 @@
         "JoyStick",
         "Paradise",
         "PlayHouse",
-        "Quivas"
+        "Quivas",
+        "Sheridan"
       ],
       "payrollEstimate": 890,
-      "sameDayTurns": 2,
+      "sameDayTurns": 3,
       "tomorrowCheckins": 2,
       "totalCheckouts": 7,
       "optimizations": [],
@@ -253,6 +254,7 @@
         "Paradise",
         "PlayHouse",
         "Quivas",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 430,
@@ -296,6 +298,7 @@
         "Paradise",
         "PlayHouse",
         "Quivas",
+        "Sheridan",
         "Wonderland"
       ],
       "payrollEstimate": 0,
@@ -377,15 +380,15 @@
               "order": 3
             },
             {
-              "property_id": 435859,
-              "name": "Airport",
-              "address": "19990 E 40th Ave, Denver 80249",
-              "zone": "far_east",
+              "property_id": 354421,
+              "name": "JoyStick",
+              "address": "8228 Balsam Way, Arvada 80005",
+              "zone": "far_west",
               "beds": 4,
-              "sqft": 1642,
-              "est_hours": 2.0,
-              "lat": 39.7706,
-              "lon": -104.7548,
+              "sqft": 2183,
+              "est_hours": 2.5,
+              "lat": 39.8466,
+              "lon": -105.0904,
               "priority": "checkout_only",
               "priority_locked": false,
               "next_checkin": "2026-09-04",
@@ -427,19 +430,19 @@
               "order": 1
             },
             {
-              "property_id": 354421,
-              "name": "JoyStick",
-              "address": "8228 Balsam Way, Arvada 80005",
-              "zone": "far_west",
-              "beds": 4,
-              "sqft": 2183,
-              "est_hours": 2.5,
-              "lat": 39.8466,
-              "lon": -105.0904,
+              "property_id": 370183,
+              "name": "Sheridan",
+              "address": "3451 Sheridan Blvd, Wheat Ridge 80212",
+              "zone": "west",
+              "beds": 2,
+              "sqft": 1287,
+              "est_hours": 1.5,
+              "lat": 39.7653,
+              "lon": -105.0534,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": "2026-09-04",
-              "next_checkout": "2026-09-07",
+              "next_checkin": "2026-08-26",
+              "next_checkout": "2026-08-29",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -463,6 +466,25 @@
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
               "order": 3
+            },
+            {
+              "property_id": 435859,
+              "name": "Airport",
+              "address": "19990 E 40th Ave, Denver 80249",
+              "zone": "far_east",
+              "beds": 4,
+              "sqft": 1642,
+              "est_hours": 2.0,
+              "lat": 39.7706,
+              "lon": -104.7548,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": "2026-09-04",
+              "next_checkout": "2026-09-07",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 4
             }
           ],
           "isLaundry": false
@@ -490,7 +512,7 @@
       "payrollEstimate": 890,
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 7,
+      "totalCheckouts": 8,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
