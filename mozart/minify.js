@@ -19,7 +19,9 @@ const OUT = path.join(__dirname, 'dist', 'index.html');
   const res = await minify(js, {
     ecma: 2020,
     compress: { passes: 2 },
-    mangle: { toplevel: false },   // App/data/helpers are referenced from inline onclick handlers
+    // Inline onclick handlers reference App by name, and the test suite reads a
+    // handful of helpers off window - everything else can be renamed.
+    mangle: { toplevel: true, reserved: ['App', 'data', 'statusOf', 'paidSum', 'unitById', 'encPayload', 'money'] },
     format: { comments: false }
   });
   if (res.error) throw res.error;

@@ -236,6 +236,22 @@
   .copybtn { border: 1px solid var(--border); background: var(--page); color: var(--accent); border-radius: 10px; padding: 8px 12px; font-weight: 800; font-size: 14px; cursor: pointer; }
   .sharebtn { border: 0; background: var(--accent-soft); color: var(--accent); border-radius: 10px; padding: 9px 11px; font-size: 17px; cursor: pointer; }
   .note { color: var(--muted); font-size: 14px; margin: 10px 4px; }
+  .navdot { display: inline-block; min-width: 17px; height: 17px; line-height: 17px; padding: 0 4px;
+            border-radius: 9px; background: var(--bad); color: #fff; font-size: 11px; font-weight: 800; }
+  .repcard { padding: 14px; border-bottom: 1px solid var(--line); }
+  .repcard:last-child { border-bottom: 0; }
+  .repcard.done { opacity: .55; }
+  .rephead { display: flex; align-items: center; gap: 8px; }
+  .rephead b { font-size: 17px; flex: 1; }
+  .reptext { color: var(--ink); font-size: 15px; margin: 6px 0 2px; white-space: pre-wrap; }
+  .repmeta { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  .repbtns { display: flex; gap: 8px; margin-top: 10px; }
+  .repbtns .btn { margin-top: 0; font-size: 15px; padding: 11px 10px; }
+  .field textarea { width: 100%; padding: 13px; font-size: 17px; border-radius: 12px; min-height: 90px;
+                    border: 1px solid var(--border); background: var(--page); color: var(--ink); font-family: inherit; }
+  .paylink .pl-t small { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+  .best { background: var(--good-bg); color: var(--good-text); font-size: 11px; font-weight: 800;
+          padding: 2px 7px; border-radius: 999px; margin-left: 6px; vertical-align: middle; }
   .sectionlabel { font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: var(--ink2); margin: 18px 4px 8px; }
 
   /* ---- tenant page ---- */
@@ -315,6 +331,14 @@
 
 /* ================= seed data (from the AUG 26 paper sheet — total $37,643.00) ================= */
 const METHODS = ['Venmo', 'Cash App', 'Zelle', 'Direct Deposit', 'Cash', 'Check', 'Other'];
+const REPAIR_KINDS = ['Heat or air conditioning', 'Water or plumbing', 'Electric', 'Appliance',
+                      'Door, window or lock', 'Pest', 'Something else'];
+const URGENCY = {
+  emergency: 'Emergency — no heat, no water, a leak, or it will not lock',
+  soon: 'Needs fixing soon',
+  whenever: 'Whenever you get a chance'
+};
+const URGENCY_SHORT = { emergency: '🚨 Emergency', soon: 'Soon', whenever: 'Whenever' };
 
 /* Mozart Properties logo — one copy lives in the header; reuse it everywhere else */
 function logoSVG(cls) {
@@ -362,6 +386,7 @@ function freshData(seed) {
     groups: JSON.parse(JSON.stringify(seed.groups)),
     units: JSON.parse(JSON.stringify(seed.units)),
     payments: [],
+    repairs: [],
     imported: []
   };
   applySheetAug26(d, seed.augustPaid);
@@ -386,6 +411,7 @@ async function initData() {
     stored.settings = Object.assign({ owner:'', phone:'', venmo:'', cashapp:'', zelle:'', deposit:'' }, stored.settings || {});
     stored.groups = stored.groups || [];
     stored.imported = stored.imported || [];
+    stored.repairs = stored.repairs || [];
     data = stored;
     for (const p of data.payments) {   // older builds labelled these 'Other'
       if (String(p.id).startsWith('sheet-aug26-') && p.method === 'Other') p.method = 'Paper sheet';
@@ -477,8 +503,10 @@ const App = {
   filter: 'all',
   _method: null,
   _pendingApply: null,
+  _pendingFix: null,
   _tenant: null,
   _review: null,
+  repairFilter: 'open',
 
   /* ---------- boot & routing ---------- */
   async boot() {
@@ -491,6 +519,8 @@ const App = {
     document.getElementById('nav').style.display = 'flex';
     const applyPayload = q.get('apply') ? decPayload(q.get('apply')) : null;
     if (applyPayload) this._pendingApply = applyPayload;
+    const fixPayload = q.get('fix') ? decPayload(q.get('fix')) : null;
+    if (fixPayload) this._pendingFix = fixPayload;
 
     try {
       await initData();
@@ -507,6 +537,13 @@ const App = {
     this.afterUnlock();
   },
   afterUnlock() {
+    if (this._pendingFix) {
+      const payload = this._pendingFix;
+      this._pendingFix = null;
+      history.replaceState(null, '', baseURL());
+      this.applyRepairReport(payload);
+      return;
+    }
     if (this._pendingApply) {
       const payload = this._pendingApply;
       this._pendingApply = null;
@@ -614,18 +651,22 @@ const App = {
     if (this.view === 'month') host.innerHTML = this.renderMonth();
     else if (this.view === 'year') host.innerHTML = this.renderYear();
     else if (this.view === 'tenants') host.innerHTML = this.renderTenants();
+    else if (this.view === 'repairs') host.innerHTML = this.renderRepairs();
     else host.innerHTML = this.renderSettings();
     document.getElementById('topsub').textContent =
       this.view === 'month' ? monthLabel(this.month) :
       this.view === 'year' ? String(this.year) :
-      this.view === 'tenants' ? 'Tenants & Units' : 'Settings';
+      this.view === 'tenants' ? 'Tenants & Units' :
+      this.view === 'repairs' ? 'Repairs' : 'Settings';
     this.renderNav();
   },
   renderNav() {
+    const open = data && data.repairs ? data.repairs.filter(r => r.status !== 'done').length : 0;
     const items = [
       ['month', '📅', 'Month'],
       ['year', '🗓️', 'Year'],
       ['tenants', '👥', 'Tenants'],
+      ['repairs', '🔧', open ? `Repairs <span class="navdot">${open}</span>` : 'Repairs'],
       ['settings', '⚙️', 'Settings']
     ];
     document.getElementById('nav').innerHTML = items.map(([v, ic, lb]) =>
@@ -802,12 +843,13 @@ const App = {
     return `
       <div class="sectionlabel">How tenants can pay</div>
       <div class="card">
+        ${handle('Zelle — best for rent, no fees', 'zelle')}
+        ${handle('Bank transfer / direct deposit', 'deposit')}
         ${handle('Venmo', 'venmo')}
         ${handle('Cash App', 'cashapp')}
-        ${handle('Zelle', 'zelle')}
-        ${handle('Direct deposit', 'deposit')}
         ${handle('Your phone (for “I paid” texts)', 'phone')}
       </div>
+      <p class="note">Zelle moves the money bank to bank in minutes and neither side pays a fee, so it is listed first on every tenant's page. Venmo and Cash App work too, but they charge to move money to your bank right away and they report to the IRS.</p>
       <button class="btn ghost" onclick="App.editHandles()">✏️ Edit payment info & phone</button>
       <button class="btn" onclick="App.copyInstructions()">📋 Copy payment instructions to text a tenant</button>
       <p class="note">Tip: in the Tenants tab, tap 📲 next to a tenant to copy their personal payment page. Send it to them once — they can pay from it every month, and their “I paid” text marks the book automatically when you tap it.</p>
@@ -826,6 +868,133 @@ const App = {
   },
 
   /* ---------- tenant page (opened from a ?p= link — no PIN, sees only their unit) ---------- */
+  /* ---------- repairs ---------- */
+  applyRepairReport(r) {
+    if (!(r && r.u && r.k)) { alert('That repair link is not complete — nothing was added.'); this.render(); return; }
+    const id = String(r.id || '');
+    if (id && data.repairs.some(x => x.reportId === id)) {
+      this.view = 'repairs';
+      this.confirmScreen('Already on the list', `This repair from ${esc(r.t || 'the tenant')} was added before. Nothing was added twice.`, null);
+      return;
+    }
+    const unit = unitById(r.u) || data.units.find(u => u.label === r.l && (!r.t || u.tenant === r.t));
+    if (!unit) { alert('That repair is for a unit that is not in the book anymore (' + (r.l || r.u) + ').'); this.render(); return; }
+    data.repairs.push({
+      id: uid(), unitId: unit.id, kind: String(r.k).slice(0, 60), where: String(r.w || '').slice(0, 60),
+      note: String(r.n || '').slice(0, 400), urgency: URGENCY_SHORT[r.ur] ? r.ur : 'soon',
+      date: /^\d{4}-\d{2}-\d{2}$/.test(String(r.d)) ? r.d : todayISO(),
+      status: 'open', from: 'tenant', reportId: id || undefined
+    });
+    save();
+    const g = groupById(unit.groupId);
+    const m = nowKey();
+    const owed = Math.max(0, unit.rent - paidSum(unit.id, m));
+    this.view = 'repairs';
+    this.confirmScreen('Added to the repair list',
+      `${esc(unit.tenant || 'Tenant')} — ${esc(g ? g.name : '')} ${esc(unit.label)}<br>${esc(r.k)}` +
+      (owed > 0 ? `<br><b style="color:var(--bad-text)">They still owe ${money(owed)} for ${monthLabel(m)}.</b>`
+                : `<br><b style="color:var(--good-text)">${monthLabel(m)} rent is paid up.</b>`), null);
+  },
+  renderRepairs() {
+    const list = data.repairs.slice().sort((a, b) => {
+      if ((a.status === 'done') !== (b.status === 'done')) return a.status === 'done' ? 1 : -1;
+      if ((a.urgency === 'emergency') !== (b.urgency === 'emergency')) return a.urgency === 'emergency' ? -1 : 1;
+      return String(b.date).localeCompare(String(a.date));
+    }).filter(r => this.repairFilter === 'done' ? r.status === 'done' : r.status !== 'done');
+
+    const m = nowKey();
+    let html = `
+      <div class="chips">
+        <button class="chip ${this.repairFilter === 'open' ? 'on' : ''}" onclick="App.setRepairFilter('open')">Still to fix</button>
+        <button class="chip ${this.repairFilter === 'done' ? 'on' : ''}" onclick="App.setRepairFilter('done')">Fixed</button>
+      </div>`;
+
+    if (!list.length) {
+      html += `<div class="card" style="padding:26px 16px;text-align:center">
+        <div style="font-size:44px">${this.repairFilter === 'done' ? '📗' : '🔧'}</div>
+        <p class="note">${this.repairFilter === 'done' ? 'Nothing has been marked fixed yet.'
+          : 'Nothing is broken right now. When a tenant reports something from their payment page, it lands here.'}</p></div>`;
+    } else {
+      html += '<div class="card">';
+      for (const r of list) {
+        const u = unitById(r.unitId);
+        const g = u ? groupById(u.groupId) : null;
+        const owed = u ? Math.max(0, u.rent - paidSum(u.id, m)) : 0;
+        const rentTag = !u || !u.rent ? '' : owed > 0
+          ? `<span class="badge due">✕ Owes ${money(owed)} for ${monthShort(m)}</span>`
+          : `<span class="badge paid">✓ ${monthShort(m)} rent paid</span>`;
+        html += `
+          <div class="repcard ${r.status === 'done' ? 'done' : ''}">
+            <div class="rephead">
+              <b>${esc(g ? g.name : '')} ${esc(u ? u.label : '?')}</b>
+              ${r.urgency === 'emergency' ? '<span class="badge due">🚨 Emergency</span>'
+                : `<span class="badge idle">${esc(URGENCY_SHORT[r.urgency] || 'Soon')}</span>`}
+            </div>
+            <div class="repmeta">${esc(u ? (u.tenant || 'No tenant') : '')}${r.from === 'tenant' ? ' · 📲 sent by tenant' : ''}</div>
+            <div class="reptext"><b>${esc(r.kind)}</b>${r.where ? ' — ' + esc(r.where) : ''}${r.note ? '\n' + esc(r.note) : ''}</div>
+            <div class="repmeta">Reported ${fmtDate(r.date)}${r.done ? ' · fixed ' + fmtDate(r.done) : ''} &nbsp; ${rentTag}</div>
+            <div class="repbtns">
+              ${r.status === 'done'
+                ? `<button class="btn ghost" onclick="App.reopenRepair('${r.id}')">Put back on the list</button>`
+                : `<button class="btn green" onclick="App.markRepairDone('${r.id}')">✓ Fixed</button>` +
+                  (u && u.phone ? `<a class="btn ghost" href="sms:${cleanPhone(u.phone)}?&body=${encodeURIComponent('About the ' + r.kind.toLowerCase() + ' at ' + (u.label || '') + ': ')}">💬 Text</a>` : '')}
+              <button class="btn ghost" onclick="App.deleteRepair('${r.id}')">Remove</button>
+            </div>
+          </div>`;
+      }
+      html += '</div>';
+    }
+    html += `<button class="btn" onclick="App.addRepair()">＋ Add a repair myself</button>
+      <p class="note">A repair request does not change what a tenant owes — rent is still due on the 1st. Each one shows whether that unit is paid up.</p>`;
+    return html;
+  },
+  setRepairFilter(f) { this.repairFilter = f; this.render(); },
+  markRepairDone(id) {
+    const r = data.repairs.find(x => x.id === id);
+    if (!r) return;
+    r.status = 'done'; r.done = todayISO();
+    save(); this.render();
+  },
+  reopenRepair(id) {
+    const r = data.repairs.find(x => x.id === id);
+    if (!r) return;
+    r.status = 'open'; delete r.done;
+    save(); this.render();
+  },
+  deleteRepair(id) {
+    if (!confirm('Remove this repair from the list?')) return;
+    data.repairs = data.repairs.filter(x => x.id !== id);
+    save(); this.render();
+  },
+  addRepair() {
+    const unitOpts = data.groups.map(g => unitsInGroup(g.id)
+      .map(u => `<option value="${u.id}">${esc(g.name)} — ${esc(u.label)}${u.tenant ? ' (' + esc(u.tenant) + ')' : ''}</option>`).join('')).join('');
+    this.modal(`
+      <button class="x" onclick="App.closeModal()">✕</button>
+      <h3>Add a repair</h3>
+      <div class="field"><label>Which unit?</label><select id="rp-unit">${unitOpts}</select></div>
+      <div class="field"><label>What needs fixing?</label>
+        <select id="rp-kind">${REPAIR_KINDS.map(k => `<option>${k}</option>`).join('')}</select></div>
+      <div class="field"><label>Where is it? (optional)</label><input type="text" id="rp-where" placeholder="for example: kitchen sink"></div>
+      <div class="field"><label>Details (optional)</label><textarea id="rp-note" placeholder="what is happening"></textarea></div>
+      <div class="field"><label>How bad is it?</label>
+        <select id="rp-urg">${Object.entries(URGENCY).map(([k, v]) => `<option value="${k}" ${k === 'soon' ? 'selected' : ''}>${v}</option>`).join('')}</select></div>
+      <button class="btn" onclick="App.saveRepair()">✓ Add it to the list</button>
+    `);
+  },
+  saveRepair() {
+    const unitId = document.getElementById('rp-unit').value;
+    if (!unitId) { alert('Pick a unit first.'); return; }
+    data.repairs.push({
+      id: uid(), unitId,
+      kind: document.getElementById('rp-kind').value,
+      where: document.getElementById('rp-where').value.trim(),
+      note: document.getElementById('rp-note').value.trim(),
+      urgency: document.getElementById('rp-urg').value,
+      date: todayISO(), status: 'open', from: 'landlord'
+    });
+    save(); this.closeModal(); this.view = 'repairs'; this.render();
+  },
   renderTenantPage() {
     const t = this._tenant;
     document.getElementById('topsub').textContent = 'Rent';
@@ -836,11 +1005,13 @@ const App = {
     const rent = Number(t.r) || 0;
     const vmHandle = String(t.vm || '').replace(/^@/, '');
     const caHandle = String(t.ca || '').replace(/^\$/, '');
+    const memo = `Put "${t.l || 'your unit'}" in the note so it is easy to match up.`;
+    // Zelle and a bank transfer go straight into the account with no fee, so they lead.
     const payRows = [
-      t.vm ? `<a class="paylink" target="_blank" rel="noopener" href="https://venmo.com/u/${encodeURIComponent(vmHandle)}"><span class="pl-ic">💙</span><div class="pl-t"><b>Venmo</b><span>${esc(t.vm)}</span></div><span class="pl-go">Open ›</span></a>` : '',
-      t.ca ? `<a class="paylink" target="_blank" rel="noopener" href="https://cash.app/$${encodeURIComponent(caHandle)}"><span class="pl-ic">💵</span><div class="pl-t"><b>Cash App</b><span>$${esc(caHandle)}</span></div><span class="pl-go">Open ›</span></a>` : '',
-      t.ze ? `<div class="paylink" style="cursor:pointer" onclick="App.copyText('${esc(t.ze)}')"><span class="pl-ic">🏦</span><div class="pl-t"><b>Zelle</b><span>${esc(t.ze)}</span></div><span class="pl-go">Copy</span></div>` : '',
-      t.dd ? `<div class="paylink"><span class="pl-ic">🏛️</span><div class="pl-t"><b>Direct deposit</b><span>${esc(t.dd)}</span></div></div>` : ''
+      t.ze ? `<div class="paylink" style="cursor:pointer" onclick="App.copyText('${esc(t.ze)}')"><span class="pl-ic">🏦</span><div class="pl-t"><b>Zelle<span class="best">NO FEES</span></b><span>${esc(t.ze)}</span><small>${esc(memo)}</small></div><span class="pl-go">Copy</span></div>` : '',
+      t.dd ? `<div class="paylink"><span class="pl-ic">🏛️</span><div class="pl-t"><b>Bank transfer / direct deposit<span class="best">NO FEES</span></b><span>${esc(t.dd)}</span><small>${esc(memo)}</small></div></div>` : '',
+      t.vm ? `<a class="paylink" target="_blank" rel="noopener" href="https://venmo.com/u/${encodeURIComponent(vmHandle)}"><span class="pl-ic">💙</span><div class="pl-t"><b>Venmo</b><span>${esc(t.vm)}</span><small>${esc(memo)}</small></div><span class="pl-go">Open ›</span></a>` : '',
+      t.ca ? `<a class="paylink" target="_blank" rel="noopener" href="https://cash.app/$${encodeURIComponent(caHandle)}"><span class="pl-ic">💵</span><div class="pl-t"><b>Cash App</b><span>$${esc(caHandle)}</span><small>${esc(memo)}</small></div><span class="pl-go">Open ›</span></a>` : ''
     ].join('') || `<div class="paylink"><span class="pl-ic">💬</span><div class="pl-t"><b>Ask the landlord</b><span>Venmo, Cash App, Zelle, cash, or check</span></div></div>`;
 
     document.getElementById('app').innerHTML = `
@@ -868,7 +1039,66 @@ const App = {
         <button class="btn ghost" onclick="App.tenantSend(false)">Or copy the message instead</button>` :
         `<button class="btn green" onclick="App.tenantSend(false)">Copy the “I paid” message ✓</button>
         <p class="note" style="text-align:center">Paste it in a text to your landlord.</p>`}
-      <p class="note" style="text-align:center">When the landlord taps the link in your text, the payment is marked off in the rent book automatically.</p>`;
+      <p class="note" style="text-align:center">When the landlord taps the link in your text, the payment is marked off in the rent book automatically.</p>
+
+      <div class="sectionlabel"><span class="stepnum">3</span>Something broken?</div>
+      <div class="card" id="tp-fixcard" style="padding:14px">
+        <p class="note" style="margin:0 0 10px">Tell the landlord what needs fixing. <b>Rent is still due on the 1st</b> either way — a repair request does not change what you owe.</p>
+        <button class="btn ghost" onclick="App.showRepairForm()">🔧 Report something broken</button>
+      </div>
+      <div id="tp-fixform"></div>`;
+  },
+  showRepairForm() {
+    document.getElementById('tp-fixcard').style.display = 'none';
+    document.getElementById('tp-fixform').innerHTML = `
+      <div class="card" style="padding:4px 14px 16px">
+        <div class="field"><label>What needs fixing?</label>
+          <select id="tf-kind">${REPAIR_KINDS.map(k => `<option>${k}</option>`).join('')}</select></div>
+        <div class="field"><label>Where is it?</label>
+          <input type="text" id="tf-where" placeholder="for example: kitchen sink, back bedroom"></div>
+        <div class="field"><label>What is happening?</label>
+          <textarea id="tf-note" placeholder="for example: the sink backs up and drains very slowly"></textarea></div>
+        <div class="field"><label>How bad is it?</label>
+          <select id="tf-urg">${Object.entries(URGENCY).map(([k, v]) => `<option value="${k}" ${k === 'soon' ? 'selected' : ''}>${v}</option>`).join('')}</select></div>
+      </div>
+      ${this._tenant.ph
+        ? `<a class="btn green" href="#" onclick="return App.tenantRepairSend(true)">💬 Send it to the landlord</a>
+           <button class="btn ghost" onclick="App.tenantRepairSend(false)">Or copy the message instead</button>`
+        : `<button class="btn green" onclick="App.tenantRepairSend(false)">Copy the repair message</button>
+           <p class="note" style="text-align:center">Paste it in a text to your landlord.</p>`}
+      <p class="note" style="text-align:center">Rent is still due on the 1st — please send your payment above as well.</p>`;
+    document.getElementById('tf-kind').scrollIntoView({ block: 'center' });
+  },
+  tenantRepairSend(viaSMS) {
+    const t = this._tenant;
+    const kind = document.getElementById('tf-kind').value;
+    const where = document.getElementById('tf-where').value.trim();
+    const note = document.getElementById('tf-note').value.trim();
+    const urg = document.getElementById('tf-urg').value;
+    if (!note && !where) { alert('Please say a little about what is wrong.'); return false; }
+    const payload = { v: 1, id: uid(), u: t.u, l: t.l, t: t.t, k: kind, w: where, n: note, ur: urg, d: todayISO() };
+    const link = baseURL() + '?fix=' + encPayload(payload);
+    const msg = `Hi, this is ${t.t || 'your tenant'} (${t.g || ''} ${t.l || ''}). Something needs fixing: ${kind}` +
+      (where ? ` — ${where}` : '') + (note ? `. ${note}` : '') +
+      (urg === 'emergency' ? ' This is an emergency.' : '') +
+      ` Tap this link to add it to the repair list: ${link}`;
+    const done = () => {
+      document.getElementById('tp-fixform').innerHTML =
+        `<div class="card" style="padding:18px;text-align:center">
+           <div style="font-size:40px">✅</div>
+           <h3 style="margin-top:6px">Repair request sent</h3>
+           <p class="note">The landlord has it. <b>Rent is still due on the 1st</b> — scroll up and send your payment if you have not yet.</p>
+         </div>`;
+    };
+    if (viaSMS && t.ph) {
+      location.href = 'sms:' + cleanPhone(t.ph) + '?&body=' + encodeURIComponent(msg);
+      done();
+      return false;
+    }
+    navigator.clipboard.writeText(msg).then(
+      () => { alert('Copied! Paste it into a text message to your landlord.'); done(); },
+      () => { prompt('Copy this and text it to your landlord:', msg); done(); });
+    return false;
   },
   tenantSend(viaSMS) {
     const t = this._tenant;
