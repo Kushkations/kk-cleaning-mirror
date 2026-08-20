@@ -1,470 +1,492 @@
 {
- "groups": [
-  {
-   "id": "g6th",
-   "name": "6th Ave"
-  },
-  {
-   "id": "gcol",
-   "name": "Colorado"
-  },
-  {
-   "id": "gdup",
-   "name": "Duplex Loan"
-  },
-  {
-   "id": "ggra",
-   "name": "Granby Condo"
-  },
-  {
-   "id": "ghom",
-   "name": "Home Mortgage"
-  },
-  {
-   "id": "gmlk",
-   "name": "Martin Luther King Duplex"
-  },
-  {
-   "id": "gmzp",
-   "name": "Mozart Place"
-  },
-  {
-   "id": "gmoz",
-   "name": "Mozart Properties"
-  },
-  {
-   "id": "gshe",
-   "name": "Sheridan Apts"
-  },
-  {
-   "id": "gtrk",
-   "name": "Truck Loan"
-  }
- ],
- "units": [
-  {
-   "id": "u01",
-   "groupId": "g6th",
-   "label": "1016 A",
-   "tenant": "David Bloch",
-   "rent": 600,
-   "active": true
-  },
-  {
-   "id": "u02",
-   "groupId": "g6th",
-   "label": "1016 B",
-   "tenant": "Filadelfio Trujillo",
-   "rent": 550,
-   "active": true
-  },
-  {
-   "id": "u03",
-   "groupId": "g6th",
-   "label": "A",
-   "tenant": "Arika Montoya",
-   "rent": 600,
-   "active": true
-  },
-  {
-   "id": "u04",
-   "groupId": "g6th",
-   "label": "B",
-   "tenant": "Elizabeth Lopez",
-   "rent": 550,
-   "active": true
-  },
-  {
-   "id": "u05",
-   "groupId": "gcol",
-   "label": "Colorado",
-   "tenant": "Ron Pittman",
-   "rent": 2000,
-   "active": true
-  },
-  {
-   "id": "u06",
-   "groupId": "gdup",
-   "label": "Duplex Loan",
-   "tenant": "Josh Wilson",
-   "rent": 175,
-   "active": true
-  },
-  {
-   "id": "u07",
-   "groupId": "ggra",
-   "label": "Granby Condo",
-   "tenant": "Sherman Investments",
-   "rent": 318,
-   "active": true
-  },
-  {
-   "id": "u08",
-   "groupId": "ghom",
-   "label": "Home Mortgage",
-   "tenant": "Scott Gus",
-   "rent": 350,
-   "active": true
-  },
-  {
-   "id": "u09",
-   "groupId": "gmlk",
-   "label": "4327",
-   "tenant": "Ivan Perez",
-   "rent": 1000,
-   "active": true
-  },
-  {
-   "id": "u10",
-   "groupId": "gmlk",
-   "label": "4331",
-   "tenant": "Maricela Castillo",
-   "rent": 1050,
-   "active": true
-  },
-  {
-   "id": "u11",
-   "groupId": "gmzp",
-   "label": "Unit 1",
-   "tenant": "June Saiz",
-   "rent": 950,
-   "active": true
-  },
-  {
-   "id": "u12",
-   "groupId": "gmzp",
-   "label": "Unit 2",
-   "tenant": "Sue Baca",
-   "rent": 650,
-   "active": true
-  },
-  {
-   "id": "u13",
-   "groupId": "gmzp",
-   "label": "Unit 3",
-   "tenant": "Frank Gallegos",
-   "rent": 650,
-   "active": true
-  },
-  {
-   "id": "u14",
-   "groupId": "gmoz",
-   "label": "Unit 1",
-   "tenant": "Daniel Farrelly",
-   "rent": 1575,
-   "active": true
-  },
-  {
-   "id": "u15",
-   "groupId": "gmoz",
-   "label": "Unit 2",
-   "tenant": "Ken L Williams",
-   "rent": 1345,
-   "active": true
-  },
-  {
-   "id": "u16",
-   "groupId": "gmoz",
-   "label": "Unit 3",
-   "tenant": "Richard Price",
-   "rent": 1050,
-   "active": true
-  },
-  {
-   "id": "u17",
-   "groupId": "gmoz",
-   "label": "Unit 4",
-   "tenant": "Paul Vernig",
-   "rent": 1200,
-   "active": true
-  },
-  {
-   "id": "u18",
-   "groupId": "gmoz",
-   "label": "Unit 5",
-   "tenant": "Brenton Bostick",
-   "rent": 1600,
-   "active": true
-  },
-  {
-   "id": "u19",
-   "groupId": "gmoz",
-   "label": "Unit 6",
-   "tenant": "Shawn Eckels",
-   "rent": 1400,
-   "active": true
-  },
-  {
-   "id": "u20",
-   "groupId": "gmoz",
-   "label": "Unit 7",
-   "tenant": "Shaq 3",
-   "rent": 1650,
-   "active": true
-  },
-  {
-   "id": "u21",
-   "groupId": "gmoz",
-   "label": "Unit 8",
-   "tenant": "David Guerrero",
-   "rent": 1785,
-   "active": true
-  },
-  {
-   "id": "u22",
-   "groupId": "gmoz",
-   "label": "Garage 1",
-   "tenant": "Rey Vauhns",
-   "rent": 100,
-   "active": true
-  },
-  {
-   "id": "u23",
-   "groupId": "gmoz",
-   "label": "Garage 2",
-   "tenant": "Mike Concrete",
-   "rent": 275,
-   "active": true
-  },
-  {
-   "id": "u24",
-   "groupId": "gmoz",
-   "label": "Garage 3",
-   "tenant": "Mic",
-   "rent": 50,
-   "active": true
-  },
-  {
-   "id": "u25",
-   "groupId": "gmoz",
-   "label": "Garage 4",
-   "tenant": "Gayland Allen",
-   "rent": 100,
-   "active": true
-  },
-  {
-   "id": "u26",
-   "groupId": "gmoz",
-   "label": "Garage 5",
-   "tenant": "Kevin Gray",
-   "rent": 100,
-   "active": true
-  },
-  {
-   "id": "u27",
-   "groupId": "gmoz",
-   "label": "Parking",
-   "tenant": "Mike Truck",
-   "rent": 50,
-   "active": true
-  },
-  {
-   "id": "u28",
-   "groupId": "gmoz",
-   "label": "Parking 1",
-   "tenant": "Tim Robinson",
-   "rent": 50,
-   "active": true
-  },
-  {
-   "id": "u29",
-   "groupId": "gmoz",
-   "label": "Parking 2",
-   "tenant": "Dalila",
-   "rent": 100,
-   "active": true
-  },
-  {
-   "id": "u30",
-   "groupId": "gshe",
-   "label": "3445",
-   "tenant": "Shaq 1",
-   "rent": 1000,
-   "active": true
-  },
-  {
-   "id": "u31",
-   "groupId": "gshe",
-   "label": "3447",
-   "tenant": "Betty Cole",
-   "rent": 1000,
-   "active": true
-  },
-  {
-   "id": "u32",
-   "groupId": "gshe",
-   "label": "3449",
-   "tenant": "Joshua Dondelinger",
-   "rent": 1100,
-   "active": true
-  },
-  {
-   "id": "u33",
-   "groupId": "gshe",
-   "label": "3451",
-   "tenant": "Shaq 2",
-   "rent": 1300,
-   "active": true
-  },
-  {
-   "id": "u34",
-   "groupId": "gshe",
-   "label": "3453",
-   "tenant": "Nicole Williamson",
-   "rent": 1300,
-   "active": true
-  },
-  {
-   "id": "u35",
-   "groupId": "gshe",
-   "label": "3455",
-   "tenant": "Daniel Stined",
-   "rent": 1000,
-   "active": true
-  },
-  {
-   "id": "u36",
-   "groupId": "gshe",
-   "label": "3457",
-   "tenant": "Karl Haynes",
-   "rent": 1450,
-   "active": true
-  },
-  {
-   "id": "u37",
-   "groupId": "gshe",
-   "label": "3485",
-   "tenant": "Robert Sequra",
-   "rent": 1500,
-   "active": true
-  },
-  {
-   "id": "u38",
-   "groupId": "gshe",
-   "label": "3487",
-   "tenant": "William S. Hogan",
-   "rent": 1120,
-   "active": true
-  },
-  {
-   "id": "u39",
-   "groupId": "gshe",
-   "label": "3489",
-   "tenant": "Rosa Gutierrez",
-   "rent": 1150,
-   "active": true
-  },
-  {
-   "id": "u40",
-   "groupId": "gshe",
-   "label": "5220",
-   "tenant": "Martain Garcia",
-   "rent": 950,
-   "active": true
-  },
-  {
-   "id": "u41",
-   "groupId": "gshe",
-   "label": "5230",
-   "tenant": "Gloria Ponce",
-   "rent": 1000,
-   "active": true
-  },
-  {
-   "id": "u42",
-   "groupId": "gshe",
-   "label": "5240",
-   "tenant": "Jamie Rivemar",
-   "rent": 1100,
-   "active": true
-  },
-  {
-   "id": "u44",
-   "groupId": "gtrk",
-   "label": "Truck loan",
-   "tenant": "C.L. Walker",
-   "rent": 800,
-   "active": true
-  }
- ],
- "augustPaid": [
-  {
-   "u": "u09",
-   "a": 1000
-  },
-  {
-   "u": "u10",
-   "a": 1050
-  },
-  {
-   "u": "u14",
-   "a": 1575
-  },
-  {
-   "u": "u16",
-   "a": 1050
-  },
-  {
-   "u": "u17",
-   "a": 1200
-  },
-  {
-   "u": "u18",
-   "a": 1600
-  },
-  {
-   "u": "u20",
-   "a": 1650
-  },
-  {
-   "u": "u21",
-   "a": 1785
-  },
-  {
-   "u": "u22",
-   "a": 100
-  },
-  {
-   "u": "u30",
-   "a": 1000
-  },
-  {
-   "u": "u31",
-   "a": 1000
-  },
-  {
-   "u": "u33",
-   "a": 1300
-  },
-  {
-   "u": "u34",
-   "a": 1300
-  },
-  {
-   "u": "u35",
-   "a": 1000,
-   "n": "sheet also shows a handwritten 5600"
-  },
-  {
-   "u": "u37",
-   "a": 1500,
-   "n": "sheet shows handwritten 1492"
-  },
-  {
-   "u": "u38",
-   "a": 1120
-  },
-  {
-   "u": "u39",
-   "a": 1150
-  },
-  {
-   "u": "u41",
-   "a": 1000
-  },
-  {
-   "u": "u44",
-   "a": 800
-  }
- ]
+  "groups": [
+    {
+      "id": "g6th",
+      "name": "6th Ave"
+    },
+    {
+      "id": "gcol",
+      "name": "Colorado"
+    },
+    {
+      "id": "gdup",
+      "name": "Duplex Loan"
+    },
+    {
+      "id": "ggra",
+      "name": "Granby Condo"
+    },
+    {
+      "id": "ghom",
+      "name": "Home Mortgage"
+    },
+    {
+      "id": "gmlk",
+      "name": "Martin Luther King Duplex"
+    },
+    {
+      "id": "gmzp",
+      "name": "Mozart Place"
+    },
+    {
+      "id": "gmoz",
+      "name": "Mozart Properties"
+    },
+    {
+      "id": "gshe",
+      "name": "Sheridan Apts"
+    },
+    {
+      "id": "gtrk",
+      "name": "Truck Loan"
+    }
+  ],
+  "units": [
+    {
+      "id": "u01",
+      "groupId": "g6th",
+      "label": "1016 A",
+      "tenant": "David Bloch",
+      "rent": 600,
+      "active": true
+    },
+    {
+      "id": "u02",
+      "groupId": "g6th",
+      "label": "1016 B",
+      "tenant": "Filadelfio Trujillo",
+      "rent": 550,
+      "active": true
+    },
+    {
+      "id": "u03",
+      "groupId": "g6th",
+      "label": "A",
+      "tenant": "Arika Montoya",
+      "rent": 600,
+      "active": true
+    },
+    {
+      "id": "u04",
+      "groupId": "g6th",
+      "label": "B",
+      "tenant": "Elizabeth Lopez",
+      "rent": 550,
+      "active": true
+    },
+    {
+      "id": "u05",
+      "groupId": "gcol",
+      "label": "Colorado",
+      "tenant": "Ron Pittman",
+      "rent": 2000,
+      "active": true
+    },
+    {
+      "id": "u06",
+      "groupId": "gdup",
+      "label": "Duplex Loan",
+      "tenant": "Josh Wilson",
+      "rent": 175,
+      "active": true
+    },
+    {
+      "id": "u07",
+      "groupId": "ggra",
+      "label": "Granby Condo",
+      "tenant": "Sherman Investments",
+      "rent": 318,
+      "active": true
+    },
+    {
+      "id": "u08",
+      "groupId": "ghom",
+      "label": "Home Mortgage",
+      "tenant": "Scott Gus",
+      "rent": 350,
+      "active": true
+    },
+    {
+      "id": "u09",
+      "groupId": "gmlk",
+      "label": "4327",
+      "tenant": "Ivan Perez",
+      "rent": 1000,
+      "active": true
+    },
+    {
+      "id": "u10",
+      "groupId": "gmlk",
+      "label": "4331",
+      "tenant": "Maricela Castillo",
+      "rent": 1050,
+      "active": true
+    },
+    {
+      "id": "u11",
+      "groupId": "gmzp",
+      "label": "Unit 1",
+      "tenant": "June Saiz",
+      "rent": 950,
+      "active": true
+    },
+    {
+      "id": "u12",
+      "groupId": "gmzp",
+      "label": "Unit 2",
+      "tenant": "Sue Baca",
+      "rent": 650,
+      "active": true
+    },
+    {
+      "id": "u13",
+      "groupId": "gmzp",
+      "label": "Unit 3",
+      "tenant": "Frank Gallegos",
+      "rent": 650,
+      "active": true
+    },
+    {
+      "id": "u45",
+      "groupId": "gmzp",
+      "label": "Unit 4",
+      "tenant": "",
+      "rent": 0,
+      "active": true,
+      "needs": true,
+      "note": "Not on the Aug 2026 paper sheet - tenant name and rent still needed"
+    },
+    {
+      "id": "u46",
+      "groupId": "gmzp",
+      "label": "Unit 5",
+      "tenant": "",
+      "rent": 0,
+      "active": true,
+      "needs": true,
+      "note": "Not on the Aug 2026 paper sheet - tenant name and rent still needed"
+    },
+    {
+      "id": "u14",
+      "groupId": "gmoz",
+      "label": "Unit 1",
+      "tenant": "Daniel Farrelly",
+      "rent": 1575,
+      "active": true
+    },
+    {
+      "id": "u15",
+      "groupId": "gmoz",
+      "label": "Unit 2",
+      "tenant": "Ken L Williams",
+      "rent": 1345,
+      "active": true
+    },
+    {
+      "id": "u16",
+      "groupId": "gmoz",
+      "label": "Unit 3",
+      "tenant": "Richard Price",
+      "rent": 1050,
+      "active": true
+    },
+    {
+      "id": "u17",
+      "groupId": "gmoz",
+      "label": "Unit 4",
+      "tenant": "Paul Vernig",
+      "rent": 1200,
+      "active": true
+    },
+    {
+      "id": "u18",
+      "groupId": "gmoz",
+      "label": "Unit 5",
+      "tenant": "Brenton Bostick",
+      "rent": 1600,
+      "active": true
+    },
+    {
+      "id": "u19",
+      "groupId": "gmoz",
+      "label": "Unit 6",
+      "tenant": "Shawn Eckels",
+      "rent": 1400,
+      "active": true
+    },
+    {
+      "id": "u20",
+      "groupId": "gmoz",
+      "label": "Unit 7",
+      "tenant": "Shaq 3",
+      "rent": 1650,
+      "active": true
+    },
+    {
+      "id": "u21",
+      "groupId": "gmoz",
+      "label": "Unit 8",
+      "tenant": "David Guerrero",
+      "rent": 1785,
+      "active": true
+    },
+    {
+      "id": "u22",
+      "groupId": "gmoz",
+      "label": "Garage 1",
+      "tenant": "Rey Vauhns",
+      "rent": 100,
+      "active": true
+    },
+    {
+      "id": "u23",
+      "groupId": "gmoz",
+      "label": "Garage 2",
+      "tenant": "Mike Concrete",
+      "rent": 275,
+      "active": true
+    },
+    {
+      "id": "u24",
+      "groupId": "gmoz",
+      "label": "Garage 3",
+      "tenant": "Mic",
+      "rent": 50,
+      "active": true
+    },
+    {
+      "id": "u25",
+      "groupId": "gmoz",
+      "label": "Garage 4",
+      "tenant": "Gayland Allen",
+      "rent": 100,
+      "active": true
+    },
+    {
+      "id": "u26",
+      "groupId": "gmoz",
+      "label": "Garage 5",
+      "tenant": "Kevin Gray",
+      "rent": 100,
+      "active": true
+    },
+    {
+      "id": "u27",
+      "groupId": "gmoz",
+      "label": "Parking",
+      "tenant": "Mike Truck",
+      "rent": 50,
+      "active": true
+    },
+    {
+      "id": "u28",
+      "groupId": "gmoz",
+      "label": "Parking 1",
+      "tenant": "Tim Robinson",
+      "rent": 50,
+      "active": true
+    },
+    {
+      "id": "u29",
+      "groupId": "gmoz",
+      "label": "Parking 2",
+      "tenant": "Dalila",
+      "rent": 100,
+      "active": true
+    },
+    {
+      "id": "u30",
+      "groupId": "gshe",
+      "label": "3445",
+      "tenant": "Shaq 1",
+      "rent": 1000,
+      "active": true
+    },
+    {
+      "id": "u31",
+      "groupId": "gshe",
+      "label": "3447",
+      "tenant": "Betty Cole",
+      "rent": 1000,
+      "active": true
+    },
+    {
+      "id": "u32",
+      "groupId": "gshe",
+      "label": "3449",
+      "tenant": "Joshua Dondelinger",
+      "rent": 1100,
+      "active": true
+    },
+    {
+      "id": "u33",
+      "groupId": "gshe",
+      "label": "3451",
+      "tenant": "Shaq 2",
+      "rent": 1300,
+      "active": true
+    },
+    {
+      "id": "u34",
+      "groupId": "gshe",
+      "label": "3453",
+      "tenant": "Nicole Williamson",
+      "rent": 1300,
+      "active": true
+    },
+    {
+      "id": "u35",
+      "groupId": "gshe",
+      "label": "3455",
+      "tenant": "Daniel Stined",
+      "rent": 1000,
+      "active": true,
+      "note": "Sheet shows a handwritten 5,600 next to this row - confirm what it means"
+    },
+    {
+      "id": "u36",
+      "groupId": "gshe",
+      "label": "3457",
+      "tenant": "Karl Haynes",
+      "rent": 1450,
+      "active": true
+    },
+    {
+      "id": "u37",
+      "groupId": "gshe",
+      "label": "3485",
+      "tenant": "Robert Sequra",
+      "rent": 1500,
+      "active": true
+    },
+    {
+      "id": "u38",
+      "groupId": "gshe",
+      "label": "3487",
+      "tenant": "William S. Hogan",
+      "rent": 1120,
+      "active": true
+    },
+    {
+      "id": "u39",
+      "groupId": "gshe",
+      "label": "3489",
+      "tenant": "Rosa Gutierrez",
+      "rent": 1150,
+      "active": true
+    },
+    {
+      "id": "u40",
+      "groupId": "gshe",
+      "label": "5220",
+      "tenant": "Martain Garcia",
+      "rent": 950,
+      "active": true
+    },
+    {
+      "id": "u41",
+      "groupId": "gshe",
+      "label": "5230",
+      "tenant": "Gloria Ponce",
+      "rent": 1000,
+      "active": true
+    },
+    {
+      "id": "u42",
+      "groupId": "gshe",
+      "label": "5240",
+      "tenant": "Jamie Rivemar",
+      "rent": 1100,
+      "active": true,
+      "note": "Sheet shows a handwritten 6,600 next to this row - confirm what it means"
+    },
+    {
+      "id": "u44",
+      "groupId": "gtrk",
+      "label": "Truck loan",
+      "tenant": "C.L. Walker",
+      "rent": 800,
+      "active": true
+    }
+  ],
+  "augustPaid": [
+    {
+      "u": "u09",
+      "a": 1000
+    },
+    {
+      "u": "u10",
+      "a": 1050
+    },
+    {
+      "u": "u14",
+      "a": 1575
+    },
+    {
+      "u": "u16",
+      "a": 1050
+    },
+    {
+      "u": "u17",
+      "a": 1200
+    },
+    {
+      "u": "u18",
+      "a": 1600
+    },
+    {
+      "u": "u20",
+      "a": 1650
+    },
+    {
+      "u": "u21",
+      "a": 1785
+    },
+    {
+      "u": "u22",
+      "a": 100
+    },
+    {
+      "u": "u30",
+      "a": 1000
+    },
+    {
+      "u": "u31",
+      "a": 1000
+    },
+    {
+      "u": "u32",
+      "a": 1100,
+      "n": "sheet also shows a handwritten 300 - confirm the amount"
+    },
+    {
+      "u": "u33",
+      "a": 1300
+    },
+    {
+      "u": "u34",
+      "a": 1300
+    },
+    {
+      "u": "u37",
+      "a": 1500,
+      "n": "sheet shows handwritten 1492"
+    },
+    {
+      "u": "u38",
+      "a": 1120
+    },
+    {
+      "u": "u39",
+      "a": 1150
+    },
+    {
+      "u": "u41",
+      "a": 1000
+    },
+    {
+      "u": "u44",
+      "a": 800
+    }
+  ]
 }

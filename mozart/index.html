@@ -324,9 +324,14 @@ function logoSVG(cls) {
   return n.outerHTML;
 }
 
+const SHEET_PASS = 2;   // bump when the reading of the paper sheet is corrected
+
 /* Rows scratched off on the Aug 2026 paper sheet = already paid for August 2026 */
 function applySheetAug26(d, augustPaid) {
   const M = '2026-08';
+  const keep = new Set((augustPaid || []).map(s => 'sheet-aug26-' + s.u));
+  // drop rows carried over from an earlier, mis-read pass of the paper sheet
+  d.payments = d.payments.filter(p => !String(p.id).startsWith('sheet-aug26-') || keep.has(p.id));
   for (const s of (augustPaid || [])) {
     if (!d.units.some(x => x.id === s.u)) continue;
     if (d.payments.some(p => p.unitId === s.u && p.month === M)) continue;
@@ -336,7 +341,15 @@ function applySheetAug26(d, augustPaid) {
       note: s.n || 'marked off on the Aug 2026 paper sheet'
     });
   }
-  d.sheetAug26 = true;
+  d.sheetAug26 = SHEET_PASS;
+}
+
+/* Units that exist at the property but never made it onto the paper sheet. */
+function applyMissingUnits(d, seedUnits) {
+  for (const u of (seedUnits || [])) {
+    if (u.needs && !d.units.some(x => x.id === u.id)) d.units.push(JSON.parse(JSON.stringify(u)));
+  }
+  d.missingUnits = true;
 }
 
 /* ================= storage ================= */
@@ -352,6 +365,7 @@ function freshData(seed) {
     imported: []
   };
   applySheetAug26(d, seed.augustPaid);
+  d.missingUnits = true;   // freshData already copied them in
   return d;
 }
 async function fetchSeed() {
@@ -376,10 +390,13 @@ async function initData() {
     for (const p of data.payments) {   // older builds labelled these 'Other'
       if (String(p.id).startsWith('sheet-aug26-') && p.method === 'Other') p.method = 'Paper sheet';
     }
-    if (!data.sheetAug26) {
-      try { const seed = await fetchSeed(); applySheetAug26(data, seed.augustPaid); }
-      catch (e) { data.sheetAug26 = true; }
-      save();
+    if (data.sheetAug26 !== SHEET_PASS || !data.missingUnits) {
+      try {
+        const seed = await fetchSeed();
+        if (data.sheetAug26 !== SHEET_PASS) applySheetAug26(data, seed.augustPaid);
+        if (!data.missingUnits) applyMissingUnits(data, seed.units);
+        save();
+      } catch (e) { /* offline - try again next time the book is opened */ }
     }
     return;
   }
@@ -617,6 +634,7 @@ const App = {
   },
 
   badgeFor(unit, month) {
+    if (unit.needs && (!unit.tenant || !unit.rent)) return '<span class="badge partial">＋ Add name &amp; rent</span>';
     const st = statusOf(unit, month);
     const sum = paidSum(unit.id, month);
     if (st === 'vacant') return '<span class="badge idle">— Vacant</span>';
@@ -691,8 +709,8 @@ const App = {
         const needsBtn = u.active && u.rent > 0 && (st === 'due' || st === 'partial' || st === 'upcoming');
         html += `
           <div class="row ${st === 'vacant' ? 'vacant' : ''}" onclick="App.openUnit('${u.id}','${m}')">
-            <div class="who"><div class="u">${esc(u.label)}</div><div class="t">${esc(u.tenant || 'No tenant')}</div>${payLine}</div>
-            <div class="amt"><div class="r money">${money(u.rent)}</div>${this.badgeFor(u, m)}</div>
+            <div class="who"><div class="u">${esc(u.label)}</div><div class="t">${esc(u.tenant || (u.needs ? 'Not on the Aug sheet' : 'No tenant'))}</div>${payLine}</div>
+            <div class="amt"><div class="r money">${u.needs && !u.rent ? '—' : money(u.rent)}</div>${this.badgeFor(u, m)}</div>
             ${needsBtn ? `<button class="markbtn" onclick="event.stopPropagation();App.openUnit('${u.id}','${m}')">Mark paid</button>` : ''}
           </div>`;
       }
@@ -964,6 +982,8 @@ const App = {
       <button class="x" onclick="App.closeModal()">✕</button>
       <h3>${esc(g ? g.name : '')} — ${esc(u.label)}</h3>
       <div class="subtitle">${esc(u.tenant || 'No tenant')} · ${monthLabel(month)}</div>
+      ${u.note ? `<p class="note">📝 From the paper sheet: ${esc(u.note)}</p>` : ''}
+      ${u.needs ? `<button class="btn" onclick="App.editUnit('${unitId}')">✏️ Add the tenant name and rent</button>` : ''}
       <div class="sumline"><span>Rent for the month</span><b class="money">${money(u.rent)}</b></div>
       <div class="sumline"><span>Paid so far</span><b class="money" style="color:var(--good-text)">${money(sum)}</b></div>
       <div class="sumline"><span>Still owed</span><b class="money" style="color:${remaining > 0 ? 'var(--bad-text)' : 'var(--good-text)'}">${money(remaining)}</b></div>
@@ -1051,6 +1071,7 @@ const App = {
     if (unitId) {
       const u = unitById(unitId);
       Object.assign(u, { groupId: gid, label, tenant, phone, email, rent, active });
+      if (u.needs && tenant && rent > 0) { delete u.needs; delete u.note; }   // no longer missing
     } else {
       data.units.push({ id: 'u' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5), groupId: gid, label, tenant, phone, email, rent, active });
     }
