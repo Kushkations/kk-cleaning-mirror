@@ -494,7 +494,8 @@ const App = {
     }
     const rid = String(r.id || '');
     if (rid && data.imported.includes(rid)) {
-      this.confirmScreen('Already recorded', `This payment from ${esc(r.t || 'the tenant')} was recorded before. Nothing was added twice.`, r);
+      const prev = data.payments.find(p => p.reportId === rid);
+      this.confirmScreen('Already recorded', `This payment from ${esc(r.t || 'the tenant')} was recorded before. Nothing was added twice.`, prev ? prev.id : null);
       return;
     }
     let unit = unitById(r.u) || data.units.find(u => u.label === r.l && (!r.t || u.tenant === r.t));
@@ -503,28 +504,31 @@ const App = {
       this.render();
       return;
     }
-    data.payments.push({
+    const pay = {
       id: uid(), unitId: unit.id, month: String(r.m),
       amount: Math.round(Number(r.a) * 100) / 100,
       method: METHODS.includes(r.me) ? r.me : 'Other',
       date: /^\d{4}-\d{2}-\d{2}$/.test(String(r.d)) ? r.d : todayISO(),
       note: String(r.n || '').slice(0, 200),
-      reported: true
-    });
+      reported: true,
+      reportId: rid || undefined
+    };
+    data.payments.push(pay);
     if (rid) data.imported.push(rid);
     save();
     this.month = String(r.m);
     const g = groupById(unit.groupId);
     this.confirmScreen('Payment recorded ✓',
-      `${esc(unit.tenant || 'Tenant')} — ${esc(g ? g.name : '')} ${esc(unit.label)}<br><b class="money" style="font-size:22px">${money(r.a)}</b> by ${esc(r.me || 'unknown method')} for ${monthLabel(String(r.m))}.<br><br>It is marked off in the book. Double-check the money actually arrived in your ${esc(r.me || 'account')}.`, r);
+      `${esc(unit.tenant || 'Tenant')} — ${esc(g ? g.name : '')} ${esc(unit.label)}<br><b class="money" style="font-size:22px">${money(r.a)}</b> by ${esc(r.me || 'unknown method')} for ${monthLabel(String(r.m))}.<br><br>It is marked off in the book. Double-check the money actually arrived in your ${esc(r.me || 'account')}.`, pay.id);
   },
-  confirmScreen(title, msg, r) {
+  confirmScreen(title, msg, pid) {
     document.getElementById('app').innerHTML = `
       <div class="confirm-hero">
         <div class="big">✅</div>
         <h2>${title}</h2>
         <p>${msg}</p>
       </div>
+      ${pid ? `<button class="btn green" onclick="App.receipt('${pid}')">🧾 Send the tenant a receipt</button>` : ''}
       <button class="btn" onclick="App.render()">Open the rent book</button>`;
     document.getElementById('topsub').textContent = 'Payment received';
     this.renderNav();
@@ -829,6 +833,45 @@ const App = {
   copyText(s) {
     navigator.clipboard.writeText(s).then(() => alert('Copied: ' + s), () => prompt('Copy this:', s));
   },
+  copyPlain(s) {
+    navigator.clipboard.writeText(s).then(() => alert('Copied!'), () => prompt('Copy this:', s));
+  },
+
+  /* ---------- receipts ---------- */
+  receiptText(p, u, g) {
+    const remaining = Math.max(0, u.rent - paidSum(u.id, p.month));
+    return [
+      'RECEIPT — Mozart Properties',
+      `Received: ${money(p.amount)} by ${p.method}`,
+      `From: ${u.tenant || 'Tenant'} — ${(g ? g.name + ' ' : '')}${u.label}`,
+      `For: Rent, ${monthLabel(p.month)}`,
+      `Date received: ${fmtDate(p.date)}`,
+      remaining > 0 ? `Still owed for ${monthLabel(p.month)}: ${money(remaining)}` : `${monthLabel(p.month)} rent: PAID IN FULL ✓`,
+      `Receipt no. ${String(p.id).toUpperCase()}`,
+      'Thank you!'
+    ].join('\n');
+  },
+  receipt(pid) {
+    const p = data.payments.find(x => x.id === pid);
+    if (!p) { alert('Payment not found.'); return; }
+    const u = unitById(p.unitId);
+    if (!u) { alert('Unit not found.'); return; }
+    const g = groupById(u.groupId);
+    const text = this.receiptText(p, u, g);
+    this._lastReceipt = text;
+    const smsHref = 'sms:' + cleanPhone(u.phone || '') + '?&body=' + encodeURIComponent(text);
+    const mailHref = 'mailto:' + encodeURIComponent(u.email || '') + '?subject=' + encodeURIComponent('Rent receipt — ' + u.label + ' — ' + monthLabel(p.month)) + '&body=' + encodeURIComponent(text);
+    this.modal(`
+      <button class="x" onclick="App.closeModal()">✕</button>
+      <h3>🧾 Receipt</h3>
+      <div class="subtitle">${esc(u.tenant || 'Tenant')} · ${esc(u.label)}</div>
+      <div class="card" style="margin-top:12px;padding:14px;white-space:pre-wrap;font-size:15px;line-height:1.6">${esc(text)}</div>
+      <a class="btn green" href="${smsHref}">💬 Text this receipt${u.phone ? ' to ' + esc(u.phone) : ''}</a>
+      <a class="btn ghost" href="${mailHref}">✉️ Email this receipt${u.email ? ' to ' + esc(u.email) : ''}</a>
+      <button class="btn ghost" onclick="App.copyPlain(App._lastReceipt)">📋 Copy it</button>
+      ${!u.phone && !u.email ? `<p class="note" style="text-align:center">Tip: add this tenant's cell number or email in the Tenants tab and it fills in by itself next time.</p>` : ''}
+    `);
+  },
 
   /* ---------- tenant link sharing (landlord side) ---------- */
   tenantLinkFor(unitId) {
@@ -864,6 +907,7 @@ const App = {
     const payRows = pays.map(p => `
       <div class="payitem">
         <div class="pi"><b class="money">${money(p.amount)}</b> — ${esc(p.method)}${p.reported ? ' <span class="reportedtag">📲 sent by tenant</span>' : ''}<div class="pm">${fmtDate(p.date)}${p.note ? ' · ' + esc(p.note) : ''}</div></div>
+        <button class="del" style="background:var(--accent-soft);color:var(--accent)" title="Send receipt" onclick="App.receipt('${p.id}')">🧾 Receipt</button>
         <button class="del" onclick="App.deletePayment('${p.id}','${unitId}','${month}')">Remove</button>
       </div>`).join('');
     this.modal(`
@@ -926,6 +970,8 @@ const App = {
       <div class="field" id="eu-newgroup-wrap" style="display:none"><label>New property name</label><input type="text" id="eu-newgroup" placeholder="for example: Elm Street"></div>
       <div class="field"><label>Unit (apartment number, garage…)</label><input type="text" id="eu-label" value="${u ? esc(u.label) : ''}" placeholder="for example: 3451 or Garage 6"></div>
       <div class="field"><label>Tenant name</label><input type="text" id="eu-tenant" value="${u ? esc(u.tenant) : ''}" placeholder="who lives there"></div>
+      <div class="field"><label>Tenant cell number (for receipts & their payment link)</label><input type="tel" id="eu-phone" value="${u ? esc(u.phone || '') : ''}" placeholder="(555) 555-5555"></div>
+      <div class="field"><label>Tenant email (optional, for receipts)</label><input type="text" id="eu-email" value="${u ? esc(u.email || '') : ''}" placeholder="name@email.com"></div>
       <div class="field"><label>Monthly rent ($)</label><input type="number" id="eu-rent" inputmode="decimal" step="0.01" min="0" value="${u ? u.rent : ''}"></div>
       <div class="field"><label style="display:flex;align-items:center;gap:10px;font-size:16px;color:var(--ink)">
         <input type="checkbox" id="eu-active" style="width:22px;height:22px" ${!u || u.active ? 'checked' : ''}> Occupied (counts toward the monthly total)</label></div>
@@ -948,13 +994,15 @@ const App = {
     const label = document.getElementById('eu-label').value.trim();
     if (!label) { alert('Please type the unit (like 3451 or Garage 6).'); return; }
     const tenant = document.getElementById('eu-tenant').value.trim();
+    const phone = document.getElementById('eu-phone').value.trim();
+    const email = document.getElementById('eu-email').value.trim();
     const rent = parseFloat(document.getElementById('eu-rent').value) || 0;
     const active = document.getElementById('eu-active').checked;
     if (unitId) {
       const u = unitById(unitId);
-      Object.assign(u, { groupId: gid, label, tenant, rent, active });
+      Object.assign(u, { groupId: gid, label, tenant, phone, email, rent, active });
     } else {
-      data.units.push({ id: 'u' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5), groupId: gid, label, tenant, rent, active });
+      data.units.push({ id: 'u' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5), groupId: gid, label, tenant, phone, email, rent, active });
     }
     save();
     this.closeModal();
