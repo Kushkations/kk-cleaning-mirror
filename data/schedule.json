@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-21T16:46:12.379118",
+  "generated": "2026-08-21T17:01:50.029437",
   "weekStart": "2026-08-21",
   "weekEnd": "2026-09-03",
   "week": [
@@ -321,6 +321,7 @@
         "Indica",
         "Palace",
         "PlayHouse",
+        "Sativa",
         "Wonderland"
       ],
       "payrollEstimate": 890,
@@ -505,7 +506,8 @@
         "Elevation",
         "GameRoom",
         "Hotbox",
-        "PlayHouse"
+        "PlayHouse",
+        "Sativa"
       ],
       "payrollEstimate": 890,
       "sameDayTurns": 1,
@@ -583,7 +585,8 @@
         "Alpha",
         "BuffaloGolf",
         "GameRoom",
-        "Hotbox"
+        "Hotbox",
+        "Sativa"
       ],
       "payrollEstimate": 430,
       "sameDayTurns": 0,
@@ -618,6 +621,7 @@
         "Paradise",
         "PlayHouse",
         "Pueblo",
+        "Sativa",
         "Sheridan"
       ],
       "payrollEstimate": 0,
@@ -681,6 +685,7 @@
         "Hotbox",
         "PlayHouse",
         "Pueblo",
+        "Sativa",
         "Sheridan"
       ],
       "payrollEstimate": 460,
@@ -761,6 +766,7 @@
         "Grant",
         "PlayHouse",
         "Pueblo",
+        "Sativa",
         "Sheridan"
       ],
       "payrollEstimate": 430,
@@ -838,7 +844,8 @@
         "GameRoom",
         "Grant",
         "PlayHouse",
-        "Pueblo"
+        "Pueblo",
+        "Sativa"
       ],
       "payrollEstimate": 460,
       "sameDayTurns": 1,
@@ -915,7 +922,8 @@
       "occupied": [
         "Alpha",
         "GameRoom",
-        "Pueblo"
+        "Pueblo",
+        "Sativa"
       ],
       "payrollEstimate": 430,
       "sameDayTurns": 0,
@@ -945,7 +953,8 @@
         "Alpha",
         "GameRoom",
         "Paradise",
-        "Pueblo"
+        "Pueblo",
+        "Sativa"
       ],
       "payrollEstimate": 0,
       "sameDayTurns": 0,
@@ -975,7 +984,8 @@
         "Alpha",
         "GameRoom",
         "Paradise",
-        "Pueblo"
+        "Pueblo",
+        "Sativa"
       ],
       "payrollEstimate": 0,
       "sameDayTurns": 0,
@@ -1007,6 +1017,7 @@
         "GameRoom",
         "Paradise",
         "Pueblo",
+        "Sativa",
         "Wonderland"
       ],
       "payrollEstimate": 0,
@@ -1020,17 +1031,46 @@
       "date": "2026-09-03",
       "dayNameEs": "Jueves",
       "dayNameEn": "Thursday",
-      "teams": [],
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Marii",
+          "members": [
+            "Marii",
+            "Neidys",
+            "Dexabeth"
+          ],
+          "properties": [
+            {
+              "property_id": 362638,
+              "name": "Sativa",
+              "address": "391 E 83rd Dr, Denver 80229",
+              "zone": "hq",
+              "beds": 6,
+              "sqft": 1782,
+              "est_hours": 2.0,
+              "lat": 39.8458,
+              "lon": -104.9816,
+              "priority": "tomorrow_checkin",
+              "priority_locked": false,
+              "next_checkin": "2026-09-04",
+              "next_checkout": "2026-09-07",
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
       "laundry": {
         "assigned": [],
         "active": false
       },
       "off": [
-        "Marii",
         "Julie",
-        "Dexabeth",
         "Yasnielis",
-        "Neidys",
         "Luraidy"
       ],
       "occupied": [
@@ -1045,17 +1085,17 @@
         "Pueblo",
         "Wonderland"
       ],
-      "payrollEstimate": 0,
+      "payrollEstimate": 460,
       "sameDayTurns": 0,
-      "tomorrowCheckins": 0,
-      "totalCheckouts": 0,
+      "tomorrowCheckins": 1,
+      "totalCheckouts": 1,
       "optimizations": [],
       "startTime": "9:45 AM"
     }
   ],
   "cleanerStats": {
     "Marii": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 5,
       "role": "lead",
       "dailyRate": 170
     },
@@ -1065,7 +1105,7 @@
       "dailyRate": 140
     },
     "Dexabeth": {
-      "daysThisWeek": 8,
+      "daysThisWeek": 9,
       "role": "cleaner",
       "dailyRate": 150
     },
@@ -1075,7 +1115,7 @@
       "dailyRate": 140
     },
     "Neidys": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 5,
       "role": "cleaner",
       "dailyRate": 140
     },
