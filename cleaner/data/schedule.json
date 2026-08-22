@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-22T13:01:54.369515",
+  "generated": "2026-08-22T13:16:50.474324",
   "weekStart": "2026-08-22",
   "weekEnd": "2026-09-04",
   "week": [
@@ -322,8 +322,8 @@
               "lon": -105.1396,
               "priority": "checkout_only",
               "priority_locked": false,
-              "next_checkin": null,
-              "next_checkout": null,
+              "next_checkin": "2026-08-28",
+              "next_checkout": "2026-08-31",
               "deadline": null,
               "checkout_time": "10:00 AM",
               "is_late_checkout": false,
@@ -670,6 +670,7 @@
       ],
       "occupied": [
         "Alpha",
+        "Altitude",
         "GameRoom",
         "Grant",
         "PlayHouse",
@@ -749,6 +750,7 @@
       ],
       "occupied": [
         "Alpha",
+        "Altitude",
         "GameRoom",
         "Grant",
         "PlayHouse",
@@ -829,6 +831,7 @@
       ],
       "occupied": [
         "Alpha",
+        "Altitude",
         "GameRoom",
         "Pueblo",
         "Sativa"
@@ -844,16 +847,45 @@
       "date": "2026-08-31",
       "dayNameEs": "Lunes",
       "dayNameEn": "Monday",
-      "teams": [],
+      "teams": [
+        {
+          "name": "Equipo 1",
+          "lead": "Dexabeth",
+          "members": [
+            "Dexabeth",
+            "Yasnielis",
+            "Julie"
+          ],
+          "properties": [
+            {
+              "property_id": 399039,
+              "name": "Altitude",
+              "address": "4350 Xenon St, Wheat Ridge 80033",
+              "zone": "far_west",
+              "beds": 6,
+              "sqft": 1868,
+              "est_hours": 2.5,
+              "lat": 39.7773,
+              "lon": -105.1396,
+              "priority": "checkout_only",
+              "priority_locked": false,
+              "next_checkin": null,
+              "next_checkout": null,
+              "deadline": null,
+              "checkout_time": "10:00 AM",
+              "is_late_checkout": false,
+              "order": 1
+            }
+          ],
+          "isLaundry": false
+        }
+      ],
       "laundry": {
         "assigned": [],
         "active": false
       },
       "off": [
         "Marii",
-        "Julie",
-        "Dexabeth",
-        "Yasnielis",
         "Neidys",
         "Luraidy"
       ],
@@ -864,10 +896,10 @@
         "Pueblo",
         "Sativa"
       ],
-      "payrollEstimate": 0,
+      "payrollEstimate": 430,
       "sameDayTurns": 0,
       "tomorrowCheckins": 0,
-      "totalCheckouts": 0,
+      "totalCheckouts": 1,
       "optimizations": [],
       "startTime": "9:45 AM"
     },
@@ -1125,17 +1157,17 @@
       "dailyRate": 170
     },
     "Julie": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 5,
       "role": "cleaner",
       "dailyRate": 140
     },
     "Dexabeth": {
-      "daysThisWeek": 10,
+      "daysThisWeek": 11,
       "role": "cleaner",
       "dailyRate": 150
     },
     "Yasnielis": {
-      "daysThisWeek": 4,
+      "daysThisWeek": 5,
       "role": "cleaner",
       "dailyRate": 140
     },
